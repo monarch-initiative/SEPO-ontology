@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl" uri="imports/ontology-metadata.owl"/>
+    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl" uri="mireots/bfo.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1457648540011" name="http://purl.obolibrary.org/obo/bfo.owl" uri="mireots/bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1457648540011" name="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl" uri="imports/ontology-metadata.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1457648540011" name="http://purl.obolibrary.org/obo/sepo-merged.owl" uri="sepo-merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1457648540011" name="http://purl.obolibrary.org/obo/sepo.owl" uri="sepo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1457648540011" name="http://purl.obolibrary.org/obo/sepo_developer.owl" uri="sepo_developer.owl"/>
+    </group>
+</catalog>
