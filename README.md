@@ -8,10 +8,10 @@ The core of the SEPO model is set of related informational entities representing
 
 The following **Wiki pages** provide additional information about the SEPO ontology and its support for structuring evidence and provenance metadata around scientific claims. 
 
-1. Core Concepts and Relationships 
-2. Use Cases and Requirements
-3. Real Data Examples
-4. Ontological Commitments 
+1. [Core Concepts and Relationships] (https://github.com/monarch-initiative/SEPO-ontology/wiki/Core-Concepts-and-Relationships)
+2. [Use Cases and Requirements](https://github.com/monarch-initiative/SEPO-ontology/wiki/Use-Cases-and-Requirements)
+3. [Real Data Examples](https://github.com/monarch-initiative/SEPO-ontology/wiki/Real-Data-Examples)
+4. [Ontological Commitments](https://github.com/monarch-initiative/SEPO-ontology/wiki/Ontological-Committments)
 
 **References**
 
