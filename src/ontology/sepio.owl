@@ -17,7 +17,8 @@
 5. Scientific Evidence Ontology (SEO)
 6. Ontology of Scientific Evidence and Provenance (OSEP)
 7. Scientific Evidence and Provenance Information Ontology (SEPIO)
-8. Research Evidence and Provenance Ontology (REPO)</rdfs:seeAlso>
+8. Scientific Evidence and Provenance  Ontology (SEPO)
+9. Research Evidence and Provenance Ontology (REPO)</rdfs:seeAlso>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl"/>
     </owl:Ontology>
@@ -223,13 +224,13 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000006">
         <rdfs:label xml:lang="en">has_evidence</rdfs:label>
+        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/RO_0002558 ! &apos;has evidence&apos;
+or
+http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&apos;</obo:SEPIO_0000052>
         <obo:IAO_0000116>Consider re-use of http://purl.obolibrary.org/obo/RO_0002558 ! &apos;has evidence&apos;.
 Definition = &quot;x has evidence y iff , x is  an information content entity, material entity or process, and y supports either the existence of x, or the truth value of x.&quot;
 
 See  also http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&apos;.</obo:IAO_0000116>
-        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/RO_0002558 ! &apos;has evidence&apos;
-or
-http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&apos;</obo:SEPIO_0000052>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
         <rdfs:domain>
             <owl:Class>
@@ -261,16 +262,16 @@ http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&apos;</obo:S
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000008">
         <rdfs:label xml:lang="en">has_refuting_evidence</rdfs:label>
-        <obo:SEPIO_0000052>http://semanticscience.org/resource/SIO_000774 ! &apos;is refuted by&apos;</obo:SEPIO_0000052>
         <obo:IAO_0000118>has_conflicting_evidence</obo:IAO_0000118>
+        <obo:SEPIO_0000052>http://semanticscience.org/resource/SIO_000774 ! &apos;is refuted by&apos;</obo:SEPIO_0000052>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000012"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000007"/>
-        </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000008"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000012"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000007"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -331,17 +332,17 @@ Definition = &quot;A relationship between a piece of evidence and an entity that
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:label xml:lang="en">contradicts</rdfs:label>
         <rdfs:comment>Relation between two propositions s that make opposing claims (e.g. proposition1 holds that variant1 is pathogenic for disease1, and proposition2 holds that variant1 is benign for disease1).</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000012"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000012"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000012"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000012"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -464,14 +465,6 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000026">
         <rdfs:label xml:lang="en">has_subject</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000026"/>
@@ -480,6 +473,14 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000026"/>
         </owl:propertyChainAxiom>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -489,14 +490,6 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027">
         <rdfs:label xml:lang="en">has_object</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027"/>
-        </owl:propertyChainAxiom>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -505,6 +498,14 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -515,7 +516,7 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
         <rdfs:label xml:lang="en">has_predicate</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028"/>
         </owl:propertyChainAxiom>
         <rdfs:domain>
@@ -527,7 +528,7 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
             </owl:Class>
         </rdfs:domain>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
@@ -538,8 +539,8 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030">
         <rdfs:label xml:lang="en">expresses</rdfs:label>
-        <obo:SEPIO_0000052>http://purl.org/see/rdo#is_assertion_asserting</obo:SEPIO_0000052>
         <obo:IAO_0000118>asserts</obo:IAO_0000118>
+        <obo:SEPIO_0000052>http://purl.org/see/rdo#is_assertion_asserting</obo:SEPIO_0000052>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
@@ -679,10 +680,10 @@ http://purl.org/pav/createdOn</obo:SEPIO_0000052>
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000036">
         <rdfs:label xml:lang="en">date_modified</rdfs:label>
-        <obo:IAO_0000118>date_last_updated</obo:IAO_0000118>
         <obo:IAO_0000115>The most recent data on which an entity was modified or updated.</obo:IAO_0000115>
         <obo:SEPIO_0000052>http://purl.org/dc/terms/modified ! Date Modified
 Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
+        <obo:IAO_0000118>date_last_updated</obo:IAO_0000118>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
     </owl:DatatypeProperty>
     
@@ -1290,9 +1291,9 @@ Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
         <obo:IAO_0000115>An information content entity that is inferred from data.</obo:IAO_0000115>
         <obo:IAO_0000116>In the Philly 2013 workshop, we recognized the limitations of &quot;conclusion textual entity&quot;, and we introduced this as more general. The need for the &apos;textual entity&apos; term going forward is up for future debate. </obo:IAO_0000116>
+        <obo:IAO_0000119>Group:2013 Philly Workshop group</obo:IAO_0000119>
         <obo:IAO_0000111>conclusion based on data</obo:IAO_0000111>
         <obo:IAO_0000117>Group:2013 Philly Workshop group</obo:IAO_0000117>
-        <obo:IAO_0000119>Group:2013 Philly Workshop group</obo:IAO_0000119>
         <obo:SEPIO_0000061>Possible parent for &apos;assertion&apos;</obo:SEPIO_0000061>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -1324,16 +1325,16 @@ Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000">
         <rdfs:label xml:lang="en">proposition</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000119>http://plato.stanford.edu/entries/propositions</obo:IAO_0000119>
         <obo:IAO_0000116>Likely same basic concept as:
 
 1.  &apos;proposition&apos; from the RDO/SEE Semantic EvidencE Framework. 
 http://purl.org/see/rdo#proposition =  &quot;The class rdo:proposition represents propositions i.e. the sharable objects of propositional attitudes like belief or desire and the bearers of truth values. As truth bearers they are either true or false. They are taken to represent the semantic content of sentences or larger lexical entities formulated in some natural or artificial language.&quot;)
 
 2.  &apos;Claim&apos; from the Micropublication Ontology model. http://purl.org/mp/Claim = &quot;the single principal Statement arguedBy a Micropublication&quot;</obo:IAO_0000116>
+        <obo:SEPIO_0000052>http://purl.org/see/rdo#proposition</obo:SEPIO_0000052>
+        <obo:IAO_0000119>http://plato.stanford.edu/entries/propositions</obo:IAO_0000119>
         <rdfs:comment>&quot;Propositions, we shall say, are the sharable objects of the attitudes and the primary bearers of truth and falsity. This stipulation rules out certain candidates for propositions, including thought- and utterance-tokens, which presumably are not sharable, and concrete events or facts, which presumably cannot be false.&quot;
 (sourece: http://plato.stanford.edu/entries/propositions/)</rdfs:comment>
-        <obo:SEPIO_0000052>http://purl.org/see/rdo#proposition</obo:SEPIO_0000052>
         <obo:IAO_0000115>1. A proposition is a generic, sharable statement of purported truth that is supported by evidence. As truth bearers they are either true or false. They are taken to represent the semantic content of assertions as made in sentences or larger lexical entities, formulated in some natural or artificial language.
  
 2. A proposition is sharable objects of propositional attitudes like belief or desire and the bearers of truth values. As truth bearers they are either true or false. They are taken to represent the semantic content of assertions as made in sentences or larger lexical entities, formulated in some natural or artificial language.</obo:IAO_0000115>
@@ -1352,16 +1353,17 @@ http://purl.org/see/rdo#proposition =  &quot;The class rdo:proposition represent
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>A particular claim made by a particular agent on a particular occasion that a particular proposition is true.</obo:IAO_0000115>
+        <obo:SEPIO_0000052>http://purl.org/see/rdo#assertion</obo:SEPIO_0000052>
         <foaf:homepage>In the SEPIO model, an assertion is merely a statement (an act of speech) that expresses or asserts the claim made in a proposition.  It is the proposition (or association) that bears the subject and object, and is supported by evidence. This means there is no ambiguity or duplicity with respect to where the subject and object and evidence hang (always from the proposition, never from the assertion).
 
 The model also allows a slim implementation when the assertion is omitted - all relevant info can be captured without it when data about the assertion (i.e., its date of creation or update) are not provided.</foaf:homepage>
+        <obo:IAO_0000119>http://purl.org/see/rdo#assertion</obo:IAO_0000119>
+        <obo:IAO_0000112>An author of a scientific article asserting that a diseases is causes by a genetic variant, a database curator asserting that a mouse strain exhibits a specific phenotype as a result of its genotype and environment.</obo:IAO_0000112>
+        <obo:IAO_0000118>statement</obo:IAO_0000118>
         <rdfs:comment>Unlike a proposition, the identity of a particular assertion is dependent on the agent who made it. 
 
 Assertions are akin to acts of speech expressing a proposition or association, and as such have no direct link to association subject/objects, or lines of evidence.</rdfs:comment>
-        <obo:IAO_0000112>An author of a scientific article asserting that a diseases is causes by a genetic variant, a database curator asserting that a mouse strain exhibits a specific phenotype as a result of its genotype and environment.</obo:IAO_0000112>
-        <obo:IAO_0000118>statement</obo:IAO_0000118>
-        <obo:SEPIO_0000052>http://purl.org/see/rdo#assertion</obo:SEPIO_0000052>
-        <obo:IAO_0000119>http://purl.org/see/rdo#assertion</obo:IAO_0000119>
         <obo:IAO_0000232>Likely the same basic concept as:
 
 1. &apos;assertion&apos; from the RDO/SEE (Semantic EvidencE) Framework. 
@@ -1376,7 +1378,6 @@ http://purl.org/mp/Micropublication = a micropublication consists of
   the ChallengeGraph ::= the set of all Representations challenging its Claim which are elementsOf a Micropublication.
 
 3. &apos;provenance&apos; from OBAN.  OBAN has limited documentation to clarify the precise semantics for this class, but it seems to represeent a single line of provenance inclusive of the assertion of an association from one source/agent, and its associted evidence information.</obo:IAO_0000232>
-        <obo:IAO_0000115>A particular claim made by a particular agent on a particular occasion that a particular proposition is true.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1392,9 +1393,9 @@ http://purl.org/mp/Micropublication = a micropublication consists of
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>An evidence derived from a single line of inquiry or investigation.</obo:IAO_0000115>
         <obo:IAO_0000116>Consider use of http://purl.obolibrary.org/obo/ECO_0000000 here.  ECO classes are intended to be used in annotations on data, and are definned accordinngly,  So it is not cler what an instance of an evidence code would be.  But it is reasonable  to assume it would be an instance of a line of evidence (all information derived from a line of investigation, as used to evaluate the validity of an assertion or fact).</obo:IAO_0000116>
         <rdfs:comment>The total evidence for a given proposition may be comprised of many evidence lines, and a given line of evidence may be supported by one or more pieces of data</rdfs:comment>
+        <obo:IAO_0000115>An evidence derived from a single line of inquiry or investigation.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1432,15 +1433,15 @@ http://purl.org/mp/Micropublication = a micropublication consists of
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/ECO_0000217 ! assertion method 
-or
-http://purl.org/see/rdo#act_of_assertion</obo:SEPIO_0000052>
-        <obo:IAO_0000119>http://purl.org/see/rdo#act_of_assertion</obo:IAO_0000119>
         <rdfs:comment>An assertion process is a particular act effected by particular agents on a particular occasion (e.g. as authors of a scientific article) of evaluating evidence and reaching a conclusion that supports putting forward a particular proposition as true.
 
 It is through the act of interpretation and evaluation of data as it pertains to supporting a particular proposition that evidence is created. For this reason, the assertion process has as outputs both an assertion, and a line of evidence.</rdfs:comment>
-        <obo:IAO_0000118>act of assertion</obo:IAO_0000118>
+        <obo:IAO_0000119>http://purl.org/see/rdo#act_of_assertion</obo:IAO_0000119>
+        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/ECO_0000217 ! assertion method 
+or
+http://purl.org/see/rdo#act_of_assertion</obo:SEPIO_0000052>
         <obo:IAO_0000115>The process of generating an assertion, which includes interpretation and evaluation of data as evidence supporting the proposition expressed in assertion.</obo:IAO_0000115>
+        <obo:IAO_0000118>act of assertion</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -1473,8 +1474,8 @@ It is through the act of interpretation and evaluation of data as it pertains to
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:SEPIO_0000052>ECO:0000000 ! evidence</obo:SEPIO_0000052>
         <obo:IAO_0000115>An information artifact used to evaluate the truth value of a proposition, which is generated through the interpretation of data relevant to the proposition&apos;s validity</obo:IAO_0000115>
+        <obo:SEPIO_0000052>ECO:0000000 ! evidence</obo:SEPIO_0000052>
     </owl:Class>
     
 
@@ -1504,9 +1505,9 @@ It is through the act of interpretation and evaluation of data as it pertains to
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000020">
         <rdfs:label xml:lang="en">association</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
-        <obo:IAO_0000118>annotation</obo:IAO_0000118>
         <obo:SEPIO_0000052>http://purl.org/oban/association.</obo:SEPIO_0000052>
         <obo:IAO_0000115>Associations are a form of proposition, framed as a tuple linking two (or more) entities through defined relationships.</obo:IAO_0000115>
+        <obo:IAO_0000118>annotation</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -1516,8 +1517,8 @@ It is through the act of interpretation and evaluation of data as it pertains to
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000029">
         <rdfs:label xml:lang="en">statement</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <obo:IAO_0000118>proposition</obo:IAO_0000118>
         <rdfs:comment>A proposition with truth value. Possible parent to group assertions and associations.</rdfs:comment>
+        <obo:IAO_0000118>proposition</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -1547,11 +1548,11 @@ It is through the act of interpretation and evaluation of data as it pertains to
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000047">
         <rdfs:label xml:lang="en">annotation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000020"/>
+        <obo:IAO_0000115>An association between an entity and a term describing a concept related to the entity (typically a term from some controlled vocabulary).</obo:IAO_0000115>
         <rdfs:comment>1. A specific relationship indicated by the annotaiton, and additional context for thie association,  may or may not be specified in an annotation.  Annotations shoould be supported by some tyope of evidence and appropriate metaata.
 
 2. From LEGO curation documentation : &quot;In its most basic form, the association of a gene product through a relation to a GO term; supported by some type of evidence with appropriate metadata.&quot;
 (https://docs.google.com/document/d/18ihslb7prB6CWtu2yjF-pMHZBTY1-AdXJAu-ZyuyXS4/edit#)</rdfs:comment>
-        <obo:IAO_0000115>An association between an entity and a term describing a concept related to the entity (typically a term from some controlled vocabulary).</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1561,11 +1562,11 @@ It is through the act of interpretation and evaluation of data as it pertains to
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000048">
         <rdfs:label xml:lang="en">agent role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:SEPIO_0000052>http://purl.org/see/rdo#agent_role</obo:SEPIO_0000052>
-        <rdfs:comment>In the context of evidence and proveannce, agents are persons, groups, organizations, or software that are responsible for making assertions or generating the evidence and data that support them.</rdfs:comment>
         <obo:IAO_0000115>A role borne by a  person, group, organization, or information processing entity (e.g. software, algorithms) in virtue of its active participation in a process (e.g the generation, modification, or provision of some entity).
 
 A role borne by a  person, group, organization, or information processing entity (e.g. software, algorithms) in virtue of its active participation in a process leading to some outcome (i.e. a resulting material, process, or state)</obo:IAO_0000115>
+        <obo:SEPIO_0000052>http://purl.org/see/rdo#agent_role</obo:SEPIO_0000052>
+        <rdfs:comment>In the context of evidence and proveannce, agents are persons, groups, organizations, or software that are responsible for making assertions or generating the evidence and data that support them.</rdfs:comment>
     </owl:Class>
     
 
@@ -1598,11 +1599,11 @@ Definition/Comment: A manual assertion could be based on evidence that is genera
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000056">
         <rdfs:label xml:lang="en">automated assertion process</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000003"/>
-        <obo:IAO_0000115>An assertion determined through algorithmic analysis of a computational agent, independent of human review.</obo:IAO_0000115>
-        <rdfs:comment>Ultimately even automated assertions require a human agent to set a confidence threshhold that determines when a computational output (e.g. a sequence similarity p-value) justifies an assesrtion being made.</rdfs:comment>
         <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/ECO_0000203 ! automatic assertion
 
 Definition/Comment: An automatic assertion is based on computationally generated information that is not reviewed by a person prior to making the assertion. For example, one common type of automatic assertion involves creating an association of evidence with an entity based on commonness of attributes of that entity and another entity for which an assertion already exists. The commonness is determined algorithmically.</obo:SEPIO_0000052>
+        <rdfs:comment>Ultimately even automated assertions require a human agent to set a confidence threshhold that determines when a computational output (e.g. a sequence similarity p-value) justifies an assesrtion being made.</rdfs:comment>
+        <obo:IAO_0000115>An assertion determined through algorithmic analysis of a computational agent, independent of human review.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1612,8 +1613,8 @@ Definition/Comment: An automatic assertion is based on computationally generated
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000058">
         <rdfs:label xml:lang="en">provenance</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115>A process history leading to the creation and current condition of an artifact.</obo:IAO_0000115>
         <rdfs:comment>For scientific assertions/claims, this is the process history leading to the asseertion being made, including processes through which evidence is evaluated, and processes through which  information used as evidence is created.  The transitive nature of provenance means that the provenance history of informtion used as supporting data becomes provenance for an assertion that uses this information as evidence. Provenance metadata describes these processes, including accounts of who conducted these processes, what entities participated in them, and when/where they occurred.</rdfs:comment>
+        <obo:IAO_0000115>A process history leading to the creation and current condition of an artifact.</obo:IAO_0000115>
     </owl:Class>
     
 
