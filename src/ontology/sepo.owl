@@ -265,12 +265,12 @@ http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&apos;</obo:S
         <obo:IAO_0000118>has_conflicting_evidence</obo:IAO_0000118>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000006"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000012"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000007"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000008"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000012"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000007"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -314,11 +314,11 @@ Definition = &quot;A relationship between a piece of evidence and an entity that
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000007"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000011"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000007"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000011"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
@@ -468,10 +468,6 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000026"/>
         </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000026"/>
-        </owl:propertyChainAxiom>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -480,6 +476,10 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000030"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000026"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -490,6 +490,10 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
         <rdfs:label xml:lang="en">has_object</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000016"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000027"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000030"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000027"/>
         </owl:propertyChainAxiom>
@@ -501,10 +505,6 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000027"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -514,14 +514,6 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPO_0000028">
         <rdfs:label xml:lang="en">has_predicate</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000016"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000000"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000001"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000028"/>
@@ -530,6 +522,14 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000030"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000028"/>
         </owl:propertyChainAxiom>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000000"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPO_0000001"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1159,6 +1159,16 @@ Definition: Date on which the resource was changed.</obo:SEPO_0000052>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000066">
+        <rdfs:label xml:lang="en">investigation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000004"/>
+        <obo:IAO_0000115>a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s).</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000175 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000175">
@@ -1245,7 +1255,7 @@ Definition: Date on which the resource was changed.</obo:SEPO_0000052>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000471">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">study design execution</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000013"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000004"/>
         <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6/11/9: edited at workshop. Used to be: study design execution is a process with the objective to generate data according to a concretized study design. The execution of a study design is part of an investigation, and minimally consists of an assay or data transformation.</obo:IAO_0000232>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a planned process that realizes the concretization of a study design</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">branch derived</obo:IAO_0000119>
@@ -1396,12 +1406,6 @@ http://purl.org/mp/Micropublication = a micropublication consists of
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -1420,6 +1424,12 @@ http://purl.org/mp/Micropublication = a micropublication consists of
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPO_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:SEPO_0000052>http://purl.obolibrary.org/obo/ECO_0000217 ! assertion method 
