@@ -113,6 +113,25 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECO_9000000 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/ECO_9000000">
+        <rdfs:label xml:lang="en">used_in</rdfs:label>
+        <obo:IAO_0000115>A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002352"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_9000001 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/ECO_9000001">
+        <rdfs:label xml:lang="en">uses</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056">
@@ -266,12 +285,12 @@ See  also http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&ap
         <obo:SEPIO_0000052>http://semanticscience.org/resource/SIO_000774 ! &apos;is refuted by&apos;</obo:SEPIO_0000052>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000008"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000012"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000007"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000008"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -311,16 +330,20 @@ Definition = &quot;A relationship between a piece of evidence and an entity that
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000007"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000011"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000011"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002233"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000011"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000007"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000011"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -428,7 +451,7 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000023">
         <rdfs:label xml:lang="en">uses_resource</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
     </owl:ObjectProperty>
     
 
@@ -447,12 +470,12 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000025">
         <rdfs:label xml:lang="en">uses_method</rdfs:label>
         <rdfs:comment>Relation linking a planned process to a scientific techhnique applied in its execution (either the process itself, or some specification of the process in a protocol or guideline document).</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000033"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000014"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -491,11 +514,11 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
         <rdfs:label xml:lang="en">has_object</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027"/>
         </owl:propertyChainAxiom>
         <rdfs:domain>
@@ -515,10 +538,6 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028">
         <rdfs:label xml:lang="en">has_predicate</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028"/>
-        </owl:propertyChainAxiom>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -529,6 +548,10 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
         </rdfs:domain>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
@@ -621,25 +644,82 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000059">
         <rdfs:label>is_evidence_with_support_from</rdfs:label>
         <obo:IAO_0000118 xml:lang="en">has_support_from</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000086"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000083 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000083">
+        <rdfs:label xml:lang="en">has_evidence_type</rdfs:label>
+        <obo:IAO_0000116>Used for now to link an evidence line insance to its ECO type. In the future, if ECO defines their terms in such a way as to allow us to type evidence lines as instances of and ECO term, we can pursue this approahc.</obo:IAO_0000116>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000084 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000084">
+        <rdfs:label xml:lang="en">has_supporting_data</rdfs:label>
+        <obo:IAO_0000118>is_evidence_supported_by_data</obo:IAO_0000118>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000010"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000085 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000085">
+        <rdfs:label xml:lang="en">has_supporting_process</rdfs:label>
+        <obo:IAO_0000118>is_evidence_supported_by_process</obo:IAO_0000118>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000010"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000011"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/http://purl.org/oban/association_has_predicate -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000086 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.org/oban/association_has_predicate">
-        <rdfs:label xml:lang="en">association has predicate</rdfs:label>
-        <obo:IAO_0000116>Placeholder until OBAN implements this property, as requested here: https://github.com/EBISPOT/OBAN/issues/6</obo:IAO_0000116>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000086">
+        <rdfs:label xml:lang="en">ObsoleteObjectProperty</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/http://purl.org/oban/association_has_subject -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000098 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.org/oban/association_has_subject">
-        <rdfs:label xml:lang="en">association has subject</rdfs:label>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000098">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has_equivalent_proposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000099 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000099">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has_consistent_proposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000100 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000100">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label xml:lang="en">has_contradicting_proposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000101 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000101">
+        <rdfs:label xml:lang="en">has_inconsistent_proposition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -648,6 +728,24 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
 
     <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_object">
         <rdfs:label>association has object</rdfs:label>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/oban/association_has_predicate -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_predicate">
+        <rdfs:label xml:lang="en">association has predicate</rdfs:label>
+        <obo:IAO_0000116>Placeholder until OBAN implements this property, as requested here: https://github.com/EBISPOT/OBAN/issues/6</obo:IAO_0000116>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/oban/association_has_subject -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_subject">
+        <rdfs:label xml:lang="en">association has subject</rdfs:label>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
     </owl:ObjectProperty>
     
@@ -671,6 +769,7 @@ http://purl.org/pav/createdBy</obo:IAO_0000116>
         <obo:SEPIO_0000052>http://purl.org/dc/terms/created
 or
 http://purl.org/pav/createdOn</obo:SEPIO_0000052>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
     </owl:DatatypeProperty>
     
@@ -684,6 +783,7 @@ http://purl.org/pav/createdOn</obo:SEPIO_0000052>
         <obo:SEPIO_0000052>http://purl.org/dc/terms/modified ! Date Modified
 Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
         <obo:IAO_0000118>date_last_updated</obo:IAO_0000118>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
     </owl:DatatypeProperty>
     
@@ -693,6 +793,7 @@ Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000040">
         <rdfs:label xml:lang="en">date_evaluated</rdfs:label>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
     </owl:DatatypeProperty>
     
@@ -703,6 +804,59 @@ Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000051">
         <rdfs:label xml:lang="en">date_submitted</rdfs:label>
         <obo:SEPIO_0000052>http://purl.org/dc/terms/dateSubmitted</obo:SEPIO_0000052>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000063 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000063">
+        <rdfs:label xml:lang="en">date_started</rdfs:label>
+        <obo:SEPIO_0000052>http://www.w3.org/ns/prov#startedAtTime</obo:SEPIO_0000052>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000064 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000064">
+        <rdfs:label xml:lang="en">date_ended</rdfs:label>
+        <obo:SEPIO_0000052>http://www.w3.org/ns/prov#endedAtTime</obo:SEPIO_0000052>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000065 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000065">
+        <rdfs:label xml:lang="en">has_value</rdfs:label>
+        <obo:SEPIO_0000052>http://www.w3.org/ns/prov#value
+&apos;This property serves the same purpose as rdf:value, but has been reintroduced to avoid some of the definitional ambiguity in the RDF specification (specifically, &apos;may be used in describing structured values&apos;). The editor&apos;s definition comes from http://www.w3.org/TR/rdf-primer/#rdfvalue&apos;</obo:SEPIO_0000052>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000095 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000095">
+        <rdfs:label xml:lang="en">before_date</rdfs:label>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000096 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000096">
+        <rdfs:label xml:lang="en">after_date</rdfs:label>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
     </owl:DatatypeProperty>
     
@@ -734,6 +888,17 @@ Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
         <rdfs:label>evidence</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
         <obo:SEPIO_0000061>Possibly use the existing ECO evidence class as a stub to hold evidence code class hierarchy.  May use this to replace the SEPIO &apos;evidence&apos; class, or the SEPIO &apos;evidence line&apos; class.</obo:SEPIO_0000061>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ERO_0001716 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ERO_0001716">
+        <rdfs:label xml:lang="en">database</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>A database is an organized collection of data, today typically in digital form.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Database</oboInOwl:hasDbXref>
     </owl:Class>
     
 
@@ -1170,6 +1335,16 @@ Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000070">
+        <rdfs:label xml:lang="en">assay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000004"/>
+        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/ERO_0000007 ! technique.</obo:SEPIO_0000052>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000175 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000175">
@@ -1256,14 +1431,13 @@ Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000471">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">study design execution</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
         <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6/11/9: edited at workshop. Used to be: study design execution is a process with the objective to generate data according to a concretized study design. The execution of a study design is part of an investigation, and minimally consists of an assay or data transformation.</obo:IAO_0000232>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a planned process that realizes the concretization of a study design</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">branch derived</obo:IAO_0000119>
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">injecting a mouse with PBS solution, weighing it, and recording the weight according to a study design.</obo:IAO_0000112>
         <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">removed axiom has_part some (assay or &apos;data transformation&apos;) per discussion on protocol application mailing list to improve reasoner performance. The axiom is still desired.</obo:IAO_0000116>
         <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">study design execution</obo:IAO_0000111>
-        <obo:SEPIO_0000061>Consider this as a subtype of &apos;data generation process&apos; (which is broader because it includes things like creating a figure, or writing a paper)</obo:SEPIO_0000061>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
     </owl:Class>
@@ -1353,7 +1527,8 @@ http://purl.org/see/rdo#proposition =  &quot;The class rdo:proposition represent
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A particular claim made by a particular agent on a particular occasion that a particular proposition is true.</obo:IAO_0000115>
+        <obo:SEPIO_0000052>http://purl.org/see/rdo#assertion</obo:SEPIO_0000052>
+        <rdfs:comment>Assertions are akin to acts of speech expressing a proposition or association. Unlike a proposition, the identity of a particular assertion is dependent on the agent who made it.</rdfs:comment>
         <obo:IAO_0000116>In the SEPIO model, an assertion is merely a statement (an act of speech) that expresses a proposition.  It is the proposition (or association) that carries the semantic content of a claim.   Thus, in modeling formalized propositions such as oban:associations, the subject and object of the association hang from the proposition, as do the lines of evidence supporting the association.</obo:IAO_0000116>
         <obo:IAO_0000232>Likely the same or analogous concept as:
 
@@ -1362,12 +1537,9 @@ http://purl.org/see/rdo#assertion = &quot;The class rdo:assertion represents par
 
 2. &apos;provenance&apos; from OBAN.  OBAN has limited documentation to clarify the precise semantics for this class, but it seems to represeent a single line of provenance inclusive of the assertion of an association from one source/agent, and its associted evidence information.</obo:IAO_0000232>
         <obo:IAO_0000119>http://purl.org/see/rdo#assertion</obo:IAO_0000119>
-        <obo:SEPIO_0000052>http://purl.org/see/rdo#assertion</obo:SEPIO_0000052>
         <obo:IAO_0000112>An author of a scientific article asserting that a diseases is causes by a genetic variant, a database curator asserting that a mouse strain exhibits a specific phenotype as a result of its genotype and environment.</obo:IAO_0000112>
         <obo:IAO_0000118>statement</obo:IAO_0000118>
-        <rdfs:comment>Unlike a proposition, the identity of a particular assertion is dependent on the agent who made it. 
-
-Assertions are akin to acts of speech expressing a proposition or association, and as such have no direct link to association subject/objects, or lines of evidence.</rdfs:comment>
+        <obo:IAO_0000115>A claim made by a particular agent on a particular occasion that a particular proposition is true.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1376,15 +1548,15 @@ Assertions are akin to acts of speech expressing a proposition or association, a
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000002">
         <rdfs:label xml:lang="en">evidence line</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000116>Consider use of http://purl.obolibrary.org/obo/ECO_0000000 here.  ECO classes are intended to be used in annotations on data, and are definned accordinngly,  So it is not cler what an instance of an evidence code would be.  But it is reasonable  to assume it would be an instance of a line of evidence (all information derived from a line of investigation, as used to evaluate the validity of an assertion or fact).</obo:IAO_0000116>
         <rdfs:comment>A particular line of evidence is  generated through the act of interpretation and evaluation of data for one line of investigation, as it pertains to the validity of a particular proposition. The total evidence for a given proposition may be comprised of many lines of evidence, and a given evidence line may be supported by one or more pieces of data generated in a particular line of investigation.</rdfs:comment>
+        <obo:SEPIO_0000052>Consider use of http://purl.obolibrary.org/obo/ECO_0000000 here.  ECO classes are intended to be used in annotations on data, and are defined accordinngly,  So it is not clear what an instance of an ECO class would be.  But it is reasonable  to assume it would be an instance of a line of evidence (a set of information artifacts constrained by the scope of the ECO term that defines a type of investigation/assay that produces the information, as used to evaluate the validity of an assertion).</obo:SEPIO_0000052>
         <obo:IAO_0000115>An evidence derived from a single line of inquiry or investigation.</obo:IAO_0000115>
     </owl:Class>
     
@@ -1481,16 +1653,6 @@ http://purl.org/see/rdo#act_of_assertion</obo:SEPIO_0000052>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000014 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000014">
-        <rdfs:label xml:lang="en">scientific technique</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000004"/>
-        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/ERO_0000007 ! technique.</obo:SEPIO_0000052>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000020 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000020">
@@ -1538,12 +1700,12 @@ http://purl.org/see/rdo#act_of_assertion</obo:SEPIO_0000052>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000047">
         <rdfs:label xml:lang="en">annotation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000020"/>
-        <obo:IAO_0000115>An association between an entity and a term describing a concept related to the entity (typically a term from some controlled vocabulary).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000091"/>
         <rdfs:comment>1. A specific relationship indicated by the annotaiton, and additional context for thie association,  may or may not be specified in an annotation.  Annotations shoould be supported by some tyope of evidence and appropriate metaata.
 
 2. From LEGO curation documentation : &quot;In its most basic form, the association of a gene product through a relation to a GO term; supported by some type of evidence with appropriate metadata.&quot;
 (https://docs.google.com/document/d/18ihslb7prB6CWtu2yjF-pMHZBTY1-AdXJAu-ZyuyXS4/edit#)</rdfs:comment>
+        <obo:IAO_0000115>An assertion expressing an association between an entity and a term describing a concept related to the entity (typically a term from some controlled vocabulary).</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1616,6 +1778,197 @@ Definition/Comment: An automatic assertion is based on computationally generated
         <rdfs:label xml:lang="en">hierarchy of &apos;supporting data&apos; types</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:comment>Temporary organizational container to hold classes used to type supporting data.  All subclasses would be direct subtypes of information content entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000066">
+        <rdfs:label xml:lang="en">study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000004"/>
+        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</obo:SEPIO_0000052>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000067">
+        <rdfs:label xml:lang="en">clinical study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000066"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000069">
+        <rdfs:label xml:lang="en">interventional clinical study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000067"/>
+        <obo:SEPIO_0000052>http://purl.org/net/OCRe/research.owl#Interventional_study</obo:SEPIO_0000052>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000070">
+        <rdfs:label xml:lang="en">observational clinical study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000067"/>
+        <obo:SEPIO_0000052>http://purl.org/net/OCRe/research.owl#Observational_study</obo:SEPIO_0000052>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000071">
+        <rdfs:label xml:lang="en">case-control clinical study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000070"/>
+        <obo:SEPIO_0000052>http://purl.org/net/OCRe/research.owl#Case_control_study</obo:SEPIO_0000052>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000072">
+        <rdfs:label xml:lang="en">experimental study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000066"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000073">
+        <rdfs:label xml:lang="en">in vitro study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000072"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000074">
+        <rdfs:label xml:lang="en">in vivo study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000072"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000075">
+        <rdfs:label xml:lang="en">ex vivo study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000076">
+        <rdfs:label xml:lang="en">cell-based in vivo study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000074"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000077">
+        <rdfs:label xml:lang="en">tissue-based in vivo study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000074"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000078">
+        <rdfs:label xml:lang="en">organism-based in vivo study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000074"/>
+        <obo:IAO_0000118>whole organism in vivo study</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000079">
+        <rdfs:label xml:lang="en">data-driven study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000066"/>
+        <obo:IAO_0000115>A study based only on analysis of existing data, as found in artifacts such as community/curated databases, raw datasets, or publications.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000080">
+        <rdfs:label xml:lang="en">literature-based study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000081"/>
+        <obo:IAO_0000115>A curation-based study that uses only one or more literature publication as input data source.</obo:IAO_0000115>
+        <obo:IAO_0000116>Based on ClinVar &apos;literature only&apos; collection method: &quot;for submissions that provide the interpretation of a variant from one or more publications. No additional curation has been performed by the submitter; the interpretation is from the publication(s) only.&quot;</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000081">
+        <rdfs:label xml:lang="en">curation-based study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000079"/>
+        <obo:IAO_0000116>Based on Clinvar &apos;curation&apos; collecction method: &quot;for variants that were not directly observed by the submitter, but were interpreted by curation of multiple sources, including clinical testing laboratory reports, publications, private case data, and public databases.&quot;</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000089">
+        <rdfs:label xml:lang="en">diagnosis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000091"/>
+        <rdfs:comment>Diagnoses are concluding assertions about the disease or disorder borne by a patient.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000090">
+        <rdfs:label xml:lang="en">hypothesis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:comment>A hypothesis is an assertion that a particular proposition is true, whose validity is intended to be invesitgated through experimental methods.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000091 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000091">
+        <rdfs:label xml:lang="en">conclusion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000093 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000093">
+        <rdfs:label xml:lang="en">submission process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000094 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000094">
+        <rdfs:label xml:lang="en">textual record</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
     </owl:Class>
     
 
@@ -1842,6 +2195,15 @@ Definition/Comment: An automatic assertion is based on computationally generated
         <obo:IAO_0000115>Relative risk is a measurement datum which denotes the risk of an &apos;event&apos; relative to an &apos;exposure&apos;. Relative risk is calculated by forming the ratio of the probability of the event occurring in the exposed group versus a the probability of this event occurring in the non-exposed group.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000254">
+        <rdfs:label xml:lang="en">allele frequency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
     </owl:Class>
     
 
