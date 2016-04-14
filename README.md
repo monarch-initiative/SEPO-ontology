@@ -1,6 +1,10 @@
 # SEPIO-ontology
 
-The **Scientific Evidence and Provenance Information Ontology (SEPIO)** was developed to support description of evidence and provenance information for scientific claims, with a focus on those found in curated research databases. Use cases driving SEPIO development include integration of scientific claims and their associated evidence/provenance metadata, and support for discovery, analysis, and evaluation of claims based on this metadata. 
+***DISCLAIMER:*** THE SEPIO ONTOLOGY IS QUITE FLUID IN ITS EARLY STAGES OF DEVLEOPMENT, AS NEW REQUIREMENTS EMERGE AND THE MODEL IS ITERATIVLY REFINED. IN PARTICULAR WE ARE EXPLORING ALIGNMENT WITH AND RE-USE OF EXISTING STANDARDS.  WE WELCOME ANY FEEDBACK YOU MAY HAVE, IN THE FORM OF USE CASES, EXEMPLAR DATA, AND REQUIREMENTS. PLEASE SUBIT TO OUR TRACKER [HERE](https://github.com/monarch-initiative/SEPIO-ontology/issues).  
+
+-----
+
+The **Scientific Evidence and Provenance Information Ontology (SEPIO)** is being developed to support description of evidence and provenance information for scientific claims, with a focus on those found in curated research databases. Use cases driving SEPIO development include integration of scientific claims and their associated evidence/provenance metadata, and support for discovery, analysis, and evaluation of claims based on this metadata. 
 
 In the SEPIO framework, ***evidence*** is defined as information as used to evaluate the validity of a proposition.  Evidence is treated as an entity separate from the particular data that support it, and is generated through the act of interpretation and evaluation of such data as they pertain to the validity of a particular proposition.  ***Provenance*** is the process history leading to a claim being made, including processes through which evidence is evaluated, and processes through which  information used as evidence is created. Provenance metadata includes accounts of who conducted these processes, what entities participated in them, and when/where they occurred. 
 
