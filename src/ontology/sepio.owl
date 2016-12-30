@@ -283,6 +283,7 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
 Definition = &quot;x has evidence y iff , x is  an information content entity, material entity or process, and y supports either the existence of x, or the truth value of x.&quot;
 
 See  also http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118>is_proposition_with_evidence</obo:IAO_0000118>
         <rdfs:label xml:lang="en">has_evidence</rdfs:label>
     </owl:ObjectProperty>
     
@@ -814,7 +815,7 @@ Process provenance: &quot;The execution history of computer processes which were
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000111">
         <obo:IAO_0000118 xml:lang="en">is_inferred_from</obo:IAO_0000118>
-        <rdfs:label>is_assertion_supported_by</rdfs:label>
+        <rdfs:label>is_assertion_supported_by_evidence</rdfs:label>
     </owl:ObjectProperty>
     
 
