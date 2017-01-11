@@ -144,6 +144,14 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <rdfs:label xml:lang="en">is_about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056">
@@ -487,23 +495,7 @@ http://purl.org/pav/createdBy</obo:SEPIO_0000052>
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000026 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000026">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000026"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000026"/>
-        </owl:propertyChainAxiom>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:label xml:lang="en">has_subject</rdfs:label>
     </owl:ObjectProperty>
     
@@ -512,23 +504,7 @@ http://purl.org/pav/createdBy</obo:SEPIO_0000052>
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000027 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027"/>
-        </owl:propertyChainAxiom>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:label xml:lang="en">has_object</rdfs:label>
     </owl:ObjectProperty>
     
@@ -537,23 +513,7 @@ http://purl.org/pav/createdBy</obo:SEPIO_0000052>
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000028 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028"/>
-        </owl:propertyChainAxiom>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:label xml:lang="en">has_predicate</rdfs:label>
     </owl:ObjectProperty>
     
@@ -904,6 +864,7 @@ Process provenance: &quot;The execution history of computer processes which were
     <!-- http://purl.org/oban/association_has_object -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_object">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <rdfs:label>association has object</rdfs:label>
     </owl:ObjectProperty>
@@ -913,6 +874,7 @@ Process provenance: &quot;The execution history of computer processes which were
     <!-- http://purl.org/oban/association_has_predicate -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_predicate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <obo:IAO_0000116>Placeholder until OBAN implements this property, as requested here: https://github.com/EBISPOT/OBAN/issues/6</obo:IAO_0000116>
         <rdfs:label xml:lang="en">association has predicate</rdfs:label>
     </owl:ObjectProperty>
@@ -922,6 +884,7 @@ Process provenance: &quot;The execution history of computer processes which were
     <!-- http://purl.org/oban/association_has_subject -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_subject">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <rdfs:label xml:lang="en">association has subject</rdfs:label>
     </owl:ObjectProperty>
