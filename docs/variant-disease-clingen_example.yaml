@@ -29,6 +29,8 @@ disease_profile:
       acmg_criterion: CLINGEN:vic008 ('ACMG v2015 PM2, absent from controls in population databases')
       description: "Variant is absent from a large cohort of non-finnish europeans (NFE) in the ExAC population database, with sequencing coverage of the variant exceeding 25X"
       outcome: "moderately supporting"
+	  supporting_reference:
+      - id: PMID:27997510
       supporting_data:
       - id: CLINGEN:PAF082A
         type: SEPIO:9000895 ('allele frequency data')
@@ -39,19 +41,19 @@ disease_profile:
       - id: CLINGEN:PAF082C
         type: SEPIO:9000878 ('population ethnicity data')
         value: "non-finnish european"
-    supporting_reference:
-    - id: PMID:27997510
+
     - id: CLINGEN:ev016
       type: "ECO:9000205 ('functional prediction evidence')"
       acmg_criterion: "CLINGEN:vic007 ('ACMG v2015 PM4, protein length change prediction')"
       description: "Variant leads to an in-frame deletion of 7 amino acids)"
       outcome: "moderately supporting"
-      supporting_data:
+      supporting_reference:
+      - id: PMID:99993251
+	  supporting_data:
       - id: CLINGEN:MolCon066
         type: SEPIO:9000946 ('molecular function annotation')
         value: SO:0001825 ('conservative inframe deletion')
       - id: CLINGEN:RegionAnnotation069
         type: SEPIO:9000825 ('genomic feature annotation')
         value: SO:0000657 ('repeat region')
-      supporting_reference:
-      - id: PMID:99993251
+
