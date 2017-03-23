@@ -15,6 +15,8 @@ The core of the SEPIO model is set of related informational entities representin
 
 Definitions and examples of the core concepts in the SEPIO model. Figure 1gives a high-level view of the relationships SEPIO defines between these concepts.
 
+-----
+
 **Term:** `Assertion` (aka Claim)  
 **Definition:** A statement of purported truth, as made by a particular agent on a particular occasion.  
 **Example:** The ENIGMA consortium’s assertion that BRCA1:2685T>A mutation is pathogenic for breast cancer.  
@@ -56,7 +58,7 @@ The provenance of Information used as evidence is captured through a structured 
 ### IV. Evidence Lines     
 Evidence Lines are a unique and critical feature of the SEPIO model, which organize evidence information into separate, independent arguments relevant to establishing the validity of a claim. Evidence Lines let us capture not only what evidence exists, but how it is interpreted and applied as evidence. They let us describe features of information that are specific to its use as evidence (e.g. the strength of support evidence provide for a particular claim). The allow us to capture dependencies between pieces of supporting information that represent meaningful evidence only in combination (e.g. cases where fact1 and fact2 must both be true to establish meaningful evidence for a claim). Finally, they help us to assess four key dimensions of evidence: quantity, quality, diversity, and concordance of evidence. This is critical to support the use of algorithms to  computationally evaluate and compare claims by operating on these four dimensions of evidence. 
 
-The use of Evidence Lines in practice is best understood by exploring the Example Data page here.
+The use of Evidence Lines in practice is best understood by exploring the Example Data page [here](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Data-Examples).
 
 ### V. References
 
@@ -69,3 +71,4 @@ The following **Wiki pages** provide additional information about the SEPIO onto
 1. [Real Data Examples](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Real-Data-Examples)
 2. [Use Cases and Requirements](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Use-Cases-and-Requirements)
 3. [Evidence Lines](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Ontological-Committments)
+4. [Community Collaborations](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Community-Collaborations)
