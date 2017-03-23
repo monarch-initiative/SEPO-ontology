@@ -45,7 +45,7 @@ This relationship groups individual evidence information into discrete arguments
 
 ### III. SEPIO Conceptual Model  
 
-![]( )
+![](https://github.com/monarch-initiative/SEPIO-ontology/blob/master/docs/Wiki%20Docs/SEPIO-Model-Wiki.jpg)
 
 **Figure 1** above shows the high-level conceptual model implemented by SEPIO, including relationships between the core informational concepts (outlined in blue), and concepts that describe the provenance of these artifacts (outlined in green). An `Assertion` is made by a particular `Agent` on a particular occasion, often following rules specified in some `Assertion Method`.  Assertions can be supported by one or  many `Evidence Lines`, each of which may be comprised of one or many pieces of supporting `Information` (i.e. evidence). SEPIO distinguishes here between more foundational `Research Data`, and higher-order `Assertions` inferred from such data.  In cases where an Assertion is used as evidence  for another Assertion, the model can be extended to describe the evidence used by the supporting Assertion. This can occur arbitrarily many times to create a network of claims connnected through descriptions of how they are used as evidence for each other.
 
