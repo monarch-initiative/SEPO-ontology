@@ -11,9 +11,7 @@ SEPIO development is driven primarily by the need to represent and integrate div
  
 ### II. Core Concepts
 
-The core of the SEPIO model is set of related informational entities representing **assertions**, **evidence lines**, and **evidence (supporting information)**.  These concepts are commonly referenced, implicitly or explicitly, across various formal models related to evidence and provenance for scientific claims [1,2,3,4], and are rooted in philosophical accounts of reasoning, argument, and discourse. Around these concepts, SEPIO provides a minimal but extensible model of process and process participants that are necessary to address its driving use cases and requirements (Figure 1 below). 
-
-Definitions and examples of the core concepts in the SEPIO model. Figure 1gives a high-level view of the relationships SEPIO defines between these concepts.
+The core of the SEPIO model is set of related informational entities representing **assertions**, **evidence lines**, and **evidence (supporting information)**.  These concepts are commonly referenced, implicitly or explicitly, across various formal models related to evidence and provenance for scientific claims [1,2,3,4], and are rooted in philosophical accounts of reasoning, argument, and discourse. Around these concepts, SEPIO provides a minimal but extensible model of process and process participants that are necessary to address its driving use cases and requirements (**Figure 1** below). 
 
 -----
 
