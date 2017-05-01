@@ -66,7 +66,7 @@ The use of Evidence Lines in practice is best understood by exploring the Exampl
 4. **The Evidence Code Ontology (ECO)**: Chibucos, Marcus C., et al. "Standardized description of scientific evidence using the Evidence Ontology (ECO)." Database 2014 (2014)
 
 The following **Wiki pages** provide additional information about the SEPIO ontology and its support for structuring evidence and provenance metadata around scientific claims. 
-1. [Real Data Examples](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Real-Data-Examples)
+1. [Real Data Examples](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Data-Examples)
 2. [Use Cases and Requirements](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Use-Cases-and-Requirements)
-3. [Evidence Lines](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Ontological-Committments)
+3. [Evidence Lines](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Evidence-Lines)
 4. [Community Collaborations](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Community-Collaborations)
