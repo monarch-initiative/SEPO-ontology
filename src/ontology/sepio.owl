@@ -272,7 +272,7 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002614">
         <obo:IAO_0000115>A relationship between a piece of evidence and an entity that plays a role in supporting that evidence.</obo:IAO_0000115>
-        <obo:IAO_0000116>Consider RO_0002614 ! is evidence with support from (but this relation may be more broad than we intent, as it can also point to material resources)</obo:IAO_0000116>
+        <obo:IAO_0000116>Consider RO_0002614 ! is evidence with support from (but this relation may be more broad than we intend, as it can also point to material resources)</obo:IAO_0000116>
         <obo:IAO_0000118>is_evidence_with_support_from</obo:IAO_0000118>
         <rdfs:label xml:lang="en">is_evidence_supported_by</rdfs:label>
     </owl:ObjectProperty>
@@ -643,8 +643,7 @@ Consider: http://semanticscience.org/resource/SIO_000209 ! &apos;is disputing ev
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000084">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002614"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000118>is_evidence_supported_by_data</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">has_supporting_data</rdfs:label>
+        <rdfs:label xml:lang="en">has_supporting_information</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -699,18 +698,14 @@ Consider: http://semanticscience.org/resource/SIO_000209 ! &apos;is disputing ev
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000100"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000100"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015"/>
-        </owl:propertyChainAxiom>
+        <obo:IAO_0000116>Previosly implemented  property chains: 
+
+is_asserted_in o strongly_contradicts o asserts -&gt; strongly_contradicts
+asserts o strongly_contradicts o is_asserted_in -&gt; strongly_contradicts
+
+But these broke reasoner - &quot;the given hierarchy is not regular&quot; error message&quot;.  Apparently breaks rule that &quot;in property chains of 3 or larger, the inner property must not also appear as the composite property&quot;. (https://arxiv.org/pdf/1212.2902.pdf)</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">has_contradicting_proposition</obo:IAO_0000118>
-        <rdfs:comment>Relation between two propositions s that make opposing claims (e.g. proposition1 holds that variant1 is pathogenic for disease1, and proposition2 holds that variant1 is benign for disease1).</rdfs:comment>
+        <rdfs:comment>Relation between two propositions that make opposing claims (e.g. proposition1 holds that variant1 is pathogenic for disease1, and proposition2 holds that variant1 is benign for disease1).</rdfs:comment>
         <rdfs:label xml:lang="en">strongly_contradicts</rdfs:label>
     </owl:ObjectProperty>
     
@@ -758,7 +753,7 @@ Process provenance: &quot;The execution history of computer processes which were
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000115>Relationship between an assertion or proposition and an information resource in which it is expressed (e.g. a publication, report, or database record).</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">is_expressed_in_resource</rdfs:label>
+        <rdfs:label xml:lang="en">is_expressed_in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -784,6 +779,7 @@ Process provenance: &quot;The execution history of computer processes which were
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000111 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000111">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000086"/>
         <obo:IAO_0000118 xml:lang="en">is_inferred_from</obo:IAO_0000118>
         <rdfs:label>is_assertion_supported_by_evidence</rdfs:label>
     </owl:ObjectProperty>
@@ -888,6 +884,14 @@ Process provenance: &quot;The execution history of computer processes which were
         <obo:IAO_0000115>A relation describing the degree of support provided by an evidence line for a target assertion or proposition.</obo:IAO_0000115>
         <rdfs:comment>The range for this relation is a term from a value partition that enumerates categorical degrees of strength.  Different systems can define terms representing the levels of strength they which to define for their use case.</rdfs:comment>
         <rdfs:label xml:lang="en">evidence_has_strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000140 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000140">
+        <rdfs:label xml:lang="en">evidence_assessed_by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1112,6 +1116,14 @@ Definition: Date on which the resource was changed.</obo:SEPIO_0000052>
         <obo:IAO_0000115>A relation holding between an assertion and the date on which it was asserted.</obo:IAO_0000115>
         <obo:IAO_0000116>SEPIO creates a relation separate from existing PAV and PROV relations which are too specific about whether a relation refers to the date on which the abstract information content was created, or when it was serialized and documented in a concrete format.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">asserted_on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000141 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000141">
+        <rdfs:label xml:lang="en">evidence_assessed_on</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2118,6 +2130,7 @@ Note that publications and reports are considered separately from supporting dat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000067">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000066"/>
+        <obo:IAO_0000115>Formal study with multiple patients</obo:IAO_0000115>
         <rdfs:label xml:lang="en">clinical study</rdfs:label>
     </owl:Class>
     
@@ -2393,6 +2406,16 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:IAO_0000115>A quality inhereing in a line of evidence in virtue of the degree of support an agent beleives it to provide for a target assertion or proposition.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">evidence strength</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000143 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000143">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000004"/>
+        <obo:IAO_0000115>observation or  finding based on single patent</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">case report</rdfs:label>
     </owl:Class>
     
 
