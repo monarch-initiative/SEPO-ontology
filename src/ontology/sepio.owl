@@ -896,6 +896,29 @@ Process provenance: &quot;The execution history of computer processes which were
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000144 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000144">
+        <obo:IAO_0000115>A relation used to indicate context in which a particular assertion or proposition applies.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has_qualifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000145 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000145">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000124"/>
+        </owl:propertyChainAxiom>
+        <obo:IAO_0000115>A relation used to link an assertion or proposition to publications where evidence was found.</obo:IAO_0000115>
+        <rdfs:comment>This is a shortcut relation to be used when  publications are referenced as providing support for an assertion, but it is not clear how many evidence lines  are described across these publications.  In such cases, discrete evidence lines cannot be created, and the has_evidence_source relation is used  to directly link the assertion to publications providing some form of evidence information.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_evidence_source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source">

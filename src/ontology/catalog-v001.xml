@@ -4,10 +4,10 @@
     <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl" uri="imports/ontology-metadata.owl"/>
     <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl" uri="mireots/bfo.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1493654780983" name="http://purl.obolibrary.org/obo/bfo.owl" uri="mireots/bfo.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1493654780983" name="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl" uri="imports/ontology-metadata.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1493654780983" name="http://purl.obolibrary.org/obo/sepio.owl" uri="sepio.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1493654780983" name="http://purl.obolibrary.org/obo/sepo-merged.owl" uri="sepio-merged.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1493654780983" name="http://purl.obolibrary.org/obo/sepo_developer.owl" uri="sepio_developer.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1493673303360" name="http://purl.obolibrary.org/obo/bfo.owl" uri="mireots/bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1493673303360" name="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl" uri="imports/ontology-metadata.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1493673303360" name="http://purl.obolibrary.org/obo/sepio.owl" uri="sepio.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1493673303360" name="http://purl.obolibrary.org/obo/sepo-merged.owl" uri="sepio-merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1493673303360" name="http://purl.obolibrary.org/obo/sepo_developer.owl" uri="sepio_developer.owl"/>
     </group>
 </catalog>
