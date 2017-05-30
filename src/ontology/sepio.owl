@@ -285,13 +285,12 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000031"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>Relationship between a proposition and information interpreted as evidence toward evaluating its validity.</obo:IAO_0000115>
+        <obo:IAO_0000115>Relationship between an assertion or proposition and an evidence line used in evaluating its validity.</obo:IAO_0000115>
         <obo:IAO_0000116>Consider re-use of http://purl.obolibrary.org/obo/RO_0002558 ! &apos;has evidence&apos;.
 Definition = &quot;x has evidence y iff , x is  an information content entity, material entity or process, and y supports either the existence of x, or the truth value of x.&quot;
 
 See  also http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000118>is_proposition_with_evidence</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">has_evidence</rdfs:label>
+        <rdfs:label xml:lang="en">has_evidence_line</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -309,7 +308,7 @@ See  also http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&ap
         <obo:IAO_0000116>Mapping to related terms: 
 
 Consider: http://semanticscience.org/resource/SIO_000206 ! &apos;is supported by&apos;</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">has_supporting_evidence</rdfs:label>
+        <rdfs:label xml:lang="en">has_supporting_evidence_line</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -328,7 +327,8 @@ Consider: http://semanticscience.org/resource/SIO_000206 ! &apos;is supported by
 
 Consider: http://semanticscience.org/resource/SIO_000774 ! &apos;is refuted by&apos;</obo:IAO_0000116>
         <obo:IAO_0000118>has_conflicting_evidence</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">has_refuting_evidence</rdfs:label>
+        <obo:IAO_0000118>has_refuting_evidence_line</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has_disputing_evidence_line</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -347,7 +347,7 @@ Consider: http://semanticscience.org/resource/SIO_000774 ! &apos;is refuted by&a
 
 Consider: http://semanticscience.org/resource/SIO_000207 ! &apos;is disputed by&apos;</obo:IAO_0000116>
         <rdfs:comment>A relation between a proposition and information that does not conclusively support or contradict its validity, based on evaluation of some agent.</rdfs:comment>
-        <rdfs:label xml:lang="en">has_inconclusive_evidence</rdfs:label>
+        <rdfs:label xml:lang="en">has_inconclusive_evidence_line</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -419,6 +419,7 @@ Definition = &quot;actively participates in y if and only if x participates in y
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000018 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000018">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000150"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002353"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000017"/>
@@ -613,6 +614,7 @@ Consider: http://semanticscience.org/resource/SIO_000209 ! &apos;is disputing ev
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000046">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
+        <obo:IAO_0000116>Consider RO:0000087 ! has_role.  However, this property is defined as a relation between an independent continuant and a role.  In BFO, dependent continuants (such as information) cannot bear roles.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">has_role</rdfs:label>
     </owl:ObjectProperty>
     
@@ -891,7 +893,9 @@ Process provenance: &quot;The execution history of computer processes which were
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000140 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000140">
-        <rdfs:label xml:lang="en">evidence_assessed_by</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000150"/>
+        <obo:IAO_0000118>evaluated_by</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">assessed_by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -912,9 +916,47 @@ Process provenance: &quot;The execution history of computer processes which were
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000124"/>
         </owl:propertyChainAxiom>
-        <obo:IAO_0000115>A relation used to link an assertion or proposition to publications where evidence was found.</obo:IAO_0000115>
-        <rdfs:comment>This is a shortcut relation to be used when  publications are referenced as providing support for an assertion, but it is not clear how many evidence lines  are described across these publications.  In such cases, discrete evidence lines cannot be created, and the has_evidence_source relation is used  to directly link the assertion to publications providing some form of evidence information.</rdfs:comment>
-        <rdfs:label xml:lang="en">has_evidence_source</rdfs:label>
+        <obo:IAO_0000115>A relation used to link an assertion or proposition to publications where evidence for it was found.</obo:IAO_0000115>
+        <rdfs:comment>This is a shortcut relation to be used when  publications are referenced as providing support for an assertion, but it is not clear how many evidence lines  are described across these publications.  In such cases, discrete evidence lines cannot be created, and the has_evidence_from_source relation is used to directly link the assertion to publications providing some form of evidence information.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_evidence_from_source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000146 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000146">
+        <obo:IAO_0000115>A relation used to link an assertion or proposition directly to some indicator of the strength of the evidence supporting it.</obo:IAO_0000115>
+        <rdfs:comment>This is shortcut relation to link an assertion or proposition directly to some indicator of the strength of the evidence supporting it. It is used when there is not enough information to create evidence line(s) for the assertion, but the source provides some indication of the strength of the evidence supporting it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_evidence_with_strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000150 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000150">
+        <obo:IAO_0000115>A relation between an entity and an agent who made a contribution to its original creation, or to its subsequent modification, transformation, or assessment.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has_contributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000151 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000151">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000140"/>
+        <obo:IAO_0000118>validated_by</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">validity_assessed_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000152 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000152">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000140"/>
+        <rdfs:label xml:lang="en">strength_assessed_by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -962,6 +1004,7 @@ Process provenance: &quot;The execution history of computer processes which were
     <!-- http://purl.org/pav/curatedBy -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/pav/curatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000150"/>
         <obo:IAO_0000115>Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation.
 
 The curator may be different from the author (pav:authoredBy) and creator of the digital resource (pav:createdBy).
@@ -2443,6 +2486,88 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000148 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label xml:lang="en">evidence  role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000149 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000149">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000046"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000148"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000118>evidence</obo:IAO_0000118>
+        <obo:IAO_0000118>evidence information</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">evidence item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000153 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000153">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
+        <rdfs:label xml:lang="en">creator role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000154">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
+        <rdfs:label xml:lang="en">assessor role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000155 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000155">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000154"/>
+        <rdfs:label xml:lang="en">validator role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000156 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000156">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
+        <rdfs:label xml:lang="en">curator role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000157 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000157">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000046"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">software agent</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/STATO_0000030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000030">
@@ -2812,6 +2937,21 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <obo:IAO_0000115>The number of elements of a finite set of objects.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000046"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label>Agent</rdfs:label>
     </owl:Class>
     
 
