@@ -1,0 +1,1122 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio-vi.owl#"
+     xml:base="http://purl.obolibrary.org/obo/sepio-vi.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-vi.owl">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_alt_id -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_alt_id"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_created_by"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_creation_date"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_id -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_id"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_subset -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_subset"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_xref -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_xref"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000790 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000790">
+        <rdfs:label xml:lang="en">has_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000840 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000840">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0003303"/>
+        <rdfs:label xml:lang="en">pathogenic_for_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000841 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000841">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0003303"/>
+        <rdfs:label xml:lang="en">likely_pathogenic_for_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000842 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000842">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000790"/>
+        <obo:IAO_0000115>Relation between an entity and a condition (disease, phenotype) which it does not cause or contribute to.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">non-causal_for_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000843 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000843">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000842"/>
+        <rdfs:label xml:lang="en">benign_for_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000844 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000844">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000842"/>
+        <rdfs:label xml:lang="en">likely_benign_for_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000845 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000845">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000790"/>
+        <rdfs:label xml:lang="en">has_uncertain_significance_for_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0003302 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003302">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000790"/>
+        <obo:IAO_0000112>The genetic variant &apos;NM_007294.3(BRCA1):c.110C&gt;A (p.Thr37Lys)&apos; casues or contributes to the disease  &apos;familial breast-ovarian cancer&apos;.
+
+An environment of exposure to arsenic causes or contributes to the phenotype of patchy skin hyperpigmentation, and the disease &apos;skin cancer&apos;.</obo:IAO_0000112>
+        <obo:IAO_0000115>A relationship between an entity (a genotype, genetic variation or environment) and a condition (a phenotype or disease) where the entity has some causal or contributing role that influences the condition.</obo:IAO_0000115>
+        <obo:IAO_0000116>Note that relationships of phenotypes to organisms/strains that bear them, or diseases they are manifest in, should continue to use RO:0002200 ! &apos;has phenotype&apos; and RO:0002201 ! &apos;phenotype of&apos;.</obo:IAO_0000116>
+        <rdfs:comment>Genetic variations can span any level of granularity from a full genome or genotype to an individual gene  or sequence alteration.  These variations can be represented at the physical level (DNA/RNA macromolecules or their parts, as in the ChEBI ontology and Molecular Sequence Ontology) or at the abstract level (generically dependent continuant sequence features that are carried by these macromolecules, as in the Sequence Ontology and Genotype Ontology).  The causal relations in this hierarchy can be used in linking either physical or abstract genetic variations to phenotypes or diseases they cause or contribute to.
+
+Environments include natural environments or exposures, experimentally applied conditions, or clinical interventions.</rdfs:comment>
+        <rdfs:label xml:lang="en">causes or contributes to condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0003303 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003303">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0003302"/>
+        <obo:IAO_0000115>A relationship between an entity (a genotype, genetic variation or environment) and a condition (a phenotype or disease) where the entity has a causal role for the condition.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">causes condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datamodel.clinicalgenome.org/terms/E14 -->
+
+    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E14">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label>mendelian condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datamodel.clinicalgenome.org/terms/MendCond074 -->
+
+    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/MendCond074">
+        <rdfs:subClassOf rdf:resource="http://datamodel.clinicalgenome.org/terms/E14"/>
+        <rdfs:label>arrhythmogenic right ventricular cardiomyopathy, Autosomal Dominant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datamodel.clinicalgenome.org/valueset/vs011met -->
+
+    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/valueset/vs011met">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100005"/>
+        <rdfs:label>met</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datamodel.clinicalgenome.org/valueset/vs011notmet -->
+
+    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/valueset/vs011notmet">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100005"/>
+        <rdfs:label>not met</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datamodel.clinicalgenome.org/valueset/vs017 -->
+
+    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/valueset/vs017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
+        <rdfs:label>ClinGen evidence strength</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datamodel.clinicalgenome.org/valueset/vs017none -->
+
+    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/valueset/vs017none">
+        <rdfs:subClassOf rdf:resource="http://datamodel.clinicalgenome.org/valueset/vs017"/>
+        <rdfs:label>none</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datamodel.clinicalgenome.org/valueset/vs017pm -->
+
+    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/valueset/vs017pm">
+        <rdfs:subClassOf rdf:resource="http://datamodel.clinicalgenome.org/valueset/vs017"/>
+        <obo:IAO_0000116>CG-evidence-strength:pm</obo:IAO_0000116>
+        <rdfs:label>pathogenic moderate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datamodel.clinicalgenome.org/valueset/vs017pvs -->
+
+    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/valueset/vs017pvs">
+        <rdfs:subClassOf rdf:resource="http://datamodel.clinicalgenome.org/valueset/vs017"/>
+        <obo:IAO_0000116>CG-evidence-strength:pvs</obo:IAO_0000116>
+        <rdfs:label>pathogenic very strong</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000115>A disease is a disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
+        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/OGMS_0000031
+http://www.ebi.ac.uk/efo/EFO_0000408
+http://semanticscience.org/resource/SIO_010299</obo:SEPIO_0000052>
+        <rdfs:label>disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000481"/>
+        <rdfs:label>variant allele</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000667"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <rdfs:label>gene trap insertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000481 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000481">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <rdfs:label xml:lang="en">genomic locus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000492 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000492">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115>A sequence alteration that is very rare allele in a population (typically &lt;1%), or an experimentally-induced variation that derives from a wild-type background locus for a given strain.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <rdfs:label xml:lang="en">mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000701 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000701">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label>sequence feature or collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label>Mode of inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000005"/>
+        <rdfs:label>Autosomal dominant inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000005"/>
+        <rdfs:label>Autosomal recessive inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <obo:IAO_0000115>An assertion about the pathogenicity of a sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
+        <obo:IAO_0000118>variant classification</obo:IAO_0000118>
+        <obo:IAO_0000118>variant pathogenicity interpretation</obo:IAO_0000118>
+        <obo:IAO_0000119>ClinGen DMWG. 
+http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html</obo:IAO_0000119>
+        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <rdfs:comment>Interpretations for pathogenic variants specify a condition (disease or phenotype) for which the conclusion was reached. However, if the variant is determined to be benign (e.g. in the case of a very common polymorphism), a specific condition may not be specified - indicating that the allele is benign for all conditions. If a condition is specified for a benign variant, then the interpretation is limited to that specific condition [text derived from ClinGen Variant Interpretation model].</rdfs:comment>
+        <rdfs:label xml:lang="en">variant interpretation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <obo:IAO_0000119>ClinGen DMWG. 
+http://datamodel.clinicalgenome.org/interpretation/master/tech/criterion_assessment.html</obo:IAO_0000119>
+        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <rdfs:comment>Variant interpretation guidelines often define specific &apos;criteria&apos; against which a variant is evaluated. Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
+
+Consider the &quot;PM2&quot; criterion defined by the ACMG Guidelines, which is based on the frequency of a variant in control populations. It is satisfied if a variant is absent or at exceedingly low frequencies in population databases, in which case &apos;Moderate&apos; evidence is provided for the pathogenicity of the variant. Conversely, the &quot;BS2&quot; criterion is satisfied if a variant is found at a frequency above what is expected given disease penetrance, and offers &apos;Strong&apos; evidence that the variant is Benign.
+
+A &apos;criterion assessment&apos; represents the conclusion drawn by evaluating evidence as specified by a particular &apos;criterion&apos;.  For example, the concluding assertion that &quot;the frequency of variant x in control populations is inconsistent with it being pathogenic&quot;.
+
+Note that while a single type of evidence is used in making a particular &apos;criterion assessment&apos;, several distinct evidence lines of this type may be evaluated - e.g.  independent studies of a variant&apos;s prevalence in different populations may provide separate lines of evidence that are all of the same type (&apos;variant frequency evidence&apos;).  
+
+Ultimately, one or more &apos;criterion assessments&apos;, each of which represents a conclusion about whether a defined criteria is satisfied, are evaluated together to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">criterion assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">variant interpretation criterion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">variant interpretation guideline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
+        <rdfs:label xml:lang="en">criterion assessment outcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000701"/>
+        <rdfs:label>sequence feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000159 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000159">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The point at which one or more contiguous nucleotides were excised.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deleted_sequence</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleotide deletion</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleotide_deletion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_alt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000033</obo:IAO_alt_id>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000159</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <obo:IAO_xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Nucleotide_deletion</obo:IAO_xref>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deletion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A region of nucleotide sequence that has translocated to a new position.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transchr</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">translocated sequence</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000199</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">translocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000207 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000207">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000248"/>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SSLP</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple sequence length polymorphism</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple sequence length variation</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000207</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple_sequence_length_variation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000002"/>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence length variation</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000248</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_length_variation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000667 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000667">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The sequence of one or more nucleotides added between two adjacent nucleotides in the sequence.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insertion</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleotide insertion</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleotide_insertion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_alt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000034</obo:IAO_alt_id>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000667</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000694 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000694">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNPs are single base pair positions in genomic DNA at which different sequence alternatives exist in normal individuals in some population(s), wherein the least frequent variant has an abundance of 1% or greater.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single nucleotide polymorphism</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000694</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000002"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A multiple nucleotide polymorphism with alleles of common length &gt; 1, for example AAA/TTT.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multiple nucleotide polymorphism</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001013</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MNP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variation that increases or decreases the copy number of a given region.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNP</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNV</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copy number polymorphism</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copy number variation</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001019</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <obo:IAO_xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Copy_number_variation</obo:IAO_xref>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copy_number_variation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000002"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence_alteration is a sequence_feature whose extent is the deviation from another sequence.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence variation</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_alt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000004</obo:IAO_alt_id>
+        <obo:IAO_alt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000007</obo:IAO_alt_id>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001059</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <rdfs:label>sequence_alteration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence_alteration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001218 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001218">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000667"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insertion that derives from another organism, via the use of recombinant DNA technology.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transgenic insertion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001218</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transgenic_insertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001483 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001483">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000002"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNVs are single base pair positions in genomic DNA at which different sequence alternatives exist.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single nucleotide variant</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kareneilbeck</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thu Oct 08 11:37:49 PDT 2009</obo:IAO_creation_date>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001483</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001742 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001742">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001019"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence alteration whereby the copy number of a given regions is greater than the reference sequence.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copy number gain</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gain</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kareneilbeck</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mon Feb 28 01:54:09 PST 2011</obo:IAO_creation_date>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001742</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copy_number_gain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001743 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001743">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001019"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence alteration whereby the copy number of a given region is less than the reference sequence.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copy number loss</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loss</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kareneilbeck</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mon Feb 28 01:55:02 PST 2011</obo:IAO_creation_date>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001743</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copy_number_loss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001744 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001744">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uniparental disomy is a sequence_alteration where a diploid individual receives two copies for all or part of a chromosome from one parent and no copies of the same chromosome or region from the other parent.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UPD</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uniparental disomy</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kareneilbeck</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mon Feb 28 02:01:05 PST 2011</obo:IAO_creation_date>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001744</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <obo:IAO_xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http:http\://en.wikipedia.org/wiki/Uniparental_disomy</obo:IAO_xref>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UPD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001745 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001745">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001744"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uniparental disomy is a sequence_alteration where a diploid individual receives two copies for all or part of a chromosome from the mother and no copies of the same chromosome or region from the father.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maternal uniparental disomy</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kareneilbeck</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mon Feb 28 02:03:01 PST 2011</obo:IAO_creation_date>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001745</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maternal_uniparental_disomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001746 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001746">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001744"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uniparental disomy is a sequence_alteration where a diploid individual receives two copies for all or part of a chromosome from the father and no copies of the same chromosome or region from the mother.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paternal uniparental disomy</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kareneilbeck</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mon Feb 28 02:03:30 PST 2011</obo:IAO_creation_date>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001746</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paternal_uniparental_disomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001784 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001784">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001785"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structural sequence alteration where there are multiple equally plausible explanations for the change.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kareneilbeck</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wed Mar 23 03:21:19 PDT 2011</obo:IAO_creation_date>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001784</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex_structural_alteration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001785 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001785">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kareneilbeck</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fri Mar 25 02:27:41 PDT 2011</obo:IAO_creation_date>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0001785</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">structural_alteration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any change in genomic DNA caused by a single event.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000002</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">substitution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000002"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When no simple or well defined DNA mutation event describes the observed DNA change, the keyword \&quot;complex\&quot; should be used. Usually there are multiple equally plausible explanations for the change.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex substitution</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000005</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex_substitution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000008">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single nucleotide change which has occurred at the same position of a corresponding nucleotide in a reference sequence.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">point mutation</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000008</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <obo:IAO_xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Point_mutation</obo:IAO_xref>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">point_mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001483"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Change of a pyrimidine nucleotide, C or T, into an other pyrimidine nucleotide, or change of a purine nucleotide, A or G, into an other purine nucleotide.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000009</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000009"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A substitution of a pyrimidine, C or T, for another pyrimidine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyrimidine transition</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000010</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyrimidine_transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000010"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transition of a cytidine to a thymine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C to T transition</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000011</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C_to_T_transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000011"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The transition of cytidine to thymine occurring at a pCpG site as a consequence of the spontaneous deamination of 5&apos;-methylcytidine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C to T transition at pCpG site</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000012</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C_to_T_transition_at_pCpG_site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000010"/>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T to C transition</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000013</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_to_C_transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000009"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A substitution of a purine, A or G, for another purine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purine transition</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000014</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purine_transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000014"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transition of an adenine to a guanine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A to G transition</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000015</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A_to_G_transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000014"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transition of a guanine to an adenine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G to A transition</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000016</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G_to_A_transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001483"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Change of a pyrimidine nucleotide, C or T, into a purine nucleotide, A or G, or vice versa.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000017</obo:IAO_id>
+        <obo:IAO_xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Transversion</obo:IAO_xref>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000017"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Change of a pyrimidine nucleotide, C or T, into a purine nucleotide, A or G.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyrimidine to purine transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000018</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyrimidine_to_purine_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000018"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transversion from cytidine to adenine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C to A transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000019</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C_to_A_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000018"/>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C to G transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000020</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C_to_G_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000018"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transversion from T to A.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T to A transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000021</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_to_A_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000018"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transversion from T to G.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T to G transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000022</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_to_G_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000017"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Change of a purine nucleotide, A or G , into a pyrimidine nucleotide C or T.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purine to pyrimidine transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000023</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purine_to_pyrimidine_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000023"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transversion from adenine to cytidine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A to C transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000024</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A_to_C_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000023"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transversion from adenine to thymine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A to T transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000025</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A_to_T_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000023"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transversion from guanine to cytidine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G to C transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000026</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G_to_C_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000023"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transversion from guanine to thymine.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G to T transversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000027</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G_to_T_transversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sequence alteration which included an insertion and a deletion, affecting 2 or more bases.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000032</obo:IAO_id>
+        <obo:IAO_xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Indel</obo:IAO_xref>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">indel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000667"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One or more nucleotides are added between two adjacent nucleotides in the sequence; the inserted sequence derives from, or is identical in sequence to, nucleotides adjacent to insertion point.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleotide duplication</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleotide_duplication</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000035</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duplication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A continuous nucleotide sequence is inverted in the same position.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversion</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000036</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000173"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A tandem duplication where the individual regions are in the same orientation.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">direct tandem duplication</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000039</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">direct_tandem_duplication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000173"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A tandem duplication where the individual regions are not in the same orientation.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inverted tandem duplication</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mirror duplication</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000040</obo:IAO_id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inverted_tandem_duplication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000173 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000173">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000035"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A duplication consisting of 2 identical adjacent regions.</obo:IAO_0000115>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erverted</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tandem duplication</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
+        <obo:IAO_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:1000173</obo:IAO_id>
+        <obo:IAO_subset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBVAR</obo:IAO_subset>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tandem_duplication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.orpha.net/ORDO/Orphanet_247 -->
+
+    <owl:Class rdf:about="http://www.orpha.net/ORDO/Orphanet_247">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_4"/>
+        <rdfs:label>arrhythmogenic right ventricular cardiomyopathy</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

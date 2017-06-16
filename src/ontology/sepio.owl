@@ -169,29 +169,6 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">this blood coagulation has participant this blood clot</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this investigation has participant this investigator</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this process has participant this input material (or this output material)</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a relation between a process and a continuant, in which the continuant is somehow involved in the process</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">has participant</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002217 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002217">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115>x actively participates in y if and only if x participates in y and x realizes some active role</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000118>agent in</obo:IAO_0000118>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <rdfs:label xml:lang="en">x-actively participates in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -267,7 +244,6 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000006 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000006">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000031"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -291,7 +267,6 @@ See  also http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&ap
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000007">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000032"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000098"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000007"/>
@@ -309,7 +284,6 @@ Consider: http://semanticscience.org/resource/SIO_000206 ! &apos;is supported by
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000008">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000033"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000100"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000007"/>
@@ -329,7 +303,6 @@ Consider: http://semanticscience.org/resource/SIO_000774 ! &apos;is refuted by&a
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000009">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000034"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000098"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000009"/>
@@ -344,25 +317,6 @@ Consider: http://semanticscience.org/resource/SIO_000207 ! &apos;is disputed by&
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000011 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000011">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115>A relation between an artifact and any processual part of its lineage or history (i.e. any process that led to its creation, modification, or maintenance)</obo:IAO_0000115>
-        <obo:IAO_0000116>Property chains:
-
-is_asserted_in o x-has_provenance
-x-has_provenance o &apos;has part&apos;
-has_supporting_evidence_line o x-has_provenance
-&apos;has input&apos; o x-has_provenance</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">x-has_provenance</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000015 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000015">
@@ -373,15 +327,6 @@ has_supporting_evidence_line o x-has_provenance
 or
 http://purl.org/see/rdo#is_assertion_expressed_in</obo:SEPIO_0000052>
         <rdfs:label>is_asserted_in</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000016 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000016">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000086"/>
-        <rdfs:label xml:lang="en">ExploratoryProperty</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -422,42 +367,6 @@ The date the digital resource was created can be indicated with pav:createdOn.
 
 The location the agent was at when creating the digital resource can be made using pav:createdAt.</obo:SEPIO_0000052>
         <rdfs:label xml:lang="en">created_by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000019 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000019">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002353"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000024"/>
-        </owl:propertyChainAxiom>
-        <obo:SEPIO_0000052>http://purl.org/pav/createdAt</obo:SEPIO_0000052>
-        <rdfs:label xml:lang="en">x-created_at_location</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000022 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000022">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <obo:IAO_0000118>created_with</obo:IAO_0000118>
-        <obo:SEPIO_0000052>http://purl.org/pav/createdWith</obo:SEPIO_0000052>
-        <rdfs:label xml:lang="en">x-created_with_resource</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000024 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000024">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/BFO_0000066 ! &apos;occurs in&apos;</obo:SEPIO_0000052>
-        <rdfs:label xml:lang="en">x-occurs_at_location</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -507,62 +416,6 @@ Consider: http://purl.org/see/rdo#is_assertion_asserting</obo:SEPIO_0000052>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000031 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000031">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <obo:IAO_0000116>Dont think we need inverse for has_evidence_line - so junking for now.</obo:IAO_0000116>
-        <obo:SEPIO_0000052>http://semanticscience.org/resource/SIO_000773 ! &apos;is evidence for&apos;</obo:SEPIO_0000052>
-        <rdfs:label xml:lang="en">x-is_evidence_for</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000032 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000032">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000031"/>
-        <obo:IAO_0000116>Mapping to related terms: 
-
-Consider: http://semanticscience.org/resource/SIO_000208 ! &apos;is supporting evidence for&apos;</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">x-is_supporting_evidence_for</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000033 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000033">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000031"/>
-        <obo:IAO_0000116>Mapping to related terms: 
-
-Consider: http://semanticscience.org/resource/SIO_000775 ! &apos;is refuting evidence for&apos;</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">x-is_disputing_evidence_for</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000034 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000034">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000031"/>
-        <obo:IAO_0000116>Mapping to related terms: 
-
-Consider: http://semanticscience.org/resource/SIO_000209 ! &apos;is disputing evidence for&apos;</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">x-is_inconclusive_evidence_for</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000041 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000041">
@@ -579,16 +432,6 @@ Consider: http://semanticscience.org/resource/SIO_000209 ! &apos;is disputing ev
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000046">
         <obo:IAO_0000116>Consider RO:0000087 ! has_role.  However, this property is defined as a relation between an independent continuant and a role.  In BFO, dependent continuants (such as information) cannot bear roles.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">has_role</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000083 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000083">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <obo:IAO_0000116>Used for now to link an evidence line insance to its ECO type. In the future, if ECO defines their terms in such a way as to allow us to type evidence lines as instances of and ECO term, we can pursue this approahc.</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">x-has_evidence_type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -680,24 +523,6 @@ But these broke reasoner - &quot;the given hierarchy is not regular&quot; error 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000106 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000106">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>A relation between an artifact and any informational entity that was used in the process history leading to its creation (e.g. data it is derived from, protocols specifying its creation, data informing  its creation).</obo:IAO_0000115>
-        <obo:IAO_0000116>Distinction between &apos;data provenance&apos; and process provenance&apos; based on definitions here: http://www.yourdictionary.com/provenance.
-
-Data provenance: &quot;The copy history of a piece of data, or the intermediate pieces of data utilized to compute a final data element, as in a database record or web site&quot;
-
-Process provenance: &quot;The execution history of computer processes which were utilized to compute a final piece of data.&quot;</obo:IAO_0000116>
-        <obo:IAO_0000118>has_artifactual_provenance</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">x-has_information_provenance</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000108 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000108">
@@ -746,16 +571,6 @@ Process provenance: &quot;The execution history of computer processes which were
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000114 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000114">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <obo:IAO_0000115>A relation between a planned process and a parameter that it measures as part of an assay or observation.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">x-measures_parameter</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000115 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000115">
@@ -770,33 +585,6 @@ Process provenance: &quot;The execution history of computer processes which were
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000116">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000113"/>
         <rdfs:label xml:lang="en">aligns_with</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000117 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000117">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:label xml:lang="en">x-has_input_reagent</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000118 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000118">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:label xml:lang="en">x-has_input_device</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000119 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000119">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <rdfs:label xml:lang="en">x-has_input_specimen</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1107,6 +895,12 @@ Another example: I can access the page for tomorrow weather in Boston (http://ww
         <obo:IAO_0000115>Web address of the resource</obo:IAO_0000115>
         <rdfs:label xml:lang="en">has_url</rdfs:label>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057"/>
     
 
 
@@ -1512,16 +1306,6 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000300 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000300">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <obo:IAO_0000115>A textual entity is a part of a manifestation (FRBR sense), a generically dependent continuant whose concretizations are patterns of glyphs intended to be interpreted as words, formulas, etc.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">x-textual entity</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000308 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000308">
@@ -1668,27 +1452,10 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0000272 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000272">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <obo:IAO_0000111 xml:lang="en">protocol</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">PCR protocol, has objective specification, amplify DNA fragment of interest, and has action specification describes the amounts of experimental reagents used (e..g. buffers, dNTPS, enzyme), and the temperature and cycle time settings for running the PCR.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A plan specification which has sufficient level of detail and quantitative information to communicate it between investigation agents, so that different investigation agents will reliably be able to independently reproduce the process.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">OBI branch derived + wikipedia (http://en.wikipedia.org/wiki/Protocol_%28natural_sciences%29)</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:SEPIO_0000061>Possible parent for &apos;variant classification guideline&apos;</obo:SEPIO_0000061>
-        <rdfs:label xml:lang="en">x-protocol</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0000338 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000338">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000003"/>
         <obo:IAO_0000111 xml:lang="en">drawing a conclusion based on data</obo:IAO_0000111>
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concluding that a gene is upregulated in a tissue sample based on the band intensity in a western blot.  Concluding that a patient has a infection based on measurement of an elevated body temperature and reported headache. Concluding that there were problems in an investigation because data from PCR and microarray are conflicting. Concluding that &apos;defects in gene XYZ cause cancer due to improper DNA repair&apos; based on data from experiments in that study that gene XYZ is involved in DNA repair, and the conclusion of a previous study that cancer patients have an increased number of mutations in this gene. </obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1698,24 +1465,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bjoern Peters</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <obo:SEPIO_0000061>Possible parent for &apos;assertion process&apos;.</obo:SEPIO_0000061>
-        <rdfs:label xml:lang="en">x-drawing a conclusion based on data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000471 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000471">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">study design execution</obo:IAO_0000111>
-        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">injecting a mouse with PBS solution, weighing it, and recording the weight according to a study design.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a planned process that realizes the concretization of a study design</obo:IAO_0000115>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">removed axiom has_part some (assay or &apos;data transformation&apos;) per discussion on protocol application mailing list to improve reasoner performance. The axiom is still desired.</obo:IAO_0000116>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">branch derived</obo:IAO_0000119>
-        <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6/11/9: edited at workshop. Used to be: study design execution is a process with the objective to generate data according to a concretized study design. The execution of a study design is part of an investigation, and minimally consists of an assay or data transformation.</obo:IAO_0000232>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-study design execution</rdfs:label>
+        <rdfs:label xml:lang="en">drawing a conclusion based on data</rdfs:label>
     </owl:Class>
     
 
@@ -1737,7 +1487,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     <!-- http://purl.obolibrary.org/obo/OBI_0001909 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001909">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
         <obo:IAO_0000111>conclusion based on data</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115>An information content entity that is inferred from data.</obo:IAO_0000115>
@@ -1746,7 +1496,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <obo:IAO_0000119>Group:2013 Philly Workshop group</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <obo:SEPIO_0000061>Possible parent for &apos;assertion&apos;</obo:SEPIO_0000061>
-        <rdfs:label>x-conclusion based on data</rdfs:label>
+        <rdfs:label>conclusion based on data</rdfs:label>
     </owl:Class>
     
 
@@ -1933,16 +1683,6 @@ May be equivalent to http://purl.obolibrary.org/obo/ECO_0000217 ! assertion meth
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000013 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
-        <obo:SEPIO_0000061>Container for classes that we might use to add structure to the core SEPIO classes (ie. fit them into framework of existing ontologies by asserted them as subtyeps of these more general classes)</obo:SEPIO_0000061>
-        <rdfs:label xml:lang="en">ExploratoryClasses</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000037 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000037">
@@ -2034,30 +1774,6 @@ ECO Definition/Comment: An automatic assertion is based on computationally gener
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000060 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
-        <obo:IAO_0000112>The raw count data from the case-control study above, the calculated p-value as a measure of statistical significance, or a figure summarizing these data.</obo:IAO_0000112>
-        <obo:IAO_0000115>An information content entity that can be used as evidence to evaluate the truth of a proposition.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an organizational container to group of information entities that can be used as evdience in the evaluation of a proposition&apos;svalidity.</obo:IAO_0000116>
-        <obo:IAO_0000118>supporting information</obo:IAO_0000118>
-        <rdfs:comment>‘Data’ as used here is a broad term covering any information interpreted as evidence in evaluating a proposition.  This includes information entities that would not otherwise be considered as data based on thier provenance, but are so here becasue they are used as input &apos;data&apos; for an assertion process that interprets them to evaluate the validity of a proposition. Supporting data are created in some ‘data generation process’, and subsequently interpreted in an ‘assertion process’ that uses them as evidence to make an assertion about the truth of a proposition.
-
-Classes representing differnet types of supporting data are imported here from ontologies such as OBI, IAO, and STATO, and include:
- - measured data values
- - derived data values  such as statistical calculations and confidence measures
- - figures presenting or describing such data
- - author statements representing summaries or conclusiosn drawn from such data
- - established facts in a field of research
-
-Note that publications and reports are considered separately from supporting data, as a they *contain* information (data values, figures author statements) that can be used as supporting data. But on its own a publication or report is merely a proxy for this information.</rdfs:comment>
-        <rdfs:label>obsolete_supporting data</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000066 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000066">
@@ -2131,15 +1847,6 @@ Note that publications and reports are considered separately from supporting dat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000074">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000072"/>
         <rdfs:label xml:lang="en">in vivo study</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000075 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000075">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <rdfs:label xml:lang="en">x-ex vivo study</rdfs:label>
     </owl:Class>
     
 
@@ -2218,7 +1925,7 @@ Note that publications and reports are considered separately from supporting dat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000090">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <rdfs:comment>A hypothesis is an assertion that a particular proposition is true, whose validity is intended to be invesitgated through experimental methods.</rdfs:comment>
+        <rdfs:comment>A hypothesis is an assertion that a particular proposition is true, whose validity is intended to be investigated through experimental methods.</rdfs:comment>
         <rdfs:label xml:lang="en">hypothesis</rdfs:label>
     </owl:Class>
     
@@ -2231,24 +1938,6 @@ Note that publications and reports are considered separately from supporting dat
         <obo:IAO_0000115>A study based on analysis of data gathered from baseline studies of a 	population group of apparently unaffected individuals to assess allele frequencies</obo:IAO_0000115>
         <obo:IAO_0000119>ClinVar</obo:IAO_0000119>
         <rdfs:label xml:lang="en">reference population data study</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000110 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000110">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <rdfs:label xml:lang="en">x-experiment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000120 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000120">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <rdfs:label xml:lang="en">x-conclusion role</rdfs:label>
     </owl:Class>
     
 
@@ -2308,19 +1997,9 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000133 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000133">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <obo:IAO_0000115>A quality inhereing in a line of evidence in virtue of the degree of support an agent beleives it to provide for a target assertion or proposition.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
+        <obo:IAO_0000115>A quality inhering in a line of evidence in virtue of the degree of support an agent beleives it to provide for a target assertion or proposition.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">evidence strength</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000143 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000143">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <obo:IAO_0000115>observation or finding based on single patent</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">x-case report</rdfs:label>
     </owl:Class>
     
 
@@ -2359,10 +2038,21 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000148"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000112>The raw count data from the case-control study above, the calculated p-value as a measure of statistical significance, or a figure summarizing these data.</obo:IAO_0000112>
         <obo:IAO_0000118>evidence</obo:IAO_0000118>
         <obo:IAO_0000118>evidence information</obo:IAO_0000118>
         <obo:IAO_0000118>supporting data</obo:IAO_0000118>
         <obo:IAO_0000118>supporting information</obo:IAO_0000118>
+        <rdfs:comment>&apos;Evidence Item&apos; is a broad term covering any information interpreted as evidence in the act of making an assertion.  
+
+Classes representing differnet types of supporting data are imported here from ontologies such as OBI, IAO, and STATO, and include:
+ - measured data values
+ - derived data values  such as statistical calculations and confidence measures
+ - figures presenting or describing such data
+ - author statements representing summaries or conclusiosn drawn from such data
+ - established facts in a field of research
+
+Note that publications and reports are considered separately from &apos;evidence items&apos;, as a they *contain* information (data values, figures author statements) that can be used as evidence. But on its own a publication or report is merely a proxy for this information.</rdfs:comment>
         <rdfs:label xml:lang="en">evidence item</rdfs:label>
     </owl:Class>
     
@@ -2446,48 +2136,15 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000171 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000171">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <obo:IAO_0000115>An assertion about the pathogenicity of a sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
-        <obo:IAO_0000118>variant classification</obo:IAO_0000118>
-        <obo:IAO_0000118>variant pathogenicity interpretation</obo:IAO_0000118>
-        <obo:IAO_0000119>ClinGen DMWG. 
-http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html</obo:IAO_0000119>
-        <rdfs:comment>Interpretations for pathogenic variants specify a condition (disease or phenotype) for which the conclusion was reached. However, if the variant is determined to be benign (e.g. in the case of a very common polymorphism), a specific condition may not be specified - indicating that the allele is benign for all conditions. If a condition is specified for a benign variant, then the interpretation is limited to that specific condition [text derived from ClinGen Variant Interpretation model].</rdfs:comment>
-        <rdfs:label xml:lang="en">variant interpretation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000172 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000172">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <obo:IAO_0000119>ClinGen DMWG. 
-http://datamodel.clinicalgenome.org/interpretation/master/tech/criterion_assessment.html</obo:IAO_0000119>
-        <rdfs:comment>Variant interpretation guidelines often define specific &apos;criteria&apos; against which a variant is evaluated. Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
-
-Consider the &quot;PM2&quot; criterion defined by the ACMG Guidelines, which is based on the frequency of a variant in control populations. It is satisfied if a variant is absent or at exceedingly low frequencies in population databases, in which case &apos;Moderate&apos; evidence is provided for the pathogenicity of the variant. Conversely, the &quot;BS2&quot; criterion is satisfied if a variant is found at a frequency above what is expected given disease penetrance, and offers &apos;Strong&apos; evidence that the variant is Benign.
-
-A &apos;criterion assessment&apos; represents the conclusion drawn by evaluating evidence as specified by a particular &apos;criterion&apos;.  For example, the concluding assertion that &quot;the frequency of variant x in control populations is inconsistent with it being pathogenic&quot;.
-
-Note that while a single type of evidence is used in making a particular &apos;criterion assessment&apos;, several distinct evidence lines of this type may be evaluated - e.g.  independent studies of a variant&apos;s prevalence in different populations may provide separate lines of evidence that are all of the same type (&apos;variant frequency evidence&apos;).  
-
-Ultimately, one or more &apos;criterion assessments&apos;, each of which represents a conclusion about whether a defined criteria is satisfied, are evaluated together to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
-        <rdfs:label xml:lang="en">criterion assessment</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000173 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000173">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000175"/>
         <obo:IAO_0000115>An observtion made in the context of a scientific experiment or study, describing what an agent observed, what a device recorded, and/or what objective calculations were made in the course of this activity.</obo:IAO_0000115>
+        <obo:IAO_0000118>empirical finding</obo:IAO_0000118>
+        <obo:IAO_0000118>study outcome</obo:IAO_0000118>
         <rdfs:comment>An empirical finding is a statment that summarizes the observations made in a particular experiment or study. It reflects only what was observed, recorded, or calculated. As such, the scope of this statement is limited to the direct participants in the study. It only describes the instances observed or recorded in the study, but makes no broader inference or conclusion about types or classes to which these instances belong. It is therefore considered a matter of fact, rather than a propositional assertion that may or may not be true.  This does not mean that the observations were necessarily accurate or correct - only that they were indeed made in a particular study. For example, the finding that &quot;sequencing of DNA from patient X showed a mutation in gene Y&quot; is a matter of fact, even if the finding is an artifact of a failed sequence read, and the mutation does not exist.</rdfs:comment>
-        <rdfs:label xml:lang="en">empirical finding</rdfs:label>
+        <rdfs:label xml:lang="en">experimental finding</rdfs:label>
     </owl:Class>
     
 
@@ -2517,20 +2174,68 @@ The phrase &quot;the pink elephant&quot; describes an entity, but is not a state
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000176 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000179 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000176">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
-        <rdfs:label xml:lang="en">variant interpretation guideline</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000179">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">value set</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000177 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100001 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000177">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <obo:IAO_0000115>An assertion about the pathogenicity of a sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
+        <obo:IAO_0000118>variant classification</obo:IAO_0000118>
+        <obo:IAO_0000118>variant pathogenicity interpretation</obo:IAO_0000118>
+        <obo:IAO_0000119>ClinGen DMWG. 
+http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html</obo:IAO_0000119>
+        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <rdfs:comment>Interpretations for pathogenic variants specify a condition (disease or phenotype) for which the conclusion was reached. However, if the variant is determined to be benign (e.g. in the case of a very common polymorphism), a specific condition may not be specified - indicating that the allele is benign for all conditions. If a condition is specified for a benign variant, then the interpretation is limited to that specific condition [text derived from ClinGen Variant Interpretation model].</rdfs:comment>
+        <rdfs:label xml:lang="en">variant interpretation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <obo:IAO_0000119>ClinGen DMWG. 
+http://datamodel.clinicalgenome.org/interpretation/master/tech/criterion_assessment.html</obo:IAO_0000119>
+        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <rdfs:comment>Variant interpretation guidelines often define specific &apos;criteria&apos; against which a variant is evaluated. Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
+
+Consider the &quot;PM2&quot; criterion defined by the ACMG Guidelines, which is based on the frequency of a variant in control populations. It is satisfied if a variant is absent or at exceedingly low frequencies in population databases, in which case &apos;Moderate&apos; evidence is provided for the pathogenicity of the variant. Conversely, the &quot;BS2&quot; criterion is satisfied if a variant is found at a frequency above what is expected given disease penetrance, and offers &apos;Strong&apos; evidence that the variant is Benign.
+
+A &apos;criterion assessment&apos; represents the conclusion drawn by evaluating evidence as specified by a particular &apos;criterion&apos;.  For example, the concluding assertion that &quot;the frequency of variant x in control populations is inconsistent with it being pathogenic&quot;.
+
+Note that while a single type of evidence is used in making a particular &apos;criterion assessment&apos;, several distinct evidence lines of this type may be evaluated - e.g.  independent studies of a variant&apos;s prevalence in different populations may provide separate lines of evidence that are all of the same type (&apos;variant frequency evidence&apos;).  
+
+Ultimately, one or more &apos;criterion assessments&apos;, each of which represents a conclusion about whether a defined criteria is satisfied, are evaluated together to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">criterion assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">variant interpretation criterion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">variant interpretation guideline</rdfs:label>
     </owl:Class>
     
 
@@ -2951,7 +2656,7 @@ The phrase &quot;the pink elephant&quot; describes an entity, but is not a state
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:label>Agent(prov)</rdfs:label>
         <rdfs:label>An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</rdfs:label>
     </owl:Class>
@@ -2967,7 +2672,7 @@ The phrase &quot;the pink elephant&quot; describes an entity, but is not a state
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:comment>The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.</rdfs:comment>
         <rdfs:label>Agent(foaf)</rdfs:label>
     </owl:Class>
@@ -3050,6 +2755,28 @@ This concept is intentionally quite broad, covering informal and ad-hoc groups, 
         <rdfs:comment>https://submit.ncbi.nlm.nih.gov/ft/byid/soovr93u/mdi-5618_320494_counsyl_autosomal_dominant_disease_classification_criteria_(2015)_v1.pdf</rdfs:comment>
         <rdfs:label xml:lang="en">Counsyl Autosomal Dominant Disease Classification criteria (2015)</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
+        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
+        <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
+        <obo:IAO_0000115 xml:lang="en">a relation between a process and a continuant, in which the continuant is somehow involved in the process</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">this process has participant this input material (or this output material)</obo:IAO_0000112>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
+        <obo:IAO_0000112 xml:lang="en">this investigation has participant this investigator</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this blood coagulation has participant this blood clot</obo:IAO_0000112>
+        <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
