@@ -375,6 +375,14 @@ The location the agent was at when creating the digital resource can be made usi
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000026">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:comment>When a dataset attempts to formally capture Assertion semantics, this property can be used to indicate its subject (e.g. the first slot of an RDF triple that expresses the Assertion)</rdfs:comment>
         <rdfs:label xml:lang="en">has_subject</rdfs:label>
     </owl:ObjectProperty>
@@ -385,6 +393,14 @@ The location the agent was at when creating the digital resource can be made usi
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000027">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:comment>When a dataset attempts to formally capture Assertion semantics, this property can be used to indicate its object (e.g. the third slot of an RDF triple that expresses the Assertion)</rdfs:comment>
         <rdfs:label xml:lang="en">has_object</rdfs:label>
     </owl:ObjectProperty>
@@ -395,6 +411,14 @@ The location the agent was at when creating the digital resource can be made usi
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000028">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:comment>When a dataset attempts to formally capture Assertion semantics, this property can be used to indicate its predicate (e.g. the second slot of an RDF triple that expresses the Assertion)</rdfs:comment>
         <rdfs:label xml:lang="en">has_predicate</rdfs:label>
     </owl:ObjectProperty>
@@ -649,6 +673,14 @@ But these broke reasoner - &quot;the given hierarchy is not regular&quot; error 
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000144">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <obo:IAO_0000115>A relation used to indicate context in which a particular assertion or proposition applies.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">has_qualifier</rdfs:label>
     </owl:ObjectProperty>
@@ -761,7 +793,7 @@ Want to be able to support inferences such as:
         <obo:IAO_0000115>a relation between an assertion and a value that indicates the degree of confidence that the Proposition it puts forth is true.</obo:IAO_0000115>
         <obo:IAO_0000118>assertion_trust_rating</obo:IAO_0000118>
         <rdfs:comment>Different data sources often create their own scales or value sets to capture this concept.  e.g. CIViC &apos;Trust Ratings&apos; are based on a 5 star system.</rdfs:comment>
-        <rdfs:label xml:lang="en">assertion_confidence_level</rdfs:label>
+        <rdfs:label xml:lang="en">statement_confidence</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1998,8 +2030,8 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000133">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
-        <obo:IAO_0000115>A quality inhering in a line of evidence in virtue of the degree of support an agent beleives it to provide for a target assertion or proposition.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">evidence strength</rdfs:label>
+        <obo:IAO_0000115>A value indicating the degree of support an agent believes an evidence line to provide for a target assertion or proposition.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">evidence strength value</rdfs:label>
     </owl:Class>
     
 
@@ -2039,6 +2071,7 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112>The raw count data from the case-control study above, the calculated p-value as a measure of statistical significance, or a figure summarizing these data.</obo:IAO_0000112>
+        <obo:IAO_0000115>An information content entity that is used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
         <obo:IAO_0000118>evidence</obo:IAO_0000118>
         <obo:IAO_0000118>evidence information</obo:IAO_0000118>
         <obo:IAO_0000118>supporting data</obo:IAO_0000118>
@@ -2140,10 +2173,15 @@ Note that publications and reports are considered separately from &apos;evidence
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000173">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000175"/>
-        <obo:IAO_0000115>An observtion made in the context of a scientific experiment or study, describing what an agent observed, what a device recorded, and/or what objective calculations were made in the course of this activity.</obo:IAO_0000115>
+        <obo:IAO_0000112>&quot;Sequencing of DNA from patient X revealed an A-&gt;T mutation at position 2143 in gene Y&quot;.
+
+&quot;The frequency of variant X is 0.00015 in a cohort of non-finnish european subjects described in the ExAC dataset.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000115>An observtion made in the context of a scientific experiment or study, describing what an agent observed, what a device recorded, and/or what mathematical calculations were made in the course of the  study.</obo:IAO_0000115>
         <obo:IAO_0000118>empirical finding</obo:IAO_0000118>
         <obo:IAO_0000118>study outcome</obo:IAO_0000118>
-        <rdfs:comment>An empirical finding is a statment that summarizes the observations made in a particular experiment or study. It reflects only what was observed, recorded, or calculated. As such, the scope of this statement is limited to the direct participants in the study. It only describes the instances observed or recorded in the study, but makes no broader inference or conclusion about types or classes to which these instances belong. It is therefore considered a matter of fact, rather than a propositional assertion that may or may not be true.  This does not mean that the observations were necessarily accurate or correct - only that they were indeed made in a particular study. For example, the finding that &quot;sequencing of DNA from patient X showed a mutation in gene Y&quot; is a matter of fact, even if the finding is an artifact of a failed sequence read, and the mutation does not exist.</rdfs:comment>
+        <rdfs:comment>An experimental finding is a statement that summarizes the observations made in a particular experiment or study. It describes only what was observed, recorded, or calculated, and not more general conclusions that may have been inferred from such findings. As such, the scope of a &apos;finding&apos; is limited to the direct participants in the study - describing the instances observed or recorded in the study.  It makes no broader inference or conclusion about types or classes to which these instances belong. A finding is therefore considered as a matter of fact, rather than a propositional assertion that may or may not be true.  
+
+This does not mean that the observations were necessarily accurate or correct - only that they were indeed made in a particular study. For example, the finding that &quot;Sequencing of DNA from patient X revealed an A-&gt;T mutation at position 2143 in gene Y&quot; is a matter of fact, even if the finding is an artifact of an erroneous sequence read, or the sequencing coverage is so low that this finding may be wrong. Metadata about the finding, such as sequencing methods used, coverage or read depth, are recoded so users can judge for themselves whether the objectively reported finding accurtely reflects the biology it describes.</rdfs:comment>
         <rdfs:label xml:lang="en">experimental finding</rdfs:label>
     </owl:Class>
     
@@ -2177,8 +2215,71 @@ The phrase &quot;the pink elephant&quot; describes an entity, but is not a state
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000179 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000179">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="en">value set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000180 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000180">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000046"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000148"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A statement (ie an assertion or observation) that is used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
+        <rdfs:comment>Evidence Statements can be &apos;Findings&apos; that summarize data and outcomes from a particular study, or evidence-based &apos;Assertions&apos; that make a broader claim, as inferred from the evaluation of relevant Findings or previously made Assertions.</rdfs:comment>
+        <rdfs:label xml:lang="en">evidence statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000181 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000181">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000046"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000148"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A  data item that is used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
+        <obo:IAO_0000118>evidence datum</obo:IAO_0000118>
+        <rdfs:comment>&apos;Data items&apos; here can include actual data values or derived statistical calculations or scores (e.g. &quot;548.5 mg/dl blood glucose&quot;, or a &quot;1.3951e-24 p-value&quot;), data sets containing several such values and possibly metadata about them, or tables/figures that render such data for human consumption.</rdfs:comment>
+        <rdfs:label xml:lang="en">evidence data item</rdfs:label>
     </owl:Class>
     
 
@@ -2236,6 +2337,17 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
         <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">variant interpretation guideline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0100011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
+        <obo:IAO_0000115>A value indicating the degree to which the observation or proposition made in a statement is beleived to be true.</obo:IAO_0000115>
+        <obo:IAO_0000116>Consider subclasses for &apos;assertion confidence value&apos; and &apos;finding confidence value&apos;.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">statement confidence value</rdfs:label>
     </owl:Class>
     
 
