@@ -287,16 +287,6 @@ Process provenance: &quot;The execution history of computer processes which were
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000114 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000114">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000016"/>
-        <obo:IAO_0000115>A relation between a planned process and a parameter that it measures as part of an assay or observation.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">x-measures_parameter</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000117 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000117">
@@ -399,13 +389,36 @@ Process provenance: &quot;The execution history of computer processes which were
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000000 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000">
+        <obo:IAO_0000116>In the SEPIO model, an assertion is akin to an act in speech or text that expresses beleif in the truth of a proposition.  It is the proposition that represents the semantic content of a claim, and bears truth value. 
+
+Mappings to terms from related models: 
+1.  http://purl.org/see/rdo#proposition
+A SEPIO proposition is equivalent to a &apos;proposition&apos; from the Semantic EvidencE framework. &quot;The class rdo:proposition represents propositions i.e. the sharable objects of propositional attitudes like belief or desire and the bearers of truth values. As truth bearers they are either true or false. They are taken to represent the semantic content of sentences or larger lexical entities formulated in some natural or artificial language.&quot;)
+
+2. http://purl.org/mp/Holotype
+The notion of a holotype from the Micropublications model is related to a SPEIO proposition - in that it represents a statement that is selcted to all other statements expressing the same meaning.
+
+3. http://purl.org/oban/association
+An OBAN proposition is a more type of proposition, that is structured/expressed according to the specifications laid out in the OBAN ontology.</obo:IAO_0000116>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000001 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001">
+        <obo:SEPIO_0000052>Mappings to terms from related models: 
+
+1. http://purl.org/see/rdo#assertion
+A SEPIO:assertion is equivalent to an RDO &apos;assertion&apos; from the Semantic EvidencE Framework. http://purl.org/see/rdo#assertion = &quot;The class rdo:assertion represents particular claims made by particular agents on a particular occasion (e.g. as authors of a scientific article) that a particular proposition is true&quot;.
+
+2. http://purl.org/mp/Claim 
+A SEPIO:asseriton is similar if not equivalent to the notion of a &apos;Claim&apos; from the Micropublication Ontology model. http://purl.org/mp/Claim = &quot;the single principal Statement arguedBy a Micropublication&quot;
+
+3. http://purl.org/oban/provenance&quot;
+A SEPIO:assertion is related to the notion of &apos;&apos;provenance&apos; from the Open biomedical Annotaitons (OBAN) model. OBAN has limited documentation to clarify the precise semantics for this class, but it seems to represeent a single line of provenance inclusive of the assertion of an association from one source/agent, and its associted evidence information.</obo:SEPIO_0000052>
+    </owl:Class>
     
 
 
@@ -455,16 +468,6 @@ Process provenance: &quot;The execution history of computer processes which were
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000129 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000143 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000143">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
-        <obo:IAO_0000115>observation or finding based on single patent</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">x-case report</rdfs:label>
-    </owl:Class>
 </rdf:RDF>
 
 
