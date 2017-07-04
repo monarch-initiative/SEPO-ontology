@@ -11,7 +11,7 @@ SEPIO development is driven primarily by the need to represent and integrate div
  
 ### II. Core Concepts
 
-The core of the SEPIO model is an axis of informational entities representing **propositions**,  **assertions**, **evidence lines**, and the elemental pieces of inforamtion that serve as **evidence items**.  These concepts are commonly referenced, implicitly or explicitly, across various formal models related to evidence and provenance for scientific claims [1,2,3,4], and are rooted in philosophical accounts of reasoning, argument, and discourse. Around these concepts, SEPIO provides a minimal but extensible model of process and process participants that are necessary to address its driving use cases and requirements (**Figure 1** below). 
+The core of the SEPIO model is an axis of informational entities representing **propositions**,  **assertions**, **evidence lines**, and the elemental pieces of information that serve as **evidence items**.  These concepts are commonly referenced, implicitly or explicitly, across various formal models related to evidence and provenance for scientific claims [1,2,3,4], and are rooted in philosophical accounts of reasoning, argument, and discourse. Around these concepts, SEPIO provides a minimal but extensible model of process and process participants that are necessary to address its driving use cases and requirements (**Figure 1** below). 
 
 -----
 
