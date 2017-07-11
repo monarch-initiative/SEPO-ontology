@@ -255,7 +255,7 @@ Environments include natural environments or exposures, experimentally applied c
     <!-- http://datamodel.clinicalgenome.org/terms/vs016 -->
 
     <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/vs016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000187"/>
         <rdfs:label xml:lang="en">ClinGen mechanism confidence value</rdfs:label>
     </owl:Class>
     

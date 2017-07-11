@@ -900,7 +900,6 @@ Want to be able to support inferences such as:
 
     <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_object">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <rdfs:domain rdf:resource="http://purl.org/oban/association"/>
         <rdfs:label>association has object</rdfs:label>
     </owl:ObjectProperty>
     
@@ -910,7 +909,6 @@ Want to be able to support inferences such as:
 
     <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_predicate">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <rdfs:domain rdf:resource="http://purl.org/oban/association"/>
         <rdfs:comment>Propositional statements can be represented in RDF  as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called &apos;associations&apos;, and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.
 
 As a proposition-level entity, a particular association can be expressed in more than one assertion made by different agents, or at different times. The meaning of an assertion can be captured through its link to an association whose meaning is formally specified as described above (e.g. :assertion1 is_asserted_in :association1, :association1 has_predicate :thing1). 
@@ -927,7 +925,6 @@ This property is useful when a particular dataset wants to describe statements a
 
     <owl:ObjectProperty rdf:about="http://purl.org/oban/association_has_subject">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <rdfs:domain rdf:resource="http://purl.org/oban/association"/>
         <rdfs:label>association has subject</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1275,14 +1272,6 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
-        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    </rdf:Description>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000182 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000182">
@@ -1529,7 +1518,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000017"/>
@@ -1722,7 +1711,7 @@ From http://plato.stanford.edu/entries/propositions/: &quot;Propositions are the
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000130"/>
-                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1821,9 +1810,9 @@ May be equivalent to http://purl.obolibrary.org/obo/ECO_0000217 ! assertion meth
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A planned process that generates information which may be used as evidence in an assertion process to evaluate the validity of a claim.</obo:IAO_0000115>
+        <obo:IAO_0000115>A planned process executed in the performance of scientific research wherein systematic investigations are performed to establish facts and reach new conclusions about phenomena in the world.</obo:IAO_0000115>
         <rdfs:comment>Data generation process are typically experimental studies or observations, but can include any process generating information used to evaluate a claim.  This is an organizational class that groups more specific types of such processes that are most commonly used in generating data used as evidence to support claims. These processes produce informational artifacts such as measured  data values, derived statistical calculations and confidence measures, or statements representing summaries or conclusions drawn from such data.</rdfs:comment>
-        <rdfs:label xml:lang="en">data generation activity</rdfs:label>
+        <rdfs:label xml:lang="en">research activity</rdfs:label>
     </owl:Class>
     
 
@@ -2340,7 +2329,7 @@ The first two examples are not declarative sentences and therefore are not (or d
 &quot;A statement is a declarative sentence that bears truth value, in that it can be either true or false. This definition derives from the domain of logic, where a statement is either (a) a meaningful declarative sentence that is either true or false, or (b) that which a true or false declarative sentence asserts. In the latter case, a statement is distinct from a sentence in that a sentence is only one formulation of a statement, whereas there may be many other formulations expressing the same statement . . . In (this treatment), &quot;statement&quot; is introduced in order to distinguish a sentence from its informational content. A statement is regarded as the information content of an information-bearing sentence. Thus, a sentence is related to the statement it bears like a numeral to the number it refers to. Statements are abstract logical entities, while sentences are grammatical entities.&quot;
 ----
 Note that the definition in (b) describes the notion of a &apos;Proposition&apos; as defined in SEPIO, such that Propositions are classified as a type of Statement.</rdfs:comment>
-        <rdfs:comment>Statements declare a definitive or proposed matter of fact (i.e a an observation or finding that is unequivocably true, or an assertion that puts forth a proposition that may or may not be true.  They say something about the world or our experience of it that may or may not be true.  
+        <rdfs:comment>Statements declare a definitive or proposed fact (i.e a an observation or finding that is unequivocably true, or an assertion that puts forth a proposition that may or may not be true.  They say something about the world or our experience of it that may or may not be true.  
 
 The phrase &quot;the pink elephant&quot; describes an entity, but is not a &apos;statement&apos; as it has no truth value. By contrast, the phrase &quot;the pink elephant is in the room&quot; is a statement as this can be evaluated for its truth.</rdfs:comment>
         <rdfs:label xml:lang="en">statement</rdfs:label>
@@ -2459,72 +2448,28 @@ This distinction is important because the ultimate truth of observations or find
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100001 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000186 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <obo:IAO_0000115>An assertion about the pathogenicity of a sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
-        <obo:IAO_0000118>variant classification</obo:IAO_0000118>
-        <obo:IAO_0000118>variant pathogenicity interpretation</obo:IAO_0000118>
-        <obo:IAO_0000119>ClinGen DMWG. 
-http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html</obo:IAO_0000119>
-        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
-        <rdfs:comment>Interpretations for pathogenic variants specify a condition (disease or phenotype) for which the conclusion was reached. However, if the variant is determined to be benign (e.g. in the case of a very common polymorphism), a specific condition may not be specified - indicating that the allele is benign for all conditions. If a condition is specified for a benign variant, then the interpretation is limited to that specific condition [text derived from ClinGen Variant Interpretation model].</rdfs:comment>
-        <rdfs:label xml:lang="en">variant interpretation</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000186">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000070"/>
+        <obo:IAO_0000115>A study with the goal of assessing and documenting phenotypes exhibited by one or more patients.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">patient phenotyping study</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100002 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000187 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <obo:IAO_0000119>ClinGen DMWG. 
-http://datamodel.clinicalgenome.org/interpretation/master/tech/criterion_assessment.html</obo:IAO_0000119>
-        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
-        <rdfs:comment>Variant interpretation guidelines often define specific &apos;criteria&apos; against which a variant is evaluated. Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
-
-Consider the &quot;PM2&quot; criterion defined by the ACMG Guidelines, which is based on the frequency of a variant in control populations. It is satisfied if a variant is absent or at exceedingly low frequencies in population databases, in which case &apos;Moderate&apos; evidence is provided for the pathogenicity of the variant. Conversely, the &quot;BS2&quot; criterion is satisfied if a variant is found at a frequency above what is expected given disease penetrance, and offers &apos;Strong&apos; evidence that the variant is Benign.
-
-A &apos;criterion assessment&apos; represents the conclusion drawn by evaluating evidence as specified by a particular &apos;criterion&apos;.  For example, the concluding assertion that &quot;the frequency of variant x in control populations is inconsistent with it being pathogenic&quot;.
-
-Note that while a single type of evidence is used in making a particular &apos;criterion assessment&apos;, several distinct evidence lines of this type may be evaluated - e.g.  independent studies of a variant&apos;s prevalence in different populations may provide separate lines of evidence that are all of the same type (&apos;variant frequency evidence&apos;).  
-
-Ultimately, one or more &apos;criterion assessments&apos;, each of which represents a conclusion about whether a defined criteria is satisfied, are evaluated together to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
-        <rdfs:label xml:lang="en">criterion assessment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
-        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">variant interpretation criterion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100004 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100004">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
-        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">variant interpretation guideline</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100011">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000187">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
         <obo:IAO_0000115>A value indicating the degree to which the observation or proposition made in a statement is beleived to be true.</obo:IAO_0000115>
         <obo:IAO_0000116>Consider subclasses for &apos;assertion confidence value&apos; and &apos;finding confidence value&apos;.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">statement confidence value</rdfs:label>
     </owl:Class>
     
+
+
+  
 
 
     <!-- http://purl.obolibrary.org/obo/STATO_0000030 -->
@@ -2891,20 +2836,14 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     
 
 
-    <!-- http://purl.obolibrary.org/obo/http://purl.org/oban/association -->
+    <!-- http://purl.org/oban/association -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.org/oban/association">
+    <owl:Class rdf:about="http://purl.org/oban/association">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <obo:IAO_0000115>Associations are a form of proposition, framed as a tuple linking two (or more) entities through defined relationships.</obo:IAO_0000115>
         <obo:IAO_0000118>annotation</obo:IAO_0000118>
         <rdfs:label xml:lang="en">association</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.org/oban/association -->
-
-    <owl:Class rdf:about="http://purl.org/oban/association"/>
     
 
 
@@ -2941,7 +2880,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <!-- http://www.w3.org/ns/prov#Activity -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
@@ -2955,7 +2894,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</obo:IAO_0000115>
-        <rdfs:label>Activity(prov)</rdfs:label>
+        <rdfs:label>Activity</rdfs:label>
     </owl:Class>
     
 
@@ -2963,7 +2902,6 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <!-- http://www.w3.org/ns/prov#Agent -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
-        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000046"/>
@@ -2971,24 +2909,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <rdfs:label>Agent(prov)</rdfs:label>
-        <rdfs:label>An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/Agent -->
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000046"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <rdfs:comment>The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.</rdfs:comment>
-        <rdfs:label>Agent(foaf)</rdfs:label>
+        <obo:IAO_0000115>An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</obo:IAO_0000115>
+        <rdfs:comment>prov:Agent is considered equivalent to foaf:Agent (http://xmlns.com/foaf/0.1/Agent ) Def = The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.&quot;</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
     </owl:Class>
     
 
