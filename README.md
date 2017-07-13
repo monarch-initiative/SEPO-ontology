@@ -1,71 +1,63 @@
-# SEPIO-ontology
-
-THE SEPIO ONTOLOGY IS IN ITS EARLY STAGES OF DEVLEOPMENT, UNDERGOING ITERATIVE REFINEMENT AS NEW REQUIREMENTS EMERGE AND ALIGNMENT WITH EXISTING STANDARDS IS EXPLORED.  WE WELCOME ANY FEEDBACK YOU MAY HAVE IN THE FORM OF USE CASES, EXEMPLAR DATA, OR REQUIREMENTS. PLEASE SUBMIT TO OUR TRACKER [HERE](https://github.com/monarch-initiative/SEPIO-ontology/issues).  
-
------
-
-### I. Overview
-The **Scientific Evidence and Provenance Information Ontology (SEPIO)** was developed to support description and evaluation of evidence and provenance information for scientific assertions (aka 'claims'). **Evidence** is defined as information as used to evaluate the validity of a particular proposition. **Provenance** information describes the process history leading to a proposition being put forth as true in an assertion, including processes generating information used as evidence, the act of interpreting this evidence information in support of the assertion, and any entities that participated in these activities. Together, evidence and provenance information can explain why one would believe my particular proposition to be true or not, and how confident one can be in its validity. 
- 
-SEPIO development is driven primarily by the need to represent and integrate diverse evidence and provenance metadata that is provided for   claims made in scientific  publications and curated knowledgebases. The SEPIO model is structured to facilitate critical evaluation of such claims based on diverse aspects of evidence and provenance, and ultimately help us to understand how we know the things we do, why we don’t know the things we don’t, and what type of evidence is needed to firmly establish claims as scientific fact.
- 
-### II. Core Concepts
-
-The core of the SEPIO model is an axis of informational entities representing **propositions**,  **assertions**, **evidence lines**, and the elemental pieces of information that serve as **evidence items**.  These concepts are commonly referenced, implicitly or explicitly, across various formal models related to evidence and provenance for scientific claims [1,2,3,4], and are rooted in philosophical accounts of reasoning, argument, and discourse. Around these concepts, SEPIO provides a minimal but extensible model of process and process participants that are necessary to address its driving use cases and requirements (**Figure 1** below). 
-
------
-
-**Term:** `Assertion` (aka Claim)  
-**Definition:** A statement of purported truth, as made by a particular agent on a particular occasion.  
-**Example:** The ENIGMA consortium’s assertion that BRCA1:2685T>A mutation is pathogenic for breast cancer.  
-**Comments:** The identity of a particular assertion is dependent upon (1) what it claims to be true  (ie. the 'proposition' it puts forth as being true), (2) the agent asserting it, and (3) the occasion on which the assertion is made. Many agents can make assertions expressing belief in the same proposition  - e.g. ENIGMA’s assertion that that BRCA1:2685T>A is pathogenic for breast cancer is a separate instance from ClinGen's  assertion of the same underlying proposition.  Likewise, a single agent can make more than one assertion of belief in the same proposition on different occasions  - e.g. ENIGMA may make a separate assertion of the same proposition that BRCA1:2685T>A  is pathogenic for breast cancer at a later date, based on additional evidence.   
+## The SEPIO Ontology
+The **Scientific Evidence and Provenance Information Ontology (SEPIO)** was developed to represent evidence and provenance information about scientific assertions (aka 'claims'), in a way that supports critical evaluation of their validity. **Evidence** is defined as information as used to evaluate the validity of a proposition put forth in an assertion. **Provenance** information describes the complete process history behind an assertion. This includes the history of the assertion itself (e.g. who made it how, and when), but also the history of all information used as evidence to support it (e.g. the agents, activities, and resources were used in generating the evidence).
   
------
- 
-**Term:** `Evidence Item` 
-**Definition:** A piece of information that is used to establish the validity of an assertion (or more precisely, the truth of the  proposition put forth by the assertion)    
-**Example:** Any information artifact can be used as an evidence item, including:    
-- primary research data, such as measurement values of wild-type vs mutant protein activity, or values of mutation frequency values in a population.
-- statistical calculations derived from primary data, such as a p-value measuring the statistical significance of an observed phenomenon	
-- artifacts summarizing research findings such as a published figure or data table. 
-- assertions of purported facts as made by experts, such as the claim that loss of BRCA gene function is a causative mechanism for breast cancer (which as a scientific assertion, will have its own trail of evidence)   
+SEPIO provides a flexible and generic model that defines a core set of concepts and relationships that capture how evidence is evaluated in the act of making a scientific assertion. The core model is suited to application in any domain, and can support the integration of data across different data models and systems [1]. SEPIO can easily be extended with domain-specific constructs to support focused applications or use cases. For example, we are developing a extensions to support representation of the detailed evidence and provenance information collected in variant interpretation workflows, implemented in tools being developed by the ClinGen consortium [2,3,4]. 
 
-**Comments:** Evidence items can be any information interpreted as evidence in evaluating an asserted proposition. Evidence is a role that such information artifacts play, as realized in the act of their interpretation toward evaluating a target assertion.  Any piece of information has the potential to serve as evidence, but only become evidence information when it is used in this way.  
+Below we provide a brief summary of the SEPIO data model and its core terms and relationships. The **Concept-Attribute Tables** and **Core Concept Pages** to the right offer more detailed descriptions of these concepts and their key attributes in the SEPIO model, and the **Real Data Example** pages provide a diverse selection of evidence and provenance data from existing databases represented using the SEPIO model.  Please post issues to our [tracker](https://github.com/monarch-initiative/SEPIO-ontology/issues), and contact Matthew Brush with questions at brushm@ohsu.edu.
+
+-----------
+
+## Core Concepts and Relationships
+The central axis of SEPIO defines the relationship between **Assertions**, **Evidence Lines**, and **Evidence Items** (i.e. the individual pieces of information that serve as evidence). Around these concepts, SEPIO builds the core model diagrammed below.  
+
+![sepio-wiki_023](https://user-images.githubusercontent.com/5184212/28144547-f004bd46-6720-11e7-887c-f4ad9291d646.jpg)
+
+### (1) [Assertion](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Assertion)
+- **Description:** An Assertion is an evidence-based statement made by a particular Agent on particular occasion, often following rules specified in some Assertion Method.  Assertions can be supported or disputed by one or more Evidence Line.
+- **Example:** The ENIGMA consortium’s assertion that "The DSC2:c.631-2A>G variant is pathogenic_for arrhythmogenic ventricular cardiomyopathy."
   
------
-
-**Term:** `Evidence Line`   
-**Definition:** Information artifacts that group all evidence that constitutes a single, independent argument relevant to the validity of a target assertion.    
-**Example:** All information derived from a single line of investigation is grouped into a single evidence line when they speak to a single argument relevant to other validity of the target assertion. For example, a single evidence line would group primary counts, derived p-values, summary figures,  and asserted conclusions from a study on the frequency of the BRCA1:2685T>A mutation in breast cancer patients vs healthy controls - as all of this information collectively makes a single argument relevant to the truth of a target assesrtion.  
-**Comments:**  'Combinatorial evidence': Information derived from separate studies or lines of reasoning may be grouped under a single evidence line in cases where they are dependent on each other to qualify as evidence relevatn to the validity of a target assertion.  For example, a finding that the BRCA1:2685T>A  mutation causes loss of BRCA gene function is evidence for a causative relationship between this mutation and breast cancer only if it is also true that loss of BRCA gene function is an established mechanism for breast cancer. Information relevant to these independent facts would all be grouped under a single evidence line, because only their **combination** represents a meaningful argument for the proposition that BRCA1:2685T>A is pathogenic for breast cancer.  
-
-Evidence lines are defined with respect to a particular target assertion (i.e. an instance of an evidence line is relevant only to one asserted proposition). In this respect, it can be helpful to think of evidence lines as representing the relationship between one or more pieces of evidence information and their target assertion.  
-This relationship groups individual evidence information into discrete arguments as described above, and provides meaningful context in which to understand how individual pieces of evidence information was organized and interpreted as evidence by the asserting agent.
+### (2) [Evidence Line](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Evidence-Line)
+- **Description:** Evidence Lines represent an independent argument relevant to the validity of the proposition it puts forth. Evidence Lines are supported by one or more individual pieces of Information, which in this role serve as Evidence Items.
+- **Example:** The argument made for the assertion above by an Agent's interpretation of the prior assertion that "The c.631-2A>G variant impairs DSC2 gene function." 
+    
+### (3) [Evidence Item](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Evidence-Item)
+- **Description**: An Evidence Item is any Information artifact that is interpreted to evaluate the validity of a Proposition put forth by an Assertion. It is shown parenthetically above because it is a 'defined class' in SEPIO, representing any piece of Information bearing an evidence role. SEPIO organizes Evidence Items under Evidence Lines that represent the discrete arguments to which these items contribute. 
+- **Example:** Specific measurement data and statistical confidence scores from a study showing that recombinant DSC2 protein with this mutation showed impaired binding of Ca2+ ions in a HeLa cell based assay, that are used to support an Assertion that  the c.631-2A>G variant impairs DSC2 gene function. 
   
+### (4) [Activity](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Activity)
+- **Description:** In SEPIO we are primarily concerned with Activities that generate information that is used as evidence, such as research studies, assays, or computation. SEPIO supports description of such Activities to capture the provenance of Evidence Items.
+- **Example:** An in vitro Ca2+ binding assay
+  
+### (5) Publications
+- **Description:** Publications are the most common form of evidence and provenance metadata provided by curated databases. But Publications are not considered Evidence Items in the SEPIO model, as they are only proxies that point to where actual evidence information is described. 
+  
+### (6) Shortcut Relations
+- **Description:**  Evidence Lines can be directly linked to a supporting Activity or Publication by 'shortcut relations' (dashed lines), enabling description of the provenance of an Evidence Line even when particular Evidence Items are not provided. These relationships can inferred via property chains defined in the SEPIO ontology to enable interoperability of graphs asserting these different patterns (see [5]).
+
+
+The semantics and structure of the core SEPIO model directly reflect the implicit cognitive tasks that are performed in the process of making evidence-based assertions: (1) the organization of evidence into separate, meaningful arguments; (2) the evaluation of these arguments individually to determine the direction and strength of support they provide for a particular proposition; and (3) the combined assessment of all relevant arguments to make a final assertion expressing belief (or not) in this proposition. SEPIO's organization of metadata around Evidence Lines is critical to representing these perspectives. This enables assessment of the overall **quantity**, **quality**, **diversity**, and **concordance** of evidence for a particular claim - key features that support computational approaches for evidence and provenance-based evaluation [6].
+
 -----
 
-### III. SEPIO Conceptual Model  
+## The SEPIO Framework
+SEPIO is an OWL2 ontology developed according to OBO Foundry Principles, and uses the Basic Formal Ontology (BFO) to provide high-level structure. Where possible, it re-uses terms from orthogonal ontologies including the Evidence and Conclusion Ontology (ECO), the Ontology of Biomedical Investigations (OBI), the Information Artifact Ontology (IAO), and the Provenance Ontology (PROV-O).
 
-![](https://github.com/monarch-initiative/SEPIO-ontology/blob/master/docs/Wiki%20Docs/sepio%20core.jpg)
+Development of this core ontology is the first step toward establishing a larger SEPIO Framework comprised of SEPIO-based data models and tools to support implementation of and computation over SEPIO data. The framework will have three components:
 
-**Figure 1** above prrovides  a high-level view of the conceptual model implemented by SEPIO, including relationships between the core informational concepts (colored nodes), and concepts that describe the provenance of these artifacts. An `Assertion` is made by a particular `Agent` on a particular occasion, often following rules specified in some `Assertion Method`.  Assertions can be supported by one or  many `Evidence Lines`, each of which may be comprised of one or many pieces of  `Information` (which in this role serve as `Evidence Items`).  Note that in cases where a prior Assertion is used as evidence, the model can be extended to describe the provenance behind this prior Assertion. This can occur arbitrarily many times to create a network of Assertions connected through descriptions of how they are used as evidence for each other.
+1. **Data Models:** A generic semantic data model complemented by 'profiles' that extend the core model to support domain and application- specific use cases.
+2. **Supporting Ontologies:** A set of modules from orthogonal ontologies providing standardized terms for the consistent and interoperable collection of semantically enriched metadata.
+3. **Supporting Tools:** A suite of tools supporting metadata curation, ontology creation, data integration, and evidence-based evaluation of scientific claims.
 
-The provenance of Evidence Items is captured through a structured description of the activity that generated it - most typically a research `Study`. The basic Study model shown here is relatively light-weight, but more complex and nuanced models describing experimental workflows and variables can be used as desired. Note that references to `Publications` that describe the evidence are treated differently than actual evidence Information itself, as they merely point users to where evidence and provenance information can be found. Finally, the dashed lines show 'shortcut' relationships that can be created to directly link an Evidence Line to a supporting Study or Publication. These direct links can be directly asserted in a dataset, or inferred from the links through Evidence Items (via property chains defined in the SEPIO ontology).
+Plans for developing such a Framework are further described here [7].
+
+## References
+
+1. Real Data Examples pages
+2. ClinGen data example page
+3. Community Collaborations and Uses page (and/or ACMG paper)
+4. ClinGen page
+5. Levels/Shortcuts
+6. Evidence Concept page
+7. SEPIO Framework page
 
 
-        
-### IV. Evidence Lines     
-Evidence Lines are a unique and critical feature of the SEPIO model, which organize evidence information into separate, independent arguments relevant to establishing the validity of a claim. Evidence Lines let us capture not only what evidence exists, but how it is interpreted and applied as evidence. They let us describe features of information that are specific to its use as evidence (e.g. the strength of support evidence provide for a particular claim). The allow us to capture dependencies between pieces of supporting information that represent meaningful evidence only in combination (e.g. cases where fact1 and fact2 must both be true to establish meaningful evidence for a claim). Finally, they help us to assess four key dimensions of evidence: quantity, quality, diversity, and concordance. This is critical to support the computational evaluation and comparison of claims by operating on these four dimensions of evidence. 
-
-### V. References
-
-1. **The Semantic EvidencE (SEE) Framework**: Bölling, Christian, Michael Weidlich, and Hermann-Georg Holzhütter. "SEE: structured representation of scientific evidence in the biomedical domain using Semantic Web techniques." Journal of biomedical semantics 5.1 (2014)
-2. **The Micropublications Model (MP)**: Clark, Tim, Paolo N. Ciccarese, and Carole A. Goble. "Micropublications: a semantic model for claims, evidence, arguments and annotations in biomedical communications." Journal of biomedical semantics 5.1 (2014)
-3. **Open Biomedical Annotations (OBAN)**: Sarntivijai, Sirarat, et al. "Linking rare and common disease: mapping clinical disease-phenotypes to ontologies in therapeutic target validation."
-4. **The Evidence Code Ontology (ECO)**: Chibucos, Marcus C., et al. "Standardized description of scientific evidence using the Evidence Ontology (ECO)." Database 2014 (2014)
-
-The following **Wiki pages** provide additional information about the SEPIO ontology and its support for structuring evidence and provenance metadata around scientific claims. 
-1. [Data Examples](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Data-Examples)
-2. [Use Cases and Requirements](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Use-Cases-and-Requirements)
-3. [Evidence Lines](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Evidence-Lines)
-4. [Community Collaborations](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Community-Collaborations)
