@@ -22,26 +22,26 @@ disease_profile:
     assertion_method: 
     - id: doi:10.1038/gim.2015.30
       label: "ACMG ISV guidelines 2015"
-	evidence_line:
-    	- id: CLINGEN:ev01
+    evidence_line:
+        - id: CLINGEN:ev01
           type: ECO:0000033 ('TAS')
-		  evidence_strength: "moderately supporting"
-		  evidence_item: 
-		    - id: CLINGEN:CA01
-			 type: SEPIO:0100002 ('Assertion' > 'Criterion Assessment')
-			 assertion_method: CLINGEN:vic008 ('ACMG v2015 PM2, absent from controls in population databases')
-			 description: "Variant is absent from control populations"
-			 evidence_line: 
-			    - id: CLINGEN:ev025
-	              type: ECO:XXXXXXX ('population frequency evidence')
+          evidence_strength: "moderately supporting"
+          evidence_item: 
+           - id: CLINGEN:CA01
+             type: SEPIO:0100002 ('Assertion' > 'Criterion Assessment')
+             assertion_method: CLINGEN:vic008 ('ACMG v2015 PM2, absent from controls in population databases')
+             description: "Variant is absent from control populations"
+             evidence_line: 
+                - id: CLINGEN:ev025
+                  type: ECO:XXXXXXX ('population frequency evidence')
                   supporting_reference:
                      - id: PMID:27997510
                   evidence_item:
                      - id: CLINGEN:PAF082
-					   type: SEPIO:0000173 ('study finding')
-					   description: "Variant is absent from a large cohort of non-finnish europeans (NFE) in the ExAC population database, with sequencing coverage of the variant exceeding 25X"
-					   supporting_data:
-					     - id: CLINGEN:PAF082A 
+                       type: SEPIO:0000173 ('study finding')
+                       description: "Variant is absent from a large cohort of non-finnish europeans (NFE) in the ExAC population database, with sequencing coverage of the variant exceeding 25X"
+                       supporting_data:
+                         - id: CLINGEN:PAF082A 
                            type: SEPIO:9000895 ('allele frequency data')
                            value: "0"
                          - id: CLINGEN:PAF082B
@@ -50,32 +50,32 @@ disease_profile:
                          - id: CLINGEN:PAF082C
                            type: SEPIO:9000878 ('population ethnicity data')
                            value: "non-finnish european"
-	evidence_line:
+    evidence_line:
     	- id: CLINGEN:ev02
           type: ECO:0000033 ('TAS')
-		  evidence_strength: "moderately supporting"
-		  evidence_item: 
-		    - id: CLINGEN:CA02
-			  type: SEPIO:0100002 ('Assertion > 'Criterion Assessment')
-		      assertion_method: "CLINGEN:vic007 ('ACMG v2015 PM4, protein length change prediction')   
-		      description: "Variant leads to an in-frame deletion of 7 amino acids"
-			  evidence_line:
-			       - id: CLINGEN:ev016
-  				    type: "ECO:XXXXXXX ('functional prediction evidence')"
-					supporting_reference:
-					   - id: PMID:99993251
-				    evidence_item:					
-					   - id: CLINGEN:MolCon066
-					     type: SEPIO:0000173 ('study finding')
-						 description: "Variant results in a length change of its protein product"
-					     supporting_data:
-						    - id: MolCon066A
-							  type: SEPIO:9000946 ('molecular function data')
-						      value: SO:0001825 ('conservative inframe deletion')
-					   - id: CLINGEN:RegionAnnotation069
-					     type: SEPIO:0000173 ('study finding')
-					     supporting_data:
-  					       - id: CLINGEN:RegionAnnotation069A
-					         type: SEPIO:9000825 ('genomic feature annotation')
-                             value: SO:0000657 ('repeat region')
+          evidence_strength: "moderately supporting"
+          evidence_item: 
+            - id: CLINGEN:CA02
+              type: SEPIO:0100002 ('Assertion > 'Criterion Assessment')
+              assertion_method: "CLINGEN:vic007 ('ACMG v2015 PM4, protein length change prediction')   
+              description: "Variant leads to an in-frame deletion of 7 amino acids"
+              evidence_line:
+                  - id: CLINGEN:ev016
+                    type: "ECO:XXXXXXX ('functional prediction evidence')"
+                    supporting_reference:
+                      - id: PMID:99993251
+                    evidence_item:					
+                       - id: CLINGEN:MolCon066
+                         type: SEPIO:0000173 ('study finding')
+                         description: "Variant results in a length change of its protein product"
+                         supporting_data:
+                            - id: MolCon066A
+                              type: SEPIO:9000946 ('molecular function data')
+                              value: SO:0001825 ('conservative inframe deletion')
+                       - id: CLINGEN:RegionAnnotation069
+                         type: SEPIO:0000173 ('study finding')
+                         supporting_data:
+                            - id: CLINGEN:RegionAnnotation069A
+                              type: SEPIO:9000825 ('genomic feature annotation')
+                              value: SO:0000657 ('repeat region')
 
