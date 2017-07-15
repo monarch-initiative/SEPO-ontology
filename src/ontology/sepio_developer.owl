@@ -468,6 +468,20 @@ A SEPIO:assertion is related to the notion of &apos;&apos;provenance&apos; from 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000129 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/pav/createdBy">
+        <obo:SEPIO_0000061>Formerly SEPIO_0000018 ! created_by</obo:SEPIO_0000061>
+    </rdf:Description>
 </rdf:RDF>
 
 
