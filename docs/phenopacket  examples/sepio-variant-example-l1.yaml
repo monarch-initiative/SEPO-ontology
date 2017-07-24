@@ -1,0 +1,35 @@
+schema: phenopacket-level-1
+
+comment: This is an exploratory example of what the very simple evidence metadata would look like using the SEPIO model in a variant-phenotype phenopacket.  This example is taken directly from the github phenopacket-format repo, and the SEPIO model implemented to capture evidence - which here includes only a ECO evidence type and a supporting publication.  A much more complex example of evidence for an ACMG Guideline-based variant interpretation can also be found in the SEPIO repo (variant-disease-clingen_example_v2.yaml).
+
+rich provenance and evidence metadata captured in the evolving ClinGen-SEPIO Variant Interpretation data model might look like in phenopacket format. This example describes a variant interpretation created following the ACMG Guidelines that asserts  NM_007294.3(BRCA2):c.4677_5075del to be pathogenic for Breast Carcinoma.  Evidence for this assertion includes two ACMG Criterion Assessments. One based on criteria PM2 claims that this variant is absent from control populations. The other based on criterion PM4 claims that the variant results in a length change of its protein product.  Evidence for these supporting assertions is also represented.  Evidence for the PM2 Criterion Assessment includes a finding that the variant is absent from a large cohort of non-finnish europeans (NFE) in the ExAC population database, and specific data values supporting this finding are reported.  Evidence for the PM4 Criterion Assessment includes a finding that the variant leads to an in-frame deletion of 7 amino acids, and specific data values supporting this finding are reported.
+
+comment: This is an example phenopacket containing one variant to phenotype association
+ontologies:
+  - id: hp
+    version: "2016-02-01"
+variants:
+  - id: _:v1
+    positions:
+      - type: HGVS
+        value: "NM_123:c.-123C>T"
+phenotype_profile:
+  - entity: _:v1
+    evidence_line:
+      - id: EvLn001
+	    type: TAS
+        supporting_reference:
+          - id: PMID:FAKE1234
+            title: Mutations in NM_123 cause multisystem proteinopathy and ALS
+    phenotype:
+      type:
+        id: HP:0003560
+        label: Muscular dystrophy
+      onset:
+        type:
+          id: HP:0003584
+          label: Late onset
+      description: blah blah
+    created: 2016-01-14
+    contributors:
+- id: ORCID:nnnn-nnnn-nnnn
