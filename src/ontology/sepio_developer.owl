@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio_developer.owl#"
      xml:base="http://purl.obolibrary.org/obo/sepio_developer.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:eco="http://purl.obolibrary.org/obo/eco/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -364,7 +365,6 @@ Process provenance: &quot;The execution history of computer processes which were
         <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI branch derived + wikipedia (http://en.wikipedia.org/wiki/Protocol_%28natural_sciences%29)</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:SEPIO_0000061>Possible parent for &apos;variant classification guideline&apos;</obo:SEPIO_0000061>
         <rdfs:label xml:lang="en">x-protocol</rdfs:label>
     </owl:Class>
     
@@ -383,6 +383,22 @@ Process provenance: &quot;The execution history of computer processes which were
         <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6/11/9: edited at workshop. Used to be: study design execution is a process with the objective to generate data according to a concretized study design. The execution of a study design is part of an investigation, and minimally consists of an assay or data transformation.</obo:IAO_0000232>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-study design execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001909 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001909">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
+        <obo:IAO_0000111>conclusion based on data</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>An information content entity that is inferred from data.</obo:IAO_0000115>
+        <obo:IAO_0000116>In the Philly 2013 workshop, we recognized the limitations of &quot;conclusion textual entity&quot;, and we introduced this as more general. The need for the &apos;textual entity&apos; term going forward is up for future debate. </obo:IAO_0000116>
+        <obo:IAO_0000117>Group:2013 Philly Workshop group</obo:IAO_0000117>
+        <obo:IAO_0000119>Group:2013 Philly Workshop group</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:label>x-conclusion based on data</rdfs:label>
     </owl:Class>
     
 
@@ -431,9 +447,22 @@ A SEPIO:assertion is related to the notion of &apos;&apos;provenance&apos; from 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
-        <obo:SEPIO_0000061>Container for classes that we might use to add structure to the core SEPIO classes (ie. fit them into framework of existing ontologies by asserted them as subtyeps of these more general classes)</obo:SEPIO_0000061>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">ExploratoryClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
+        <obo:IAO_0000115>An assertion expressing an association between an entity and a concept related to the entity (typically a term from some controlled vocabulary).</obo:IAO_0000115>
+        <rdfs:comment>1. A specific relationship indicated by the annotaiton, and additional context for thie association,  may or may not be specified in an annotation.  Annotations shoould be supported by some tyope of evidence and appropriate metaata.
+
+2. From LEGO curation documentation : &quot;In its most basic form, the association of a gene product through a relation to a GO term; supported by some type of evidence with appropriate metadata.&quot;
+(https://docs.google.com/document/d/18ihslb7prB6CWtu2yjF-pMHZBTY1-AdXJAu-ZyuyXS4/edit#)</rdfs:comment>
+        <rdfs:label xml:lang="en">x-annotation</rdfs:label>
     </owl:Class>
     
 
@@ -443,6 +472,26 @@ A SEPIO:assertion is related to the notion of &apos;&apos;provenance&apos; from 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000075">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
         <rdfs:label xml:lang="en">x-ex vivo study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
+        <rdfs:comment>Diagnoses are assertions about the disease or disorder borne by a patient.</rdfs:comment>
+        <rdfs:label xml:lang="en">x-diagnosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000013"/>
+        <rdfs:comment>A hypothesis is an assertion that a particular proposition is true, whose validity is intended to be investigated through experimental methods.</rdfs:comment>
+        <rdfs:label xml:lang="en">x-hypothesis</rdfs:label>
     </owl:Class>
     
 
@@ -479,8 +528,23 @@ A SEPIO:assertion is related to the notion of &apos;&apos;provenance&apos; from 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000211">
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs1</obo:IAO_0000116>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000212">
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm2</obo:IAO_0000116>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000215">
+        <obo:IAO_0000116>http://data.clinicalgenome.org/AssertMeth001</obo:IAO_0000116>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000216">
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm</obo:IAO_0000116>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000218">
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/none</obo:IAO_0000116>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/pav/createdBy">
-        <obo:SEPIO_0000061>Formerly SEPIO_0000018 ! created_by</obo:SEPIO_0000061>
+        <obo:IAO_0000116>Formerly SEPIO_0000018 ! created_by</obo:IAO_0000116>
     </rdf:Description>
 </rdf:RDF>
 

@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio-vi.owl#"
      xml:base="http://purl.obolibrary.org/obo/sepio-vi.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:eco="http://purl.obolibrary.org/obo/eco/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -26,6 +27,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ERO_0000480 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ERO_0000480"/>
     
 
 
@@ -62,6 +69,15 @@
     <!-- http://purl.obolibrary.org/obo/IAO_xref -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_xref"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000217 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000217">
+        <rdfs:label xml:lang="en">ClinGen preferred term</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -166,22 +182,24 @@ Environments include natural environments or exposures, experimentally applied c
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100008 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000196 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100008">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100003"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000196">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
-        <rdfs:label xml:lang="en">has_default_strength</rdfs:label>
+        <obo:IAO_0000115>A relation that holds between a variant interpretation criterion and some indicator of the default strength associated with evidence meeting this criterion.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">default_criterion_strength</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100009 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000197 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100009">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100002"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100005"/>
-        <rdfs:label xml:lang="en">assessment_outcome</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000197">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000191"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
+        <obo:IAO_0000115>A relationship that holds between a criterion assessment and a term that indicates whether the conditions laid out by the criterion were met or not met for a particular criterion assessment.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">criterion_assessment_outcome</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -200,7 +218,7 @@ Environments include natural environments or exposures, experimentally applied c
     <!-- http://datamodel.clinicalgenome.org/terms/E02 -->
 
     <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E02">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000180"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
         <rdfs:label>molecular consequence statement</rdfs:label>
     </owl:Class>
     
@@ -209,7 +227,7 @@ Environments include natural environments or exposures, experimentally applied c
     <!-- http://datamodel.clinicalgenome.org/terms/E03 -->
 
     <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E03">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000180"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
         <rdfs:label>condition mechanism statement</rdfs:label>
     </owl:Class>
     
@@ -236,8 +254,8 @@ Environments include natural environments or exposures, experimentally applied c
     <!-- http://datamodel.clinicalgenome.org/terms/E23 -->
 
     <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E23">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000180"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the frequency of an allele in a particular population or any defined group of individuals.</obo:IAO_0000115>
         <rdfs:label>allele frequency statement</rdfs:label>
     </owl:Class>
     
@@ -349,9 +367,9 @@ http://semanticscience.org/resource/SIO_010299</obo:SEPIO_0000052>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100001 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000190 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100001">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000190">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
         <obo:IAO_0000115>An assertion about the pathogenicity of a sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
         <obo:IAO_0000118>variant classification</obo:IAO_0000118>
@@ -365,9 +383,9 @@ http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpret
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100002 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000191 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100002">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000191">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
         <obo:IAO_0000119>ClinGen DMWG. 
 http://datamodel.clinicalgenome.org/interpretation/master/tech/criterion_assessment.html</obo:IAO_0000119>
@@ -386,9 +404,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100003 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000192 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100003">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000192">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
         <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">variant interpretation criterion</rdfs:label>
@@ -396,9 +414,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100004 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000193 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100004">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000193">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
         <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">variant interpretation guideline</rdfs:label>
@@ -406,73 +424,76 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100005 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000194 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100005">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000194">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
+        <obo:IAO_0000115>A term that indicates whether the conditions laid out by a variant interpretation criterion were met or not met for a particular criterion assessment.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">criterion assessment outcome value</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100006 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000195 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100003"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
         <rdfs:label xml:lang="en">ACMG criterion</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100012 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000198 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100005"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000198">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
         <rdfs:label xml:lang="en">ACMG criterion assessment outcome</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100013 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000199 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100013">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000199">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
-        <rdfs:label>ClinGen evidence strength value</rdfs:label>
+        <obo:IAO_0000115>An evidence strength value from the set of values defined by the 2015 ACMG Variant Interpretation Guidelines, indicating the degree of support an agent believes the evidence provided by a criterion assessment to provide for a particular proposition.</obo:IAO_0000115>
+        <rdfs:label>ACMG evidence strength value</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100014 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000200 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100014">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000200">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
+        <obo:IAO_0000115>An evidence strength value from the set of values defined by the Clinical Interpretation of Variants in Cancer (CIViC) organization, indicating the degree of support an agent believes an evidence line to provide for a particular proposition.</obo:IAO_0000115>
         <rdfs:label>CIViC evidence strength value</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100020 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000206 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100020">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000206">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000794"/>
         <rdfs:label xml:lang="en">allele count</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100021 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000207 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100021">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100020"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000207">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000206"/>
         <rdfs:label xml:lang="en">variant allele count</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100022 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000208 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100022">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100020"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000208">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000206"/>
         <rdfs:label xml:lang="en">total allele count</rdfs:label>
     </owl:Class>
     
@@ -1267,17 +1288,8 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <!-- http://datamodel.clinicalgenome.org/valueset/met -->
 
     <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/met">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100005"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
         <rdfs:label>met</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/valueset/none -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/none">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100013"/>
-        <rdfs:label>none</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1285,28 +1297,8 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <!-- http://datamodel.clinicalgenome.org/valueset/notmet -->
 
     <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/notmet">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100005"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
         <rdfs:label>not met</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/valueset/pm -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/pm">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100013"/>
-        <rdfs:label>pathogenic moderate</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/valueset/pm2 -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/pm2">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100006"/>
-        <obo:SEPIO_0100008 rdf:resource="http://datamodel.clinicalgenome.org/valueset/pm"/>
-        <rdfs:comment>Absent from controls (or at extremely low frequency if recessive) (Table 6) in Exome Sequencing Project, 1000 Genomes Project, or Exome Aggregation Consortium</rdfs:comment>
-        <rdfs:label>PM2 criterion</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1314,19 +1306,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <!-- http://datamodel.clinicalgenome.org/valueset/pvs -->
 
     <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/pvs">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100013"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000199"/>
+        <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides a &apos;very strong&apos; level of support for the pathogencity of a particular genetic variant.</obo:IAO_0000115>
         <rdfs:label>pathogenic very strong</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/valueset/pvs1 -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/pvs1">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100006"/>
-        <obo:SEPIO_0100008 rdf:resource="http://datamodel.clinicalgenome.org/valueset/pvs"/>
-        <rdfs:comment>null variant (nonsense, frameshift, canonical ±1 or 2 splice sites, initiation codon, single or multiexon deletion) in a gene where LOF is a known mechanism of disease</rdfs:comment>
-        <rdfs:label>PVS1 criterion</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1341,47 +1323,138 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100015 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000201 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100015">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100014"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000201">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000200"/>
         <rdfs:label>1-star</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100016 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000202 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100016">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100014"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000202">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000200"/>
         <rdfs:label>2-star</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100017 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000203 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100017">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100014"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000203">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000200"/>
         <rdfs:label>3-star</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100018 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000204 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100018">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100014"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000204">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000200"/>
         <rdfs:label>4-star</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0100019 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000205 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0100019">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0100014"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000205">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000200"/>
         <rdfs:label>5-star</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000209 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000209">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:label xml:lang="en">ClinGen Data Model Working Group</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000210 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000210">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <obo:IAO_0000118>Clinical Interpretation of Variants in Cancer</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">CIViC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000211 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000211">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000195"/>
+        <obo:SEPIO_0000196 rdf:resource="http://datamodel.clinicalgenome.org/valueset/pvs"/>
+        <rdfs:comment>null variant (nonsense, frameshift, canonical ±1 or 2 splice sites, initiation codon, single or multiexon deletion) in a gene where LOF is a known mechanism of disease</rdfs:comment>
+        <rdfs:label>PVS1 criterion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000212 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000212">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000195"/>
+        <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000216"/>
+        <rdfs:comment>Absent from controls (or at extremely low frequency if recessive) (Table 6) in Exome Sequencing Project, 1000 Genomes Project, or Exome Aggregation Consortium</rdfs:comment>
+        <rdfs:label>PM2 criterion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000213 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000213">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
+        <rdfs:comment>https://submit.ncbi.nlm.nih.gov/ft/byid/hxnfuuxx/enigma_rules_2015-03-26.pdf</rdfs:comment>
+        <rdfs:label xml:lang="en">ENIGMA BRCA1/2 Classification Criteria (2015)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000214 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000214">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
+        <rdfs:comment>https://submit.ncbi.nlm.nih.gov/ft/byid/soovr93u/mdi-5618_320494_counsyl_autosomal_dominant_disease_classification_criteria_(2015)_v1.pdf</rdfs:comment>
+        <rdfs:label xml:lang="en">Counsyl Autosomal Dominant Disease Classification criteria (2015)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000215 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000215">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
+        <obo:ERO_0000480>https://www.acmg.net/docs/Standards_Guidelines_for_the_Interpretation_of_Sequence_Variants.pdf</obo:ERO_0000480>
+        <rdfs:label>ACMG ISV guidelines 2015, v1.0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000216 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000216">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000199"/>
+        <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides a &apos;moderate&apos; level of support for the pathogencity of a particular genetic variant.</obo:IAO_0000115>
+        <rdfs:label>pathogenic moderate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000218 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000218">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000199"/>
+        <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides no support for or against the pathogencity of a particular genetic variant.</obo:IAO_0000115>
+        <rdfs:label>none</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
