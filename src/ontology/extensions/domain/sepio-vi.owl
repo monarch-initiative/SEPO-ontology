@@ -215,66 +215,11 @@ Environments include natural environments or exposures, experimentally applied c
     
 
 
-    <!-- http://datamodel.clinicalgenome.org/terms/E02 -->
-
-    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E02">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
-        <rdfs:label>molecular consequence statement</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/terms/E03 -->
-
-    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E03">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
-        <rdfs:label>condition mechanism statement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://datamodel.clinicalgenome.org/terms/E05 -->
 
     <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E05">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000481"/>
         <rdfs:label>CannonicalAllele</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/terms/E14 -->
-
-    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E14">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-        <rdfs:label>mendelian condition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/terms/E23 -->
-
-    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/E23">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
-        <obo:IAO_0000115>A statement about the frequency of an allele in a particular population or any defined group of individuals.</obo:IAO_0000115>
-        <rdfs:label>allele frequency statement</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/terms/MendCond074 -->
-
-    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/MendCond074">
-        <rdfs:subClassOf rdf:resource="http://datamodel.clinicalgenome.org/terms/E14"/>
-        <rdfs:label>arrhythmogenic right ventricular cardiomyopathy, Autosomal Dominant</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/terms/vs016 -->
-
-    <owl:Class rdf:about="http://datamodel.clinicalgenome.org/terms/vs016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000187"/>
-        <rdfs:label xml:lang="en">ClinGen mechanism confidence value</rdfs:label>
     </owl:Class>
     
 
@@ -344,6 +289,7 @@ http://semanticscience.org/resource/SIO_010299</obo:SEPIO_0000052>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000115>The pattern in which a particular genetic trait or disorder is passed from one generation to the next.</obo:IAO_0000115>
         <rdfs:label>Mode of inheritance</rdfs:label>
     </owl:Class>
     
@@ -353,6 +299,7 @@ http://semanticscience.org/resource/SIO_010299</obo:SEPIO_0000052>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000005"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in heterozygotes. In the context of medical genetics, an autosomal dominant disorder is caused when a single copy of the mutant allele is present. Males and females are affected equally, and can both transmit the disorder with a risk of 50% for each child of inheriting the mutant allele.</obo:IAO_0000115>
         <rdfs:label>Autosomal dominant inheritance</rdfs:label>
     </owl:Class>
     
@@ -372,13 +319,12 @@ http://semanticscience.org/resource/SIO_010299</obo:SEPIO_0000052>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000190">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
         <obo:IAO_0000115>An assertion about the pathogenicity of a sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
-        <obo:IAO_0000118>variant classification</obo:IAO_0000118>
-        <obo:IAO_0000118>variant pathogenicity interpretation</obo:IAO_0000118>
-        <obo:IAO_0000119>ClinGen DMWG. 
-http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html</obo:IAO_0000119>
-        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <oboInOwl:hasBroadSynonym>variant classification</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>variant interpretation</oboInOwl:hasBroadSynonym>
         <rdfs:comment>Interpretations for pathogenic variants specify a condition (disease or phenotype) for which the conclusion was reached. However, if the variant is determined to be benign (e.g. in the case of a very common polymorphism), a specific condition may not be specified - indicating that the allele is benign for all conditions. If a condition is specified for a benign variant, then the interpretation is limited to that specific condition [text derived from ClinGen Variant Interpretation model].</rdfs:comment>
-        <rdfs:label xml:lang="en">variant interpretation</rdfs:label>
+        <rdfs:label xml:lang="en">variant pathogenicity interpretation</rdfs:label>
     </owl:Class>
     
 
@@ -387,9 +333,8 @@ http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpret
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000191">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <obo:IAO_0000119>ClinGen DMWG. 
-http://datamodel.clinicalgenome.org/interpretation/master/tech/criterion_assessment.html</obo:IAO_0000119>
-        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:comment>Variant interpretation guidelines often define specific &apos;criteria&apos; against which a variant is evaluated. Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
 
 Consider the &quot;PM2&quot; criterion defined by the ACMG Guidelines, which is based on the frequency of a variant in control populations. It is satisfied if a variant is absent or at exceedingly low frequencies in population databases, in which case &apos;Moderate&apos; evidence is provided for the pathogenicity of the variant. Conversely, the &quot;BS2&quot; criterion is satisfied if a variant is found at a frequency above what is expected given disease penetrance, and offers &apos;Strong&apos; evidence that the variant is Benign.
@@ -408,7 +353,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000192">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
-        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <obo:IAO_0000115>A specification that describes how to interpret the direction and strength of evidence provided by a specific type of information, for or against the pathogenicity of a genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:label xml:lang="en">variant interpretation criterion</rdfs:label>
     </owl:Class>
     
@@ -418,7 +365,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000193">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
-        <oboInOwl:inSubset>domain: Variant Interpretation</oboInOwl:inSubset>
+        <obo:IAO_0000115>A specification that describes how to interpret evidence in order to make a final assertion about the pathogenicity of a genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <rdfs:comment>Guidelines may include specific &apos;variant interpretation criterion&apos; that describe how to interpret the direction and strength of evidence provided by a particular type of information, and &apos;criterion scoring algorithms&apos; which describe how to combine the outcomes of each criterion assessment to arrive at a final interpretation of a variant&apos;s pathogenicity.</rdfs:comment>
         <rdfs:label xml:lang="en">variant interpretation guideline</rdfs:label>
     </owl:Class>
     
@@ -438,7 +387,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000195">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
-        <rdfs:label xml:lang="en">ACMG criterion</rdfs:label>
+        <obo:IAO_0000115>A varaint interpretation criterion defined by the 2015 ACMG Variant Interpretation Guidelines.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">variant interpretation criterion (2015 ACMG Guidelines, v1)</rdfs:label>
     </owl:Class>
     
 
@@ -495,6 +446,74 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000208">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000206"/>
         <rdfs:label xml:lang="en">total allele count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000219">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000112>arrhythmogenic right ventricular cardiomyopathy, Autosomal Dominant (http://datamodel.clinicalgenome.org/terms/MendCond074)</obo:IAO_0000112>
+        <obo:IAO_0000115>A condition with a specific mode of inheritance.</obo:IAO_0000115>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/E14</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP:ClinGen DMWG</obo:IAO_0000119>
+        <rdfs:label>mendelian condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000224 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000224">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <obo:IAO_0000115>A description of how the weighting of the satisfied variant interpretation criterion are evaluated to arrive at a final interpretation of a variant&apos;s clinical significance.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label xml:lang="en">criterion scoring algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000225 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000225">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000187"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000227 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000227">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the frequency of an allele in a particular population or any defined group of individuals.</obo:IAO_0000115>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/E23</obo:IAO_0000116>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label>allele frequency statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000228 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000228">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/E03</obo:IAO_0000116>
+        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label>condition mechanism statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000229 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000229">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/E02</obo:IAO_0000116>
+        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label>molecular consequence statement</rdfs:label>
     </owl:Class>
     
 
@@ -1267,55 +1286,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     
 
 
-    <!-- http://datamodel.clinicalgenome.org/valueset/common -->
+    <!-- http://datamodel.clinicalgenome.org/valueset/nfe -->
 
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/common">
-        <rdf:type rdf:resource="http://datamodel.clinicalgenome.org/terms/vs016"/>
-        <rdfs:label>common</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/valueset/established -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/established">
-        <rdf:type rdf:resource="http://datamodel.clinicalgenome.org/terms/vs016"/>
-        <rdfs:label>established</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/valueset/met -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/met">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
-        <rdfs:label>met</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/valueset/notmet -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/notmet">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
-        <rdfs:label>not met</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgenome.org/valueset/pvs -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/pvs">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000199"/>
-        <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides a &apos;very strong&apos; level of support for the pathogencity of a particular genetic variant.</obo:IAO_0000115>
-        <rdfs:label>pathogenic very strong</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://datamodel.clinicalgnome.org/valueset/nfe -->
-
-    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgnome.org/valueset/nfe">
+    <owl:NamedIndividual rdf:about="http://datamodel.clinicalgenome.org/valueset/nfe">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_001016"/>
         <rdfs:comment>The population comprised of persons of non-finnish european descent.</rdfs:comment>
         <rdfs:label>non-finnish european</rdfs:label>
@@ -1391,7 +1364,8 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000211">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000195"/>
-        <obo:SEPIO_0000196 rdf:resource="http://datamodel.clinicalgenome.org/valueset/pvs"/>
+        <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000220"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs1</obo:IAO_0000116>
         <rdfs:comment>null variant (nonsense, frameshift, canonical ±1 or 2 splice sites, initiation codon, single or multiexon deletion) in a gene where LOF is a known mechanism of disease</rdfs:comment>
         <rdfs:label>PVS1 criterion</rdfs:label>
     </owl:NamedIndividual>
@@ -1403,6 +1377,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000212">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000195"/>
         <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000216"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm2</obo:IAO_0000116>
         <rdfs:comment>Absent from controls (or at extremely low frequency if recessive) (Table 6) in Exome Sequencing Project, 1000 Genomes Project, or Exome Aggregation Consortium</rdfs:comment>
         <rdfs:label>PM2 criterion</rdfs:label>
     </owl:NamedIndividual>
@@ -1434,7 +1409,9 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000215">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
         <obo:ERO_0000480>https://www.acmg.net/docs/Standards_Guidelines_for_the_Interpretation_of_Sequence_Variants.pdf</obo:ERO_0000480>
-        <rdfs:label>ACMG ISV guidelines 2015, v1.0</rdfs:label>
+        <obo:IAO_0000116>http://data.clinicalgenome.org/AssertMeth001</obo:IAO_0000116>
+        <obo:IAO_0000118>ACMG ISV guidelines 2015, v1.0</obo:IAO_0000118>
+        <rdfs:label>ACMG Variant Pathogenicity Interpretation Guidelines (2015, v1)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1444,6 +1421,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000216">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000199"/>
         <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides a &apos;moderate&apos; level of support for the pathogencity of a particular genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm</obo:IAO_0000116>
         <rdfs:label>pathogenic moderate</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1454,8 +1432,101 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000218">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000199"/>
         <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides no support for or against the pathogencity of a particular genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/none</obo:IAO_0000116>
         <rdfs:label>none</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000220 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000220">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000199"/>
+        <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides a &apos;very strong&apos; level of support for the pathogencity of a particular genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs</obo:IAO_0000116>
+        <rdfs:label>pathogenic very strong</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000221 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000221">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000225"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/common</obo:IAO_0000116>
+        <rdfs:label>common</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000222 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000222">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000225"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/established</obo:IAO_0000116>
+        <rdfs:label>established</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000223 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000223">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/met</obo:IAO_0000116>
+        <rdfs:label>met</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000225 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000225"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000226 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000226">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/not-met</obo:IAO_0000116>
+        <rdfs:label>not met</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000230 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000230">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000224"/>
+        <rdfs:label xml:lang="en">criterion scoring algorithm (2015 ACMG Guidelines, v1)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000002">
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000125">
+        <obo:IAO_0000116>A planned process that is specified by some study design and performed to test or generate hypotheses of a scientific nature.
+
+Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</obo:IAO_0000116>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000158">
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000225">
+        <rdfs:label xml:lang="en">ClinGen mechanism confidence value</rdfs:label>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/vs016</obo:IAO_0000116>
+    </rdf:Description>
 </rdf:RDF>
 
 

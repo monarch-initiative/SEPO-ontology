@@ -72,10 +72,16 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
     
 
 
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
-        <rdfs:label xml:lang="en">xref</rdfs:label>
+        <rdfs:label xml:lang="en">database_cross_reference</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -358,7 +364,6 @@ http://purl.org/see/rdo#is_assertion_expressed_in</obo:SEPIO_0000052>
         <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <obo:IAO_0000116>Consider use of http://purl.obolibrary.org/obo/RO_0002217 ! actively participates in.  
 Definition = &quot;actively participates in y if and only if x participates in y and x realizes some active role&quot;</obo:IAO_0000116>
-        <obo:SEPIO_0000052>http://purl.obolibrary.org/obo/RO_0002217 ! actively participates in</obo:SEPIO_0000052>
         <rdfs:label xml:lang="en">has_agent</rdfs:label>
     </owl:ObjectProperty>
     
@@ -884,9 +889,6 @@ Want to be able to support inferences such as:
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source">
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>A related resource from which the described resource is derived.</obo:IAO_0000115>
-        <rdfs:comment>The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</rdfs:comment>
-        <rdfs:label xml:lang="en">source</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1334,7 +1336,6 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     <!-- http://purl.obolibrary.org/obo/IAO_0000013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000088"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000311"/>
         <obo:IAO_0000111 xml:lang="en">journal article</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Examples are articles published in the journals, Nature and Science. The content can often be cited by reference to a paper based encoding, e.g.  Authors, Title of article, Journal name, date or year of publication, volume and page number.</obo:IAO_0000112>
@@ -1433,7 +1434,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000100">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000111 xml:lang="en">data set</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves).</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
@@ -2066,9 +2067,7 @@ ECO Definition/Comment: An automatic assertion is based on computationally gener
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000125">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000004"/>
-        <obo:IAO_0000115>A data generation process that is specified by some study design and performed to test or generate hypotheses of a scientific nature.</obo:IAO_0000115>
-        <obo:IAO_0000116>Mapping to related terms: 
-Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</obo:IAO_0000116>
+        <obo:IAO_0000115>A planned proccess that executes some study design or protocol to generate scientific data that is interpreted to test or generate a hypothesis.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">research study</rdfs:label>
     </owl:Class>
     
@@ -2159,7 +2158,11 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000148"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000112>The raw count data from the case-control study above, the calculated p-value as a measure of statistical significance, or a figure summarizing these data.</obo:IAO_0000112>
+        <obo:IAO_0000112>- the raw count data from a case-control study comparing the frequency of an allele in two cohorts or populations
+- the calculated p-value as a measure of statistical significance of the difference identified in the study
+- a published figure documenting these data
+- an author statement summarizing the outcomes of the study (i.e. a &apos;study finding&apos;)
+- a broader conclusion inferred from interpretation of the data reported in a study (i.e. an evidence-based &apos;assertion&apos;)</obo:IAO_0000112>
         <obo:IAO_0000115>An information content entity that is used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
         <obo:IAO_0000118>evidence</obo:IAO_0000118>
         <obo:IAO_0000118>evidence information</obo:IAO_0000118>
@@ -2167,11 +2170,11 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
         <obo:IAO_0000118>supporting information</obo:IAO_0000118>
         <rdfs:comment>&apos;Evidence Item&apos; is a broad term covering any information interpreted as evidence in the act of making an assertion.  
 
-Classes representing differnet types of supporting data are imported here from ontologies such as OBI, IAO, and STATO, and include:
+Classes representing different types of evidence items are imported here from ontologies such as OBI, IAO, and STATO, and include:
  - measured data values
- - derived data values  such as statistical calculations and confidence measures
+ - derived data values such as statistical calculations and confidence measures
  - figures presenting or describing such data
- - author statements representing summaries or conclusiosn drawn from such data
+ - author statements representing summaries of or conclusions drawn from such data
  - established facts in a field of research
 
 Note that publications and reports are considered separately from &apos;evidence items&apos;, as a they *contain* information (data values, figures author statements) that can be used as evidence. But on its own a publication or report is merely a proxy for this information.</rdfs:comment>
@@ -2333,7 +2336,7 @@ This distinction is important because the ultimate truth of observations or find
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000179 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000179">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">value set</rdfs:label>
     </owl:Class>
     
@@ -2363,8 +2366,8 @@ This distinction is important because the ultimate truth of observations or find
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000148"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A statement (ie an assertion or observation) that is used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
-        <rdfs:comment>Evidence Statements can be &apos;Findings&apos; that summarize data and outcomes from a particular study, or evidence-based &apos;Assertions&apos; that make a broader claim, as inferred from the evaluation of relevant Findings or previously made Assertions.</rdfs:comment>
+        <obo:IAO_0000115>A statement (ie an assertion or finding) that is used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
+        <rdfs:comment>Evidence Statements can be &apos;findings&apos; that summarize data and outcomes from a particular study, or evidence-based &apos;assertions&apos; that make a broader claim, as inferred from the interpretation and evaluation of previously generated information.</rdfs:comment>
         <rdfs:label xml:lang="en">evidence statement</rdfs:label>
     </owl:Class>
     
@@ -2401,9 +2404,9 @@ This distinction is important because the ultimate truth of observations or find
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000148"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>Data that is used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data items that are used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
         <obo:IAO_0000118>evidence datum</obo:IAO_0000118>
-        <rdfs:comment>&apos;Data&apos; here can include actual data items such as experimental measurements or derived statistical calculations or scores (e.g. a 548.5 mg/dl blood glucose level, or a 1.3951e-24 p-value), data sets containing several such values and possibly metadata about them, or tables/figures that render such data for human consumption.</rdfs:comment>
+        <rdfs:comment>Instances of this class can include elemental &apos;data items&apos; such as experimental measurements or derived statistical calculations or scores (e.g. a 548.5 mg/dl blood glucose level, or a 1.3951e-24 p-value), data sets containing several such values and possibly metadata about them, or tables/figures that render such data for human consumption.</rdfs:comment>
         <rdfs:label xml:lang="en">evidence data</rdfs:label>
     </owl:Class>
     
@@ -2438,12 +2441,6 @@ This distinction is important because the ultimate truth of observations or find
         <obo:IAO_0000116>Consider subclasses for &apos;assertion confidence value&apos; and &apos;finding confidence value&apos;.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">statement confidence value</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000193 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
     
 
 
@@ -2961,6 +2958,11 @@ This concept is intentionally quite broad, covering informal and ad-hoc groups, 
         <obo:IAO_0000112 xml:lang="en">this blood coagulation has participant this blood clot</obo:IAO_0000112>
         <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:label xml:lang="en">source</rdfs:label>
+        <obo:IAO_0000115>A related resource from which the described resource is derived.</obo:IAO_0000115>
+        <rdfs:comment>The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 

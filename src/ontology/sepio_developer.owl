@@ -528,21 +528,6 @@ A SEPIO:assertion is related to the notion of &apos;&apos;provenance&apos; from 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000211">
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs1</obo:IAO_0000116>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000212">
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm2</obo:IAO_0000116>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000215">
-        <obo:IAO_0000116>http://data.clinicalgenome.org/AssertMeth001</obo:IAO_0000116>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000216">
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm</obo:IAO_0000116>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000218">
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/none</obo:IAO_0000116>
-    </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/pav/createdBy">
         <obo:IAO_0000116>Formerly SEPIO_0000018 ! created_by</obo:IAO_0000116>
     </rdf:Description>
