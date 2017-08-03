@@ -81,6 +81,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -188,6 +194,7 @@ Environments include natural environments or exposures, experimentally applied c
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
         <obo:IAO_0000115>A relation that holds between a variant interpretation criterion and some indicator of the default strength associated with evidence meeting this criterion.</obo:IAO_0000115>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:label xml:lang="en">default_criterion_strength</rdfs:label>
     </owl:ObjectProperty>
     
@@ -199,6 +206,7 @@ Environments include natural environments or exposures, experimentally applied c
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000191"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000194"/>
         <obo:IAO_0000115>A relationship that holds between a criterion assessment and a term that indicates whether the conditions laid out by the criterion were met or not met for a particular criterion assessment.</obo:IAO_0000115>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:label xml:lang="en">criterion_assessment_outcome</rdfs:label>
     </owl:ObjectProperty>
     
@@ -314,13 +322,31 @@ http://semanticscience.org/resource/SIO_010299</obo:SEPIO_0000052>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000000 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000190 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000190">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <obo:IAO_0000115>An assertion about the pathogenicity of a sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>An assertion about the pathogenicity of a genetic sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <oboInOwl:hasBroadSynonym>variant classification</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>variant interpretation</oboInOwl:hasBroadSynonym>
         <rdfs:comment>Interpretations for pathogenic variants specify a condition (disease or phenotype) for which the conclusion was reached. However, if the variant is determined to be benign (e.g. in the case of a very common polymorphism), a specific condition may not be specified - indicating that the allele is benign for all conditions. If a condition is specified for a benign variant, then the interpretation is limited to that specific condition [text derived from ClinGen Variant Interpretation model].</rdfs:comment>
@@ -332,9 +358,20 @@ http://semanticscience.org/resource/SIO_010299</obo:SEPIO_0000052>
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000191 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000191">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>An assertion made by evaluating evidence according to rules set forth in a &apos;variant interpretation criterion&apos;, which describe how to interpret specific types of information as evidence for a proposition that is ultimately relevant to the pathogenicity of the variant.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:comment>Variant interpretation guidelines often define specific &apos;criteria&apos; against which a variant is evaluated. Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
 
 Consider the &quot;PM2&quot; criterion defined by the ACMG Guidelines, which is based on the frequency of a variant in control populations. It is satisfied if a variant is absent or at exceedingly low frequencies in population databases, in which case &apos;Moderate&apos; evidence is provided for the pathogenicity of the variant. Conversely, the &quot;BS2&quot; criterion is satisfied if a variant is found at a frequency above what is expected given disease penetrance, and offers &apos;Strong&apos; evidence that the variant is Benign.
@@ -355,8 +392,8 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
         <obo:IAO_0000115>A specification that describes how to interpret the direction and strength of evidence provided by a specific type of information, for or against the pathogenicity of a genetic variant.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
-        <rdfs:label xml:lang="en">variant interpretation criterion</rdfs:label>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label xml:lang="en">variant pathogenicity criterion</rdfs:label>
     </owl:Class>
     
 
@@ -365,10 +402,15 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000193">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
-        <obo:IAO_0000115>A specification that describes how to interpret evidence in order to make a final assertion about the pathogenicity of a genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000115>A specification that describes how to interpret evidence in order to make an  assertion about the pathogenicity of a genetic variant.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <rdfs:comment>Guidelines may include specific &apos;variant interpretation criterion&apos; that describe how to interpret the direction and strength of evidence provided by a particular type of information, and &apos;criterion scoring algorithms&apos; which describe how to combine the outcomes of each criterion assessment to arrive at a final interpretation of a variant&apos;s pathogenicity.</rdfs:comment>
-        <rdfs:label xml:lang="en">variant interpretation guideline</rdfs:label>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:comment>Guidelines may include specific &apos;variant interpretation criterion&apos; that describe how to interpret the direction and strength of evidence provided by a particular type of information, and &apos;criterion scoring algorithms&apos; which describe how to combine the outcomes of each criterion assessment to arrive at a final interpretation of a variant&apos;s pathogenicity.
+
+Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
+
+The result of evaluating a varaint against a particular criterion is a &apos;criterion assessment&apos;.  For example, the &quot;PM2&quot; criterion defined by the ACMG Guidelines is satisfied if a variant is absent or at exceedingly low frequencies in population databases.  Ultimately, one or more &apos;criterion assessments&apos; are evaluated together according to some &apos;crriterion scoring algorithm&apos; to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">variant pathogenicity interpretation guideline</rdfs:label>
     </owl:Class>
     
 
@@ -389,7 +431,8 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
         <obo:IAO_0000115>A varaint interpretation criterion defined by the 2015 ACMG Variant Interpretation Guidelines.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">variant interpretation criterion (2015 ACMG Guidelines, v1)</rdfs:label>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label xml:lang="en">variant pathogenicity criterion (2015 ACMG Guidelines, v1)</rdfs:label>
     </owl:Class>
     
 
@@ -467,10 +510,10 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000224">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
-        <obo:IAO_0000115>A description of how the weighting of the satisfied variant interpretation criterion are evaluated to arrive at a final interpretation of a variant&apos;s clinical significance.</obo:IAO_0000115>
+        <obo:IAO_0000115>A specification for how to collectively evaluate one or more satistied variant pathogenicity criterion assessments to determine make a final variant pathogenicity interpretation.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
-        <rdfs:label xml:lang="en">criterion scoring algorithm</rdfs:label>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label xml:lang="en">variant pathogenicity criterion scoring algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -487,10 +530,12 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000227">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
-        <obo:IAO_0000115>A statement about the frequency of an allele in a particular population or any defined group of individuals.</obo:IAO_0000115>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/E23</obo:IAO_0000116>
+        <obo:IAO_0000112>&quot;The variant has been reported in 1/66564 European chromosomes by the Exome Aggregation Consortium (ExAC,  http://exac.broadinstitute.org; dbSNP rs397514042).&quot;</obo:IAO_0000112>
+        <obo:IAO_0000115>A statement about the frequency of an allele in a particular population or a defined group of individuals.</obo:IAO_0000115>
+        <obo:IAO_0000116>ClinGen identifier: http://datamodel.clinicalgenome.org/terms/E23</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <obo:IAO_0000119>GROUP: ClinGen DMWG</obo:IAO_0000119>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:label>allele frequency statement</rdfs:label>
     </owl:Class>
     
@@ -500,8 +545,11 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000228">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/E03</obo:IAO_0000116>
-        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <obo:IAO_0000112>&quot;Splice and other loss-of-function variants in DSC2 have been reported in individuals with ARVC (http://arvcdatabase.info/).&quot;</obo:IAO_0000112>
+        <obo:IAO_0000115>A statement about the types of alleles that cause a condition (e.g. if that LOF mutations in a particular gene are a known mechanism of disease).</obo:IAO_0000115>
+        <obo:IAO_0000116>ClinGen identifier: http://datamodel.clinicalgenome.org/terms/E03</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP: ClinGen DMWG</obo:IAO_0000119>
+        <terms:source>ClinGen  (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:label>condition mechanism statement</rdfs:label>
     </owl:Class>
     
@@ -511,8 +559,10 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000229">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/E02</obo:IAO_0000116>
-        <terms:source>ClinGen DMWG (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <obo:IAO_0000115>A statement about how particular mutation affects a genome or gene product - e.g. affects splicing, truncates protein.</obo:IAO_0000115>
+        <obo:IAO_0000116>ClinGen identifier: http://datamodel.clinicalgenome.org/terms/E02</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP: ClinGen DMWG</obo:IAO_0000119>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:label>molecular consequence statement</rdfs:label>
     </owl:Class>
     
@@ -1367,7 +1417,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
         <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000220"/>
         <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs1</obo:IAO_0000116>
         <rdfs:comment>null variant (nonsense, frameshift, canonical ±1 or 2 splice sites, initiation codon, single or multiexon deletion) in a gene where LOF is a known mechanism of disease</rdfs:comment>
-        <rdfs:label>PVS1 criterion</rdfs:label>
+        <rdfs:label>ACMG PVS1 criterion</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1379,7 +1429,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
         <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000216"/>
         <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm2</obo:IAO_0000116>
         <rdfs:comment>Absent from controls (or at extremely low frequency if recessive) (Table 6) in Exome Sequencing Project, 1000 Genomes Project, or Exome Aggregation Consortium</rdfs:comment>
-        <rdfs:label>PM2 criterion</rdfs:label>
+        <rdfs:label>ACMG PM2 criterion</rdfs:label>
     </owl:NamedIndividual>
     
 

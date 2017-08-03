@@ -74,7 +74,9 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
 
     <!-- http://purl.org/dc/terms/source -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -885,11 +887,17 @@ Want to be able to support inferences such as:
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000232 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000232">
+        <rdfs:label xml:lang="en">has_quantifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/source -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source">
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source"/>
     
 
 
@@ -1261,6 +1269,14 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000231 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000231">
+        <rdfs:label xml:lang="en">quantifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/STATO_0000129 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000129">
@@ -1611,7 +1627,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     <!-- http://purl.obolibrary.org/obo/OBI_0000181 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000181">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
         <obo:IAO_0000115>a population is a collection of individuals from the same taxonomic class living, counted or sampled at a particular site or in a particular area</obo:IAO_0000115>
         <rdfs:label>population</rdfs:label>
     </owl:Class>
@@ -1684,10 +1700,29 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PCO_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115>A material entity that consists of two or more organisms, viruses, or viroids.</obo:IAO_0000115>
+        <rdfs:label>collection of organisms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
+        <obo:IAO_0000115>A domestic group, or a number of domestic groups linked through descent (demonstrated or stipulated) from a common ancestor, marriage, or adoption.</obo:IAO_0000115>
+        <rdfs:label>family</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
         <obo:IAO_0000112>The proposition that BRCA1:2685T&gt;A causes familial breast cancer.</obo:IAO_0000112>
         <obo:IAO_0000115>An abstract entity representing the sharable meaning of what is expressed in a particular assertion.</obo:IAO_0000115>
         <obo:IAO_0000116>In the SEPIO model, an assertion is akin to an act in speech or text that expresses beleif in the truth of a proposition.  It is the proposition that represents the semantic content of a claim, and bears truth value. 
@@ -1969,7 +2004,8 @@ ECO Definition/Comment: An automatic assertion is based on computationally gener
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000072">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000066"/>
-        <rdfs:label xml:lang="en">experimental study</rdfs:label>
+        <obo:IAO_0000115>A research dtudy perfomred using an experimental model system such as a cell line, or model organism.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">experimental model study</rdfs:label>
     </owl:Class>
     
 
@@ -2166,8 +2202,6 @@ ECO Definition/Comment: An automatic assertion is based on computationally gener
         <obo:IAO_0000115>An information content entity that is used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
         <obo:IAO_0000118>evidence</obo:IAO_0000118>
         <obo:IAO_0000118>evidence information</obo:IAO_0000118>
-        <obo:IAO_0000118>supporting data</obo:IAO_0000118>
-        <obo:IAO_0000118>supporting information</obo:IAO_0000118>
         <rdfs:comment>&apos;Evidence Item&apos; is a broad term covering any information interpreted as evidence in the act of making an assertion.  
 
 Classes representing different types of evidence items are imported here from ontologies such as OBI, IAO, and STATO, and include:
@@ -2253,9 +2287,9 @@ Note that publications and reports are considered separately from &apos;evidence
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The part played by a particular agent in the creation, modification, assessment, or descruction of an artifact.</obo:IAO_0000115>
+        <obo:IAO_0000115>The actions taken by a particular agent in the creation, modification, assessment, or descruction of an artifact.</obo:IAO_0000115>
         <obo:IAO_0000116>This concept is similar in meaning and usage to PROV:Attribution.  Consider aligning or adopting.</obo:IAO_0000116>
-        <rdfs:comment>The scope of a given &apos;contribution&apos; instance is constrained to include only the actions of a particular agent. Contribution instances are used to describe when, where, how (e.g. what roles were played), and on whose behalf these actions were performed.</rdfs:comment>
+        <rdfs:comment>A contribution describes the part played by a particular agent in the creation, modification, assessment, or descruction of an artifact. The scope of a given &apos;contribution&apos; instance is constrained to include only the actions of a particular agent. Contribution instances are used to describe when, where, how (e.g. what roles were played), and on whose behalf these actions were performed.</rdfs:comment>
         <rdfs:label xml:lang="en">contribution</rdfs:label>
     </owl:Class>
     
@@ -2269,7 +2303,6 @@ Note that publications and reports are considered separately from &apos;evidence
 
 A statement summarizing the outcome of a variant population frequency study: &quot;The frequency of variant X is 0.00015 in a cohort of non-finnish european subjects described in the ExAC dataset.&quot;</obo:IAO_0000112>
         <obo:IAO_0000115>A statement about the outcome of a scientific experiment or study, describing what an agent observed, what a device recorded, or what mathematical calculations were made.</obo:IAO_0000115>
-        <obo:IAO_0000118>empirical finding</obo:IAO_0000118>
         <obo:IAO_0000118>experimental finding</obo:IAO_0000118>
         <obo:IAO_0000118>study outcome</obo:IAO_0000118>
         <rdfs:comment>An experimental finding is a statement that summarizes the observations made in a particular experiment or study. It describes only what was observed, recorded, or calculated, and not more general conclusions that may have been inferred from such findings. As such, the scope of what a finding is about is limited to the direct participants in the study - i.e. it describes only the instances observed or recorded in the study.  It makes no broader inference or conclusion about types or classes to which these instances belong. 
