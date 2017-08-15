@@ -49,7 +49,9 @@ Development of this core ontology is the first step toward establishing a larger
 3. **Supporting Tools:** A suite of tools supporting metadata curation, ontology creation, data integration, and evidence-based evaluation of scientific claims.
 
 Plans for developing such a Framework are further described here [7].
-
+  
+SEPIO is an open source ontology, implemented in OWL2 under a [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/2.0/).
+    
 ## References
 
 1. Real Data Examples pages
