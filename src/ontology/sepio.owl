@@ -164,6 +164,15 @@ bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000999 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000999">
+        <obo:IAO_0000115>A relation between a categorical measurement data item and the categorical label that indicates the value of that data item on the categorical scale.</obo:IAO_0000115>
+        <rdfs:label>has_category_label</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056">
@@ -904,8 +913,9 @@ Want to be able to support inferences such as:
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000197">
         <obo:IAO_0000115>A relationship that holds between an assertion and a term that summarizes its asserted conclusion.</obo:IAO_0000115>
+        <obo:IAO_0000118>asserted_outcome</obo:IAO_0000118>
         <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
-        <rdfs:label xml:lang="en">asserted_outcome</rdfs:label>
+        <rdfs:label xml:lang="en">asserted_conclusion</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1123,10 +1133,6 @@ Another example: I can access the page for tomorrow weather in Boston (http://ww
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057"/>
-    
 
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000021 -->
@@ -1307,8 +1313,11 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000168 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000168">
-        <obo:IAO_0000115>A quantitative value that is calculated as an indicator of the degree of confidence that the Proposition put forth by an Assertion is true.</obo:IAO_0000115>
-        <rdfs:comment>Same intent as assertion_confidence_level, but used for quantitative numerical values.</rdfs:comment>
+        <obo:IAO_0000115>A quantitative value that can be interpreted as an indicator of the degree of confidence that the Proposition put forth by an Assertion is true.</obo:IAO_0000115>
+        <obo:IAO_0000116>This property has a similar intent as assertion_confidence_level, but used for quantitative numerical values.</obo:IAO_0000116>
+        <rdfs:comment>The &apos;assertion confidence score&apos; property does not only include statistical measures such as p-values that explicitly indicate a level of confidence,. It also includes any quantitative score against which a threshold for making an assertion is defined - where the distance of this score from this threshold can be interpreted as an indicator of how much confidence we might have that the asserted conclusion is true.  
+
+For example, many silico prediction tools such as SIFT interogate biological sequence data to calculate a score that reflects the likelihood that a particular sequence variant negatively impacts gene product function.  A variant is interpreted to be &apos;Tolerated&apos;, &apos;Damaging&apos;, or &apos;Deleterious&apos; based on how its score compares against pre-defined thresholds. Here, we may have less confidence that a variant with a score just above the &apos;Damaging&apos; threshold is truly damaging, versus a variant whose score is well above the threshold.</rdfs:comment>
         <rdfs:label xml:lang="en">assertion_confidence_score</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1414,6 +1423,17 @@ This property is normally used in a functional way, although PAV does not formal
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label</obo:IAO_0000115>
+        <obo:IAO_0000232>9/22/11 BP: changed the rdfs:label for this class from &apos;label&apos; to &apos;datum label&apos; to convey that this class is not intended to cover all kinds of labels (stickers, radiolabels, etc.), and not even all kind of textual labels, but rather the kind of labels occuring in a datum.</obo:IAO_0000232>
+        <rdfs:label>datum label</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000013">
@@ -1485,6 +1505,16 @@ This property is normally used in a functional way, although PAV does not formal
         <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label xml:lang="en">directive information entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <obo:IAO_0000115>A plan specification which describes the inputs and output of mathematical functions as well as workflow of execution for achieving an predefined objective. Algorithms are realized usually by means of implementation as computer programs for execution by automata.</obo:IAO_0000115>
+        <rdfs:label>algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -1732,6 +1762,27 @@ This property is normally used in a functional way, although PAV does not formal
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000938 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000938">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <obo:IAO_0000115>A measurement datum that is reported on a categorical scale</obo:IAO_0000115>
+        <rdfs:label>categorical measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000963 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000963">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <obo:IAO_0000112>The labels &apos;positive&apos; vs. &apos;negative&apos;, or &apos;left handed&apos;, &apos;right handed&apos;, &apos;ambidexterous&apos;, or &apos;strongly binding&apos;, &apos;weakly binding&apos; , &apos;not binding&apos;, or &apos;+++&apos;, &apos;++&apos;, &apos;+&apos;, &apos;-&apos; etc. form scales of categorical labels.</obo:IAO_0000112>
+        <obo:IAO_0000115>A label that is part of a categorical datum and that indicates the value of the data item on the categorical scale.</obo:IAO_0000115>
+        <rdfs:label>categorical label</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0001442 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001442">
@@ -1742,6 +1793,27 @@ This property is normally used in a functional way, although PAV does not formal
         <obo:IAO_0000118 xml:lang="en">FDR adjusted p-value</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q-value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001930 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001930">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <obo:IAO_0000115>A value specification that is specifies one category out of a fixed number of nominal categories</obo:IAO_0000115>
+        <rdfs:label>categorical value specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001933">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity that specifies a value within a classification scheme or on a quantitative scale.</obo:IAO_0000115>
+        <obo:IAO_0000116>This term is currently a descendant of &apos;information content entity&apos;, which requires that it &apos;is about&apos; something. A value specification of &apos;20g&apos; for a measurement data item of the mass of a particular mouse &apos;is about&apos; the mass of that mouse. However there are cases where a value specification is not clearly about any particular. In the future we may change &apos;value specification&apos; to remove the &apos;is about&apos; requirement.</obo:IAO_0000116>
+        <rdfs:label>value specification</rdfs:label>
     </owl:Class>
     
 
@@ -1949,6 +2021,37 @@ May be equivalent to http://purl.obolibrary.org/obo/ECO_0000217 ! assertion meth
     </owl:Class>
     
 
+	
+    <!-- http://purl.obolibrary.org/obo/OBI_0001146 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001146">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">binding assay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An assay with the objective to characterize the disposition of two or more material entities to form a complex.</obo:IAO_0000115>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Determination of KD value for an antibody binding a protein using a BIACORE assay. Using plate bound antigen in an ELISA to determine if a mixture of serum antibodies bind the antigen.nnThe following are NOT binding assays, as the desired output is not binding data: RNA microarray experiments to determine levels of gene expression. ChIP experiments to determine where in DNA a transcription factor binds. Using an IL-2 antibody on an ELISA plate to determine presence of IL-2 after stimulating a T cell culture. </obo:IAO_0000112>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON:Bjoern Peters, Randi Vita, Jason Greenbaum</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON:Bjoern Peters, Randi Vita, Jason Greenbaum</obo:IAO_0000117>
+        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">binding assay</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002165">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein localization assay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An assay that determines the specific location of a protein. Subcellular localization is distinguished from tissue-based localization based on the type of microscopy applied.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBI development call</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rebecca Tauber</obo:IAO_0000117>
+        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein localization assay</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+    </owl:Class>
+	
+	
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000048 -->
 
@@ -2303,7 +2406,8 @@ Note that publications and reports are considered separately from &apos;evidence
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000155">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000154"/>
-        <rdfs:label xml:lang="en">validator role</rdfs:label>
+        <obo:IAO_0000118>validator role</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">approver role</rdfs:label>
     </owl:Class>
     
 
@@ -2500,9 +2604,12 @@ This distinction is important because the ultimate truth of observations or find
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000148"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>Data items that are used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
+        <obo:IAO_0000115>Research data, or a product derived from research data such as data sets or figures, that are used as evidence to evaluate the validity of a target assertion or proposition.</obo:IAO_0000115>
+        <obo:IAO_0000116>Evidence data is not classified as a &apos;data item&apos; because it is intended to cover products derived from data such as figures, tables, and data sets.</obo:IAO_0000116>
         <obo:IAO_0000118>evidence datum</obo:IAO_0000118>
-        <rdfs:comment>Instances of this class can include elemental &apos;data items&apos; such as experimental measurements or derived statistical calculations or scores (e.g. a 548.5 mg/dl blood glucose level, or a 1.3951e-24 p-value), data sets containing several such values and possibly metadata about them, or tables/figures that render such data for human consumption.</rdfs:comment>
+        <rdfs:comment>Instances of this class can include elemental &apos;data items&apos; such as experimental measurements or derived statistical calculations or scores (e.g. a 548.5 mg/dl blood glucose level, or a 1.3951e-24 p-value), data sets containing several such values and possibly metadata about them, or tables/figures that render such data for human consumption.
+
+The notion of &apos;evidence data&apos; is meant to be contrasted with the notion of an &apos;evidence statement&apos;, which is a statement used as evidence. (Statements here are logical sentences with truth value that are typically supported by interpretation of more fundamental data).</rdfs:comment>
         <rdfs:label xml:lang="en">evidence data</rdfs:label>
     </owl:Class>
     
@@ -2548,7 +2655,7 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000235">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
-        <obo:IAO_0000115>A categorical value that describes the frequency with which a phenomenon occurs.</obo:IAO_0000115>
+        <obo:IAO_0000115>A data item that is about the frequency with which a phenomenon occurs.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">frequency data</rdfs:label>
     </owl:Class>
     
