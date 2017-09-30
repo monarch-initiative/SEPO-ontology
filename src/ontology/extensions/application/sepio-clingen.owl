@@ -429,11 +429,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000324 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000324">
-        <rdfs:label xml:lang="en">benign stand alone</rdfs:label>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 
