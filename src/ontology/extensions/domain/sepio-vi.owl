@@ -323,6 +323,87 @@ Environments include natural environments or exposures, experimentally applied c
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000275 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000275">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_allele</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000276 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000276">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000277 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000277">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_population</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000278 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000278">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_gene</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000279 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000279">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_region</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000280 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000280">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_individual</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000281 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000281">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_proband</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000282 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000282">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_family</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000283 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000283">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_transcript</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000285 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000285">
@@ -369,6 +450,303 @@ Environments include natural environments or exposures, experimentally applied c
         <obo:IAO_0000115>The ending position of a sequence region in 0-based coordinates.</obo:IAO_0000115>
         <obo:IAO_0000119>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</obo:IAO_0000119>
         <rdfs:label>end_position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000286 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000286">
+        <obo:IAO_0000116>Organizational term to hold datatype properties mapping to attributes of Statements in the ClinGen json model that link to data values described by the statement.  Long term, these properties will llikely be converted to data type classes, and a single object property (descrives data item) will be used to link from the Statement (Findings) to instances of these data type classes.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">describes data value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000287 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000287">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">family segregation data</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000288 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000288">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">total segregation count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000289 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000289">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele negative condition negative individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000290 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000290">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele negative condition positive individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000291 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000291">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele positive condition negative individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000292 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000292">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele positive condition positive individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000293 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000293">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">families with inconsistent segregation count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000294 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000294">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">untested condition negative individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000295 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000295">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">untested condition positive individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000296 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000296">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">variant allele count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000297 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000297">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele frequency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000298 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000298">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">total allele count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000299 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000299">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">hemizygous individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000300 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000300">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">heterozygous individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000301 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000301">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">homozygous individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000302 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000302">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">total individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000303 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000303">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">median sequencing coverage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000304 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000304">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">case allele frequency statement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000305 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000305">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">control allele frequency statement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000306 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000306">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">lower confidence limit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000307 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000307">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">upper confidence limit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000308 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000308">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">confidence score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000309 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000309">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">odds ratio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000310 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000310">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">condition prevalence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000311 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000311">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">condition prevalence upper bound</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000312 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000312">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">condition prevalence lower bound</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000313 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000313">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">pedigree_affected_values_map</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000314 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000314">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">inconsistent segregations observed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000315 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000315">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">inconsistent segregation count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000316 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000316">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">pedigree column names</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000317 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000317">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">pedigree genotype values map</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000318 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000318">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">pedigree data</rdfs:label>
     </owl:DatatypeProperty>
     
 
