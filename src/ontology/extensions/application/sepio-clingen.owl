@@ -421,15 +421,17 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Individuals
+    // Annotations
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000002">
+        <obo:IAO_0000118>evidence-based argument</obo:IAO_0000118>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000274">
+        <obo:IAO_0000115>A statement that asserts whether an allele causes complete loss of function of a gene or gene  product.</obo:IAO_0000115>
+    </rdf:Description>
 </rdf:RDF>
 
 

@@ -407,7 +407,7 @@ http://semanticscience.org/resource/SIO_010299</obo:SEPIO_0000052>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000512"/>
-        <obo:IAO_0000115>A seqeunce feature representing one of a set of coexisting sequence variants of a defined genetic locus.</obo:IAO_0000115>
+        <obo:IAO_0000115>A seqeunce feature representing one of a set of coexisting sequence variants at a defined genetic locus.</obo:IAO_0000115>
         <rdfs:label>variant allele</rdfs:label>
     </owl:Class>
     
@@ -1512,7 +1512,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000194">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
         <obo:IAO_0000115>A term that indicates whether the conditions laid out by a variant interpretation criterion were met or not met for a particular criterion assessment.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">criterion assessment outcome</rdfs:label>
     </owl:Class>
@@ -1671,7 +1670,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <obo:IAO_0000116>ClinGen identifier: http://datamodel.clinicalgenome.org/terms/E02</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP: ClinGen DMWG</obo:IAO_0000119>
         <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
-        <rdfs:label>molecular consequence statement</rdfs:label>
+        <rdfs:label>allele molecular consequence statement</rdfs:label>
     </owl:Class>
     
 
@@ -1751,7 +1750,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000245">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
-        <rdfs:label xml:lang="en">individual allele statement</rdfs:label>
+        <rdfs:label xml:lang="en">individual genotype statement</rdfs:label>
     </owl:Class>
     
 
@@ -1841,7 +1840,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000263">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
         <rdfs:label xml:lang="en">clinical significance value</rdfs:label>
     </owl:Class>
     
@@ -1868,17 +1866,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000321 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000321">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000481"/>
-        <obo:IAO_0000115>A region of genomic sequence known to undergo mutational events with greater frequency than expected by chance.</obo:IAO_0000115>
-        <obo:IAO_0000116>Placeholder for SO term.  See request here: https://github.com/The-Sequence-Ontology/SO-Ontologies/issues/411</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">mutational hotspot</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000322 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
@@ -1895,7 +1882,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
         <obo:IAO_0000112>GeneSplicer, Human Splice Finder (HSF)</obo:IAO_0000112>
-        <obo:IAO_0000115>An algorithm designed to predict the location of residues important for mRNA spllicing, and/or the impact of a mutation on splicing of an mRNA molecule.</obo:IAO_0000115>
+        <obo:IAO_0000115>An algorithm designed to predict the impact of a mutation on splicing of an mRNA molecule, or the location of residues important for mRNA splicing.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">splicing effect prediction algorithm</rdfs:label>
     </owl:Class>
     
@@ -5884,6 +5871,16 @@ It is further clarified in the comments section as: ncRNA does NOT mean conventi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_0002186 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002186">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000481"/>
+        <obo:IAO_0000115>A region of genomic sequence known to undergo mutational events with greater frequency than expected by chance.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">mutational_hotspot</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO_1000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000002">
@@ -6604,6 +6601,14 @@ It is further clarified in the comments section as: ncRNA does NOT mean conventi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000324 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000324">
+        <rdfs:label xml:lang="en">benign stand alone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000325 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000325">
@@ -6630,12 +6635,7 @@ It is further clarified in the comments section as: ncRNA does NOT mean conventi
     </owl:NamedIndividual>
     
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000324 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000324">
-        <rdfs:label xml:lang="en">benign stand alone</rdfs:label>
-    </owl:NamedIndividual>
-	
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000328 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000328">
@@ -6689,6 +6689,15 @@ It is further clarified in the comments section as: ncRNA does NOT mean conventi
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000260"/>
         <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the Genome Aggregation database (gnomAD).</obo:IAO_0000115>
         <rdfs:label xml:lang="en">gnomAD ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000336 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000336">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
+        <rdfs:label xml:lang="en">PredictionType</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
