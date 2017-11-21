@@ -341,7 +341,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000310">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
-        <rdfs:label xml:lang="en">condition prevalance</rdfs:label>
+        <rdfs:label xml:lang="en">condition prevalence</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -350,7 +350,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000311">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
-        <rdfs:label xml:lang="en">condition prevalance upper bound</rdfs:label>
+        <rdfs:label xml:lang="en">condition prevalence upper bound</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -359,7 +359,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000312">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
-        <rdfs:label xml:lang="en">condition prevalance lower bound</rdfs:label>
+        <rdfs:label xml:lang="en">condition prevalence lower bound</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -415,23 +415,6 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
         <rdfs:label xml:lang="en">pedigree data</rdfs:label>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000002">
-        <obo:IAO_0000118>evidence-based argument</obo:IAO_0000118>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000274">
-        <obo:IAO_0000115>A statement that asserts whether an allele causes complete loss of function of a gene or gene  product.</obo:IAO_0000115>
-    </rdf:Description>
 </rdf:RDF>
 
 

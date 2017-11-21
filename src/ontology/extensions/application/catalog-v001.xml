@@ -3,14 +3,14 @@
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl" uri="../../mireots/bfo.owl"/>
     <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl" uri="../../imports/ontology-metadata.owl"/>
     <group id="Folder Repository, directory=file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/, recursive=false, Auto-Update=true, version=2" prefer="public" xml:base="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/">
-        <uri id="Automatically generated entry, Timestamp=1509493585067" name="http://purl.obolibrary.org/obo/sepio-merged_20170724.owl" uri="sepio-merged_20170724.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1509493585067" name="http://purl.obolibrary.org/obo/sepio.owl" uri="sepio.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1509493585067" name="http://purl.obolibrary.org/obo/sepio_developer.owl" uri="sepio_developer.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1511288804486" name="http://purl.obolibrary.org/obo/sepio-merged_20170724.owl" uri="sepio-merged_20170724.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1511288804486" name="http://purl.obolibrary.org/obo/sepio.owl" uri="sepio.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1511288804486" name="http://purl.obolibrary.org/obo/sepio_developer.owl" uri="sepio_developer.owl"/>
     </group>
     <group id="Folder Repository, directory=file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/extensions/domain/, recursive=false, Auto-Update=true, version=2" prefer="public" xml:base="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/extensions/domain/">
-        <uri id="Automatically generated entry, Timestamp=1510684570366" name="http://purl.obolibrary.org/obo/sepio-vi.owl" uri="sepio-vi.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1511288804404" name="http://purl.obolibrary.org/obo/sepio-vi.owl" uri="sepio-vi.owl"/>
     </group>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1510622170448" name="http://purl.obolibrary.org/obo/sepio-clingen.owl" uri="sepio-clingen.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1511288804545" name="http://purl.obolibrary.org/obo/sepio-clingen.owl" uri="sepio-clingen.owl"/>
     </group>
 </catalog>

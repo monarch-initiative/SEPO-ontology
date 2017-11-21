@@ -1849,6 +1849,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000274">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement that asserts whether an allele causes complete loss of function of a gene or gene  product.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">null allele statement</rdfs:label>
     </owl:Class>
     
