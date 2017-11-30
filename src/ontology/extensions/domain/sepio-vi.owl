@@ -1978,7 +1978,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <obo:IAO_0000115>A condition with a specific mode of inheritance.</obo:IAO_0000115>
         <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/E14</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP:ClinGen DMWG</obo:IAO_0000119>
-        <rdfs:label>mendelian condition</rdfs:label>
+        <rdfs:label>genetic condition</rdfs:label>
     </owl:Class>
     
 
@@ -2217,8 +2217,9 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000263 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000263">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:label xml:lang="en">clinical significance value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+        <rdfs:comment>obsoleted 11-29-17 - couldnt recall need for this class</rdfs:comment>
+        <rdfs:label xml:lang="en">obsolete_clinical significance value</rdfs:label>
     </owl:Class>
     
 

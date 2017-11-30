@@ -914,7 +914,6 @@ Want to be able to support inferences such as:
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000189 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000189">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
