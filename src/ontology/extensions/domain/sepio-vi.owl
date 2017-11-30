@@ -5,6 +5,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:eco="http://purl.obolibrary.org/obo/eco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -14,6 +15,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-clingen.owl">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio-clingen-skos.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio.owl"/>
     </owl:Ontology>
     
@@ -2252,6 +2254,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
         <obo:IAO_0000112>SIFT, Polyphen</obo:IAO_0000112>
         <obo:IAO_0000115>An algorithm designed to predict the impact of a missense mutation on the function of a gene or gene product.</obo:IAO_0000115>
+        <obo:SEPIO_0000337>http://purl.obolibrary.org/obo/SEPIO:0000345</obo:SEPIO_0000337>
         <rdfs:label xml:lang="en">missense effect algoritm</rdfs:label>
     </owl:Class>
     
@@ -2263,6 +2266,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
         <obo:IAO_0000112>GeneSplicer, Human Splice Finder (HSF)</obo:IAO_0000112>
         <obo:IAO_0000115>An algorithm designed to predict the impact of a mutation on splicing of an mRNA molecule, or the location of residues important for mRNA splicing.</obo:IAO_0000115>
+        <obo:SEPIO_0000337>http://purl.obolibrary.org/obo/SEPIO:0000345</obo:SEPIO_0000337>
         <rdfs:label xml:lang="en">splicing effect prediction algorithm</rdfs:label>
     </owl:Class>
     
@@ -7073,11 +7077,11 @@ It is further clarified in the comments section as: ncRNA does NOT mean conventi
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000336 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO:0000345 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000336">
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO:0000345">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
-        <rdfs:label xml:lang="en">PredictionType</rdfs:label>
+        <rdfs:label>Prediction Type</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
