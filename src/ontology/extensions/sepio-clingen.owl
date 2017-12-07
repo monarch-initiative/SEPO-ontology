@@ -38,6 +38,54 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_alt_id -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_alt_id"/>
@@ -74,12 +122,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000052 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000052"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000217 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000217">
         <rdfs:label xml:lang="en">ClinGen preferred term</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000111"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000337 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000337"/>
     
 
 
@@ -97,9 +157,9 @@
 
     <!-- http://purl.org/dc/terms/source -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source">
         <obo:IAO_0000116>This relation can be used to link artifacts such as information to other information resources from with it was retrieved or derived in whole or in part.  This includes cases where information was extracted and its structure modified, but not cases where significant modifications were made to its meaning or content.</obo:IAO_0000116>
-    </rdf:Description>
+    </owl:AnnotationProperty>
     
 
 
@@ -124,6 +184,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
     
 
 
@@ -154,6 +220,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
     
 
 
@@ -246,6 +318,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002204 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002204">
@@ -295,9 +373,9 @@ Environments include natural environments or exposures, experimentally applied c
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000041 -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000041">
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000041">
         <rdfs:comment>In SEPIO, this property is most often used to link assertions to assertion methods that may describe what types of data may be used as evidence, what weight to give a particular type of evidence, and how to combine different lines of evidence to make a final assertion.</rdfs:comment>
-    </rdf:Description>
+    </owl:ObjectProperty>
     
 
 
@@ -767,6 +845,18 @@ Environments include natural environments or exposures, experimentally applied c
     <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
     
 
 
@@ -1770,7 +1860,7 @@ In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
         <obo:IAO_0000112>- Data Items: A &apos;548.5 mg/dl&apos; measurement of blood glucose in mutant mice.
 - Protocols: A blood glucose assay protocol that describes how the measurement was taken.
 - Calculations: A 1.3951e-24 p-value statistic indicating a significant increase relative to wild-type mice.
@@ -1780,24 +1870,78 @@ In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;
 - Software/Algorithms: A text-mining algorithm that mines the literature to identify and extract the assertion.
 - Databases: The MGI (Mouse Genome Informatics) database that stores the assertion as a structured gene-disease annotation.</obo:IAO_0000112>
         <rdfs:comment>ICEs are abstract entities that convey information about things in the world. ICEs represent the information encoded in physical artifacts such as photographs, books, or digital storage medium (as opposed to the physical medium itself).  A particular ICE can be encoded simultaneously in many physical or digital mediums and formats. For example, only one instance of the first edition of &quot;War and Peace&quot; exists as an ICE, representing information conveyed in this work. But many instances of &quot;War and Peace&quot; exist at the level of their physical concretizations in printed books or digital devices.</rdfs:comment>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000033"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000064"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000963 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000963"/>
     
 
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000001 -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001">
         <obo:IAO_0000118>logical inference</obo:IAO_0000118>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
     
 
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000174 -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174">
         <rdfs:comment>In SEPIO, a high-level distinction is made between Statements that are  &apos;Findings&apos; vs &apos;Assertions&apos;. Findings are statements that report what was observed in an experiment or study, and are about only the direct participants in the experiment or study. Assertions are statements that derive from some degree of interpretation or inference based on the evaluation of &apos;evidence&apos;, and often make broader claims about the types or categories to which study participants belong. 
 This distinction is important because the provenance and validity of a finding does not depend on evidence in the same way that of an assertion does. This has modeling implications for findings and assertions are linked to information that supports them.</rdfs:comment>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000179 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000179"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000187 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000187"/>
     
 
 
@@ -2057,9 +2201,9 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000235 -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000235">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000235">
         <obo:IAO_0000116>Consider: SIO:001367 ! frequency (Frequency is the number of occurrences of a repeating event per unit time)</obo:IAO_0000116>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -6685,12 +6829,30 @@ It is further clarified in the comments section as: ncRNA does NOT mean conventi
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000794 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000794"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001016 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001016"/>
+    
+
+
     <!-- http://www.orpha.net/ORDO/Orphanet_247 -->
 
     <owl:Class rdf:about="http://www.orpha.net/ORDO/Orphanet_247">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_4"/>
         <rdfs:label>arrhythmogenic right ventricular cardiomyopathy</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
     
 
 
