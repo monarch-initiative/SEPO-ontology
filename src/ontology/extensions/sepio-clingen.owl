@@ -7060,7 +7060,7 @@ It is further clarified in the comments section as: ncRNA does NOT mean conventi
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000230">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000224"/>
-        <rdfs:label xml:lang="en">criterion scoring algorithm (2015 ACMG Guidelines, v1)</rdfs:label>
+        <rdfs:label xml:lang="en">variant pathogenicity criterion scoring algorithm (2015 ACMG Guidelines, v1)</rdfs:label>
     </owl:NamedIndividual>
     
 
