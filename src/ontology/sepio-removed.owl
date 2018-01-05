@@ -1,0 +1,625 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.oboblibrary.org/obo/sepio-removed.owl#"
+     xml:base="http://purl.oboblibrary.org/obo/sepio-removed.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="http://purl.oboblibrary.org/obo/sepio-removed.owl">
+        <rdfs:comment>Temporary file to hold classes that we want to remove from sepio core to make a cleaner and simpler core ontology. Once we are sure we no longer wnat these, we may deprecate this file . . . .but it may be useful to infrom &apos;catalogs&apos; of terms that we might want to provide to support creation of ontology extensions.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000512 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000512"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label</obo:IAO_0000115>
+        <obo:IAO_0000232>9/22/11 BP: changed the rdfs:label for this class from &apos;label&apos; to &apos;datum label&apos; to convey that this class is not intended to cover all kinds of labels (stickers, radiolabels, etc.), and not even all kind of textual labels, but rather the kind of labels occuring in a datum.</obo:IAO_0000232>
+        <rdfs:label>datum label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001563 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0001563">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <rdfs:label xml:lang="en">proportional reporting ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000938 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000938">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <obo:IAO_0000115>A measurement datum that is reported on a categorical scale</obo:IAO_0000115>
+        <rdfs:label>categorical measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000963 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000963">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <obo:IAO_0000112>The labels &apos;positive&apos; vs. &apos;negative&apos;, or &apos;left handed&apos;, &apos;right handed&apos;, &apos;ambidexterous&apos;, or &apos;strongly binding&apos;, &apos;weakly binding&apos; , &apos;not binding&apos;, or &apos;+++&apos;, &apos;++&apos;, &apos;+&apos;, &apos;-&apos; etc. form scales of categorical labels.</obo:IAO_0000112>
+        <obo:IAO_0000115>A label that is part of a categorical datum and that indicates the value of the data item on the categorical scale.</obo:IAO_0000115>
+        <rdfs:label>categorical label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001442 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001442">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q-value</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000117 xml:lang="en">PERS:Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">FDR adjusted p-value</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q-value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001930 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001930">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <obo:IAO_0000115>A value specification that is specifies one category out of a fixed number of nominal categories</obo:IAO_0000115>
+        <rdfs:label>categorical value specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001933">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity that specifies a value within a classification scheme or on a quantitative scale.</obo:IAO_0000115>
+        <obo:IAO_0000116>This term is currently a descendant of &apos;information content entity&apos;, which requires that it &apos;is about&apos; something. A value specification of &apos;20g&apos; for a measurement data item of the mass of a particular mouse &apos;is about&apos; the mass of that mouse. However there are cases where a value specification is not clearly about any particular. In the future we may change &apos;value specification&apos; to remove the &apos;is about&apos; requirement.</obo:IAO_0000116>
+        <rdfs:label>value specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0302840 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0302840">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000111 xml:lang="en">curated information</obo:IAO_0000111>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID: 17344875: A curated compendium of phosphorylation motifs.Nat Biotechnol. 2007 Mar;25(3):285-6.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A information content entity that has undergone a digital curation performed by a curator for accuracy checks and compliance with curation requirements. Information which has been assessed for accuracy by domain experts.</obo:IAO_0000115>
+        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-11-10 Bjoern Peters. Need to check if this was intended. overlap with &apos;edited information&apos;, and has the same logical restrictions.</obo:IAO_0000116>
+        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-01-31 Philippe Rocca-Serra: restriction now changed to be the output of a digital curation process + reflected in example of usage and reference</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person:Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person:Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBI</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:label xml:lang="en">curated information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000206 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000206">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000794"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GENO_0000512"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">allele count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000207 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000207">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000206"/>
+        <rdfs:label xml:lang="en">variant allele count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000208">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000206"/>
+        <rdfs:label xml:lang="en">total allele count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000235 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000235">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <obo:IAO_0000115>A data item that is about the frequency with which a phenomenon occurs.</obo:IAO_0000115>
+        <obo:IAO_0000116>Consider: SIO:001367 ! frequency (Frequency is the number of occurrences of a repeating event per unit time)</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">frequency data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Chi-squared statistic is a statistic computed from observations and used to produce a p-value in statistical test when compared to a Chi-Squared distribution.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">Chi-Squared statistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000039"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000112 xml:lang="en">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2689604/</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">effect size estimate is a data item about the direction and strength of the consequences of a causative agent as explored by statistical methods. Those methods produce estimates of the effect size, e.g. confidence interval</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">AGB,PRS</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">effect size estimate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">SMD</obo:IAO_0000118>
+        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">standardized mean difference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000123">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000142"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">r2 is a correlation coefficient which is computed over the frequency of 2 dichotomous variable and is used as a measure of Linkage Disequilibrium and as input data item to the creation of an LD plot</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2580747/</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">r2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000100"/>
+        <obo:IAO_0000112 xml:lang="en">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2789971/</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/SSMD</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2789971/</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">strictly standardized mean difference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000142 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The correlation coefficient of two variables in a data sample is their covariance divided by the product of their individual standard deviations. It is a normalized measurement of how the two are linearly related.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">correlation coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000176">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">t-statistic is a statistic computed from observations and used to produce a p-value in statistical test when compared to a Student&apos;s t distribution.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">t-statistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000182 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000182">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label>odds ratio</rdfs:label>
+        <rdfs:label xml:lang="en">odds ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000201 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000201">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000142"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Spearman&apos;s rho</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">Spearman&apos;s rank correlation coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000212 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000269"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a tetrachoric correlation coefficient is a polychoric correlation coefficient for 2 dichotomous variables used as proxy for correlation between 2 continuous latent variables.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">tetrachoric correlation coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000240">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000142"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Kendall&apos;s correlation coefficient is a correlation coefficient between 2 ordinal variables (natively or following a ranking procedure) and may be used when the conditions for computing Pearson&apos;s correlation are not met (e.g linearity, normality of the 2 continuous variables)</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Kendall rank correlation coefficient</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">Kendall&apos;s tau (τ) coefficient</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">Kendall&apos;s correlation coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000115>Relative risk is a measurement datum which denotes the risk of an &apos;event&apos; relative to an &apos;exposure&apos;. Relative risk is calculated by forming the ratio of the probability of the event occurring in the exposed group versus a the probability of this event occurring in the non-exposed group.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118>risk ratio</obo:IAO_0000118>
+        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label>relative risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000254">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000235"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GENO_0000512"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The allele frequency is a data item which denotes the incidence of a gene variant in a population. It is calculated as a ratio, by dividing the number of copies of a particular allele by the number of copies of all alleles at the genetic place (locus) in a population.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">allele frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000269 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000269">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000142"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">polychoric correlation coefficient is a correlation coefficient which is computed over 2 variables to characterise an association by proxy with 2  (latent) variables which are assumed to be continuous and normally distributed.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">polychoric correlation coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000280 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000280">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000142"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Pearson product-moment correlation coefficient</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">Pearson&apos;s r</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">r statistics</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">Pearson&apos;s correlation coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000282 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000282">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">F statistic is a statistic computed from observations and used to produce a p-value in statistical test when compared to a F distribution. the F statistic is the ratio of two scaled sums of squares reflecting different sources of variability</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">F-statistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000316 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000316">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">root-mean-square standardized effect is a data item which denotes effect size in the context of analysis of variance and corresponds to the square root of the arithmetic average of p  standardized effects  (effects normalized to be expressed in standard deviation units).</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Ψ</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">http://www.statpower.net/Steiger%20Biblio/Steiger04.pdf</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">root-mean-square standardized effect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000317 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000317">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">Eta-squared is a biased estimator of the variance explained by the model in the population (it estimates only the effect size in the sample). Eta-squared describes the ratio of variance explained in the dependent variable by a predictor while controlling for other predictors, making it analogous to the r2. This estimate shares the weakness with r2 that each additional variable will automatically increase the value of η2. In addition, it measures the variance explained of the sample, not the population, meaning that it will always overestimate the effect size, although the bias grows smaller as the sample grows larger.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Effect_size#Eta-squared.2C_.CE.B72</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">eta-squared</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000318 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000318">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">omega-squared is a effect size estimate for variance explained which is less biased than the eta-squared coefficient.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">omega-squared</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000319 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000319">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">Hedges&apos;s g is an estimator of effect size which is similar to Cohen&apos;s d and is a measure based on a standardized difference however the denominator , corresponding to a pooled standard deviation, is computed differently from Cohen&apos;s d coefficient, by applying a correction factor (which involves a Gamma function)</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">Hedges&apos;s g</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000320 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000320">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000085"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">Glass&apos;s delta is an estimator of effect size which is similar to Cohen&apos;s d but where the denominator corresponds only to the standard deviation of the control group (or second group). It is considered less biais than the Cohen&apos;s d for estimating effect sizes based on means and distances between means.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obofoundry.org/obo/stato.owl"/>
+        <rdfs:label xml:lang="en">Glass&apos;s delta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000794 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000794">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <obo:IAO_0000115>The number of elements of a finite set of objects.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">count</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

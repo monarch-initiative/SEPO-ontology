@@ -1,0 +1,822 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl#"
+     xml:base="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl">
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label>definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116">
+        <rdfs:label>editor note</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000196 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000196"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000362 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000373 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000340 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000340">
+        <rdfs:label xml:lang="en">skos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID_4">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000372"/>
+        <obo:IAO_0000115>A disease is a disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
+        <rdfs:label>disease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000131 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000131">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000344"/>
+        <rdfs:label>in cis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000132 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000132">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000344"/>
+        <rdfs:label>in trans</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000134 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000134">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000338"/>
+        <rdfs:label>hemizygous</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000135 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000135">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000338"/>
+        <rdfs:label>heterozygous</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000136 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000136">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000338"/>
+        <rdfs:label>homozygous</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000137 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000137">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000338"/>
+        <rdfs:label>unspecified zygosity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000602 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000602">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000338"/>
+        <rdfs:label>homoplasmic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000603 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000603">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000338"/>
+        <rdfs:label>heteroplasmic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000840 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000840">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000371"/>
+        <oboInOwl:hasDbXref>LOINC:LA6668-3</oboInOwl:hasDbXref>
+        <rdfs:label>pathogenic_for_condition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000841 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000841">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000371"/>
+        <oboInOwl:hasDbXref>LOINC:LA26332-9</oboInOwl:hasDbXref>
+        <rdfs:label>likely_pathogenic_for_condition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000843 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000843">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000371"/>
+        <oboInOwl:hasDbXref>LOINC:LA6675-8</oboInOwl:hasDbXref>
+        <rdfs:label>benign_for_condition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000844 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000844">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000371"/>
+        <oboInOwl:hasDbXref>LOINC:LA26334-5</oboInOwl:hasDbXref>
+        <rdfs:label>likely_benign_for_condition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000845 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000845">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000371"/>
+        <oboInOwl:hasDbXref>LOINC:LA26333-7</oboInOwl:hasDbXref>
+        <rdfs:label>has_uncertain_significance_for_condition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000882 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000882">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000338"/>
+        <rdfs:label>somatic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HPO -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000118 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0000118">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000375"/>
+        <obo:IAO_0000115>A phenotypic abnormality.</obo:IAO_0000115>
+        <rdfs:comment>This is the root of the phenotypic abnormality subontology of the HPO.</rdfs:comment>
+        <rdfs:label>Phenotypic abnormality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000216 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000216">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides a &apos;moderate&apos; level of support for the pathogencity of a particular genetic variant.</obo:IAO_0000115>
+        <rdfs:label>pathogenic moderate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000218 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000218">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides no support for or against the pathogencity of a particular genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/none</obo:IAO_0000116>
+        <rdfs:label>none</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000220 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000220">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides a &apos;very strong&apos; level of support for the pathogencity of a particular genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs</obo:IAO_0000116>
+        <rdfs:label>pathogenic very strong</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000223 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000223">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000347"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/met</obo:IAO_0000116>
+        <rdfs:label>met</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000226 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000226">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000347"/>
+        <rdfs:label>not met</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000262 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000262">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the 1000 Genomes Database.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">1000 Genomes ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000265 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000265">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000349"/>
+        <rdfs:label xml:lang="en">BMVR high</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000266 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000266">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000349"/>
+        <rdfs:label xml:lang="en">BMVR low</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000268 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000268">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000354"/>
+        <rdfs:label xml:lang="en">condition mechanism strength common</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000269 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000269">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000354"/>
+        <rdfs:label xml:lang="en">condition mechanism strength established</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000270 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000270">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000354"/>
+        <rdfs:label xml:lang="en">condition mechanism strength primary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000271 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000271">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000354"/>
+        <rdfs:label xml:lang="en">condition mechanism strength suggested</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000272 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000272">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000354"/>
+        <rdfs:label xml:lang="en">condition mechanism strength unknown</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000273 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000273">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000348"/>
+        <rdfs:label xml:lang="en">locus specificity low</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000322 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000345"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000323 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000345"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000325 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000325">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <rdfs:label xml:lang="en">benign stand alone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000326 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000326">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <rdfs:label xml:lang="en">benign moderate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000327 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000327">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <rdfs:label xml:lang="en">benign supporting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000328 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000328">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <rdfs:label xml:lang="en">benign strong</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000329 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000329">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <rdfs:label xml:lang="en">pathogenic supporting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000330 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000330">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
+        <rdfs:label xml:lang="en">pathogenic strong</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000332 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000332">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the Exome Aggregation Consortium (ExAC) database.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">ExAc ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000333 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000333">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the NHLBI Exome Sequencing Project (ESP) database.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">ESP ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000334 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000334">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the Genome Aggregation database (gnomAD).</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">gnomAD ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000338 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000338">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set comprised of terms to describe the number and/or genomic organization of alleles at a particular locus in the genome of an individual.</obo:IAO_0000115>
+        <terms:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:creator>
+        <rdfs:label xml:lang="en">Allelic State</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000343 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000343">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/SO"/>
+        <obo:IAO_0000115>A value set comprised of terms used to indicate the type of sequence feature a particular region of genomic sequence represents.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">Region Type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000344 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000344">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set comprised of terms indicating the relative position of two or more alleles on the same or distinct chromosomes.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">Allelic Phase</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000345 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000345">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set comprised of terms indicating the type of algorithm used to generate a particular in silico prediction.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">In Silico Prediction Type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000347 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000347">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set holding terms that indicate whether the conditions laid out by a variant interpretation criterion were met or not for a particular criterion assessment.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">Criterion Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000348 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000348">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set comprised of terms that indicate the degree of specificity with which a genetic condition is caused by variants in a particular gene or locus.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">Locus Specificity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000349 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000349">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set comprised of terms indicating the frequency at which missense variants in a particular region are tolerated (i.e. do not cause a pathological condition).</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">Benign Missense Variation Rate Outcome</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000350 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000350">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000348"/>
+        <rdfs:label xml:lang="en">locus specificity high</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000351 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000351">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000348"/>
+        <rdfs:label xml:lang="en">locus specificity complete</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000353 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000353">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set comprised of terms indicating the degree of support provided by an evidence line for a particular variant interpretation.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">ACMG Evidence Strength</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000354 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000354">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set comprised of terms indicating the extent to which a particular genetic mechanism underlying a condition is known.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">Condition Mechanism Strength</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000363 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000363">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>A value set comprised of terms that describe if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">Value Set Extensibility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000364 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000364">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
+        <obo:IAO_0000115>A term describing a value set that cannot be extended with new values.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">fixed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000365 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000365">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
+        <obo:IAO_0000115>A term describing a value set that can be extended with new values.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">extensible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000371 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000371">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Clinical Significance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000372 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/DOID"/>
+        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/DOID_4"/>
+        <rdfs:label xml:lang="en">Disease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000375 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000375">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/HPO"/>
+        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <rdfs:label xml:lang="en">Phenotype</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000657 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_0000657">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000343"/>
+        <rdfs:label>repeat_region</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0002186 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_0002186">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000343"/>
+        <obo:IAO_0000115>A region of genomic sequence known to undergo mutational events with greater frequency than expected by chance.</obo:IAO_0000115>
+        <rdfs:label>mutational_hotspot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_002188 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_002188">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000343"/>
+        <rdfs:label>functional_gene_region</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

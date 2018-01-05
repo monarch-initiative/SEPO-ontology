@@ -1,0 +1,2126 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio-clingen.owl#"
+     xml:base="http://purl.obolibrary.org/obo/sepio-clingen.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:eco="http://purl.obolibrary.org/obo/eco/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-clingen.owl">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ERO_0000480 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ERO_0000480"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_alt_id -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_alt_id"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_created_by"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_creation_date"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_id -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_id"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_subset -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_subset"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_xref -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_xref"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000052 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000052"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000217 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000217">
+        <rdfs:label xml:lang="en">ClinGen preferred term</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000337 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000337"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source">
+        <obo:IAO_0000116>This relation can be used to link artifacts such as information to other information resources from with it was retrieved or derived in whole or in part.  This includes cases where information was extracted and its structure modified, but not cases where significant modifications were made to its meaning or content.</obo:IAO_0000116>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://biohackathon.org/resource/faldo#reference -->
+
+    <owl:ObjectProperty rdf:about="http://biohackathon.org/resource/faldo#reference">
+        <obo:IAO_0000115>The reference is the resource that the position value is anchored to.  For example, a contig or chromosome in a genome assembly.</obo:IAO_0000115>
+        <rdfs:label>reference</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000790 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000790">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000086"/>
+        <rdfs:label xml:lang="en">deprecated has_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002204 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002204">
+        <obo:IAO_0000115>definition &quot;x has gene product of y if and only if y is a gene (SO:0000704) that participates in some gene expression process (GO:0010467) where the output of that process is either y or something that is ribosomally translated from x&quot;</obo:IAO_0000115>
+        <rdfs:label>gene product of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002205 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002205">
+        <obo:IAO_0000112>every HOTAIR lncRNA is the gene product of some HOXC gene</obo:IAO_0000112>
+        <obo:IAO_0000112>every sonic hedgehog protein (PR:000014841) is the gene product of some sonic hedgehog gene</obo:IAO_0000112>
+        <obo:IAO_0000115>x has gene product y if and only if x is a gene (SO:0000704) that participates in some gene expression process (GO:0010467) where the output of that process is either y or something that is ribosomally translated from y</obo:IAO_0000115>
+        <rdfs:label>has gene product</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000041 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000196 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000196">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
+        <obo:IAO_0000115>A relation that holds between a variant interpretation criterion and some indicator of the default strength associated with evidence meeting this criterion.</obo:IAO_0000115>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label xml:lang="en">default_criterion_strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000256 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000256">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/GENO_0000890"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/GENO_0000891"/>
+        <obo:IAO_0000115>A relation that holds between a canonical allele and the contextual allele that is the preferred representation of that allele.</obo:IAO_0000115>
+        <terms:source>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/master/index.html)</terms:source>
+        <rdfs:label xml:lang="en">preferred_contextual_allele</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000275 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000275">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_allele</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000276 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000276">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000277 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000277">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_population</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000278 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000278">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_gene</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000279 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000279">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_region</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000280 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000280">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_individual</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000281 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000281">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_proband</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000282 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000282">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_family</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000283 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000283">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_transcript</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000285 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000285">
+        <obo:IAO_0000115>A relation that holds between a contextual allele and the canonical allele to which it maps.</obo:IAO_0000115>
+        <obo:IAO_0000119>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/master/index.html)</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">related_canonical_allele</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000362 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362">
+        <obo:IAO_0000115>A property used to indicate if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">valueSetExtensibility</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000373 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373">
+        <obo:IAO_0000115>A property used to relate a value set to an identifier system from which terms comprising the value set are allowed.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">valueSetIdentifierSystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ERO_0000574 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/ERO_0000574">
+        <obo:IAO_0000115>The official symbol for the gene.</obo:IAO_0000115>
+        <rdfs:label>has_gene_symbol</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000894 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000894">
+        <obo:IAO_0000115>The starting position of a sequence region in 0-based coordinates.</obo:IAO_0000115>
+        <obo:IAO_0000119>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</obo:IAO_0000119>
+        <rdfs:label>start_position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000895 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000895">
+        <obo:IAO_0000115>The ending position of a sequence region in 0-based coordinates.</obo:IAO_0000115>
+        <obo:IAO_0000119>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</obo:IAO_0000119>
+        <rdfs:label>end_position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000286 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000286">
+        <obo:IAO_0000116>Organizational term to hold datatype properties mapping to attributes of Statements in the ClinGen json model that link to data values described by the statement.  Long term, these properties will llikely be converted to data type classes, and a single object property (&apos;describes data item&apos;) will be used to link from the Statement (Findings) to instances of these data type classes.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">describes data value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000287 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000287">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">family segregation data</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000288 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000288">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">total segregation count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000289 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000289">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele negative condition negative individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000290 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000290">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele negative condition positive individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000291 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000291">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele positive condition negative individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000292 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000292">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele positive condition positive individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000293 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000293">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">families with inconsistent segregation count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000294 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000294">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">untested condition negative individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000295 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000295">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">untested condition positive individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000296 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000296">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">variant allele count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000297 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000297">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">allele frequency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000298 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000298">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">total allele count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000299 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000299">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">hemizygous individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000300 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000300">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">heterozygous individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000301 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000301">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">homozygous individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000302 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000302">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">total individual count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000303 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000303">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">median sequencing coverage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000304 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000304">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">case allele frequency statement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000305 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000305">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">control allele frequency statement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000306 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000306">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">lower confidence limit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000307 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000307">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">upper confidence limit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000308 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000308">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">confidence score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000309 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000309">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">odds ratio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000310 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000310">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">condition prevalence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000311 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000311">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">condition prevalence upper bound</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000312 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000312">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">condition prevalence lower bound</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000313 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000313">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">pedigree_affected_values_map</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000314 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000314">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">inconsistent segregations observed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000315 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000315">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">inconsistent segregation count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000316 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000316">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">pedigree column names</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000317 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000317">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">pedigree genotype values map</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000318 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000318">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
+        <rdfs:label xml:lang="en">pedigree data</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000367 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000367">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <obo:IAO_0000112>DOID as a prefix for identifiers from the Disease Ontology, e.g. DOID:10652 (Alzheimer&apos;s Disease)</obo:IAO_0000112>
+        <obo:IAO_0000115>A property linking an identifier system to a string used as a prefix for identifiers defined by that system.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has prefix</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <obo:IAO_0000115>A sequence feature that serves as a standard against which &apos;variant&apos; versions of the sequence feature are compared, or against which located sequence features within the reference region are aligned in order to assign position information.</obo:IAO_0000115>
+        <obo:IAO_0000116>This is a defined organizational class to collect all &apos;reference&apos; sequence entities.</obo:IAO_0000116>
+        <obo:IAO_0000118>reference sequence</obo:IAO_0000118>
+        <rdfs:comment>Being &apos;refercence&apos; does not imply anything about the nature, prevalence, or function of a sequence.  Only that some agent has used it to serve a reference role in defining a variant or locting a sequence.</rdfs:comment>
+        <rdfs:label>reference sequence feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000886"/>
+        <obo:IAO_0000115>A quality inhering in a collection of discontinuous sequence features in a single genome that reside on the same macromolecule (eg the same chromosomes).</obo:IAO_0000115>
+        <rdfs:label>in cis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000132 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000132">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000886"/>
+        <obo:IAO_0000115>A quality inhering in a collection of discontinuous sequence features in a single genome that reside on different macromolecules (e.g. different chromosomes).</obo:IAO_0000115>
+        <rdfs:label>in trans</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000875"/>
+        <obo:IAO_0000115>An allelic state that specifically describes the degree of similarity of alleles at a particular locus in the *chromosomal* genome (i.e. whether the alleles are the same or different).</obo:IAO_0000115>
+        <obo:IAO_0000118>allelic state</obo:IAO_0000118>
+        <oboInOwl:hasDbXref>http://semanticscience.org/resource/SIO_001263</oboInOwl:hasDbXref>
+        <rdfs:label>zygosity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000134 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000134">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000391"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000360"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000391"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000360"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000136 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000136">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000391"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000360"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000137 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000137">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000133"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000360"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000391 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000391">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000133"/>
+        <rdfs:label>disomic zygosity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000402 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000402">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000135"/>
+        <obo:IAO_0000115>A heterozygous quality inhering in a single locus complement comprised of two different varaint alleles and no wild type locus. (e.g.fgf8a&lt;ti282a&gt;/fgf8a&lt;x15&gt;)</obo:IAO_0000115>
+        <rdfs:label>compound heterozygous</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000458 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000458">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000135"/>
+        <rdfs:comment>a heterozygous quality inhering in a locus complement comprised of one variant locus and one wild-type/reference locus (e.g.fgf8a&lt;ti282a&gt;/fgf8a&lt;+&gt;)</rdfs:comment>
+        <rdfs:label>simple heterozygous</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000602 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000602">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000875"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000360"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000603 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000603">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000875"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000360"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000604 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000604">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000134"/>
+        <rdfs:label xml:lang="en">hemizygous X-linked</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000605 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000605">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000134"/>
+        <rdfs:label xml:lang="en">hemizygous Y-linked</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000606 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000606">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000134"/>
+        <rdfs:label xml:lang="en">hemizygous insertion-linked</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000701 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000701">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label>sequence feature or collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000778 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000778">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information entity that is intended to represent some biological sequence, sequence feature, qualified sequence feature, or a collection of one or more of these entities.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">sequence information entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000788 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000788">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <obo:IAO_0000115>An attribute, quality, or state of a sequence or sequence feature.</obo:IAO_0000115>
+        <obo:IAO_0000116>Sequence feature attributes can be based on qualities of the material bearers of the feature, for example, the staining intensity of a chromosomal band feature.</obo:IAO_0000116>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/SO_0000400</oboInOwl:hasDbXref>
+        <rdfs:label>sequence feature attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000815 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000815">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000788"/>
+        <obo:IAO_0000115>An attribute of a sequence feature related to the location of its starting and ending residues according to some reference coordinate system.</obo:IAO_0000115>
+        <obo:IAO_0000118>sequence location</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">sequence feature position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000871 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000871">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000701"/>
+        <obo:IAO_0000115>A set of sequence alterations (typically single-nucleotide polymorphisms) on one chromosome that tend to always occur together.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">haplotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000875 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000875">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000876"/>
+        <obo:IAO_0000115>A quality inhering in an &apos;allelic complement&apos; (aka a &apos;single locus complement&apos;) that describes the allelic variability found at a particular locus in the genome of a single cell/organism</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">allelic state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000876 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000876">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000788"/>
+        <obo:IAO_0000118>allelic dosage</obo:IAO_0000118>
+        <obo:IAO_0000118>an attribute inhering in a feature based on the total number or relative stoichiometry of copies present in a particular genome.</obo:IAO_0000118>
+        <obo:IAO_0000118>gene dosage</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">genetic dosage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000877 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000877">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000788"/>
+        <obo:IAO_0000115>A quality inhering in an allele based on its source/origin - typically the parent from which it was inherited.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">allele origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000878 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000878">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000888"/>
+        <obo:IAO_0000115>a quality of an allele in virtue of its having been inherited from a female parent.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">maternal allele origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000879 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000879">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000888"/>
+        <obo:IAO_0000115>a quality of an allele in virtue of its having been inherited from a male parent.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">paternal allele origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000880 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000880">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000877"/>
+        <obo:IAO_0000115>a quality of an allele in virtue of its having occurred through a de novo mutaiton, rather than inherited from a parent..</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">de novo allele origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000881 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000881">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000877"/>
+        <obo:IAO_0000115>a quality of an allele in virtue of its origin not being known.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">unknown allele origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000882 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000882">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000788"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000360"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000883 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000883">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000788"/>
+        <obo:IAO_0000115>a quality inhering in a feature in virtue of its presence only in the genome of gametes (germ cells).</obo:IAO_0000115>
+        <obo:IAO_0000118>germ-line</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">gametic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000886 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000886">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000788"/>
+        <obo:IAO_0000115>A quality inhering in a collection of discontinuous sequence features in a single genome in virtue of their relative position on the same or separate chromosomes.</obo:IAO_0000115>
+        <rdfs:label>allelic phase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000888 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000888">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000877"/>
+        <obo:IAO_0000115>a quality of an allele in virtue of its having been inherited from either parent.</obo:IAO_0000115>
+        <rdfs:label>parental allele origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000890 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000890">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <obo:IAO_0000112>The canonical allele that represents a single nucleotide variation in the BRCA2 gene, which can be described by various contextual alleles such as “NC_000013.11:g.32319070T&gt;A” and “NG_012772.3:g.8591T&gt;A”.</obo:IAO_0000112>
+        <obo:IAO_0000115>One of a set of coexisting sequence variants at a defined genomic locus, or a set of such variants located in cis on the same copy of the chromosome.</obo:IAO_0000115>
+        <obo:IAO_0000116>The notion of a &apos;canonical allele&apos; is taken from the ClinGen Allele model (http://datamodel.clinicalgenome.org/allele/).  It is implemented in GENO to provide an ontological representation of this concept that will support data integration efforts, but may be replaced by should an IRI become available from the ClinGen model.</obo:IAO_0000116>
+        <obo:IAO_0000119>http://datamodel.clinicalgenome.org/allele/resource/canonical_allele/</obo:IAO_0000119>
+        <terms:source>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</terms:source>
+        <rdfs:comment>As a &apos;sequence feature or collection&apos; (sensu SO), a &apos;canonical allele&apos; is considered here as an extent of biological sequence encoded in nucleic acid molecules of a cell or organism (as opposed to an information artifact that is about such a sequence).  Canonical alleles can include haplotypes that consist of more than one discontinuous sequence feature that exist in cis on the same chromosomal strand (as such haplotypes are often linked to a particular disease).
+
+In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;contextual alleles&apos;. Contextual alleles are informational representation that describe a canonical allele, using a particular reference sequence. A single canonical allele can be described by many contextual alleles that each use a different reference sequence in their representation.</rdfs:comment>
+        <rdfs:label>canonical allele</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000891 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000891">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000778"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GENO_0000890"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An informational artifact that describes an allele as defined on a particular reference sequence.</obo:IAO_0000115>
+        <obo:IAO_0000116>The notion of a &apos;contextual allele&apos; is taken from the ClinGen Allele model (http://datamodel.clinicalgenome.org/allele/).  It is implemented in GENO to provide an ontological representation of this concept that will support data integration efforts, but may be replaced by should an IRI become available from the ClinGen model.</obo:IAO_0000116>
+        <obo:IAO_0000119>http://datamodel.clinicalgenome.org/allele/resource/contextual_allele/</obo:IAO_0000119>
+        <terms:source>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</terms:source>
+        <rdfs:comment>The notion of a &apos;contextual allele&apos; derives from the ClinGen Allele model. Here, each genetic allele in a patient corresponds to a single &apos;canonical allele&apos;, which in turn may aggregate any number of &apos;contextual allele&apos; representations that are may be defined against different reference sequences. Accordingly, many contextual alleles can describe a single canonical allele. For example, the contextual alleles “NC_000013.11:g.32319070T&gt;A” and “NG_012772.3:g.8591T&gt;A” both describe the same underlying canonical allele, a single nucleotide variation, in the BRCA2 gene.</rdfs:comment>
+        <rdfs:label>contextual allele</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000181 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000181">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
+        <obo:IAO_0000115>a population is a collection of individuals from the same taxonomic class living, counted or sampled at a particular site or in a particular area</obo:IAO_0000115>
+        <rdfs:label>population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115>A material entity that consists of two or more organisms, viruses, or viroids.</obo:IAO_0000115>
+        <rdfs:label>collection of organisms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
+        <obo:IAO_0000115>A collection of organisms of the same species whose members are all either genealogically related to each other or have mated with each other.</obo:IAO_0000115>
+        <obo:IAO_0000118>genealogical family</obo:IAO_0000118>
+        <obo:IAO_0000119>Matthew Brush, as part of http://datamodel.clinicalgenome.org/interpretation/</obo:IAO_0000119>
+        <rdfs:label>biological family</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001">
+        <obo:IAO_0000118>logical inference</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174">
+        <rdfs:comment>In SEPIO, a high-level distinction is made between Statements that are  &apos;Findings&apos; vs &apos;Assertions&apos;. Findings are statements that report what was observed in an experiment or study, and are about only the direct participants in the experiment or study. Assertions are statements that derive from some degree of interpretation or inference based on the evaluation of &apos;evidence&apos;, and often make broader claims about the types or categories to which study participants belong. 
+This distinction is important because the provenance and validity of a finding does not depend on evidence in the same way that of an assertion does. This has modeling implications for findings and assertions are linked to information that supports them.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000190">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>An assertion about the pathogenicity of a genetic sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <oboInOwl:hasBroadSynonym>variant classification</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>variant interpretation</oboInOwl:hasBroadSynonym>
+        <rdfs:comment>Interpretations for pathogenic variants specify a condition (disease or phenotype) for which the conclusion was reached. However, if the variant is determined to be benign (e.g. in the case of a very common polymorphism), a specific condition may not be specified - indicating that the allele is benign for all conditions. If a condition is specified for a benign variant, then the interpretation is limited to that specific condition [text derived from ClinGen Variant Interpretation model].</rdfs:comment>
+        <rdfs:label xml:lang="en">variant pathogenicity interpretation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000191 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000191">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>An assertion made by evaluating evidence according to rules set forth in a &apos;variant interpretation criterion&apos;, which describe how to interpret specific types of information as evidence for a proposition that is ultimately relevant to the pathogenicity of the variant.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:comment>In the process of generating a variant interpretation, criterion assessments are &apos;intermediate&apos; assertions that establish whether a particular criterion is met or not for the variant under review. Evidence relevant to the merit of this assertion is organized around one or more evidence lines, and the criterion assessment is itself used as evidence for the final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
+        <rdfs:comment>Variant interpretation guidelines often define specific &apos;criteria&apos; against which a variant is evaluated. Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
+
+Consider the &quot;PM2&quot; criterion defined by the ACMG Guidelines, which is based on the frequency of a variant in control populations. It is satisfied if a variant is absent or at exceedingly low frequencies in population databases, in which case &apos;Moderate&apos; evidence is provided for the pathogenicity of the variant. Conversely, the &quot;BS2&quot; criterion is satisfied if a variant is found at a frequency above what is expected given disease penetrance, and offers &apos;Strong&apos; evidence that the variant is Benign.
+
+A &apos;criterion assessment&apos; represents the conclusion drawn by evaluating evidence as specified by a particular &apos;criterion&apos;.  For example, the concluding assertion that &quot;the frequency of variant x in control populations is inconsistent with it being pathogenic&quot;.
+
+Note that while a single type of evidence is used in making a particular &apos;criterion assessment&apos;, several distinct evidence lines of this type may be evaluated - e.g.  independent studies of a variant&apos;s prevalence in different populations may provide separate lines of evidence that are all of the same type (&apos;variant frequency evidence&apos;).  
+
+Ultimately, one or more &apos;criterion assessments&apos;, each of which represents a conclusion about whether a defined criteria is satisfied, are evaluated together to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">criterion assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000192 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000192">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <obo:IAO_0000115>A specification that describes how to interpret the direction and strength of evidence provided by a specific type of information, for or against the pathogenicity of a genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:comment>In the process of generating a variant interpretation, criterion support the generation of intermediate assertions (&apos;criterion assessments&apos;) that establish whether a variant meets the standards set forth in the criterion. Many criterion also define a default strength to a particular type of evidence it defines (e.g. the ACMG criteria for pathogenicity are categorized as very string, strong, moderate, and supporting). These strengths are ultimately used by rules that combine the outcomes of all satisfied criterion to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">variant pathogenicity criterion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000193">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <obo:IAO_0000115>A specification that describes how to interpret evidence in order to make an  assertion about the pathogenicity of a genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:comment>Guidelines typically include specific &apos;variant interpretation criterion&apos; that describe how to interpret the direction and strength of evidence provided by a particular type of information, and &apos;criterion scoring algorithms&apos; which describe how to combine the outcomes of each criterion assessment to arrive at a final interpretation of a variant&apos;s pathogenicity.
+
+Each &apos;variant interpretation criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). The result of evaluating a varaint against a particular criterion is a &apos;criterion assessment&apos;.  For example, the &quot;PM2&quot; criterion defined by the ACMG Guidelines is satisfied if a variant is absent or at exceedingly low frequencies in population databases. Many frameworks, such as the ACMG Guidelines, also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
+
+Ultimately, one or more &apos;criterion assessments&apos; are evaluated together according to a &apos;crriterion scoring algorithm&apos; that defiens rule  for combining individual assessment outcomes to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">variant pathogenicity interpretation guideline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
+        <obo:IAO_0000115>A varaint interpretation criterion defined by the 2015 ACMG Variant Interpretation Guidelines.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:label xml:lang="en">variant pathogenicity criterion (2015 ACMG Guidelines, v1)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000198 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000198">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+        <rdfs:label xml:lang="en">obsolete_ACMG criterion assessment outcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000199">
+        <obo:IAO_0000115>An evidence strength value from the set of values defined by the 2015 ACMG Variant Interpretation Guidelines, indicating the degree of support an agent believes the evidence provided by a criterion assessment to provide for a particular proposition.</obo:IAO_0000115>
+        <rdfs:label>obsolete_ACMG evidence strength level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000219">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000112>arrhythmogenic right ventricular cardiomyopathy, Autosomal Dominant</obo:IAO_0000112>
+        <obo:IAO_0000115>A disease, or a set of one or more co-occurring phenotypes, typically controlled by a single locus with a defined inheritance pattern.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label>genetic condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000224 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000224">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <obo:IAO_0000112>The rules for a &apos;likely pathogenic&apos; interpretation in the 2015 ACMG Guidelines - if any of the following sets of criterion assessment outcomes are met, a variant is classified as likely pathogenic: 
+(i)    1 Very strong (PVS1) AND 1 moderate (PM1–PM6) OR
+(ii)   1 Strong (PS1–PS4) AND 1–2 moderate (PM1–PM6) OR
+(iii)  1 Strong (PS1–PS4) AND ≥2 supporting (PP1–PP5) OR
+(iv)  ≥3 Moderate (PM1–PM6) OR
+(v)   2 Moderate (PM1–PM6) AND ≥2 supporting  (PP1–PP5) OR
+(vi)  1 Moderate (PM1–PM6) AND ≥4 supporting PP1–PP5)</obo:IAO_0000112>
+        <obo:IAO_0000115>A specification for how to collectively evaluate the outcomes of one or more variant pathogenicity criterion assessments as evidence, to make an assertion about the pathogenicity of a variant.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <rdfs:comment>These rules consider both the direction (does it support a pathogenic or benign interpretation) and the asserted strength  (what level of support does it provide) of the evidence provided by each satisfied criteria, and define mappings from specific combinations of these outcomes to particular interpretations of the variant&apos;s pathogenicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">variant pathogenicity criterion scoring algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000225 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000225">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/vs016</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">obsolete_ClinGen mechanism confidence level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000227 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000227">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000112>&quot;The variant has been reported in 1/66564 European chromosomes by the Exome Aggregation Consortium (ExAC,  http://exac.broadinstitute.org; dbSNP rs397514042).&quot;</obo:IAO_0000112>
+        <obo:IAO_0000115>A statement that describes the observed frequency of an allele as determined in a defined group of individuals (typically a representative sampling that serves as a proxy for some larger population of individuals).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label>population allele frequency statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000228 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000228">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000112>&quot;Splice and other loss-of-function variants in DSC2 have been reported in individuals with ARVC (http://arvcdatabase.info/).&quot;</obo:IAO_0000112>
+        <obo:IAO_0000115>A statement about the mechanism underlying a genetic condition (e.g. if that LOF mutations in a particular gene are a known mechanism of disease).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label>condition mechanism statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000229 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000229">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the expected effect of a variant allele at the level of genomic or transcript sequence (e.g. how it might affect splicing, truncate a gene product, etc.).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label>allele molecular consequence statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000238 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000238">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about whether a individual is affected by or exhibits a particular condition.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">individual condition statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000239 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000239">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement asserting the occurrence of a particular disease in the history of a family.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">family condition statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000240">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the origin of a particular allele in an individual - i.e. whether it occurred  de novo in the individual as a result of a spontaneous mutation event, or whether it was inherited from a parent.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">individual allele inheritance statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000241 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000241">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement describing a particular experimental result about the impact of an allele on gene product function (typically that of the directly affected gene).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">allele functional impact statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000242 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000242">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement describing allele frequencies identified in a particular study group as a function of case-control status (i.e frequency in affected vs unaffected study groups).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">case-control allele frequency statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000243 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000243">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement that classifies a particular region of biological sequence as being of a specified type or types (e.g. using terms from the Sequence Ontology).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">region type statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000244 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000244">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the positional relationship between a region of genomic sequence and one or more alleles (e.g. that the region overlaps, encompasses, or is adjacent to the allele).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">region alleles statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the allelic state of one or more alleles in the genome of an individual (e.g. zygosity information, or phase relative to a second allele).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">individual genotype statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000246 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000246">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the frequency at which missense variants in a particular region are tolerated (i.e. do not cause a pathological condition).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">benign missense variation rate statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000247 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000247">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement describing the observed correlation between transmission of a particular allele and a particular genetic condition, across a single family pedigree (i.e. the co-segregation of an allele and a condition as observed across a family pedigree).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">family co-segregation statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement describing the observed correlation between transmission of a particular allele and a particular genetic condition, across multiple family pedigrees (i.e. the co-segregation of an allele and a condition as observed across multiple family pedigrees).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">aggregate co-segregation statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000249 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000249">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement asserting the predicted impact of a particular allele on the function of its resulting gene product (e.g. that it is &apos;deleterious&apos;, &apos;damaging&apos;, &apos;tolerated&apos;, etc.). Such assertions are typically based on interpretation of the quantitative output of predictive computational algorithms.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:comment>An &apos;in silico prediction statement&apos; represents an asserted conclusion based on interpretation of one or more &apos;in silico prediction score statements&apos;, which represent particular scores calculated by an algorithm based on data pertinent to the potential for a variant to impact gene product function.</rdfs:comment>
+        <rdfs:label xml:lang="en">in silico prediction statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000250 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000250">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the specificity with which a genetic condition is caused by variants in a particular gene or locus (i.e. whether it is the only known gene associated with the condition, or one or more other genes have been linked to the condition).</obo:IAO_0000115>
+        <obo:IAO_0000118>condition etiology statement</obo:IAO_0000118>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">locus heterogeneity statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000251 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000251">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement describing the observed frequency of a condition as determined for a particular population of persons (ascertained by factors such as ethnicity, race, socio-economic  status, geographic residence, etc).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">condition prevalence statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000252">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement about the proportion of individuals carrying a causal allele that exhibit a particular disease or phenotype.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">condition penetrance statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000253 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000253">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement asserting whether a particular allele is evolutionarily conserved.  Such assertions are typically based on interpretation of the quantitative output of computational algorithms (i.e. &apos;allele conservation scores&apos;).</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:comment>An &apos;allele conservation statement&apos; is a qualitative assertion of whether the allele is fixed across species - a conclusion typically based on interpretation of one or more allele conservation scores generated by computational algorithms.</rdfs:comment>
+        <rdfs:label xml:lang="en">allele conservation statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000260 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000260">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:label xml:lang="en">cohort ascertainment method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000263 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000263">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+        <rdfs:comment>obsoleted 11-29-17 - couldnt recall need for this class</rdfs:comment>
+        <rdfs:label xml:lang="en">obsolete_clinical significance value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000274 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000274">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement that asserts whether an allele causes complete loss of function of a gene or gene  product.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">null allele statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000322 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000356"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000323"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000323 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000356"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000331 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000331">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000048"/>
+        <rdfs:label xml:lang="en">interpreter role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000356 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000356">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000358"/>
+        <rdfs:label xml:lang="en">In Silico Prediction Type Value Partition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000357 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000357">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000355"/>
+        <rdfs:label xml:lang="en">In Silico Prediction Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000359 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000359">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000134"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000135"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000136"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000137"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000602"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000603"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000882"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000355"/>
+        <rdfs:label xml:lang="en">Allelic State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000360 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000360">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000134"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000135"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000136"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000137"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000602"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000603"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000882"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000358"/>
+        <rdfs:label xml:lang="en">Allelic State Value Partition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000368 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000368">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement describing a particular algorithmically-generated score that indicates the degree to which a geneitc variation is predicted to impact the function of a resulting gene product.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:comment>An &apos;in silico prediction score statement&apos; describes the generation of a particular quantitative score as calculated by an algorithm.  These scores are interpreted as evidence to make a final &apos;in silico prediction statement&apos; asserting an agents conclusion about the predicted impact of the varaint on gene product function.</rdfs:comment>
+        <rdfs:label xml:lang="en">in silico prediction score statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000369 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000369">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <obo:IAO_0000115>A statement describing a particular algorithmically-generated score that indicates the degree to which an allele is evolutionarily conserved across a defined set of taxa/species.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label xml:lang="en">allele conservation score statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000374 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">identifier system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000701"/>
+        <obo:IAO_0000115>Any extent of continuous biological sequence.</obo:IAO_0000115>
+        <rdfs:label>sequence_feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000704 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000704">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <obo:IAO_0000115>A region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene may include regulatory regions, transcribed regions and/or other functional sequence regions.</obo:IAO_0000115>
+        <rdfs:label>gene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000193">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000181"/>
+        <obo:IAO_0000115>is a population whose individual members realize (may be expressed as) a combination of  inclusion rule values specifications or resulting from a sampling process (e.g. recruitment followed by randomization to group) on which a number of measurements will be carried out, which may be used as input to statistical tests and statistical inference.</obo:IAO_0000115>
+        <rdfs:label>study group population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001016 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000181"/>
+        <obo:IAO_0000115>An ethnic group is a group of people whose members identify with each other through a common heritage, consisting of a common culture, including a shared language or dialect</obo:IAO_0000115>
+        <rdfs:label>ethnic group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>DOID</obo:SEPIO_0000367>
+        <rdfs:label>Disease Ontology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000134 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000134">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000359"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000135 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000135">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000359"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000136 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000136">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000359"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000137 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000137">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000359"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000602 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000602">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000359"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000603 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000603">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000359"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000882 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000882">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000359"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HPO -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>HPO</obo:SEPIO_0000367>
+        <rdfs:label>Human Phenotype Ontology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000209 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000209">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <obo:ERO_0000480>https://www.clinicalgenome.org/</obo:ERO_0000480>
+        <obo:IAO_0000118>Clinical Genome Resource</obo:IAO_0000118>
+        <rdfs:comment>ClinGen is a National Institutes of Health (NIH)-funded resource dedicated to building an authoritative central resource that defines the clinical relevance of genes and variants for use in precision medicine and research.</rdfs:comment>
+        <rdfs:label xml:lang="en">ClinGen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000211 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000211">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000195"/>
+        <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000220"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs1</obo:IAO_0000116>
+        <rdfs:comment>null variant (nonsense, frameshift, canonical ±1 or 2 splice sites, initiation codon, single or multiexon deletion) in a gene where LOF is a known mechanism of disease</rdfs:comment>
+        <rdfs:label>ACMG PVS1 criterion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000212 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000212">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000195"/>
+        <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000216"/>
+        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm2</obo:IAO_0000116>
+        <rdfs:comment>Absent from controls (or at extremely low frequency if recessive) (Table 6) in Exome Sequencing Project, 1000 Genomes Project, or Exome Aggregation Consortium</rdfs:comment>
+        <rdfs:label>ACMG PM2 criterion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000215 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000215">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
+        <obo:ERO_0000480>https://www.acmg.net/docs/Standards_Guidelines_for_the_Interpretation_of_Sequence_Variants.pdf</obo:ERO_0000480>
+        <obo:IAO_0000116>http://data.clinicalgenome.org/AssertMeth001</obo:IAO_0000116>
+        <obo:IAO_0000118>ACMG ISV guidelines 2015, v1.0</obo:IAO_0000118>
+        <rdfs:label>ACMG Variant Pathogenicity Interpretation Guidelines (2015, v1)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000230 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000230">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000224"/>
+        <rdfs:label xml:lang="en">variant pathogenicity criterion scoring algorithm (2015 ACMG Guidelines, v1)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000262 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000262">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000260"/>
+        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the 1000 Genomes Database.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">1000 Genomes ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000322 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000357"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000323 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000357"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000332 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000332">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000260"/>
+        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the Exome Aggregation Consortium (ExAC) database.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">ExAc ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000333 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000333">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000260"/>
+        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the NHLBI Exome Sequencing Project (ESP) database.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">ESP ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000334 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000334">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000260"/>
+        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the Genome Aggregation database (gnomAD).</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">gnomAD ascertainment method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000361 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000361">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <obo:ERO_0000480>https://www.clinicalgenome.org/working-groups/data-model/</obo:ERO_0000480>
+        <obo:IAO_0000118>ClinGen DMWG</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">ClinGen Data Model Working Group</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>SO</obo:SEPIO_0000367>
+        <rdfs:label>Sequence Ontology</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000134">
+        <rdfs:label>hemizygous</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000135">
+        <rdfs:label>heterozygous</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000136">
+        <rdfs:label>homozygous</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000137">
+        <rdfs:label>unspecified zygosity</rdfs:label>
+        <obo:IAO_0000118>no-call zygosity</obo:IAO_0000118>
+        <obo:IAO_0000118>unknown zygosity</obo:IAO_0000118>
+        <obo:IAO_0000118>indeterminite zygosity</obo:IAO_0000118>
+    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GENO_0000137"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedTarget>no-call zygosity</owl:annotatedTarget>
+        <rdfs:comment>(this is how the GVF10 format/standard refers to loci without enough data to make an accurate call . . . see http://www.sequenceontology.org/resources/gvf.html#quick_gvf_examples)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GENO_0000137"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <owl:annotatedTarget>indeterminite zygosity</owl:annotatedTarget>
+        <rdfs:comment>MGI uses this term when zygosity is not known.</rdfs:comment>
+    </owl:Axiom>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000602">
+        <rdfs:label xml:lang="en">homoplasmic</rdfs:label>
+        <obo:IAO_0000115>an allelic state where a single allele exists at a particular locus in the organellar genome (mitochondrial or plastid) of a cell/organism.</obo:IAO_0000115>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000603">
+        <obo:IAO_0000115>an allelic state where more than one type of allele exists at a particular locus in the organellar genome (mitochondrial or plastid) of a cell/organism.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">heteroplasmic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000882">
+        <obo:IAO_0000115>a quality inhering in a feature in virtue of its presence only in the genome of non-germ cells.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">somatic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000002">
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000017">
+        <obo:IAO_0000115>A relation holding between a process and a person, group, organization, or information processing entity (e.g. software, algorithms) that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</obo:IAO_0000115>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000046">
+        <obo:IAO_0000115>A relation holding between a continuant bearer and a role through their aprticipation in a process.</obo:IAO_0000115>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000124">
+        <obo:IAO_0000112>For example, consider a Gene Ontology curator who uses Publication A as a source of sequence information for the Saccharomyces cerevisiae IML1 protein. The curator interprets this information as contributing to an evidence line supporting their assertion that the Drosophila melanogaster homolog of this protein exhibits the same GTPase activator activity (GO:0005096). In this scenario, Publicaiton A could be cited as a supporting reference for this evidence line.  Publications B and C may also describe the same exact sequence information for the Saccharomyces cerevisiae IML1 protein - but because these publications were not used by the curator, they would not qualify as supporting references for the evidence line in question.</obo:IAO_0000112>
+        <obo:IAO_0000115>A relation linking an evidence line to a citable document (typically a publication) that describes evidence contributing to the argument captured by the evidence line.</obo:IAO_0000115>
+        <rdfs:comment>Supporting references for a given line of evidence are only those publications actually used by an agent making an asseriton, in virtue of their describing information interpreted as evidence in this process. Other publications that may describe the same information but which were not directly used by the asserting agent do not qualify as supporting references.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000125">
+        <obo:IAO_0000116>A planned process that is specified by some study design and performed to test or generate hypotheses of a scientific nature.
+
+Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</obo:IAO_0000116>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000158">
+        <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000163">
+        <obo:IAO_0000115>A relation between a contribution and the date on which it  was made.</obo:IAO_0000115>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000197">
+        <obo:IAO_0000116>This property is used to semantically annotate statements with a term that a particular community or application has agreed to use in the describing their data. Ontologically then, the values of this property do not represent &apos;conclusions&apos; per se. For example, the ClinGen variant interpretation model uses terms from the Sequence Ontology to summarize the outcome of &quot;Conditon Mechansim&quot; statements that assert the type of variants known to cause a particular disorder (e.g. SO:0001583 ! missense variant or SO:0002054 loss of function variant). The IRIs for these terms are directly referenced from a statement instance in the data to loosely codify its conclusion, not to imply the  existence of some variant sequence feature. 
+
+While ontologically imprecise, this is a commonly used shortcut to standardize semantics in a data applicaiton in support of data querying and integration.</obo:IAO_0000116>
+        <rdfs:comment>Can be used to link a variant interpretation to a term reflecting the asserted pathogenicity of the evaluated variant, or to link a criterion assessment to a term indicating whether the conditions laid out by the criterion were met.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
+        <obo:IAO_0000112>SIFT, Polyphen</obo:IAO_0000112>
+        <rdfs:label>missense effect algoritm</rdfs:label>
+        <obo:IAO_0000115>An algorithm designed to predict the impact of a missense mutation on the function of a gene or gene product.</obo:IAO_0000115>
+        <rdfs:label>missense effect algorithm</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
+        <rdfs:label>splicing effect prediction algorithm</rdfs:label>
+        <obo:IAO_0000115>An algorithm designed to predict the impact of a mutation on splicing of an mRNA molecule, or the location of residues important for mRNA splicing.</obo:IAO_0000115>
+        <obo:IAO_0000112>GeneSplicer, Human Splice Finder (HSF)</obo:IAO_0000112>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
+        <obo:IAO_0000115>A value set comprised of terms representing diseases.</obo:IAO_0000115>
+        <rdfs:comment>This value set includes any term from the Disease Ontology identifier system.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
