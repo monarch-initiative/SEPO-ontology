@@ -143,6 +143,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000377 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000377">
+        <rdfs:comment>Use this annotation property to record labels ClinGen prefers over the rdfs:label for its users or application use cases.</rdfs:comment>
+        <rdfs:label xml:lang="en">clingen-preferred label</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>

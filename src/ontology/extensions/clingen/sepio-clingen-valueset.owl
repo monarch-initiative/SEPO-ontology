@@ -612,7 +612,7 @@
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/SO"/>
         <obo:IAO_0000115>A value set comprised of terms used to indicate the type of sequence feature a particular region of genomic sequence represents.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Region Type</rdfs:label>
+        <rdfs:label xml:lang="en">Region Annotation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -634,7 +634,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the type of algorithm used to generate a particular in silico prediction.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">In Silico Prediction Type</rdfs:label>
+        <rdfs:label xml:lang="en">In Silico Prediction Method</rdfs:label>
     </owl:NamedIndividual>
     
 
