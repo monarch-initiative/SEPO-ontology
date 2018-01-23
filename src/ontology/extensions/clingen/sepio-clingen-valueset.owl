@@ -339,6 +339,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0001146 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001146">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000382"/>
+        <rdfs:label>binding assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002165 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0002165">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000382"/>
+        <rdfs:label>protein localization assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002167 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0002167">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000382"/>
+        <rdfs:label>subcellular protein localization assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000216 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000216">
@@ -645,7 +675,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <obo:IAO_0000115>A value set holding terms that indicate whether the conditions laid out by a variant interpretation criterion were met or not for a particular criterion assessment.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Criterion Evaluation</rdfs:label>
+        <rdfs:label xml:lang="en">Criterion Assessment Outcome</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -780,9 +810,47 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000380 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000380">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Molecular Consequence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000382 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000382">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Functional Assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000204 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_0000204">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000380"/>
+        <rdfs:label>five_prime_UTR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000507 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_0000507">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000380"/>
+        <rdfs:label>pseudogenic_exon</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -792,6 +860,46 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000343"/>
         <rdfs:label>repeat_region</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000667 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_0000667">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000380"/>
+        <rdfs:label>insertion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001019 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_0001019">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000380"/>
+        <rdfs:label>copy_number_variation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001568 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_0001568">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000380"/>
+        <rdfs:label>splicing_variant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001578 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO_0001578">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000380"/>
+        <rdfs:label>stop_lost</rdfs:label>
     </owl:NamedIndividual>
     
 

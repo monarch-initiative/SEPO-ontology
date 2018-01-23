@@ -1687,7 +1687,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000355"/>
-        <rdfs:label xml:lang="en">In Silico Prediction Type</rdfs:label>
+        <rdfs:label xml:lang="en">In Silico Prediction Method</rdfs:label>
     </owl:Class>
     
 
@@ -1764,6 +1764,24 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="en">identifier system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000378 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000378">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000355"/>
+        <rdfs:label xml:lang="en">Molecular Consequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000545 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000545">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000355"/>
+        <rdfs:label xml:lang="en">Functional Assay</rdfs:label>
     </owl:Class>
     
 
@@ -1889,9 +1907,33 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>HPO</obo:SEPIO_0000367>
+        <obo:SEPIO_0000367>HP</obo:SEPIO_0000367>
         <rdfs:label>Human Phenotype Ontology</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001146 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001146">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000545"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002165 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002165">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000545"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002167 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002167">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000545"/>
+    </rdf:Description>
     
 
 
@@ -2026,6 +2068,54 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <obo:SEPIO_0000367>SO</obo:SEPIO_0000367>
         <rdfs:label>Sequence Ontology</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000204 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0000204">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000507 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0000507">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000667 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0000667">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001019 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001019">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001568 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001568">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001578 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001578">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
+    </rdf:Description>
     <rdf:Description>
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
     </rdf:Description>
