@@ -168,7 +168,7 @@
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source">
-        <obo:IAO_0000116>This relation can be used to link artifacts such as information to other information resources from with it was retrieved or derived in whole or in part.  This includes cases where information was extracted and its structure modified, but not cases where significant modifications were made to its meaning or content.</obo:IAO_0000116>
+        <obo:IAO_0000116>This relation can be used to link artifacts such as information to other information resources from which it was retrieved or derived in whole or in part.  This includes cases where information was extracted and its structure modified. this does not include cases where significant modifications were made to its meaning or content, or entirely new information was derived from the source through inference/reasoning (e.g. the source provided information used as evidence from which some conclusion was inferred).</obo:IAO_0000116>
     </owl:AnnotationProperty>
     
 
@@ -268,7 +268,7 @@
     <!-- http://purl.obolibrary.org/obo/GENO_0000790 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000790">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000086"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
         <rdfs:label xml:lang="en">deprecated has_condition</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1212,12 +1212,6 @@ In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000129 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000174 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174">
@@ -1329,17 +1323,8 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000198 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000198">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <rdfs:label xml:lang="en">obsolete_ACMG criterion assessment outcome</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000199 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000199">
-        <obo:IAO_0000115>An evidence strength value from the set of values defined by the 2015 ACMG Variant Interpretation Guidelines, indicating the degree of support an agent believes the evidence provided by a criterion assessment to provide for a particular proposition.</obo:IAO_0000115>
-        <rdfs:label>obsolete_ACMG evidence strength level</rdfs:label>
     </owl:Class>
     
 
@@ -1379,7 +1364,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000225 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000225">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/vs016</obo:IAO_0000116>
         <rdfs:label xml:lang="en">obsolete_ClinGen mechanism confidence level</rdfs:label>
     </owl:Class>
@@ -1612,7 +1597,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000263 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000263">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000129"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <rdfs:comment>obsoleted 11-29-17 - couldnt recall need for this class</rdfs:comment>
         <rdfs:label xml:lang="en">obsolete_clinical significance value</rdfs:label>
     </owl:Class>
@@ -1777,6 +1762,16 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000391 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000391">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
+        <obo:IAO_0000115>A computational method designed to predict the impact of a mutation on splicing of an mRNA molecule, or the location of residues important for mRNA splicing.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">in silico prediction method</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000545 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000545">
@@ -1823,6 +1818,12 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <obo:IAO_0000115>An ethnic group is a group of people whose members identify with each other through a common heritage, consisting of a common culture, including a shared language or dialect</obo:IAO_0000115>
         <rdfs:label>ethnic group</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
+
+    <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
     
 
 
@@ -2001,22 +2002,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the 1000 Genomes Database.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">1000 Genomes ascertainment method</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000322 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000357"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000323 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000357"/>
-    </rdf:Description>
     
 
 

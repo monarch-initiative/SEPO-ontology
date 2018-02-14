@@ -116,6 +116,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000391 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000391"/>
+    
+
+
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
 
     <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">
@@ -518,6 +524,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000322 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000391"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000345"/>
     </owl:NamedIndividual>
@@ -527,6 +534,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000323 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000391"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000345"/>
     </owl:NamedIndividual>
