@@ -62,6 +62,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -81,19 +87,42 @@
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000362 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362">
+        <obo:IAO_0000115>A property used to indicate if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">valueSetExtensibility</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000373 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373">
+        <obo:IAO_0000115>A property used to relate a value set to an identifier system from which terms comprising the value set are allowed.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">valueSetIdentifierSystem</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000367 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000367"/>
     
 
 
@@ -116,9 +145,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000391 -->
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000374 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000391"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
+        <rdfs:label>identifier system</rdfs:label>
+    </owl:Class>
     
 
 
@@ -167,7 +198,11 @@
 
     <!-- http://purl.obolibrary.org/obo/DOID -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>DOID</obo:SEPIO_0000367>
+        <rdfs:label>Disease Ontology</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -187,6 +222,7 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000131">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000344"/>
+        <obo:IAO_0000115>A quality inhering in a collection of discontinuous sequence features in a single genome that reside on the same macromolecule (eg the same chromosomes).</obo:IAO_0000115>
         <rdfs:label>in cis</rdfs:label>
     </owl:NamedIndividual>
     
@@ -197,6 +233,7 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000132">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000344"/>
+        <obo:IAO_0000115>A quality inhering in a collection of discontinuous sequence features in a single genome that reside on different macromolecules (e.g. different chromosomes).</obo:IAO_0000115>
         <rdfs:label>in trans</rdfs:label>
     </owl:NamedIndividual>
     
@@ -329,7 +366,11 @@
 
     <!-- http://purl.obolibrary.org/obo/HPO -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>HP</obo:SEPIO_0000367>
+        <rdfs:label>Human Phenotype Ontology</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -524,9 +565,9 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000322 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000391"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000345"/>
+        <rdfs:label>missense effect algorithm</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -534,9 +575,9 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000323 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000391"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000345"/>
+        <rdfs:label>splicing effect prediction algorithm</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -800,8 +841,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/DOID"/>
-        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/DOID_4"/>
         <rdfs:label xml:lang="en">Disease</rdfs:label>
+        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/DOID_4"/>
     </owl:NamedIndividual>
     
 
@@ -812,8 +853,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/HPO"/>
-        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
         <rdfs:label xml:lang="en">Phenotype</rdfs:label>
+        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
     </owl:NamedIndividual>
     
 
@@ -836,9 +877,51 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000392 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000392">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Allele Origin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000395 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000395">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">ACMG Criterion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000396 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000396">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000397"/>
+        <rdfs:label xml:lang="en">Gene</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000397 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000397">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
+        <rdfs:label xml:lang="en">external</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>SO</obo:SEPIO_0000367>
+        <rdfs:label>Sequence Ontology</rdfs:label>
+    </owl:NamedIndividual>
     
 
 

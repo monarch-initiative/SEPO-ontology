@@ -2968,11 +2968,6 @@ This concept is intentionally quite broad, covering informal and ad-hoc groups, 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000345 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000345"/>
-    
-
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////

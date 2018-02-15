@@ -420,24 +420,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000362 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362">
-        <obo:IAO_0000115>A property used to indicate if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">valueSetExtensibility</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000373 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373">
-        <obo:IAO_0000115>A property used to relate a value set to an identifier system from which terms comprising the value set are allowed.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">valueSetIdentifierSystem</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -817,26 +799,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GENO_0000131 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000131">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000886"/>
-        <obo:IAO_0000115>A quality inhering in a collection of discontinuous sequence features in a single genome that reside on the same macromolecule (eg the same chromosomes).</obo:IAO_0000115>
-        <rdfs:label>in cis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GENO_0000132 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000132">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000886"/>
-        <obo:IAO_0000115>A quality inhering in a collection of discontinuous sequence features in a single genome that reside on different macromolecules (e.g. different chromosomes).</obo:IAO_0000115>
-        <rdfs:label>in trans</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GENO_0000133 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000133">
@@ -1160,12 +1122,53 @@ In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0000181 -->
+    <!-- http://purl.obolibrary.org/obo/HP_0000005 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000181">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000115>The pattern in which a particular genetic trait or disorder is passed from one generation to the next.</obo:IAO_0000115>
+        <obo:IAO_0000116>Consider GENO:0000141  (condition inherittance) for a species neutral class.</obo:IAO_0000116>
+        <rdfs:label>Mode of inheritance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0003812 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003812">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000115>A variability of phenotypic features.</obo:IAO_0000115>
+        <rdfs:label>Phenotypic variability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MONDO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000115>An alteration of health status resulting from a physiopathological mechanism, and having a homogeneous clinical presentation and evolution and homogeneous therapeutic possibilities. Excludes developmental anomalies. [database_cross_reference: Orphanet:377788]</obo:IAO_0000115>
+        <rdfs:label>disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C17005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C17005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
-        <obo:IAO_0000115>a population is a collection of individuals from the same taxonomic class living, counted or sampled at a particular site or in a particular area</obo:IAO_0000115>
-        <rdfs:label>population</rdfs:label>
+        <obo:IAO_0000115>A group of individuals united by a common factor (e.g., geographic location, ethnicity, disease, age, gender)</obo:IAO_0000115>
+        <rdfs:label>Population Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:IAO_0000115>A process in an organism that leads to a subsequent disorder.</obo:IAO_0000115>
+        <rdfs:label>etiological process</rdfs:label>
     </owl:Class>
     
 
@@ -1344,6 +1347,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000224 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000224">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
         <obo:IAO_0000112>The rules for a &apos;likely pathogenic&apos; interpretation in the 2015 ACMG Guidelines - if any of the following sets of criterion assessment outcomes are met, a variant is classified as likely pathogenic: 
 (i)    1 Very strong (PVS1) AND 1 moderate (PM1–PM6) OR
@@ -1588,7 +1592,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000260 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000260">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000385"/>
         <rdfs:label xml:lang="en">cohort ascertainment method</rdfs:label>
     </owl:Class>
     
@@ -1621,6 +1625,10 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000356"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000323"/>
+        <obo:IAO_0000112>SIFT, Polyphen</obo:IAO_0000112>
+        <obo:IAO_0000115>An algorithm designed to predict the impact of a missense mutation on the function of a gene or gene product.</obo:IAO_0000115>
+        <rdfs:label>missense effect algorithm</rdfs:label>
+        <rdfs:label>missense effect algoritm</rdfs:label>
     </owl:Class>
     
 
@@ -1630,6 +1638,9 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000356"/>
+        <obo:IAO_0000112>GeneSplicer, Human Splice Finder (HSF)</obo:IAO_0000112>
+        <obo:IAO_0000115>An algorithm designed to predict the impact of a mutation on splicing of an mRNA molecule, or the location of residues important for mRNA splicing.</obo:IAO_0000115>
+        <rdfs:label>splicing effect prediction algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -1663,14 +1674,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000357 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000357">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000355"/>
         <rdfs:label xml:lang="en">In Silico Prediction Method</rdfs:label>
     </owl:Class>
@@ -1753,21 +1756,32 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000378 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000378">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000355"/>
-        <rdfs:label xml:lang="en">Molecular Consequence</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000391 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000391">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000037"/>
         <obo:IAO_0000115>A computational method designed to predict the impact of a mutation on splicing of an mRNA molecule, or the location of residues important for mRNA splicing.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">in silico prediction method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000393 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000393">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <obo:IAO_0000115>An assay with the objective of measuring the function of a particular allele or variant of a gene.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">allele functional assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000394 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000394">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>A characteristic of some sequence feature that results from the introduction of some variant allele, described at the level of genomic or transcript sequence.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">molecular consequence</rdfs:label>
     </owl:Class>
     
 
@@ -1804,9 +1818,18 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/STATO_0000193 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000193">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000181"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17005"/>
         <obo:IAO_0000115>is a population whose individual members realize (may be expressed as) a combination of  inclusion rule values specifications or resulting from a sampling process (e.g. recruitment followed by randomization to group) on which a number of measurements will be carried out, which may be used as input to statistical tests and statistical inference.</obo:IAO_0000115>
         <rdfs:label>study group population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UPHENO_0001001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0001001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label>Phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -1814,7 +1837,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://semanticscience.org/resource/SIO_001016 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000181"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17005"/>
         <obo:IAO_0000115>An ethnic group is a group of people whose members identify with each other through a common heritage, consisting of a common culture, including a shared language or dialect</obo:IAO_0000115>
         <rdfs:label>ethnic group</rdfs:label>
     </owl:Class>
@@ -1835,16 +1858,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/DOID -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>DOID</obo:SEPIO_0000367>
-        <rdfs:label>Disease Ontology</rdfs:label>
-    </owl:NamedIndividual>
     
 
 
@@ -1901,16 +1914,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GENO_0000882">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000359"/>
     </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HPO -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>HP</obo:SEPIO_0000367>
-        <rdfs:label>Human Phenotype Ontology</rdfs:label>
-    </owl:NamedIndividual>
     
 
 
@@ -2043,64 +2046,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <obo:IAO_0000118>ClinGen DMWG</obo:IAO_0000118>
         <rdfs:label xml:lang="en">ClinGen Data Model Working Group</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SO -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>SO</obo:SEPIO_0000367>
-        <rdfs:label>Sequence Ontology</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SO_0000204 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0000204">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SO_0000507 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0000507">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SO_0000667 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0000667">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SO_0001019 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001019">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SO_0001568 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001568">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SO_0001578 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SO_0001578">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000378"/>
-    </rdf:Description>
     <rdf:Description>
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
     </rdf:Description>
@@ -2187,17 +2132,6 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
 
 While ontologically imprecise, this is a commonly used shortcut to standardize semantics in a data applicaiton in support of data querying and integration.</obo:IAO_0000116>
         <rdfs:comment>Can be used to link a variant interpretation to a term reflecting the asserted pathogenicity of the evaluated variant, or to link a criterion assessment to a term indicating whether the conditions laid out by the criterion were met.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000322">
-        <obo:IAO_0000112>SIFT, Polyphen</obo:IAO_0000112>
-        <rdfs:label>missense effect algoritm</rdfs:label>
-        <obo:IAO_0000115>An algorithm designed to predict the impact of a missense mutation on the function of a gene or gene product.</obo:IAO_0000115>
-        <rdfs:label>missense effect algorithm</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000323">
-        <rdfs:label>splicing effect prediction algorithm</rdfs:label>
-        <obo:IAO_0000115>An algorithm designed to predict the impact of a mutation on splicing of an mRNA molecule, or the location of residues important for mRNA splicing.</obo:IAO_0000115>
-        <obo:IAO_0000112>GeneSplicer, Human Splice Finder (HSF)</obo:IAO_0000112>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
         <obo:IAO_0000115>A value set comprised of terms representing diseases.</obo:IAO_0000115>
