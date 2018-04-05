@@ -12,7 +12,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl">
-        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio-valueset.owl"/>
     </owl:Ontology>
     
 
@@ -85,44 +85,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000362 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362">
-        <obo:IAO_0000115>A property used to indicate if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">valueSetExtensibility</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000373 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373">
-        <obo:IAO_0000115>A property used to relate a value set to an identifier system from which terms comprising the value set are allowed.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">valueSetIdentifierSystem</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000367 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000367"/>
     
 
 
@@ -140,15 +105,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000340 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000340">
-        <rdfs:label xml:lang="en">skos</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000374 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
-        <rdfs:label>identifier system</rdfs:label>
+        <rdfs:label xml:lang="en">skos terms</rdfs:label>
     </owl:Class>
     
 
@@ -198,11 +155,7 @@
 
     <!-- http://purl.obolibrary.org/obo/DOID -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>DOID</obo:SEPIO_0000367>
-        <rdfs:label>Disease Ontology</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID"/>
     
 
 
@@ -275,6 +228,17 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000338"/>
         <rdfs:label>unspecified zygosity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000143 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000143">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance whereby a heterozygous individual expresses distinct traits or conditions associated with both alleles (e.g. an individual with an AB blood type).</obo:IAO_0000115>
+        <rdfs:label>co-dominant inheritance</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -364,24 +328,227 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HPO -->
+    <!-- http://purl.obolibrary.org/obo/GENO_0000889 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>HP</obo:SEPIO_0000367>
-        <rdfs:label>Human Phenotype Ontology</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000889">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <rdfs:label>unknown inheritance</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0000118 -->
+    <!-- http://purl.obolibrary.org/obo/GENO_0000892 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0000118">
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000892">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000375"/>
-        <obo:IAO_0000115>A phenotypic abnormality.</obo:IAO_0000115>
-        <rdfs:comment>This is the root of the phenotypic abnormality subontology of the HPO.</rdfs:comment>
-        <rdfs:label>Phenotypic abnormality</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance whereby manifestation of a trait or condition occurs only when both affected and unaffected mitochondria are inherited (i.e. some mitochondria that do and some that do not contain the causative allele).</obo:IAO_0000115>
+        <rdfs:label>heteroplasmic mitochondrial inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000893 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000893">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance whereby manifestation of a trait or condition occurs only when affected mitochondria are inherited (i.e. mitochondria containing the causative allele)</obo:IAO_0000115>
+        <rdfs:label>homoplasmic mitochondrial inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HPO -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000006 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0000006">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in heterozygotes. In the context of medical genetics, an autosomal dominant disorder is caused when a single copy of the mutant allele is present. Males and females are affected equally, and can both transmit the disorder with a risk of 50% for each child of inheriting the mutant allele.</obo:IAO_0000115>
+        <rdfs:label>Autosomal dominant inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000007 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0000007">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in homozygotes. In the context of medical genetics, autosomal recessive disorders manifest in homozygotes (with two copies of the mutant allele) or compound heterozygotes (whereby each copy of a gene has a distinct mutant allele).</obo:IAO_0000115>
+        <rdfs:label>Autosomal recessive inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001417 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0001417">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on the X chromosome.</obo:IAO_0000115>
+        <rdfs:label>X-linked inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001419 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0001419">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for recessive traits related to a gene encoded on the X chromosome. In the context of medical genetics, X-linked recessive disorders manifest in males (who have one copy of the X chromosome and are thus hemizygotes), but generally not in female heterozygotes who have one mutant and one normal allele.</obo:IAO_0000115>
+        <rdfs:label>X-linked recessive inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001423 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0001423">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for dominant traits related to a gene encoded on the X chromosome. In the context of medical genetics, X-linked dominant disorders tend to manifest very severely in affected males. The severity of manifestation in females may depend on the degree of skewed X inactivation.</obo:IAO_0000115>
+        <rdfs:label>X-linked dominant inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001426 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0001426">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that depends on a mixture of major and minor genetic determinants possibly together with environmental factors. Diseases inherited in this manner are termed complex diseases.</obo:IAO_0000115>
+        <rdfs:label>Multifactorial inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001427 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0001427">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on the mitochondrial genome. Because the mitochondrial genome is essentially always maternally inherited, a mitochondrial condition can only be transmitted by females, although the condition can affect both sexes. The proportion of mutant mitochondria can vary (heteroplasmy).</obo:IAO_0000115>
+        <rdfs:label>Mitochondrial inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001428 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0001428">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance in which a trait or disorder results from a de novo mutation occurring after conception, rather than being inherited from a preceding generation.</obo:IAO_0000115>
+        <rdfs:label>Somatic mutation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001450 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0001450">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on the Y chromosome.</obo:IAO_0000115>
+        <rdfs:label>Y-linked inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001470 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0001470">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in heterozygotes in a sex-specific manner (i.e. only in males or only in females).</obo:IAO_0000115>
+        <rdfs:label>Sex-limited autosomal dominant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0003743 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0003743">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance in which the severity of a disorder increases or the age of onset decreases as the disorder is passed from one generation to the next.</obo:IAO_0000115>
+        <rdfs:label>Genetic anticipation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0003745 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0003745">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>Cases of the disease in question occur without a previous family history, i.e., as isolated cases without being transmitted from a parent and without other siblings being affected.</obo:IAO_0000115>
+        <rdfs:label>Sporadic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0010983 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0010983">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A type of multifactorial inheritance governed by the simultaneous action of a few gene loci. It is recommended this term be used for traits governed by three loci, although it is noted that usage of this term in the literature is not uniform.</obo:IAO_0000115>
+        <rdfs:label>Oligogenic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0012274 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0012274">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A type of autosomal dominant inheritance involving a gene that is imprinted with paternal silencing.</obo:IAO_0000115>
+        <rdfs:label>Autosomal dominant inheritance with paternal imprinting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0012275 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0012275">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A type of autosomal dominant inheritance involving a gene that is imprinted with maternal silencing.</obo:IAO_0000115>
+        <rdfs:label>Autosomal dominant inheritance with maternal imprinting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0025352 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0025352">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>Being related to a mutation that gamete that participates in fertilization. All cells of the emerging organism will be affected and the variant canl be passed on to the next generation.</obo:IAO_0000115>
+        <rdfs:label>Autosomal dominant germline de novo mutation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0031362 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0031362">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests only in homozygotes in a sex-specific manner (i.e. only in males or only in females).</obo:IAO_0000115>
+        <rdfs:label>Sex-limited autosomal recessive inheritance</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -476,6 +643,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000262">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000409"/>
         <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the 1000 Genomes Database.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">1000 Genomes ascertainment method</rdfs:label>
     </owl:NamedIndividual>
@@ -646,6 +814,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000332">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000409"/>
         <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the Exome Aggregation Consortium (ExAC) database.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">ExAc ascertainment method</rdfs:label>
     </owl:NamedIndividual>
@@ -656,6 +825,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000333">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000409"/>
         <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the NHLBI Exome Sequencing Project (ESP) database.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">ESP ascertainment method</rdfs:label>
     </owl:NamedIndividual>
@@ -666,6 +836,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000334">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000409"/>
         <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the Genome Aggregation database (gnomAD).</obo:IAO_0000115>
         <rdfs:label xml:lang="en">gnomAD ascertainment method</rdfs:label>
     </owl:NamedIndividual>
@@ -675,7 +846,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000338 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000338">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms to describe the number and/or genomic organization of alleles at a particular locus in the genome of an individual.</obo:IAO_0000115>
         <terms:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:creator>
         <rdfs:label xml:lang="en">Allelic State</rdfs:label>
@@ -686,7 +857,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000343 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000343">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/SO"/>
         <obo:IAO_0000115>A value set comprised of terms used to indicate the type of sequence feature a particular region of genomic sequence represents.</obo:IAO_0000115>
@@ -699,7 +870,8 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000344 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000344">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000364"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the relative position of two or more alleles on the same or distinct chromosomes.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">Allelic Phase</rdfs:label>
@@ -710,7 +882,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000345 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000345">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the type of algorithm used to generate a particular in silico prediction.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">In Silico Prediction Method</rdfs:label>
@@ -721,7 +893,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000347 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000347">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set holding terms that indicate whether the conditions laid out by a variant interpretation criterion were met or not for a particular criterion assessment.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">Criterion Assessment Outcome</rdfs:label>
@@ -732,7 +904,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000348 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000348">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms that indicate the degree of specificity with which a genetic condition is caused by variants in a particular gene or locus.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">Locus Specificity</rdfs:label>
@@ -743,7 +915,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000349 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000349">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the frequency at which missense variants in a particular region are tolerated (i.e. do not cause a pathological condition).</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">Benign Missense Variation Rate Outcome</rdfs:label>
@@ -774,7 +946,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000353 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000353">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the degree of support provided by an evidence line for a particular variant interpretation.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">ACMG Evidence Strength</rdfs:label>
@@ -785,7 +957,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000354 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000354">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the extent to which a particular genetic mechanism underlying a condition is known.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">Condition Mechanism Strength</rdfs:label>
@@ -796,7 +968,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000363 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000363">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms that describe if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">Value Set Extensibility</rdfs:label>
@@ -829,7 +1001,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000371 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000371">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <rdfs:label xml:lang="en">Clinical Significance</rdfs:label>
     </owl:NamedIndividual>
     
@@ -838,7 +1010,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000372 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/DOID"/>
         <rdfs:label xml:lang="en">Disease</rdfs:label>
@@ -850,11 +1022,10 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000375 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000375">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/HPO"/>
-        <rdfs:label xml:lang="en">Phenotype</rdfs:label>
-        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <rdfs:label xml:lang="en">Human Phenotype</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -862,7 +1033,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000380 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000380">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <rdfs:label xml:lang="en">Molecular Consequence</rdfs:label>
     </owl:NamedIndividual>
     
@@ -871,7 +1042,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000382 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000382">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <rdfs:label xml:lang="en">Functional Assay</rdfs:label>
     </owl:NamedIndividual>
     
@@ -880,7 +1051,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000392 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000392">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <rdfs:label xml:lang="en">Allele Origin</rdfs:label>
     </owl:NamedIndividual>
     
@@ -889,7 +1060,7 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000395 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000395">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <rdfs:label xml:lang="en">ACMG Criterion</rdfs:label>
     </owl:NamedIndividual>
     
@@ -898,8 +1069,9 @@
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000396 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000396">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000397"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000411"/>
         <rdfs:label xml:lang="en">Gene</rdfs:label>
     </owl:NamedIndividual>
     
@@ -915,13 +1087,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000409 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000409">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <rdfs:label xml:lang="en">Ascertainment Method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000411 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000411"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000416 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000416">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <rdfs:label xml:lang="en">Inheritance Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>SO</obo:SEPIO_0000367>
-        <rdfs:label>Sequence Ontology</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO"/>
     
 
 

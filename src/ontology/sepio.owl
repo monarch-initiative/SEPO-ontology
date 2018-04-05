@@ -574,6 +574,7 @@ Consider: http://purl.org/see/rdo#is_assertion_asserting</obo:SEPIO_0000052>
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000041 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000041">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000407"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
         <obo:IAO_0000115>A relation holding between a generated artifact and a plan specification that specifies all or part of the process that created it (e.g. a protocol, guideline, rule set)</obo:IAO_0000115>
@@ -822,7 +823,7 @@ If more than one agent is involved in this process, we may consider them collect
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
         <obo:IAO_0000115>A relation describing the degree of support provided by an evidence line for a target assertion or proposition.</obo:IAO_0000115>
-        <rdfs:comment>The range for this relation is a term from a value partition that enumerates categorical degrees of strength.  Different systems can define terms representing the levels of strength they which to define for their use case.</rdfs:comment>
+        <obo:IAO_0000116>The value of this property is typically a term from some defined set of values that enumerates categorical degrees of evidence strength  (e.g. the CIViC five-teired &apos;evidence level&apos; scale). Different systems or applications can create terms representing the levels of strength they wish to define for their use case.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">evidence_strength</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1162,7 +1163,19 @@ A property chain (has_evidence_line o has_evidence_item -&gt; has_evidence_with_
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000407">
         <obo:IAO_0000115>A relation holding between a plan specification and an artifact whose generation it specifies.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">specifies</rdfs:label>
+        <rdfs:label xml:lang="en">specifies_creation_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000415 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000415">
+        <obo:IAO_0000115>A relation describing the quality of the data used as evidence by an agent making an assertion.</obo:IAO_0000115>
+        <obo:IAO_0000116>While the &apos;evidence quality&apos; is fundamentally an attribute of the evidence items produced by a particular study, this property is typically attached to an evidence line and used to indicate the overall quality of the evidence items supporting the line of evidence.
+
+The value of this property is typically a term from some defined set of values that enumerates categorical degrees of quality (e.g. the CIViC five star &apos;trust rating&apos; scale) Different systems or applications can create terms representing the levels of quality they wish to define for their use case.</obo:IAO_0000116>
+        <rdfs:label>evidence_quality</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1495,15 +1508,6 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000163 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000163">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000160"/>
-        <rdfs:label xml:lang="en">contribution_date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000164 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000164">
@@ -1785,6 +1789,12 @@ This property is normally used in a functional way, although PAV does not formal
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000150"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112>- Data Items: A &apos;548.5 mg/dl&apos; measurement of blood glucose in mutant mice.
@@ -2158,8 +2168,9 @@ From http://plato.stanford.edu/entries/propositions/: &quot;Propositions are the
 
 3. A later assertion by the ENIGMA consortium on May 9, 2013, based on new evidence, that BRCA1:2685T&gt;A causes familial breast cancer.</obo:IAO_0000112>
         <obo:IAO_0000115>A statement made by a particular agent on a particular occasion that a particular proposition is true, based on the evaluation of one or more lines of evidence.</obo:IAO_0000115>
-        <obo:IAO_0000116>In SEPIO, a high-level distinction is made between statements that are  &apos;findings&apos; vs &apos;assertions&apos;.  Findings are statements that report/summarize what was directly observed or calculated in a study, and are about only the immediate  participants in the experiment or study. As such, findings involve no interpretation or inference from the data to draw broader conclusions. Assertions, by contrast, are statements that derive from some degree of interpretation or inference based on the evaluation of &apos;evidence&apos;, and often make broader claims about the types or categories to which study participants belong.   
-This distinction is important because the provenance and validity of a &apos;finding&apos; statement does not depend on subjective interpretation of &apos;evidence&apos; in the same way that of an assertion does. This has modeling implications for how findings and assertions are linked to information that supports them.</obo:IAO_0000116>
+        <obo:IAO_0000116>SEPIO distinguishes two high-level subtypes of statements:
+1. Findings are statements that report the immediate, objective resultsof an assay, experiment, or study -  without bias or interpretation.  A finding statement results from an act of summarizing direct observations, calculations, or measurements.
+2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and its interpretation as evidence.</obo:IAO_0000116>
         <obo:IAO_0000118>claim</obo:IAO_0000118>
         <obo:IAO_0000118>evidence-based assertion</obo:IAO_0000118>
         <obo:IAO_0000118>propostional assertion</obo:IAO_0000118>
@@ -2247,6 +2258,12 @@ May be equivalent to http://purl.obolibrary.org/obo/ECO_0000217 ! assertion meth
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000037">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000407"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A directive information entity that specifies an algorithm or heuristics for evaluating evidence in the process of making an assertion.</obo:IAO_0000115>
         <obo:IAO_0000116>SEPIO implements several OWL individuals representing instances of commonly applied assertion methods, primarily those used in pathogenic variant classification such as the ACMG variant classification criteria.</obo:IAO_0000116>
         <rdfs:comment>Assertion methods can be informal guidlines or heuristics that support manual evaluation of evidence, e.g. the ACMG Variant Classification Guidelines. Assertion methods can also be formally encoded as algorithms that allow computational or statistical analysis of data as evidence in support of making an assertion - e.g. multifactorial analysis algorithms that operate on specified data to generate a quantitative score indicating the validity of a particular proposition.</rdfs:comment>
@@ -2259,10 +2276,11 @@ May be equivalent to http://purl.obolibrary.org/obo/ECO_0000217 ! assertion meth
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000048">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000115>A role borne by a  person, group, organization, or information processing entity (e.g. software, algorithms) in virtue of its active participation in a process lerading to some outcome (e.g the generation, modification, or provision of some entity).</obo:IAO_0000115>
+        <obo:IAO_0000115>A role borne by a  person, group, organization, or information processing entity (e.g. software, algorithms) in virtue of its active participation in a process leading to some outcome (e.g the generation, modification, or provision of some entity).</obo:IAO_0000115>
+        <obo:IAO_0000118>agent role</obo:IAO_0000118>
         <obo:SEPIO_0000052>http://purl.org/see/rdo#agent_role</obo:SEPIO_0000052>
         <rdfs:comment>In the context of evidence and proveannce, agents are persons, groups, organizations, or software that are responsible for making assertions or generating the evidence and data that support them.</rdfs:comment>
-        <rdfs:label xml:lang="en">agent role</rdfs:label>
+        <rdfs:label xml:lang="en">contributor role</rdfs:label>
     </owl:Class>
     
 
@@ -2472,6 +2490,9 @@ ECO Definition/Comment: An automatic assertion is based on computationally gener
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000125">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000004"/>
         <obo:IAO_0000115>A planned proccess that executes some study design or protocol to generate scientific data that is interpreted to test or generate a hypothesis.</obo:IAO_0000115>
+        <obo:SEPIO_0000061>Explore the classification of study types here as a possibility to implement in SEPIO. 
+https://mcw.libguides.com/evidencebased/studies
+Useful because these map to the strength of the evidence each might provide.</obo:SEPIO_0000061>
         <rdfs:comment>A research study is considered broadly to be any scientific activity aimed at answering a research question. Studies can be simple or complex, depending on the scope of the question being explored and the extent of resources deployed in doing so.  They may include a full research investigation, a set of experiments, or a single experiment or assay. Regardless, that act of sumamrizing any results as a finding statement is considered part of the study.</rdfs:comment>
         <rdfs:label xml:lang="en">research study</rdfs:label>
     </owl:Class>
@@ -2502,7 +2523,7 @@ ECO Definition/Comment: An automatic assertion is based on computationally gener
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000133 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000133">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -2512,6 +2533,13 @@ ECO Definition/Comment: An automatic assertion is based on computationally gener
         <obo:IAO_0000115>A data item that quantifies the degree of support an agent believes an evidence line to provide for a particular proposition.</obo:IAO_0000115>
         <obo:SEPIO_0000061>Consider also framing as categorical measurement values?: 
 A categorical measurement reflecting an agent&apos;s cognitive quantification of the degree of support (s)he believes an evidence line to provide for a particular proposition.</obo:SEPIO_0000061>
+        <rdfs:comment>The strength of a line of evidence typically depends on the *type* and *quality* of the study(ies) that generate its supporting evidence items.  
+
+1. Type of Study: In a particular domain of research, certain types of studies are commonly held to produce data that is more meaningful and reliable than others, as evidence for a particular type of assertion.  These more reliable studies tend to draw on experimental systems that more accurately replicate the natural phenomenon being studied, and experimental designs that reduce confounding variables and biases. For example, in vivo studies of gene function provide stronger evidence than in vitro systems that may not replicate all aspects of the biology of a living system, and randomized controlled clinical trials are held to be more reliable than retrospective or case control studies that are more susceptible to confounding factors.  
+
+2. Quality of Study: A given study can be performed to varying degrees of rigor and comprehensiveness,  irrespective of the type of study it represents. This is another important factor in assessing the overall strength of evidence it may produce.  Higher quality studies will have carefully defined controls, and be replicated numerous times to ensure reproducibility.  Other factors that are often used as secondary indicators of the quality of research data include the quality of the journal in which it is published, and the reputation of the lab or institution performing the study. 
+
+In SEPIO, the notion of evidence quality is captured in an attribute separate from the notion of evidence strength. And the notion of study type can be represented in the type assigned to a study instance, or the evidence code used to type an evidence line (which are often based on the type of study that produced the evidence data).  Evidence strength typically relies on assessment of one or both of these more fundamental attributes of evidence.</rdfs:comment>
         <rdfs:label xml:lang="en">evidence strength</rdfs:label>
     </owl:Class>
     
@@ -2654,13 +2682,14 @@ Note that publications and reports are considered separately from &apos;evidence
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000163"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000017"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The actions taken by a particular agent in the creation, modification, assessment, or descruction of an artifact.</obo:IAO_0000115>
         <obo:IAO_0000116>This concept is similar in meaning and usage to PROV:Attribution.  Consider aligning or adopting.</obo:IAO_0000116>
-        <rdfs:comment>A contribution describes the part played by a particular agent in the creation, modification, assessment, or descruction of an artifact. The scope of a given &apos;contribution&apos; instance is constrained to include only the actions of a particular agent in contributing to a particular artifact. Contribution instances are used to organize information about when, where, how (e.g. what roles were played), and on whose behalf these actions were performed.</rdfs:comment>
+        <rdfs:comment>A contribution describes the part played by a particular agent in the creation, modification, assessment, or descruction of an artifact. The scope of a given &apos;contribution&apos; instance is constrained to include only the actions of one agent in contributing to a particular artifact.  The agent can be a group or organization comprised of more than one individual, acting together to make the contribution. Contribution instances are used to organize information about when, where, how (e.g. what roles were played), and on whose behalf these actions were performed.</rdfs:comment>
         <rdfs:label xml:lang="en">contribution</rdfs:label>
     </owl:Class>
     
@@ -2692,12 +2721,12 @@ In practices, instances of &apos;study findings&apos; are used to group one or m
         <obo:SEPIO_0000061>- While the act of generating a finding is simpler, it does involve some cognitive effort that could be guided by some method (i.e., one defining what experimental context should be included in the finding statement, and how this and the observed outcomes are reported). Which means that findings are not the direct output of an assay, which merely generates data. So perhaps in SEPIO we commit to only considering research processes at the level of studies - such that even assays would potentially involve some act of summarizing the results as a finding.
 
 - Note that at present &apos;study data sets&apos; can serve the same &apos;organizational&apos; purpose as &apos;study findings&apos; - we should converge on one recommended way to perform this level of organization of evidence data.</obo:SEPIO_0000061>
-        <rdfs:comment>A finding results from a simple act of summarization - which succinctly reports direct study results and their experimental provenance.
-
-An assertion, by contrast, results from an act of interpretation and/or inference, based in data used as evidence. The statement here is a conclusion drawn from critical evaluation of more foundational data, and its validity depends on the quality of this data and its interpretation as evidence.</rdfs:comment>
-        <rdfs:comment>An experimental finding is a statement that summarizes the immediate results of a particular experiment or study. It describes only what was directly observed, measured, or calculated, and possibly the experimental context of these observations.  It does not describe more general conclusions that may have been inferred from such results. As such, the scope of what a finding describes is limited to the direct participants in the study - i.e. it is about only the instances observed or measured in the study.  It makes no broader inference or conclusion about types or classes to which these instances belong. 
+        <rdfs:comment>A study finding is a statement that summarizes the immediate results of a particular experiment or study. It describes only what was directly observed, measured, or calculated, and optionally the experimental context of these observations.  It does not describe more general conclusions that may have been inferred from such results. As such, the scope of what a finding describes is limited to the direct participants in the study - i.e. it is about only the instances observed or measured in the study.  It makes no broader inference or conclusion about types or classes to which these instances belong. 
 
 This is not to say that the onserved findings are necessarily accurate or correct - only that they were indeed made in a particular study. For example, the finding that &quot;Sequencing of DNA from patient X revealed an A-&gt;T mutation at position 2143 in gene Y&quot; is a matter of fact - this was the outcome of the assay, even if the finding is an artifact of low sequencing coverage. Metadata about the finding (e.g. sequencing methods/reagents used, coverage or read depth) are recoded so users can judge for themselves whether the objectively reported finding accurtely reflects the biology it describes.</rdfs:comment>
+        <rdfs:comment>SEPIO distinguishes two high-level subtypes of statements:
+1. Findings are statements that report the immediate, objective resultsof an assay, experiment, or study -  without bias or interpretation.  A finding statement results from an act of summarizing direct observations, calculations, or measurements.
+2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and its interpretation as evidence.</rdfs:comment>
         <rdfs:label xml:lang="en">study finding</rdfs:label>
     </owl:Class>
     
@@ -2835,7 +2864,7 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000187 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000187">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -2856,22 +2885,6 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes
         <rdfs:comment>Source: ClinVar (&quot; &apos;Provider interpretation&apos; is intended for variants that were interpreted by a clinical provider. For example, the clinician may reclassify the variant using detailed patient phenotype information that was unavailable to the testing laborator&quot;)
 ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes.pdf</rdfs:comment>
         <rdfs:label xml:lang="en">provider interpretation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000355 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000355">
-        <rdfs:label xml:lang="en">value set</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000358 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000358">
-        <rdfs:label xml:lang="en">value partition</rdfs:label>
     </owl:Class>
     
 
@@ -2938,11 +2951,22 @@ A research study is considered broadly to be any scientific activity aimed at an
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <obo:IAO_0000115>A data item that indicates an agent&apos;s assessment of whether an evidence line  supports or disputes a target proposition (or represents inconclusive evidence that is not sufficient for either).</obo:IAO_0000115>
         <obo:SEPIO_0000061>Consider also treating this as an attribute/quality of an evidence line:
 An attribute of an evidence line describing whether it supports or disputes a target proposition (or represents inconclusive evidence that is not sufficient for either).</obo:SEPIO_0000061>
         <rdfs:label xml:lang="en">evidence direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000414 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000414">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <obo:IAO_0000115>A data item that indicates the quality of the data used as evidence by an agent making an assertion.</obo:IAO_0000115>
+        <rdfs:comment>The quality of an evidence item is a measure of the rigor applied in performing the study and anlysis tasks used to produce it. Higher quality studies will have carefully defined controls, and be replicated numerous times to ensure reproducibility.  Other factors that are often used as secondary indicators of the quality of research data include the quality of the journal in which it is published, and the reputation of the lab or institution performing the study.  Evidence qualitty is an important factor in assessing the overall strength of evidence it may produce.</rdfs:comment>
+        <rdfs:label>evidence quality</rdfs:label>
     </owl:Class>
     
 

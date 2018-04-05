@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Edited Redirect" name="http://www.w3.org/2004/02/skos/core" uri="imports/skos.rdf"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl" uri="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/imports/ontology-metadata.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl" uri="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/mireots/bfo-mireot.owl"/>
 </catalog>
