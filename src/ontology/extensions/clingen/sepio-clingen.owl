@@ -1858,6 +1858,16 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GENO -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>GENO</obo:SEPIO_0000367>
+        <rdfs:label>Genotype Ontology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HPO -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO">
@@ -2115,6 +2125,9 @@ While ontologically imprecise, this is a commonly used shortcut to standardize s
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000340">
         <obo:IAO_0000115>Organizational class that groups classes imported from the skos model to support creation and definition of value sets for particular SEPIO data model implementations.</obo:IAO_0000115>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000367">
+        <rdfs:label>has_prefix</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
         <obo:IAO_0000115>A value set comprised of terms representing diseases.</obo:IAO_0000115>

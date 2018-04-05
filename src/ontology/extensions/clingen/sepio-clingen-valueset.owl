@@ -170,6 +170,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GENO -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GENO_0000131 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000131">
@@ -1106,6 +1112,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000416">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/GENO"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/HPO"/>
         <rdfs:label xml:lang="en">Inheritance Pattern</rdfs:label>
     </owl:NamedIndividual>
     
