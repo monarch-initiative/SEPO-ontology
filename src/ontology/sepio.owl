@@ -1577,6 +1577,15 @@ For example, many silico prediction tools such as SIFT interrogate biological se
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000419 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000419">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000168"/>
+        <rdfs:label xml:lang="en">probabilistic quantifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/STATO_0000129 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000129">
@@ -2169,8 +2178,8 @@ From http://plato.stanford.edu/entries/propositions/: &quot;Propositions are the
 3. A later assertion by the ENIGMA consortium on May 9, 2013, based on new evidence, that BRCA1:2685T&gt;A causes familial breast cancer.</obo:IAO_0000112>
         <obo:IAO_0000115>A statement made by a particular agent on a particular occasion that a particular proposition is true, based on the evaluation of one or more lines of evidence.</obo:IAO_0000115>
         <obo:IAO_0000116>SEPIO distinguishes two high-level subtypes of statements:
-1. Findings are statements that report the immediate, objective resultsof an assay, experiment, or study -  without bias or interpretation.  A finding statement results from an act of summarizing direct observations, calculations, or measurements.
-2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and its interpretation as evidence.</obo:IAO_0000116>
+1. Findings are statements that report the immediate, objective results of an experiment, observation, or study -  without bias or interpretation.  A finding statement results simply from the act of reporting or summarizing these direct observations, calculations, or measurements.
+2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and the act of interpretating as evidence.</obo:IAO_0000116>
         <obo:IAO_0000118>claim</obo:IAO_0000118>
         <obo:IAO_0000118>evidence-based assertion</obo:IAO_0000118>
         <obo:IAO_0000118>propostional assertion</obo:IAO_0000118>
@@ -2178,7 +2187,7 @@ From http://plato.stanford.edu/entries/propositions/: &quot;Propositions are the
         <obo:SEPIO_0000184>The identity of a particular assertion is dependent upon (1) what it claims to be true (its semantic content, aka its ‘proposition’), (2) the agent asserting it, and (3) the occasion on which the assertion is made. Many agents can make assertions expressing belief in the same proposition (e.g. ENIGMA’s assertion that that BRCA1:2685T&gt;A causes familial breast cancer is a separate instance than Counsyl’s assertion of the same underlying proposition).  Likewise, a single agent can make more than one assertion of belief in the same proposition on different occasions  (e.g. ENIGMA may make a separate assertion of the same proposition that BRCA1:2685T&gt;A causes familial breast cancer at a later date, based on additional evidence).</obo:SEPIO_0000184>
         <rdfs:comment>Assertions as defined in SEPIO are the result of some logical inference made based on the interpretation of evidence.  They put forth a proposition that may or may not be true. The validity of this proposition ultimately rests on the quantity, quality, diversity, and concordance of evidence supporting it. 
 
-Statements directly reporting study outcomes or findings are not considered assertions in this sense, as they merely report what was observed or recorded, but do not rely on a leap of logical inference (see &apos;study finding&apos;).</rdfs:comment>
+Statements directly reporting study results or observations are not considered assertions in this sense, as they merely report what was observed or recorded, but do not rely on a leap of logical inference (see &apos;study finding&apos;).</rdfs:comment>
         <rdfs:label xml:lang="en">assertion</rdfs:label>
     </owl:Class>
     
@@ -2725,7 +2734,7 @@ In practices, instances of &apos;study findings&apos; are used to group one or m
 
 This is not to say that the onserved findings are necessarily accurate or correct - only that they were indeed made in a particular study. For example, the finding that &quot;Sequencing of DNA from patient X revealed an A-&gt;T mutation at position 2143 in gene Y&quot; is a matter of fact - this was the outcome of the assay, even if the finding is an artifact of low sequencing coverage. Metadata about the finding (e.g. sequencing methods/reagents used, coverage or read depth) are recoded so users can judge for themselves whether the objectively reported finding accurtely reflects the biology it describes.</rdfs:comment>
         <rdfs:comment>SEPIO distinguishes two high-level subtypes of statements:
-1. Findings are statements that report the immediate, objective resultsof an assay, experiment, or study -  without bias or interpretation.  A finding statement results from an act of summarizing direct observations, calculations, or measurements.
+1. Findings are statements that report the immediate, objective results of an experiment, observation, or study -  without bias or interpretation.  A finding statement results simply from an act of reporting or summarizing these direct observations, calculations, or measurements.
 2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and its interpretation as evidence.</rdfs:comment>
         <rdfs:label xml:lang="en">study finding</rdfs:label>
     </owl:Class>

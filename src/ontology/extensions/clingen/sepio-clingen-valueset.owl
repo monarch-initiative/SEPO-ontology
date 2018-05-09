@@ -62,12 +62,6 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -150,29 +144,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/DOID -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/DOID_4 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/DOID_4">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000372"/>
-        <obo:IAO_0000115>A disease is a disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
-        <rdfs:label>disease</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GENO -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO"/>
     
 
 
@@ -366,12 +337,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HPO -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HPO"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0000006 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0000006">
@@ -390,6 +355,17 @@
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000416"/>
         <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in homozygotes. In the context of medical genetics, autosomal recessive disorders manifest in homozygotes (with two copies of the mutant allele) or compound heterozygotes (whereby each copy of a gene has a distinct mutant allele).</obo:IAO_0000115>
         <rdfs:label>Autosomal recessive inheritance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000118 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HP_0000118">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000375"/>
+        <obo:IAO_0000115>a phenotypic abnormality</obo:IAO_0000115>
+        <rdfs:label>Phenotypic abnormality</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -559,6 +535,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MONDO_0000001 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/MONDO_0000001">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000372"/>
+        <rdfs:label>disease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0001146 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBI_0001146">
@@ -585,6 +571,24 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000382"/>
         <rdfs:label>subcellular protein localization assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000211 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000211">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000395"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000212 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000212">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000395"/>
     </owl:NamedIndividual>
     
 
@@ -855,7 +859,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms to describe the number and/or genomic organization of alleles at a particular locus in the genome of an individual.</obo:IAO_0000115>
         <terms:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:creator>
-        <rdfs:label xml:lang="en">Allelic State</rdfs:label>
+        <rdfs:label xml:lang="en">Allelic State Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -865,10 +869,10 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000343">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
-        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/SO"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/so"/>
         <obo:IAO_0000115>A value set comprised of terms used to indicate the type of sequence feature a particular region of genomic sequence represents.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Region Annotation</rdfs:label>
+        <rdfs:label xml:lang="en">Region Annotation Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -880,7 +884,7 @@
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000364"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the relative position of two or more alleles on the same or distinct chromosomes.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Allelic Phase</rdfs:label>
+        <rdfs:label xml:lang="en">Allelic Phase Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -891,7 +895,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the type of algorithm used to generate a particular in silico prediction.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">In Silico Prediction Method</rdfs:label>
+        <rdfs:label xml:lang="en">In Silico Prediction Method Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -902,7 +906,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set holding terms that indicate whether the conditions laid out by a variant interpretation criterion were met or not for a particular criterion assessment.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Criterion Assessment Outcome</rdfs:label>
+        <rdfs:label xml:lang="en">Criterion Assessment Outcome Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -913,7 +917,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms that indicate the degree of specificity with which a genetic condition is caused by variants in a particular gene or locus.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Locus Specificity</rdfs:label>
+        <rdfs:label xml:lang="en">Locus Specificity Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -924,7 +928,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the frequency at which missense variants in a particular region are tolerated (i.e. do not cause a pathological condition).</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Benign Missense Variation Rate Outcome</rdfs:label>
+        <rdfs:label xml:lang="en">Benign Missense Variation Rate Outcome Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -955,7 +959,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the degree of support provided by an evidence line for a particular variant interpretation.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">ACMG Evidence Strength</rdfs:label>
+        <rdfs:label xml:lang="en">ACMG Evidence Strength Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -966,7 +970,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the extent to which a particular genetic mechanism underlying a condition is known.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Condition Mechanism Strength</rdfs:label>
+        <rdfs:label xml:lang="en">Condition Mechanism Strength Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -977,7 +981,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:IAO_0000115>A value set comprised of terms that describe if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Value Set Extensibility</rdfs:label>
+        <rdfs:label xml:lang="en">Value Set Extensibility Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1008,7 +1012,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000371">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <rdfs:label xml:lang="en">Clinical Significance</rdfs:label>
+        <rdfs:label xml:lang="en">Clinical Significance Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1017,10 +1021,10 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
-        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/DOID"/>
-        <rdfs:label xml:lang="en">Disease</rdfs:label>
-        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/DOID_4"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000397"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/mondo"/>
+        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <rdfs:label xml:lang="en">Disease Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1030,8 +1034,9 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000375">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
-        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/HPO"/>
-        <rdfs:label xml:lang="en">Human Phenotype</rdfs:label>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/hp"/>
+        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <rdfs:label xml:lang="en">Human Phenotype Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1040,7 +1045,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000380">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <rdfs:label xml:lang="en">Molecular Consequence</rdfs:label>
+        <rdfs:label xml:lang="en">Molecular Consequence Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1049,7 +1054,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000382">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <rdfs:label xml:lang="en">Functional Assay</rdfs:label>
+        <rdfs:label xml:lang="en">Functional Assay Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1058,7 +1063,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000392">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <rdfs:label xml:lang="en">Allele Origin</rdfs:label>
+        <rdfs:label xml:lang="en">Allele Origin Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1067,7 +1072,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000395">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <rdfs:label xml:lang="en">ACMG Criterion</rdfs:label>
+        <rdfs:label xml:lang="en">ACMG Criterion Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1078,7 +1083,7 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000397"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000411"/>
-        <rdfs:label xml:lang="en">Gene</rdfs:label>
+        <rdfs:label xml:lang="en">Gene Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1097,7 +1102,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000409">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <rdfs:label xml:lang="en">Ascertainment Method</rdfs:label>
+        <rdfs:label xml:lang="en">Ascertainment Method Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1112,16 +1117,11 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000416">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/GENO"/>
-        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/HPO"/>
-        <rdfs:label xml:lang="en">Inheritance Pattern</rdfs:label>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000364"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/geno"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/hp"/>
+        <rdfs:label xml:lang="en">Inheritance Pattern Value Set</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SO -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SO"/>
     
 
 
@@ -1213,6 +1213,30 @@
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000343"/>
         <rdfs:label>functional_gene_region</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/geno -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/geno"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/hp"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/mondo"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/so -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/so"/>
 </rdf:RDF>
 
 
