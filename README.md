@@ -17,7 +17,7 @@ The central axis of SEPIO defines the relationship between **Assertions**, **Evi
 - **Example:** The ENIGMA consortium’s assertion that "The DSC2:c.631-2A>G variant is pathogenic_for arrhythmogenic ventricular cardiomyopathy."
   
 ### (2) [Evidence Line](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Evidence-Line)
-- **Description:** Evidence Lines represent an independent argument relevant to the validity of the proposition it puts forth. Evidence Lines are supported by one or more individual pieces of Information, which in this role serve as Evidence Items.
+- **Description:** Evidence Lines represent an independent, meaningful arguments relevant to the validity of an assertion. Evidence Lines are supported by one or more individual pieces of Information, which in this role serve as Evidence Items.
 - **Example:** The argument made for the assertion above by an Agent's interpretation of the prior assertion that "The c.631-2A>G variant impairs DSC2 gene function." 
     
 ### (3) [Evidence Item](https://github.com/monarch-initiative/SEPIO-ontology/wiki/Evidence-Item)
@@ -29,7 +29,7 @@ The central axis of SEPIO defines the relationship between **Assertions**, **Evi
 - **Example:** An in vitro Ca2+ binding assay
   
 ### (5) Publications
-- **Description:** Publications are the most common form of evidence and provenance metadata provided by curated databases. But Publications are not considered Evidence Items in the SEPIO model, as they are only proxies that point to where actual evidence information is described. 
+- **Description:** Publications are the most common maens of providing evidence and provenance informtion in curated databases. But a reference to a publication is not considered an Evidence Item in the SEPIO model, as it  is  only a pointer to where actual evidence information is described. The referenced Publication contains/describes evidence, but itself is not evidence.
   
 ### (6) Shortcut Relations
 - **Description:**  Evidence Lines can be directly linked to a supporting Activity or Publication by 'shortcut relations' (dashed lines), enabling description of the provenance of an Evidence Line even when particular Evidence Items are not provided. These relationships can inferred via property chains defined in the SEPIO ontology to enable interoperability of graphs asserting these different patterns (see [5]).
