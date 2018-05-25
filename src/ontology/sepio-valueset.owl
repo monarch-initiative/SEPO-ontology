@@ -59,7 +59,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362">
         <obo:IAO_0000115>A property used to indicate if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">valueSetExtensibility</rdfs:label>
+        <rdfs:label xml:lang="en">value_set_extensibility</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -68,7 +68,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373">
         <obo:IAO_0000115>A property used to relate a value set to an identifier system from which terms comprising the value set are allowed.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">valueSetIdentifierSystem</rdfs:label>
+        <rdfs:label xml:lang="en">value_set_identifier_system</rdfs:label>
     </owl:ObjectProperty>
     
 

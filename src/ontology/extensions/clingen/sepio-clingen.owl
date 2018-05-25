@@ -273,6 +273,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GENO_0000608 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000608">
+        <obo:IAO_0000115>a relation to link a single locus complement to its zygosity.</obo:IAO_0000115>
+        <rdfs:label>has_zygosity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GENO_0000790 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000790">
@@ -340,14 +349,14 @@
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000257"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
         </owl:propertyChainAxiom>
-        <obo:IAO_0000115>A relation that holds between a generated artifact and some directive information content entity that specifies its creation, or that of some other artifact that was subsequently used in its creation.</obo:IAO_0000115>
-        <rdfs:comment>In SEPIO, this relation is typically used to describe methods used in generating a statement or generating the data that supports the statement. This property is applied primarily in two situations: 
+        <obo:IAO_0000115>A relation that holds between a generated artifact &apos;X&apos; and some directive information content entity that specifies the creation of &apos;X&apos;, or the creation of some other artifact that was subsequently supported the creation of &apos;X&apos;.</obo:IAO_0000115>
+        <obo:IAO_0000116>In SEPIO, this relation is typically used to describe methods used in generating a statement or generating the data that supports the statement. This property is applied primarily in two situations: 
 
 First, it can be used to link an assertion to a specification that directs all or part of the assertion process that generated it. This may cover tasks such as identificaiton of data types that may be used as evidence, weighting the strength of particular types of evidence, or combineingdifferent lines of evidence to make a final assertion. For example, linking a variant pathogenicity assertion to the ACMG/AMP Variant Interpretation Guidelines (or to specific criteria or rules within this specification).
 
-Second, it can be used to link a study finding to protocols that guided all or part of the study that generated data supporting thie finding. For example: (1) linking a finding that reports the frequency of a variant in a particular population to the ascertainment method used to define the cohort analyzed in the study; or (2) linking a finding that reports the effect of a variant on a particular protein function to a protocol for the functional assay performed in the study.
+Second, it can be used to link a study finding to protocols that guided all or part of the study that generated data supporting thie finding. For example: (1) linking a finding that reports the frequency of a variant in a particular study grroup to the ascertainment method used to define the cohort analyzed in the study; or (2) linking a finding that reports the effect of a variant on a particular protein function to a protocol for the functional assay performed in the study.
 
-In cases where the specification *directly* describes the creation of the generated artifact, the sup-property &quot;is_specified_by&quot; should be used.</rdfs:comment>
+In cases where the specification *directly* describes the creation of the generated artifact, the sup-property &quot;is_specified_by&quot; should be used.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">has_supporting_method</rdfs:label>
     </owl:ObjectProperty>
     
@@ -474,6 +483,26 @@ In cases where the specification *directly* describes the creation of the genera
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000421"/>
         <obo:IAO_0000115>Connects a Statement to a UserLabel object that define an alternate, user-specified label for one of the objects contained in the Statement (typically a value set term)</obo:IAO_0000115>
         <rdfs:label xml:lang="en">user_label_dictionary</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000423 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000423">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000255"/>
+        <obo:IAO_0000115>A relation that holds between a generated artifact &apos;X&apos; and a particular parameter that is part of the method or protocol that directly or indirectly supported the creation of &apos;X&apos;.</obo:IAO_0000115>
+        <rdfs:comment>The method or protocol describing this parameter may be one that directly specified the creation if &apos;X&apos; directly, or one specified the creation of some other information artifact that subsequently supported the creation of &apos;X&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_supporting_parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000425 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000425">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is_about_genotype</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -811,6 +840,16 @@ In cases where the specification *directly* describes the creation of the genera
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000318">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000286"/>
         <rdfs:label xml:lang="en">pedigree data</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000424 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000424">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <obo:IAO_0000115>a description of the results of an experiment or study</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">result_description</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1352,7 +1391,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000191"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A specification that describes how to interpret the direction and strength of evidence provided by a specific type of information, for or against the pathogenicity of a genetic variant.</obo:IAO_0000115>
+        <obo:IAO_0000115>A specification that describes how to interpret the direction and strength of evidence provided by a specific type of information, as relevant to the classification of a genetic variant as pathogenic or benign.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
         <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:comment>In the process of generating a variant interpretation, criterion support the generation of intermediate assertions (&apos;criterion assessments&apos;) that establish whether a variant meets the standards set forth in the criterion. Many criterion also define a default strength to a particular type of evidence it defines (e.g. the ACMG criteria for pathogenicity are categorized as very string, strong, moderate, and supporting). These strengths are ultimately used by rules that combine the outcomes of all satisfied criterion to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
@@ -1665,8 +1704,8 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000260 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000260">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000385"/>
-        <rdfs:label xml:lang="en">cohort ascertainment method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:label xml:lang="en">population ascertainment method</rdfs:label>
     </owl:Class>
     
 
@@ -1745,6 +1784,16 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
         <rdfs:label xml:lang="en">allele conservation score statement</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000374 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
+        <obo:IAO_0000115>A specification comprised of identifiers as designated by an authoritative organization.
+
+Any set of identifiers that is resolved in exactly the same way (i.e. 1:1 relationship between prefix and resolving URL Pattern)</obo:IAO_0000115>
+    </rdf:Description>
     
 
 
@@ -2050,7 +2099,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000334">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000260"/>
-        <obo:IAO_0000115>An ascertainment method that delineates cohorts based on population membership as defined in the Genome Aggregation database (gnomAD).</obo:IAO_0000115>
+        <obo:IAO_0000115>An ascertainment method that delineates populations based on enthncity/race  membership as defined in the Genome Aggregation database (gnomAD).</obo:IAO_0000115>
         <rdfs:label xml:lang="en">gnomAD ascertainment method</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2169,6 +2218,9 @@ While ontologically imprecise, this is a commonly used shortcut to standardize s
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000340">
         <obo:IAO_0000115>Organizational class that groups classes imported from the skos model to support creation and definition of value sets for particular SEPIO data model implementations.</obo:IAO_0000115>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000363">
+        <rdfs:comment>blah blah blah</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
         <obo:IAO_0000115>A value set comprised of terms representing diseases.</obo:IAO_0000115>
