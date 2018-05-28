@@ -15,7 +15,7 @@ phenotype_profile:
   - entity: _:v1
     evidence_line:
       - id: EvLn001
-	    type: TAS
+        type: TAS
         supporting_reference:
           - id: PMID:FAKE1234
             title: Mutations in NM_123 cause multisystem proteinopathy and ALS
