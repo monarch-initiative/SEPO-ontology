@@ -6,76 +6,92 @@ variants:
     type: SO:0001483 ('single nucleotide variant')
     label: "NM_007294.3(BRCA1):c.4677_5075del"
     positions:
-    - type: HGVS
-      value: "NM_007294.3(BRCA2):c.4677_5075del"
-    
-disease_profile:
-  - entity: CLINVAR:226213
-    disease:
-    - id: NCIT:C4872 
-      label: "Breast Carcinoma"
-    interpretation: "pathogenic"
-    contributors: 
-    - id: CLINGEN:Agent007
-      label: "Clinical Pathogenicity Calculator v1"
-    date_created: "2016-07-12T11:00:59+00:00"
-    assertion_method: 
-    - id: doi:10.1038/gim.2015.30
-      label: "ACMG ISV guidelines 2015"
-    evidence_line:
-        - id: CLINGEN:ev01
-          type: ECO:0000033 ('TAS')
-          evidence_strength: "moderately supporting"
-          evidence_item: 
-           - id: CLINGEN:CA01
-             type: SEPIO:0100002 ('Assertion' > 'Criterion Assessment')
-             assertion_method: CLINGEN:vic008 ('ACMG v2015 PM2, absent from controls in population databases')
-             description: "Variant is absent from control populations"
-             evidence_line: 
-                - id: CLINGEN:ev025
-                  type: ECO:XXXXXXX ('population frequency evidence')
-                  supporting_reference:
-                     - id: PMID:27997510
-                  evidence_item:
-                     - id: CLINGEN:PAF082
-                       type: SEPIO:0000173 ('study finding')
-                       description: "Variant is absent from a large cohort of non-finnish europeans (NFE) in the ExAC population database, with sequencing coverage of the variant exceeding 25X"
-                       supporting_data:
-                         - id: CLINGEN:PAF082A 
-                           type: SEPIO:9000895 ('allele frequency data')
-                           value: "0"
-                         - id: CLINGEN:PAF082B
-                           type: SEPIO:9000846 ('median sequencing coverage data')
-                           value: "28X"
-                         - id: CLINGEN:PAF082C
-                           type: SEPIO:9000878 ('population ethnicity data')
-                           value: "non-finnish european"
-    evidence_line:
-    	- id: CLINGEN:ev02
-          type: ECO:0000033 ('TAS')
-          evidence_strength: "moderately supporting"
-          evidence_item: 
-            - id: CLINGEN:CA02
-              type: SEPIO:0100002 ('Assertion > 'Criterion Assessment')
-              assertion_method: "CLINGEN:vic007 ('ACMG v2015 PM4, protein length change prediction')   
-              description: "Variant leads to an in-frame deletion of 7 amino acids"
-              evidence_line:
-                  - id: CLINGEN:ev016
-                    type: "ECO:XXXXXXX ('functional prediction evidence')"
-                    supporting_reference:
-                      - id: PMID:99993251
-                    evidence_item:					
-                       - id: CLINGEN:MolCon066
-                         type: SEPIO:0000173 ('study finding')
-                         description: "Variant results in a length change of its protein product"
-                         supporting_data:
-                            - id: MolCon066A
-                              type: SEPIO:9000946 ('molecular function data')
-                              value: SO:0001825 ('conservative inframe deletion')
-                       - id: CLINGEN:RegionAnnotation069
-                         type: SEPIO:0000173 ('study finding')
-                         supporting_data:
-                            - id: CLINGEN:RegionAnnotation069A
-                              type: SEPIO:9000825 ('genomic feature annotation')
-                              value: SO:0000657 ('repeat region')
+      - type: HGVS
+        value: "NM_007294.3(BRCA2):c.4677_5075del"
 
+diseases:
+  - id: NCIT:C4872 
+   label: "Breast Carcinoma"
+   
+variant_profile:
+  - variant: CLINVAR:226213
+    disease: NCIT:C4872 
+    interpretation:
+      - id: GENO:0000841
+        label: "likely pathogenic"
+    contributors: 
+      - id: CG:Agent007
+        label: "Clinical Pathogenicity Calculator v1"
+    dateCreated: "2016-07-12T11:00:59+00:00"
+    assertionMethod: 
+      - id: doi:10.1038/gim.2015.30
+        label: "ACMG ISV guidelines 2015"
+
+    evidenceLine: # first top level evidence line - evidence provided via criterion PM2
+      - id: CG:EvLn001
+        type: ECO:0000033 # 'Traceable Statement'
+        evidenceStrength: SEPIO:0000216 # 'pathogenic moderate'
+        
+        evidenceItem: 
+          - id: CG:CritAsses001
+            type: SEPIO:0000191 # 'Criterion Assessment' (a prior assertion based on an ACMG criterion)
+            description: "Variant meets ACMG PM2 criteria"
+            allele: CG:CtxAll044 # allele id
+            assertionMethod: SEPIO:0000212 # 'ACMG PM2 criterion' (absent from controls in population databases)
+            outcome:
+              - id: SEPIO:0000223
+                label: "Met"
+                
+            evidenceLine: 
+              - id: CG:EvLn025
+                type: ECO:FAKE123 ('population frequency evidence')
+                supportingReference: PMID:2231451
+                
+                evidenceItem:
+                  - id: CG:PAF082
+                    type: SEPIO:0000227 # population allele frequency statement'
+                    description: "Variant is absent from a large cohort of non-finnish europeans (NFE) in the ExAC population database, with sequencing coverage of the variant exceeding 25X"
+                    allele: CG:CtxAll044 # allele id
+                    population:
+                       - id: CG:PAF082C
+                         label: "Non-Finnish European"
+                    supportingData:
+                      - id: CG:PAF082A 
+                        type: SEPIO:9000895 # 'allele frequency data'
+                        value: "0"
+                      - id: CG:PAF082B
+                        type: SEPIO:9000846 # 'median sequencing coverage data'
+                        value: "28X"
+
+    evidenceLine: # secoond top level evidence line - evidence provided via criterion PM4
+    	- id: CG:EvLn002
+        type: ECO:0000033 # 'Traceable Statement'
+        evidenceStrength: SEPIO:0000216 # 'pathogenic moderate'
+        
+        evidenceItem: 
+          - id: CLINGEN:CritAsses002
+            type: SEPIO:0000191 # 'Criterion Assessment' (a prior assertion based on an ACMG criterion)
+            description: "Variant meets ACMG criterion PM4"
+            allele: CG:CtxAll044 # allele id
+            outcome: SEPIO:0000223 # 'Met' 
+            assertionMethod: SEPIO:0000989 # 'ACMG PM4 criterion' (variant predicted to change protein length)
+ 
+            evidenceLine:
+              - id: CG:EvLn016
+                type: ECO:FAKE456 # 'predicted molecular consequence evidence'
+                supportingReference: PMID:8232536
+                    
+                 evidenceItem:					
+                   - id: CLINGEN:MolCon066
+                     type: SEPIO:0000229 # 'molecular consequence statement'
+                     description: "Variant results in a conservative in framme deletion of 7 aminno acids"
+                     allele: CG:CtxAll044 # allele id
+                     outcome: SO:0001825 ('conservative inframe deletion')
+                   - id: CLINGEN:RegType069
+                     type: SEPIO:0000243 # 'region type statement'
+                     description: "Affected region is not a repeat region"
+                     allele: CG:CtxRegion004
+                     outcome: SO:0000657 #'repeat region
+                     outcomeQualifier: "NOT"
+
+    # additional lines of evidence not shown . . . 
