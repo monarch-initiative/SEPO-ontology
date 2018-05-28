@@ -13,10 +13,12 @@ diseases:
   - id: NCIT:C4872 
    label: "Breast Carcinoma"
    
-variant_profile:
-  - variant: CLINVAR:226213
+variantAnnotationProfile:
+  - id: CG:VarInterp001
+    type: SEPIO:0000190 # 'variant pathogenicity interpretation'
+    variant: CLINVAR:226213
     disease: NCIT:C4872 
-    interpretation:
+    outcome:
       - id: GENO:0000841
         label: "likely pathogenic"
     contributors: 
@@ -24,38 +26,42 @@ variant_profile:
         label: "Clinical Pathogenicity Calculator v1"
     dateCreated: "2016-07-12T11:00:59+00:00"
     assertionMethod: 
-      - id: doi:10.1038/gim.2015.30
-        label: "ACMG ISV guidelines 2015"
-
-    evidenceLine: # first top level evidence line - evidence provided via criterion PM2
+      - id: SEPIO:0000215
+        label: "ACMG ISV guidelines 2015, v1.0"
+ 
+    # EvLn001 is the first of two direct evidence lines for VarInterp001 (evidence provided by assessment using criterion PM2)
+    evidenceLines: 
       - id: CG:EvLn001
         type: ECO:0000033 # 'Traceable Statement'
-        evidenceStrength: SEPIO:0000216 # 'pathogenic moderate'
+        evidenceStrength: SEPIO:0000216 # 'pathogenic moderate'        
         
-        evidenceItem: 
-          - id: CG:CritAsses001
-            type: SEPIO:0000191 # 'Criterion Assessment' (a prior assertion based on an ACMG criterion)
+        # CritAssess001, an assertion made using ACMG criterion PM2, is the sole evidence item supportinig EvLn001
+        evidenceItems: 
+          - id: CG:CritAssess001
+            type: SEPIO:0000191 # 'Criterion Assessment' (a prior assertion made using the PM2 ACMG criterion)
             description: "Variant meets ACMG PM2 criteria"
-            allele: CG:CtxAll044 # allele id
+            variant: CG:CtxAll044 # allele id
             assertionMethod: SEPIO:0000212 # 'ACMG PM2 criterion' (absent from controls in population databases)
             outcome:
               - id: SEPIO:0000223
-                label: "Met"
-                
-            evidenceLine: 
+                label: "Met"                
+            
+            # EvLn025 is an evidence line for CritAssess001, which as an assertion in its own right, both serves evidence for VarInterp001 and has evidence lines of its own.
+            evidenceLines: 
               - id: CG:EvLn025
                 type: ECO:FAKE123 ('population frequency evidence')
-                supportingReference: PMID:2231451
+                supportingReference: PMID:2231451       
                 
-                evidenceItem:
+                # The population allele frequency statement PAF082, which describes data from a ExAC study, is the sole  evidence item for EvLn025
+                evidenceItems:
                   - id: CG:PAF082
                     type: SEPIO:0000227 # population allele frequency statement'
                     description: "Variant is absent from a large cohort of non-finnish europeans (NFE) in the ExAC population database, with sequencing coverage of the variant exceeding 25X"
-                    allele: CG:CtxAll044 # allele id
+                    variant: CG:CtxAll044 # allele id
                     population:
                        - id: CG:PAF082C
                          label: "Non-Finnish European"
-                    supportingData:
+                    studyData:
                       - id: CG:PAF082A 
                         type: SEPIO:9000895 # 'allele frequency data'
                         value: "0"
@@ -63,35 +69,38 @@ variant_profile:
                         type: SEPIO:9000846 # 'median sequencing coverage data'
                         value: "28X"
 
-    evidenceLine: # secoond top level evidence line - evidence provided via criterion PM4
-    	- id: CG:EvLn002
+      # EvLn002 is the second of two direct evidence lines for VarInterp001 (evidence provided via assesment using criterion PM4)
+      - id: CG:EvLn002
         type: ECO:0000033 # 'Traceable Statement'
         evidenceStrength: SEPIO:0000216 # 'pathogenic moderate'
         
-        evidenceItem: 
-          - id: CLINGEN:CritAsses002
+        # CritAssess002, an assertion made using ACMG criterion PM4, is the sole evidence item supportinig EvLn001
+        evidenceItems: 
+          - id: CLINGEN:CritAssess002
             type: SEPIO:0000191 # 'Criterion Assessment' (a prior assertion based on an ACMG criterion)
             description: "Variant meets ACMG criterion PM4"
-            allele: CG:CtxAll044 # allele id
+            variant: CG:CtxAll044 # allele id
             outcome: SEPIO:0000223 # 'Met' 
             assertionMethod: SEPIO:0000989 # 'ACMG PM4 criterion' (variant predicted to change protein length)
  
+            # EvLn016 is an evidence line for CritAssess002, which as an assertion in its own right, both serves evidence for VarInterp001 and has evidence lines of its own.
             evidenceLine:
               - id: CG:EvLn016
                 type: ECO:FAKE456 # 'predicted molecular consequence evidence'
                 supportingReference: PMID:8232536
-                    
-                 evidenceItem:					
+                 
+                 # The molecular consequence statemen MolCon066 and the 'region type statement' RegType069 are  two evidence items that both support EvLn016
+                 evidenceItems:					
                    - id: CLINGEN:MolCon066
                      type: SEPIO:0000229 # 'molecular consequence statement'
                      description: "Variant results in a conservative in framme deletion of 7 aminno acids"
-                     allele: CG:CtxAll044 # allele id
+                     variant: CG:CtxAll044 # allele id
                      outcome: SO:0001825 ('conservative inframe deletion')
                    - id: CLINGEN:RegType069
                      type: SEPIO:0000243 # 'region type statement'
                      description: "Affected region is not a repeat region"
-                     allele: CG:CtxRegion004
+                     variant: CG:CtxRegion004
                      outcome: SO:0000657 #'repeat region
                      outcomeQualifier: "NOT"
 
-    # additional lines of evidence not shown . . . 
+    # There is one additional evidnece line for VarInterp001 that is not show . . . 
