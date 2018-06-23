@@ -550,7 +550,9 @@ In cases where the specification *directly* describes the creation of the genera
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000286 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000286">
-        <obo:IAO_0000116>Organizational term to hold datatype properties mapping to attributes of Statements in the ClinGen json model that link to data values described by the statement.  Long term, these properties will llikely be converted to data type classes, and a single object property (&apos;describes data item&apos;) will be used to link from the Statement (Findings) to instances of these data type classes.</obo:IAO_0000116>
+        <obo:IAO_0000116>In the ClinGen extension, this is an organizational property that groups a number of datatype-specific properties used to connect a statement directly to a data value it describes (instead of linking to this value through an instantiated data item object, as per the recommended SEPIO design pattern).   
+
+This shortcut pattern, and the long list of datatype properties it requires, were desired by ClinGen to make messages easier to render in application interfaces. Future iterations of the ClinGen model may move to adopt the SEPIO design here when application code can be updated to accommodate it. This will involve conversion of these datatype-specific properties to data type classes, so that typed data item objects can be created in the data, and a single object property (&apos;describes data item&apos;) used to link from a Statement to instances of these data type classes.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">describes data value</rdfs:label>
     </owl:DatatypeProperty>
     

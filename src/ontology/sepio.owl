@@ -2204,6 +2204,24 @@ Statements directly reporting study results or observations are not considered a
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000132"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000140"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000183"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000112>An example of an evidence line would be the argument that a finding such as &quot;Lepr1 KO mice exhibit lower blood glucose levels than matched WT controls&quot; makes in support of the proposition that &quot;Lepr1 gene is involved in diabetes&quot;. The Evidence Items supporting this line of evidence could include experimental data from a study exploring blood glucose levels in Lepr1 KO mice, such as a 548.5 mg/dl measurement of blood glucose in a Lepr&lt;tm1b/tm1b&gt; mutant mouse, or a 1.3951e-24 p-value indicating this measure to be significantly different from wild-type mice.
 
 Here, the finding and its supporting data exist independently of their use as evidence. An evidence line based on this finding comes into existence only when an agent interprets this finding as providing a meaningful argument for a particular proposition, in the act of making an assertion.
@@ -2752,12 +2770,6 @@ This is not to say that the onserved findings are necessarily accurate or correc
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000135"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000112>The following is derived from https://en.wikipedia.org/wiki/Statement_(logic):
 
 Examples of sentences that are (or make) statements:
@@ -2895,6 +2907,15 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes
         <rdfs:comment>Source: ClinVar (&quot; &apos;Provider interpretation&apos; is intended for variants that were interpreted by a clinical provider. For example, the clinician may reclassify the variant using detailed patient phenotype information that was unavailable to the testing laborator&quot;)
 ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes.pdf</rdfs:comment>
         <rdfs:label xml:lang="en">provider interpretation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000340 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000340">
+        <obo:IAO_0000115>Organizational class that groups classes imported from the skos model to support creation and definition of value sets for particular SEPIO data model implementations.</obo:IAO_0000115>
+        <rdfs:label>skos terms</rdfs:label>
     </owl:Class>
     
 
@@ -3058,8 +3079,16 @@ Specific examples include:
 
     <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
 
-    <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+        <obo:IAO_0000115>An idea or notion; a unit of thought.</obo:IAO_0000115>
+        <rdfs:label>Concept</rdfs:label>
     </owl:Class>
     
 
