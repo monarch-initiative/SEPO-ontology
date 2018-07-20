@@ -5,7 +5,7 @@ The **Scientific Evidence and Provenance Information Ontology** (**SEPIO**) is a
 3. **SEPIO Profiles**: subsets of the maximal information model that can be customized and extended to support a particular use case, and implemented in a formal schema language (e.g. JSON schema, ShEx).
 4. **SEPIO Value Sets**: re-usable collections of terms bound to a particular attribute that can constrain values it can take in a particular Profile.
 
-Data sources and developers interested in using SEPIO should begin by reading the Wiki pages recommended below, and browsing the current version of the SEPIO ontology located [here](https://github.com/monarch-initiative/SEPIO-ontology/blob/master/src/ontology/sepio.owl).  Comments or questions can be sent to Matthew Brush at brushm@ohsu.edu, or posted as tickets in the [SEPIO issue tracker](https://github.com/monarch-initiative/SEPIO-ontology/issues).
+Data sources or developers interested in using SEPIO should begin by reading the Wiki pages recommended below, and browsing the current version of the SEPIO ontology located [here](https://github.com/monarch-initiative/SEPIO-ontology/blob/master/src/ontology/sepio.owl).  Comments or questions can be sent to Matthew Brush at brushm@ohsu.edu, or posted as tickets in the [SEPIO issue tracker](https://github.com/monarch-initiative/SEPIO-ontology/issues).
 
 ### Resources
  The Wiki pages  in this  repository are currently being updated to reflect the current state of the SEPIO Model and Framework. The pages below are recommended starting points for exploration.
