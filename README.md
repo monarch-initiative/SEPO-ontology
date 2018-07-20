@@ -14,7 +14,8 @@ Data sources and developers interested in using SEPIO should begin by reading th
 3. **[SEPIO  Ontology](https://github.com/monarch-initiative/SEPIO-ontology/wiki/The-SEPIO-Ontology)**: Deeper dive into the foundational SEPIO model as implemented in its  core  ontology. 
 4. **[ClinGen-ACMG SEPIO Profile](https://github.com/monarch-initiative/SEPIO-ontology/wiki/The-ClinGen-ACMG-Variant-Interpretation-Profile)**: Detailed look at a Profile created to represent rich evidence and provenance  for clinical variant pathogenicity interpretations.
   
-  SEPIO is an open source ontology, implemented in OWL2 under a [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/2.0/)
+### License
+The SEPIO Ontology and Frammework is an open source project, free to re-use and re-mix under a [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/2.0/)
 
 
 
