@@ -15,7 +15,7 @@ Data sources or developers interested in using SEPIO should begin by reading the
 4. **[ClinGen-ACMG SEPIO Profile](https://github.com/monarch-initiative/SEPIO-ontology/wiki/The-ClinGen-ACMG-Variant-Interpretation-Profile)**: Detailed look at a Profile created to represent rich evidence and provenance  for clinical variant pathogenicity interpretations.
   
 ### License
-The SEPIO Ontology and Framework is an open source project, free to re-use and re-mix under a [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/2.0/)
+The SEPIO Ontology and Framework is an open source project, free to re-use and re-mix under a [Creative Commons 3.0 BY license](https://creativecommons.org/licenses/by/2.0/).
 
 
 
