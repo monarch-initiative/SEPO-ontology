@@ -610,7 +610,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
         <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides no support for or against the pathogencity of a particular genetic variant.</obo:IAO_0000115>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/none</obo:IAO_0000116>
         <rdfs:label>none</rdfs:label>
     </owl:NamedIndividual>
     
@@ -622,7 +621,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000353"/>
         <obo:IAO_0000115>An evidence strength assignment indicating the evidence provided by a criterion assessment provides a &apos;very strong&apos; level of support for the pathogencity of a particular genetic variant.</obo:IAO_0000115>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs</obo:IAO_0000116>
         <rdfs:label>pathogenic very strong</rdfs:label>
     </owl:NamedIndividual>
     
@@ -633,7 +631,6 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000223">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000347"/>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/met</obo:IAO_0000116>
         <rdfs:label>met</rdfs:label>
     </owl:NamedIndividual>
     

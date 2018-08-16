@@ -330,7 +330,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000196">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
         <obo:IAO_0000115>A relation that holds between a variant interpretation criterion and some indicator of the default strength associated with evidence meeting this criterion.</obo:IAO_0000115>
-        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
         <rdfs:label xml:lang="en">default_criterion_strength</rdfs:label>
     </owl:ObjectProperty>
     
@@ -459,7 +459,7 @@ In cases where the specification *directly* describes the creation of the genera
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000285">
         <obo:IAO_0000115>A relation that holds between a contextual allele and the canonical allele to which it maps.</obo:IAO_0000115>
-        <obo:IAO_0000119>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/master/index.html)</obo:IAO_0000119>
+        <obo:IAO_0000119>ClinGen Allele Model (http://dataexchange.clinicalgenome.org/allele/master/index.html)</obo:IAO_0000119>
         <rdfs:label xml:lang="en">related_canonical_allele</rdfs:label>
     </owl:ObjectProperty>
     
@@ -531,7 +531,7 @@ In cases where the specification *directly* describes the creation of the genera
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000894">
         <obo:IAO_0000115>The starting position of a sequence region in 0-based coordinates.</obo:IAO_0000115>
-        <obo:IAO_0000119>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</obo:IAO_0000119>
+        <obo:IAO_0000119>ClinGen Allele Model (http://dataexchange.clinicalgenome.org/allele/)</obo:IAO_0000119>
         <rdfs:label>start_position</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -541,7 +541,7 @@ In cases where the specification *directly* describes the creation of the genera
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/GENO_0000895">
         <obo:IAO_0000115>The ending position of a sequence region in 0-based coordinates.</obo:IAO_0000115>
-        <obo:IAO_0000119>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</obo:IAO_0000119>
+        <obo:IAO_0000119>ClinGen Allele Model (http://dataexchange.clinicalgenome.org/allele/)</obo:IAO_0000119>
         <rdfs:label>end_position</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1196,9 +1196,9 @@ This shortcut pattern, and the long list of datatype properties it requires, wer
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
         <obo:IAO_0000112>The canonical allele that represents a single nucleotide variation in the BRCA2 gene, which can be described by various contextual alleles such as “NC_000013.11:g.32319070T&gt;A” and “NG_012772.3:g.8591T&gt;A”.</obo:IAO_0000112>
         <obo:IAO_0000115>One of a set of coexisting sequence variants at a defined genomic locus, or a set of such variants located in cis on the same copy of the chromosome.</obo:IAO_0000115>
-        <obo:IAO_0000116>The notion of a &apos;canonical allele&apos; is taken from the ClinGen Allele model (http://datamodel.clinicalgenome.org/allele/).  It is implemented in GENO to provide an ontological representation of this concept that will support data integration efforts, but may be replaced by should an IRI become available from the ClinGen model.</obo:IAO_0000116>
-        <obo:IAO_0000119>http://datamodel.clinicalgenome.org/allele/resource/canonical_allele/</obo:IAO_0000119>
-        <terms:source>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</terms:source>
+        <obo:IAO_0000116>The notion of a &apos;canonical allele&apos; is taken from the ClinGen Allele model (http://dataexchange.clinicalgenome.org/allele/).  It is implemented in GENO to provide an ontological representation of this concept that will support data integration efforts, but may be replaced by should an IRI become available from the ClinGen model.</obo:IAO_0000116>
+        <obo:IAO_0000119>http://dataexchange.clinicalgenome.org/allele/resource/canonical_allele/</obo:IAO_0000119>
+        <terms:source>ClinGen Allele Model (http://dataexchange.clinicalgenome.org/allele/)</terms:source>
         <rdfs:comment>As a &apos;sequence feature or collection&apos; (sensu SO), a &apos;canonical allele&apos; is considered here as an extent of biological sequence encoded in nucleic acid molecules of a cell or organism (as opposed to an information artifact that is about such a sequence).  Canonical alleles can include haplotypes that consist of more than one discontinuous sequence feature that exist in cis on the same chromosomal strand (as such haplotypes are often linked to a particular disease).
 
 In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;contextual alleles&apos;. Contextual alleles are informational representation that describe a canonical allele, using a particular reference sequence. A single canonical allele can be described by many contextual alleles that each use a different reference sequence in their representation.</rdfs:comment>
@@ -1218,9 +1218,9 @@ In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>An informational artifact that describes an allele as defined on a particular reference sequence.</obo:IAO_0000115>
-        <obo:IAO_0000116>The notion of a &apos;contextual allele&apos; is taken from the ClinGen Allele model (http://datamodel.clinicalgenome.org/allele/).  It is implemented in GENO to provide an ontological representation of this concept that will support data integration efforts, but may be replaced by should an IRI become available from the ClinGen model.</obo:IAO_0000116>
-        <obo:IAO_0000119>http://datamodel.clinicalgenome.org/allele/resource/contextual_allele/</obo:IAO_0000119>
-        <terms:source>ClinGen Allele Model (http://datamodel.clinicalgenome.org/allele/)</terms:source>
+        <obo:IAO_0000116>The notion of a &apos;contextual allele&apos; is taken from the ClinGen Allele model (http://dataexchange.clinicalgenome.org/allele/).  It is implemented in GENO to provide an ontological representation of this concept that will support data integration efforts, but may be replaced by should an IRI become available from the ClinGen model.</obo:IAO_0000116>
+        <obo:IAO_0000119>http://dataexchange.clinicalgenome.org/allele/resource/contextual_allele/</obo:IAO_0000119>
+        <terms:source>ClinGen Allele Model http://dataexchange.clinicalgenome.org/allele/)</terms:source>
         <rdfs:comment>The notion of a &apos;contextual allele&apos; derives from the ClinGen Allele model. Here, each genetic allele in a patient corresponds to a single &apos;canonical allele&apos;, which in turn may aggregate any number of &apos;contextual allele&apos; representations that are may be defined against different reference sequences. Accordingly, many contextual alleles can describe a single canonical allele. For example, the contextual alleles “NC_000013.11:g.32319070T&gt;A” and “NG_012772.3:g.8591T&gt;A” both describe the same underlying canonical allele, a single nucleotide variation, in the BRCA2 gene.</rdfs:comment>
         <rdfs:label>contextual allele</rdfs:label>
     </owl:Class>
@@ -1302,7 +1302,7 @@ In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
         <obo:IAO_0000115>A collection of organisms of the same species whose members are all either genealogically related to each other or have mated with each other.</obo:IAO_0000115>
         <obo:IAO_0000118>genealogical family</obo:IAO_0000118>
-        <obo:IAO_0000119>Matthew Brush, as part of http://datamodel.clinicalgenome.org/interpretation/</obo:IAO_0000119>
+        <obo:IAO_0000119>Matthew Brush, as part of http://dataexchange.clinicalgenome.org/interpretation/</obo:IAO_0000119>
         <rdfs:label>biological family</rdfs:label>
     </owl:Class>
     
@@ -1342,7 +1342,7 @@ This distinction is important because the provenance and validity of a finding d
         </owl:equivalentClass>
         <obo:IAO_0000115>An assertion about the pathogenicity of a genetic sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
         <oboInOwl:hasBroadSynonym>variant classification</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>variant interpretation</oboInOwl:hasBroadSynonym>
         <rdfs:comment>Interpretations for pathogenic variants specify a condition (disease or phenotype) for which the conclusion was reached. However, if the variant is determined to be benign (e.g. in the case of a very common polymorphism), a specific condition may not be specified - indicating that the allele is benign for all conditions. If a condition is specified for a benign variant, then the interpretation is limited to that specific condition [text derived from ClinGen Variant Interpretation model].</rdfs:comment>
@@ -1367,7 +1367,7 @@ This distinction is important because the provenance and validity of a finding d
         </owl:equivalentClass>
         <obo:IAO_0000115>An assertion made by evaluating evidence according to rules set forth in a &apos;variant interpretation criterion&apos;, which describe how to interpret specific types of information as evidence for a proposition that is ultimately relevant to the pathogenicity of the variant.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
         <rdfs:comment>In the process of generating a variant interpretation, criterion assessments are &apos;intermediate&apos; assertions that establish whether a particular criterion is met or not for the variant under review. Evidence relevant to the merit of this assertion is organized around one or more evidence lines, and the criterion assessment is itself used as evidence for the final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
         <rdfs:comment>Variant interpretation guidelines often define specific &apos;criteria&apos; against which a variant is evaluated. Each &apos;criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). Many frameworks such as the ACMG Guidelines also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
 
@@ -1395,7 +1395,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
         </rdfs:subClassOf>
         <obo:IAO_0000115>A specification that describes how to interpret the direction and strength of evidence provided by a specific type of information, as relevant to the classification of a genetic variant as pathogenic or benign.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
         <rdfs:comment>In the process of generating a variant interpretation, criterion support the generation of intermediate assertions (&apos;criterion assessments&apos;) that establish whether a variant meets the standards set forth in the criterion. Many criterion also define a default strength to a particular type of evidence it defines (e.g. the ACMG criteria for pathogenicity are categorized as very string, strong, moderate, and supporting). These strengths are ultimately used by rules that combine the outcomes of all satisfied criterion to make a final interpretation of the variant&apos;s pathogenicity.</rdfs:comment>
         <rdfs:label xml:lang="en">variant interpretation criterion</rdfs:label>
     </owl:Class>
@@ -1414,7 +1414,7 @@ Ultimately, one or more &apos;criterion assessments&apos;, each of which represe
         </rdfs:subClassOf>
         <obo:IAO_0000115>A specification that describes how to interpret evidence in order to make an  assertion about the pathogenicity of a genetic variant.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
         <rdfs:comment>Guidelines typically include specific &apos;variant interpretation criterion&apos; that describe how to interpret the direction and strength of evidence provided by a particular type of information, and &apos;criterion scoring algorithms&apos; which describe how to combine the outcomes of each criterion assessment to arrive at a final interpretation of a variant&apos;s pathogenicity.
 
 Each &apos;variant interpretation criterion&apos; defines a particular type of argument, or &apos;evidence line&apos;, relevant to the pathogenicity of a variant. It typically sets rules or thresholds for determining if the criterion is satisfied, and indicates the direction of support provided by this evidence (for or against pathogenicity). The result of evaluating a varaint against a particular criterion is a &apos;criterion assessment&apos;.  For example, the &quot;PM2&quot; criterion defined by the ACMG Guidelines is satisfied if a variant is absent or at exceedingly low frequencies in population databases. Many frameworks, such as the ACMG Guidelines, also assign a default strength to the argument made by a satisfied criterion (e.g. &apos;Very Strong&apos;, &apos;Strong&apos;, &apos;Moderate&apos;).
@@ -1431,7 +1431,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
         <obo:IAO_0000115>A varaint interpretation criterion defined by the 2015 ACMG Variant Interpretation Guidelines.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
-        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
         <rdfs:label xml:lang="en">variant interpretation criterion (2015 ACMG Guidelines, v1)</rdfs:label>
     </owl:Class>
     
@@ -1451,7 +1451,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000219">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
         <obo:IAO_0000112>arrhythmogenic right ventricular cardiomyopathy, Autosomal Dominant</obo:IAO_0000112>
-        <obo:IAO_0000115>A disease, or a set of one or more co-occurring phenotypes, typically controlled by a single locus with a defined inheritance pattern.</obo:IAO_0000115>
+        <obo:IAO_0000115>A disease or set of one or more co-occurring phenotypic features, typically controlled by a single gene or locus with a defined inheritance pattern.</obo:IAO_0000115>
         <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
         <rdfs:label>genetic condition</rdfs:label>
     </owl:Class>
@@ -1472,7 +1472,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <obo:IAO_0000115>A specification for how to collectively evaluate the outcomes of one or more variant pathogenicity criterion assessments as evidence, to make an assertion about the pathogenicity of a variant.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
         <obo:IAO_0000118>criterion scoring algorithm</obo:IAO_0000118>
-        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
+        <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
         <rdfs:comment>These rules consider both the direction (does it support a pathogenic or benign interpretation) and the asserted strength  (what level of support does it provide) of the evidence provided by each satisfied criteria, and define mappings from specific combinations of these outcomes to particular interpretations of the variant&apos;s pathogenicity.</rdfs:comment>
         <rdfs:label xml:lang="en">variant interpretation criterion scoring rules</rdfs:label>
     </owl:Class>
@@ -1483,7 +1483,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000225">
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/terms/vs016</obo:IAO_0000116>
         <rdfs:label xml:lang="en">obsolete_ClinGen mechanism confidence level</rdfs:label>
     </owl:Class>
     
@@ -1955,7 +1954,6 @@ Any set of identifiers that is resolved in exactly the same way (i.e. 1:1 relati
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000211">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000195"/>
         <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000220"/>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pvs1</obo:IAO_0000116>
         <rdfs:comment>null variant (nonsense, frameshift, canonical ±1 or 2 splice sites, initiation codon, single or multiexon deletion) in a gene where LOF is a known mechanism of disease</rdfs:comment>
         <rdfs:label>ACMG PVS1 criterion</rdfs:label>
     </owl:NamedIndividual>
@@ -1967,7 +1965,6 @@ Any set of identifiers that is resolved in exactly the same way (i.e. 1:1 relati
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000212">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000195"/>
         <obo:SEPIO_0000196 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000216"/>
-        <obo:IAO_0000116>http://datamodel.clinicalgenome.org/valueset/pm2</obo:IAO_0000116>
         <rdfs:comment>Absent from controls (or at extremely low frequency if recessive) (Table 6) in Exome Sequencing Project, 1000 Genomes Project, or Exome Aggregation Consortium</rdfs:comment>
         <rdfs:label>ACMG PM2 criterion</rdfs:label>
     </owl:NamedIndividual>
@@ -2208,6 +2205,9 @@ Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</ob
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000158">
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000169">
+        <obo:IAO_0000118>performed_for</obo:IAO_0000118>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000173">
         <obo:IAO_0000119>Derived from https://www.aqr.org.uk/glossary/findings</obo:IAO_0000119>

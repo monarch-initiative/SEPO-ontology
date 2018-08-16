@@ -995,7 +995,7 @@ Want to be able to support inferences such as:
         <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <obo:IAO_0000115>a relation between an agent and an other agent, typically an organization, on whose behalf a Contribution is made.</obo:IAO_0000115>
         <obo:IAO_0000118>performed_on_behalf_of</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">performed_for</rdfs:label>
+        <rdfs:label xml:lang="en">agent_for</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1061,7 +1061,6 @@ A property chain (has_evidence_line o has_evidence_item -&gt; has_evidence_with_
         <obo:IAO_0000115>A relationship that holds between an assertion and a term that summarizes its asserted conclusion.</obo:IAO_0000115>
         <obo:IAO_0000118>asserted_outcome</obo:IAO_0000118>
         <obo:SEPIO_0000386>assertedConclusion</obo:SEPIO_0000386>
-        <terms:source>ClinGen (http://datamodel.clinicalgenome.org/interpretation/master/tech/variant_interpretation.html)</terms:source>
         <rdfs:label xml:lang="en">asserted_conclusion</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2186,7 +2185,7 @@ From http://plato.stanford.edu/entries/propositions/: &quot;Propositions are the
         <obo:IAO_0000118>propostional assertion</obo:IAO_0000118>
         <obo:IAO_0000119>Derived from http://purl.org/see/rdo#assertion</obo:IAO_0000119>
         <obo:SEPIO_0000184>The identity of a particular assertion is dependent upon (1) what it claims to be true (its semantic content, aka its ‘proposition’), (2) the agent asserting it, and (3) the occasion on which the assertion is made. Many agents can make assertions expressing belief in the same proposition (e.g. ENIGMA’s assertion that that BRCA1:2685T&gt;A causes familial breast cancer is a separate instance than Counsyl’s assertion of the same underlying proposition).  Likewise, a single agent can make more than one assertion of belief in the same proposition on different occasions  (e.g. ENIGMA may make a separate assertion of the same proposition that BRCA1:2685T&gt;A causes familial breast cancer at a later date, based on additional evidence).</obo:SEPIO_0000184>
-        <rdfs:comment>Assertions as defined in SEPIO are the result of some logical inference made based on the interpretation of evidence.  They put forth a proposition that may or may not be true. The validity of this proposition ultimately rests on the quantity, quality, diversity, and concordance of evidence supporting it. 
+        <rdfs:comment>Assertions as defined in SEPIO are the result of some logical inference made based on the interpretation of evidence.  They put forth a proposition that may or may not be true - the validity of which ultimately rests on the quantity, quality, diversity, and concordance of evidence supporting it.
 
 Statements directly reporting study results or observations are not considered assertions in this sense, as they merely report what was observed or recorded, but do not rely on a leap of logical inference (see &apos;study finding&apos;).</rdfs:comment>
         <rdfs:label xml:lang="en">assertion</rdfs:label>
@@ -2715,7 +2714,7 @@ Note that publications and reports are considered separately from &apos;evidence
                 <owl:onClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The actions taken by a particular agent in the creation, modification, assessment, or descruction of an artifact.</obo:IAO_0000115>
+        <obo:IAO_0000115>The actions taken by a particular agent in the creation, modification, assessment, or destruction of an artifact.</obo:IAO_0000115>
         <obo:IAO_0000116>This concept is similar in meaning and usage to PROV:Attribution.  Consider aligning or adopting.</obo:IAO_0000116>
         <rdfs:comment>A contribution describes the part played by a particular agent in the creation, modification, assessment, or descruction of an artifact. The scope of a given &apos;contribution&apos; instance is constrained to include only the actions of one agent in contributing to a particular artifact.  The agent can be a group or organization comprised of more than one individual, acting together to make the contribution. Contribution instances are used to organize information about when, where, how (e.g. what roles were played), and on whose behalf these actions were performed.</rdfs:comment>
         <rdfs:label xml:lang="en">contribution</rdfs:label>
