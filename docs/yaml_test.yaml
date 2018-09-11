@@ -1,0 +1,60 @@
+    description: >-
+      holds between two molecular entities where the action or effect of one increases the rate of secretion of the other out of a cell, gland, or organ
+    is_a: affects secretion of
+    in_subset:
+      - translator_minimal
+    domain: molecular entity
+    range: molecular entity
+    
+  decreases secretion of:
+    description: >-
+      holds between two molecular entities where the action or effect of one decreases the rate of secretion of the other out of a cell, gland, or organ
+    is_a: affects secretion of
+    in_subset:
+      - translator_minimal
+    domain: molecular entity
+    range: molecular entity
+    
+  affects uptake of:
+    description: >-
+      holds between two molecular entities where the action or effect of one impacts the rate of uptake of the other into of a cell, gland, or organ
+    is_a: affects
+    in_subset:
+      - translator_minimal
+    domain: molecular entity
+    range: molecular entity
+
+  increases uptake of:
+    description: >-
+      holds between two molecular entities where the action or effect of one increases the rate of uptake of the other into of a cell, gland, or organ
+    is_a: affects uptake of
+    in_subset:
+      - translator_minimal
+    domain: molecular entity
+    range: molecular entity
+    
+  decreases uptake of:
+    description: >-
+      holds between two molecular entities where the action or effect of one decreases the rate of uptake of the other into of a cell, gland, or organ
+    is_a: affects uptake of
+    in_subset:
+      - translator_minimal
+    domain: molecular entity
+    range: molecular entity  
+  
+  regulates:
+    is_a: affects
+    comment: This is a grouping for process-process and entity-entity relations
+    mixin: true
+    abstract: true
+    mappings:
+      - WD:P128
+    
+  positively regulates:
+    comment: This is a grouping for process-process and entity-entity relations
+    is_a: regulates
+    mixin: true
+    abstract: true
+    
+  negatively regulates:
+    comment: This is a grouping for process-process and entity-entity relations
