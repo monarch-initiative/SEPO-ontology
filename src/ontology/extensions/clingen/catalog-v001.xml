@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/sepio-valueset.owl" uri="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/sepio-valueset.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/sepio-clingen-valueset2.owl" uri="sepio-clingen-valueset2.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl" uri="sepio-clingen-valueset.owl"/>
+    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/sepio-clingen-acmg-valueset.owl" uri="sepio-clingen-acmg-valueset.owl"/>
     <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/sepio.owl" uri="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/sepio.owl"/>
     <uri id="User Edited Redirect" name="http://www.w3.org/2004/02/skos/core" uri="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/imports/skos.rdf"/>
     <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/bfo.owl" uri="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/mireots/bfo-mireot.owl"/>

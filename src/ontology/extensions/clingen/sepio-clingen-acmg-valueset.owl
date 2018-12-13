@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl#"
-     xml:base="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio-clingen-acmg-valueset.owl#"
+     xml:base="http://purl.obolibrary.org/obo/sepio-clingen-acmg-valueset.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-clingen-valueset.owl">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-clingen-acmg-valueset.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio-valueset.owl"/>
     </owl:Ontology>
     
