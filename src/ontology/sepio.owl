@@ -390,6 +390,7 @@ has_evidence_from_source = has_evidence_line o has_evidence_item o source.</obo:
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000006 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000006">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000427"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -404,6 +405,7 @@ has_evidence_from_source = has_evidence_line o has_evidence_item o source.</obo:
 Definition = &quot;x has evidence y iff , x is  an information content entity, material entity or process, and y supports either the existence of x, or the truth value of x.&quot;
 
 See  also http://semanticscience.org/resource/SIO_000772 ! &apos;has evidence&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118>has_evidence</obo:IAO_0000118>
         <rdfs:label xml:lang="en">has_evidence_line</rdfs:label>
     </owl:ObjectProperty>
     
@@ -809,7 +811,7 @@ For this resaon, we are not able to create a property chain declaring &quot;has_
 SEPIO, by contrast, aims to describe the agent(s) responsible for generating the abstract information content these concretized artifacts express. For this reason, SEPIO creates the more specific &quot;stated_by&quot; relation to explicitly distinguish the act of making a statement (generating its information content) from the act of creating a specific digital representation of the statement (generating a particular concretized artifact). 
 			
 A explicit commitment to this more abstracted level of representation is a core feature of the SEPIO model, and has implications for how instances in the data are described, identified, and distinguished in practice.</obo:IAO_0000116>
-        <obo:SEPIO_0000061>Formerly &apos;asserted_by&apos;: A relation between an assertion and the agent who originally generated the assertion, based on their evaluation of and inference from relevant evidence.</obo:SEPIO_0000061>
+        <obo:SEPIO_0000061>Formerly &apos;asserted_by&apos;: A relation between an assertion and the agent who originally generated the assertion, based on their evaluation of and inference from relevant evidence.  Was broadened to &apos;stated_by&apos; to cover statements that are not assertions - e.g. study findings statements.</obo:SEPIO_0000061>
         <rdfs:comment>In the case that the statement is an assertion, the responsible agent is the one who originally generated an assertion based on their evaluation of relevant evidence. 
 
 If more than one agent is involved in this process, we may consider them collectively as a  group or organization representing a single agent.</rdfs:comment>
@@ -825,7 +827,7 @@ If more than one agent is involved in this process, we may consider them collect
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
         <obo:IAO_0000115>A relation describing the degree of support provided by an evidence line for a target assertion or proposition.</obo:IAO_0000115>
         <obo:IAO_0000116>The value of this property is typically a term from some defined set of values that enumerates categorical degrees of evidence strength  (e.g. the CIViC five-teired &apos;evidence level&apos; scale). Different systems or applications can create terms representing the levels of strength they wish to define for their use case.</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">evidence_strength</rdfs:label>
+        <rdfs:label xml:lang="en">evidence_line_strength</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -899,7 +901,6 @@ A explicit commitment to this more abstracted level of representation is a core 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000146 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000146">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000406"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -913,7 +914,7 @@ A explicit commitment to this more abstracted level of representation is a core 
         <rdfs:comment>This relation links an assertion or proposition directly to some indicator of the strength of the total evidence supporting it. It is used when there is not enough information to create evidence line(s) for the assertion, but the source provides some indication of the strength of the evidence supporting it.
 
 Note that this is different than the notion of statement confidence, which describes how confident an agent is that a statement is true.  Confidence may depend on factors in addition to the strength of the evidence (e.g. who made the prior probability that the asserted proposition could be true, who made the assertion and when, etc.)</rdfs:comment>
-        <rdfs:label xml:lang="en">has_evidence_with_strength</rdfs:label>
+        <rdfs:label xml:lang="en">has_evidence_level</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -978,12 +979,12 @@ Want to be able to support inferences such as:
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000167 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000167">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000187"/>
-        <obo:IAO_0000115>a relation between an assertion and a value that indicates the degree of confidence that the Proposition it puts forth is true.</obo:IAO_0000115>
-        <obo:IAO_0000118>assertion_trust_rating</obo:IAO_0000118>
-        <rdfs:comment>Different data sources often create their own scales or value sets to capture this concept.  e.g. CIViC &apos;Trust Ratings&apos; are based on a 5 star system.</rdfs:comment>
-        <rdfs:label xml:lang="en">statement_confidence_level</rdfs:label>
+        <obo:IAO_0000115>a relation between an information entity and an indicator of degree of confidence that the information it represents is true.</obo:IAO_0000115>
+        <obo:IAO_0000118>trust_rating</obo:IAO_0000118>
+        <rdfs:comment>Confidence in an information entity can mean different things for different types of information.  For example, for assertions this reflects the confidence an agent has that the proposition it puts forth is true.  For things like data items, it reflects the confidence an agent has that the data accurately reflects the aspect of reality its was intended to measure.</rdfs:comment>
+        <rdfs:label xml:lang="en">confidence_level</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1035,7 +1036,14 @@ Want to be able to support inferences such as:
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000189 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000189">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
@@ -1044,12 +1052,11 @@ Want to be able to support inferences such as:
         <obo:IAO_0000115>A shortcut relation that directly relates an assertion and an evidence item that contributes to one or more of its evidence  lines  (i.e. a piece of information that is used as evidence for or against its validity).</obo:IAO_0000115>
         <obo:IAO_0000118>assertion_has_evidence_item</obo:IAO_0000118>
         <obo:IAO_0000118>has_evidence_supported_by</obo:IAO_0000118>
-        <obo:SEPIO_0000386>assertionHasEvidenceItem</obo:SEPIO_0000386>
         <obo:SEPIO_0000399 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</obo:SEPIO_0000399>
         <rdfs:comment>This relation can be used to link an assertion directly to evidence items that support it. Evidence items are typically organized into &apos;evidence lines&apos; that group them according to the argument(s) to which they contribute.  This shortcut  relation supports use cases where it is desirable to elide over this level of organization and create direct links from an assertion to the fundamental pieces of information that represent evidence supporting it.
 
 A property chain (has_evidence_line o has_evidence_item -&gt; has_evidence_with_item) is defined that can be used to infer this direct edge, facilitating interoperability between data sets that do and don&apos;t implement evidence lines to organize evidence items.</rdfs:comment>
-        <rdfs:label xml:lang="en">has_evidence_with_item</rdfs:label>
+        <rdfs:label xml:lang="en">has_evidence_line_with_item</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1172,10 +1179,19 @@ A property chain (has_evidence_line o has_evidence_item -&gt; has_evidence_with_
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000415">
         <obo:IAO_0000115>A relation describing the quality of the data used as evidence by an agent making an assertion.</obo:IAO_0000115>
-        <obo:IAO_0000116>While the &apos;evidence quality&apos; is fundamentally an attribute of the evidence items produced by a particular study, this property is typically attached to an evidence line and used to indicate the overall quality of the evidence items supporting the line of evidence.
+        <obo:IAO_0000116>This property is used to indicate the inherent quality of a piece of data, based on the rigor of the experiment that produced it.  It is not a direct indicator of the strength of evidence the data may provide for an assertion.
 
 The value of this property is typically a term from some defined set of values that enumerates categorical degrees of quality (e.g. the CIViC five star &apos;trust rating&apos; scale) Different systems or applications can create terms representing the levels of quality they wish to define for their use case.</obo:IAO_0000116>
-        <rdfs:label>evidence_quality</rdfs:label>
+        <rdfs:label>evidence_item_quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000427 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000427">
+        <obo:IAO_0000118>evidence_for</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">is_evidence_line_for</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1532,13 +1548,13 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000168 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000168">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000231"/>
-        <obo:IAO_0000115>A quantitative value that can be interpreted as an indicator of the degree of confidence that a statement is true, and accurately reflects the state of the real world.</obo:IAO_0000115>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>A quantitative value that can be interpreted as an indicator of the degree of confidence that a piece of information is true, and accurately reflects the aspect of reality it is about.</obo:IAO_0000115>
         <obo:IAO_0000116>This property has a similar intent as assertion_confidence_level, but used for quantitative numerical values.</obo:IAO_0000116>
-        <rdfs:comment>The &apos;statement confidence score&apos; property does not only include statistical measures such as p-values that explicitly indicate a level of confidence. It also includes any quantitative score against which a threshold for making an assertion is defined - where the distance of this score from this threshold can be interpreted as an indicator of how much confidence we might have that the asserted conclusion is true.  
+        <rdfs:comment>The &apos;confidence score&apos; property does not only include statistical measures such as p-values that explicitly indicate a level of confidence. It also includes any quantitative score against which a threshold for making an assertion is defined - where the distance of this score from this threshold can be interpreted as an indicator of how much confidence we might have that the asserted conclusion is true.  
 
 For example, many silico prediction tools such as SIFT interrogate biological sequence data to calculate a score that reflects the likelihood that a particular sequence variant negatively impacts gene product function.  A variant is interpreted to be &apos;Tolerated&apos;, &apos;Damaging&apos;, or &apos;Deleterious&apos; based on how its score compares against pre-defined thresholds. Here, we may have less confidence that a variant with a score just above the &apos;Damaging&apos; threshold is truly damaging, versus a variant whose score is well above the threshold.</rdfs:comment>
-        <rdfs:label xml:lang="en">statement_confidence_score</rdfs:label>
+        <rdfs:label xml:lang="en">confidence_score</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1582,6 +1598,16 @@ For example, many silico prediction tools such as SIFT interrogate biological se
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000419">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000168"/>
         <rdfs:label xml:lang="en">probabilistic quantifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000429 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000429">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+        <obo:IAO_0000115>A numerical value that quantifies the strength of evidence provided by a line of evidence. This is a counterpart to the evidence_line_strength object property - for use when the strength of evidence is captured using a quantitiative score/measure.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">evidence_line_strength_score</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1802,8 +1828,15 @@ This property is normally used in a functional way, although PAV does not formal
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000150"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000387"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000021"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112>- Data Items: A &apos;548.5 mg/dl&apos; measurement of blood glucose in mutant mice.
@@ -2206,19 +2239,13 @@ Statements directly reporting study results or observations are not considered a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000132"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000140"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000183"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000402"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112>An example of an evidence line would be the argument that a finding such as &quot;Lepr1 KO mice exhibit lower blood glucose levels than matched WT controls&quot; makes in support of the proposition that &quot;Lepr1 gene is involved in diabetes&quot;. The Evidence Items supporting this line of evidence could include experimental data from a study exploring blood glucose levels in Lepr1 KO mice, such as a 548.5 mg/dl measurement of blood glucose in a Lepr&lt;tm1b/tm1b&gt; mutant mouse, or a 1.3951e-24 p-value indicating this measure to be significantly different from wild-type mice.
@@ -2587,7 +2614,7 @@ In SEPIO, the notion of evidence quality is captured in an attribute separate fr
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000148">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <rdfs:label xml:lang="en">evidence  role</rdfs:label>
+        <rdfs:label xml:lang="en">evidence role</rdfs:label>
     </owl:Class>
     
 
@@ -2791,7 +2818,7 @@ The first two examples are not declarative sentences and therefore are not (or d
         <rdfs:comment>From https://en.wikipedia.org/wiki/Statement_(logic) (2017-06-21):
 &quot;A statement is a declarative sentence that bears truth value, in that it can be either true or false. This definition derives from the domain of logic, where a statement is either (a) a meaningful declarative sentence that is either true or false, or (b) that which a true or false declarative sentence asserts. In the latter case, a statement is distinct from a sentence in that a sentence is only one formulation of a statement, whereas there may be many other formulations expressing the same statement . . . In (this treatment), &quot;statement&quot; is introduced in order to distinguish a sentence from its informational content. A statement is regarded as the information content of an information-bearing sentence. Thus, a sentence is related to the statement it bears like a numeral to the number it refers to. Statements are abstract logical entities, while sentences are grammatical entities.&quot;
 ----
-Note that the definition in (b) describes the notion of a &apos;Proposition&apos; as defined in SEPIO, such that Propositions are classified as a type of Statement.</rdfs:comment>
+Note that the definition in (b) describes something closer to the notion of a &apos;Proposition&apos; as defined in SEPIO?</rdfs:comment>
         <rdfs:comment>Statements are sentences (or, more precisely, the information content of sentences) that declare a definitive or proposed fact - expressing something about the world or one&apos;s experience of it that may or may not be true. The identity of a particular Statement is dependent upon (1) what it reports as true (its semantic content), (2) the Agent stating it, and (3) the occasion on which the statement is made. 
 
 The phrase &quot;the pink elephant&quot; describes an entity, but is not a &apos;statement&apos; as it has no truth value. By contrast, the phrase &quot;the pink elephant is in the room&quot; is a statement as this can be evaluated for its truth.</rdfs:comment>
@@ -2892,9 +2919,8 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A data item that quantifies the level of confidence an agent has that a particular statement is true.</obo:IAO_0000115>
-        <obo:SEPIO_0000061>Consider also framing as categorical measurement values?: A categorical measurement reflecting an agent&apos;s cognitive quantification of the degree of confidence (s)he has that a particular statement is true.</obo:SEPIO_0000061>
-        <rdfs:label xml:lang="en">statement confidence</rdfs:label>
+        <obo:IAO_0000115>A data item that quantifies the level of confidence an agent has that a particular piece of information is true.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">confidence level</rdfs:label>
     </owl:Class>
     
 
@@ -3198,7 +3224,7 @@ This concept is intentionally quite broad, covering informal and ad-hoc groups, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000403">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000402"/>
-        <obo:IAO_0000115>An evidence direction indicating a line of evidence to argue for the validity of a target proposition, as evaluated by the asserting agent.</obo:IAO_0000115>
+        <obo:IAO_0000115>An evidence direction indicating that an evidence line provides an argument that supports the validity of a target assertion.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">supporting</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3208,7 +3234,6 @@ This concept is intentionally quite broad, covering informal and ad-hoc groups, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000404">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000402"/>
-        <obo:IAO_0000115>An evidence direction indicating a line of evidence to argue against the validity of a target proposition, as evaluated by the asserting agent.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">disputing</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3218,7 +3243,7 @@ This concept is intentionally quite broad, covering informal and ad-hoc groups, 
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000405">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000402"/>
-        <obo:IAO_0000115>An evidence direction indicating a line of evidence to lack sufficient credibility, relevance, or completeness to argue for or against the validity of a target proposition, as evaluated by the asserting agent.</obo:IAO_0000115>
+        <obo:IAO_0000115>An evidence direction indicating that an evidence line lacks sufficient credibility, relevance, or completeness to argue for or against the validity of a target assertion.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">inconclusive</rdfs:label>
     </owl:NamedIndividual>
     

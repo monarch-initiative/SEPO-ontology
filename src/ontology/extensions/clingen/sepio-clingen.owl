@@ -550,6 +550,7 @@ In cases where the specification *directly* describes the creation of the genera
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000286 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000286">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
         <obo:IAO_0000116>In the ClinGen extension, this is an organizational property that groups a number of datatype-specific properties used to connect a statement directly to a data value it describes (instead of linking to this value through an instantiated data item object, as per the recommended SEPIO design pattern).   
 
 This shortcut pattern, and the long list of datatype properties it requires, were desired by ClinGen to make messages easier to render in application interfaces. Future iterations of the ClinGen model may move to adopt the SEPIO design here when application code can be updated to accommodate it. This will involve conversion of these datatype-specific properties to data type classes, so that typed data item objects can be created in the data, and a single object property (&apos;describes data item&apos;) used to link from a Statement to instances of these data type classes.</obo:IAO_0000116>
@@ -1314,6 +1315,14 @@ In the ClinGen allele model, &apos;canonical alleles  are contrasted with &apos;
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000173 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000173">
+        <obo:IAO_0000119>Derived from https://www.aqr.org.uk/glossary/findings</obo:IAO_0000119>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000174 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000174">
@@ -1329,17 +1338,13 @@ This distinction is important because the provenance and validity of a finding d
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000190 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000190">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>An assertion about the pathogenicity of a genetic sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
         <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
@@ -1354,17 +1359,13 @@ This distinction is important because the provenance and validity of a finding d
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000191 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000191">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000041"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000192"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>An assertion made by evaluating evidence according to rules set forth in a &apos;variant interpretation criterion&apos;, which describe how to interpret specific types of information as evidence for a proposition that is ultimately relevant to the pathogenicity of the variant.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
         <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
@@ -1740,7 +1741,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <obo:IAO_0000112>SIFT, Polyphen</obo:IAO_0000112>
         <obo:IAO_0000115>An algorithm designed to predict the impact of a missense mutation on the function of a gene or gene product.</obo:IAO_0000115>
         <rdfs:label>missense effect algorithm</rdfs:label>
-        <rdfs:label>missense effect algoritm</rdfs:label>
     </owl:Class>
     
 
@@ -2203,14 +2203,26 @@ Any set of identifiers that is resolved in exactly the same way (i.e. 1:1 relati
 
 Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</obo:IAO_0000116>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000146">
+        <obo:IAO_0000118>has_total_evidence_strength</obo:IAO_0000118>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000158">
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000167">
+        <obo:IAO_0000116>Different data sources often create their own scales or value sets to capture this concept.  e.g. CIViC &apos;Trust Ratings&apos; are based on a 5 star system.</obo:IAO_0000116>
+        <obo:IAO_0000116>Formerly defined thi specifically for statements, as &apos;statement_confidence_level&apos;: a relation between ans assertion and a value that indicates the degree of confidence that the Proposition it puts forth is true.
+
+But generalized to be applicable to any information entity.</obo:IAO_0000116>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000169">
         <obo:IAO_0000118>performed_for</obo:IAO_0000118>
     </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000173">
-        <obo:IAO_0000119>Derived from https://www.aqr.org.uk/glossary/findings</obo:IAO_0000119>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000187">
+        <rdfs:comment>Confidence in an information entity can mean different things for different types of information.  For example, for assertions this reflects the confidence an agent has that the proposition it puts forth is true.  For things like data items, it reflects the confidence an agent has that the data accurately reflects the aspect of reality its was intended to measure.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000189">
+        <obo:IAO_0000118>has_evidence</obo:IAO_0000118>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000197">
         <obo:IAO_0000116>This property is used to semantically annotate statements with a term that a particular community or application has agreed to use in the describing their data. Ontologically then, the values of this property do not represent &apos;conclusions&apos; per se. For example, the ClinGen variant interpretation model uses terms from the Sequence Ontology to summarize the outcome of &quot;Conditon Mechansim&quot; statements that assert the type of variants known to cause a particular disorder (e.g. SO:0001583 ! missense variant or SO:0002054 loss of function variant). The IRIs for these terms are directly referenced from a statement instance in the data to loosely codify its conclusion, not to imply the  existence of some variant sequence feature. 
@@ -2227,6 +2239,9 @@ While ontologically imprecise, this is a commonly used shortcut to standardize s
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
         <obo:IAO_0000115>A value set comprised of terms representing diseases.</obo:IAO_0000115>
         <rdfs:comment>This value set includes any term from the Disease Ontology identifier system.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000404">
+        <obo:IAO_0000115>An evidence direction indicating that an evidence line provides an argument that disputes (argues against) the validity of a target assertion.</obo:IAO_0000115>
     </rdf:Description>
 </rdf:RDF>
 

@@ -35,7 +35,7 @@ variantAnnotationProfile:
         type: ECO:0000033 # 'Traceable Statement'
         evidenceStrength: SEPIO:0000216 # 'pathogenic moderate'        
         
-        # CritAssess001, an assertion made using ACMG criterion PM2, is the sole evidence item supportinig EvLn001
+        # CritAssess001, an assertion made using ACMG criterion PM2, is the sole evidence item supporting EvLn001
         evidenceItems: 
           - id: CG:CritAssess001
             type: SEPIO:0000191 # 'Criterion Assessment' (a prior assertion made using the PM2 ACMG criterion)
@@ -69,12 +69,12 @@ variantAnnotationProfile:
                         type: SEPIO:9000846 # 'median sequencing coverage data'
                         value: "28X"
 
-      # EvLn002 is the second of two direct evidence lines for VarInterp001 (evidence provided via assesment using criterion PM4)
+      # EvLn002 is the second of two direct evidence lines for VarInterp001 (evidence provided via assessment using criterion PM4)
       - id: CG:EvLn002
         type: ECO:0000033 # 'Traceable Statement'
         evidenceStrength: SEPIO:0000216 # 'pathogenic moderate'
         
-        # CritAssess002, an assertion made using ACMG criterion PM4, is the sole evidence item supportinig EvLn001
+        # CritAssess002, an assertion made using ACMG criterion PM4, is the sole evidence item supporting EvLn001
         evidenceItems: 
           - id: CLINGEN:CritAssess002
             type: SEPIO:0000191 # 'Criterion Assessment' (a prior assertion based on an ACMG criterion)
@@ -89,13 +89,13 @@ variantAnnotationProfile:
                 type: ECO:FAKE456 # 'predicted molecular consequence evidence'
                 supportingReference: PMID:8232536
                  
-                 # The molecular consequence statemen MolCon066 and the 'region type statement' RegType069 are  two evidence items that both support EvLn016
+                 # The molecular consequence statement MolCon066 and the 'region type statement' RegType069 are  two evidence items that both support EvLn016
                  evidenceItems:					
                    - id: CLINGEN:MolCon066
                      type: SEPIO:0000229 # 'molecular consequence statement'
-                     description: "Variant results in a conservative in framme deletion of 7 aminno acids"
+                     description: "Variant results in a conservative in frame deletion of 7 amino acids"
                      variant: CG:CtxAll044 # allele id
-                     outcome: SO:0001825 ('conservative inframe deletion')
+                     outcome: SO:0001825 ('conservative in-frame deletion')
                    - id: CLINGEN:RegType069
                      type: SEPIO:0000243 # 'region type statement'
                      description: "Affected region is not a repeat region"
@@ -103,4 +103,4 @@ variantAnnotationProfile:
                      outcome: SO:0000657 #'repeat region
                      outcomeQualifier: "NOT"
 
-    # There is one additional evidnece line for VarInterp001 that is not show . . . 
+    # There is one additional evidence line for VarInterp001 that is not shown . . . 

@@ -62,6 +62,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -865,9 +871,9 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000343">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <obo:IAO_0000115>A value set comprised of terms used to indicate the type of sequence feature a particular region of genomic sequence represents.</obo:IAO_0000115>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/so"/>
-        <obo:IAO_0000115>A value set comprised of terms used to indicate the type of sequence feature a particular region of genomic sequence represents.</obo:IAO_0000115>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">Region Annotation Value Set</rdfs:label>
     </owl:NamedIndividual>
@@ -878,8 +884,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000344">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000364"/>
         <obo:IAO_0000115>A value set comprised of terms indicating the relative position of two or more alleles on the same or distinct chromosomes.</obo:IAO_0000115>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000364"/>
         <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
         <rdfs:label xml:lang="en">Allelic Phase Value Set</rdfs:label>
     </owl:NamedIndividual>
@@ -1020,8 +1026,8 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000397"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/mondo"/>
-        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
         <rdfs:label xml:lang="en">Disease Value Set</rdfs:label>
+        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
     </owl:NamedIndividual>
     
 
@@ -1032,8 +1038,8 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/hp"/>
-        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
         <rdfs:label xml:lang="en">Human Phenotype Value Set</rdfs:label>
+        <skos:hasTopConcept rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
     </owl:NamedIndividual>
     
 
@@ -1095,6 +1101,39 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000403 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000403">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000430"/>
+        <obo:IAO_0000115>An evidence direction indicating that an evidence line provides an argument that supports the validity of a target assertion.</obo:IAO_0000115>
+        <rdfs:label>supporting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000404 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000404">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000430"/>
+        <obo:IAO_0000115>An evidence direction indicating that an evidence line provides an argument that disputes (argues against) the validity of a target assertion.</obo:IAO_0000115>
+        <rdfs:label>disputing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000405 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000405">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000430"/>
+        <obo:IAO_0000115>An evidence direction indicating that an evidence line lacks sufficient credibility, relevance, or completeness to argue for or against the validity of a target assertion.</obo:IAO_0000115>
+        <rdfs:label>inconclusive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000409 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000409">
@@ -1118,6 +1157,16 @@
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/geno"/>
         <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/hp"/>
         <rdfs:label xml:lang="en">Inheritance Pattern Value Set</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000430 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000430">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000364"/>
+        <rdfs:label xml:lang="en">Evidence Direction Value Set</rdfs:label>
     </owl:NamedIndividual>
     
 
