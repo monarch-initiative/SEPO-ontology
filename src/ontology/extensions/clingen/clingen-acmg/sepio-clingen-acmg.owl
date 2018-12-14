@@ -17,6 +17,16 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-clingen-acmg.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio-clingen-acmg-valueset.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio.owl"/>
+        <terms:contributor>Larry Babb</terms:contributor>
+        <terms:description>This ontology extends the core SEPIO ontology to enable representation of Variant Pathogenicity Interpretations based on the American College of Medical Genetics (ACMG) Guidelines [1]. It supports a SEPIO ClinGen-ACMG Profile created to structure variant interpretations generated and exchanged across ClinGen information systems.
+
+[1] https://www.acmg.net/docs/standards_guidelines_for_the_interpretation_of_sequence_variants.pdf
+[2] http://dataexchange.clinicalgenome.org/interpretation/</terms:description>
+        <terms:contributor>Bradford Powell</terms:contributor>
+        <terms:contributor>Matthew Brush</terms:contributor>
+        <terms:contributor>Tristan Nelson</terms:contributor>
+        <terms:contributor>Chris Bizon</terms:contributor>
+        <rdfs:label>SEPIO Clingen ACMG Ontology</rdfs:label>
     </owl:Ontology>
     
 

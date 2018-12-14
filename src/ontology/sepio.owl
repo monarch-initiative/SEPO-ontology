@@ -16,11 +16,11 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl"/>
-        <rdfs:seeAlso>The SEPIO ontology is in its early stages of development, undergoing iterative refine,ent as new requirements emerge and alignment wiht existing standards is explored. The SEPIO core file imports two files which can be resolved at the URLs below:
+        <terms:description>The SEPIO ontology is in its early stages of development, undergoing iterative refinement as new requirements emerge and alignment with existing standards is explored. The SEPIO core file imports two files which can be resolved at the URLs below:
 
 IAO ontology-metadata import: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/imports/ontology-metadata.owl
 
-bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/mireots/bfo.owl</rdfs:seeAlso>
+bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/mireots/bfo-mireot.owl</terms:description>
         <dc:contributor>Matthew Brush</dc:contributor>
     </owl:Ontology>
     

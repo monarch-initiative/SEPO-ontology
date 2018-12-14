@@ -104,9 +104,45 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000340 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000340">
+        <rdfs:label xml:lang="en">skos terms</rdfs:label>
+    </owl:Class>
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+    </owl:Class>
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
+    </owl:Class>
+    
+
+    
     <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
