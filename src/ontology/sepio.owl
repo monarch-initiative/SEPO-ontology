@@ -911,6 +911,7 @@ A explicit commitment to this more abstracted level of representation is a core 
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
         <obo:IAO_0000115>A relation used to link an assertion or proposition directly to some indicator of the strength of the total evidence supporting it.</obo:IAO_0000115>
+        <obo:IAO_0000118>has_total_evidence_strength</obo:IAO_0000118>
         <rdfs:comment>This relation links an assertion or proposition directly to some indicator of the strength of the total evidence supporting it. It is used when there is not enough information to create evidence line(s) for the assertion, but the source provides some indication of the strength of the evidence supporting it.
 
 Note that this is different than the notion of statement confidence, which describes how confident an agent is that a statement is true.  Confidence may depend on factors in addition to the strength of the evidence (e.g. who made the prior probability that the asserted proposition could be true, who made the assertion and when, etc.)</rdfs:comment>

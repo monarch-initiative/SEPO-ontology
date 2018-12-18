@@ -28,19 +28,25 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112">
+        <rdfs:label>example of usage</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label>definition</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118">
+        <rdfs:label>alternative term</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -104,11 +110,43 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+        <rdfs:label>information content entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000340 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000340">
         <rdfs:label xml:lang="en">skos terms</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000374 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label>identifier system</rdfs:label>
+        <rdfs:label xml:lang="en">identifier system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000412 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000412">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <obo:IAO_0000115>re-usable collections of terms that can be bound to attributes in a particular schema to constrain data entry.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">value set</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
@@ -139,34 +177,6 @@
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
-    </owl:Class>
-    
-
-    
-    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
-        <rdfs:label>information content entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000374 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:label>identifier system</rdfs:label>
-        <rdfs:label xml:lang="en">identifier system</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000412 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000412">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <obo:IAO_0000115>re-usable collections of terms that can be bound to attributes in a particular schema to constrain data entry.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">value set</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

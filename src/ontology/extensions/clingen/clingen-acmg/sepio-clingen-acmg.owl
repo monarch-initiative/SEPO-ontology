@@ -1355,7 +1355,7 @@ This distinction is important because the provenance and validity of a finding d
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000193"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>An assertion about the pathogenicity of a genetic sequence variant, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
+        <obo:IAO_0000115>An assertion about the pathogenicity of a sequence variant for a particular genetic condition, based on evaluation of one or more lines of evidence.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
         <terms:source>ClinGen (http://dataexchange.clinicalgenome.org/interpretation/master/)</terms:source>
         <oboInOwl:hasBroadSynonym>variant classification</oboInOwl:hasBroadSynonym>
@@ -1661,7 +1661,7 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000413"/>
         <obo:IAO_0000115>A statement asserting the predicted impact of a particular allele on the function of its resulting gene product (e.g. that it is &apos;deleterious&apos;, &apos;damaging&apos;, &apos;tolerated&apos;, etc.). Such assertions are typically based on interpretation of the quantitative output of predictive computational algorithms.</obo:IAO_0000115>
         <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
-        <rdfs:comment>An &apos;in silico prediction statement&apos; represents an asserted conclusion based on interpretation of one or more &apos;in silico prediction score statements&apos;, which represent particular scores calculated by an algorithm based on data pertinent to the potential for a variant to impact gene product function.</rdfs:comment>
+        <rdfs:comment>An &apos;in silico prediction statement&apos; represents an asserted conclusion based on interpretation of one or more &apos;in silico prediction score statements&apos;, which describe a score calculated by an algorithm based on data pertinent to the potential for a variant to impact gene product function.</rdfs:comment>
         <rdfs:label xml:lang="en">in silico prediction statement</rdfs:label>
     </owl:Class>
     
@@ -2212,9 +2212,6 @@ Any set of identifiers that is resolved in exactly the same way (i.e. 1:1 relati
         <obo:IAO_0000116>A planned process that is specified by some study design and performed to test or generate hypotheses of a scientific nature.
 
 Consider http://purl.obolibrary.org/obo/OBI_0000471 ! study design execution</obo:IAO_0000116>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000146">
-        <obo:IAO_0000118>has_total_evidence_strength</obo:IAO_0000118>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000158">
         <obo:IAO_0000117>PERSON:Matthew Brush</obo:IAO_0000117>
