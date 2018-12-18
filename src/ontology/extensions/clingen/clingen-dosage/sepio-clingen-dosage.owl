@@ -40,6 +40,49 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GENO_0000516 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000516">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000659"/>
+        <obo:IAO_0000115>The set of all sequence features occupying a particular genomic location across all homologous chromosomes in a genome.</obo:IAO_0000115>
+        <rdfs:comment>A genomic feature is any located feature in the genome, be it a junction, a single nucleotide, a gene, or an entire chromosome. The notion of a &quot;complement&quot; describes the collection of all elements in some defined set. The notion of &quot;homologous&quot; genomic features describes those that occupy the same locus on homologous chromosomes. Therefore, we use the term &quot;single locus complement&quot; to describe the set of all homologous features present at a particular genomic locus. This complement is typically a pair of two features in a diploid genome (with two copies of each chromosome). E.g. a gene pair, a QTL pair, a nucleotide pair for a SNP, or a pair of entire chromosomes.</rdfs:comment>
+        <rdfs:label>single locus complement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000659 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000659">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000701"/>
+        <obo:IAO_0000115>An exhaustive collection of all sequence features that make up an enumerated sequence feature collection with a well-defined set of members (e.g. all chromosomes in a genome, all variant alleles in a genome, all copies of a particular gene or allele in a genome, all allleles defined  in a haplotype).</obo:IAO_0000115>
+        <rdfs:label>sequence feature complement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000701 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000701">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000115>An extent of continuous biological sequence, or a collection of such sequences, whose identity is dependent on both its sequence and its position.</obo:IAO_0000115>
+        <rdfs:label>sequence feature or collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000219">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000112>arrhythmogenic right ventricular cardiomyopathy, Autosomal Dominant</obo:IAO_0000112>
+        <obo:IAO_0000115>A disease or set of one or more co-occurring phenotypic features, typically controlled by a single gene or locus with a defined inheritance pattern.</obo:IAO_0000115>
+        <terms:source>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</terms:source>
+        <rdfs:label>genetic condition</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0002001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002001">
@@ -66,6 +109,26 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000000"/>
         <obo:IAO_0000115>A proposition about  the pathogenicity of a genetic dosage of some  gene or region for a particular genetic condition.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">dosage sensitivity proposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GENO_0000516"/>
+        <obo:IAO_0000115>A single locus complement comprised of member features that span at least one gene.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">genetic dosage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000116>Consider using http://purl.obolibrary.org/obo/GENO_0000815 (sequence feature location).</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">sequence location</rdfs:label>
     </owl:Class>
     
 
