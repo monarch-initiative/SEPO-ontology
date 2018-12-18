@@ -44,6 +44,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000362 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000367 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000367"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000373 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
@@ -102,8 +120,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000412 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+    
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
 
 
     <!-- 
@@ -942,39 +968,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000363 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000363">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
-        <obo:IAO_0000115>A value set comprised of terms that describe if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
-        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
-        <rdfs:label xml:lang="en">Value Set Extensibility Value Set</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000364 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000364">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
-        <obo:IAO_0000115>A term describing a value set that cannot be extended with new values.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">fixed</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000365 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000365">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
-        <obo:IAO_0000115>A term describing a value set that can be extended with new values.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">extensible</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000371 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000371">
@@ -1055,16 +1048,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000397 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000397">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
-        <rdfs:label xml:lang="en">external</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000403 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000403">
@@ -1109,7 +1092,11 @@
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000411 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000411"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000411">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>HGNC</obo:SEPIO_0000367>
+        <rdfs:label xml:lang="en">Human Gene Nomenclature Committee</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -1228,25 +1215,41 @@
 
     <!-- http://purl.obolibrary.org/obo/geno -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/geno"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/geno">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>GENO</obo:SEPIO_0000367>
+        <rdfs:label>Genotype Ontology</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/hp -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/hp"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/hp">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>HP</obo:SEPIO_0000367>
+        <rdfs:label>Human Phenotype Ontology</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/mondo -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/mondo"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/mondo">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>MONDO</obo:SEPIO_0000367>
+        <rdfs:label>Monarch Disease Ontology</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://purl.obolibrary.org/obo/so -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/so"/>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/so">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>SO</obo:SEPIO_0000367>
+        <rdfs:label>Sequence Ontology</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

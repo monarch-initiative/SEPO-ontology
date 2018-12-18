@@ -8,7 +8,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/">
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-valueset.owl">
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     </owl:Ontology>
@@ -47,6 +48,12 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118">
         <rdfs:label>alternative term</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -133,8 +140,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>A specification comprised of identifiers as designated by an authoritative organization.
+
+Any set of identifiers that is resolved in exactly the same way (i.e. 1:1 relationship between prefix and resolving URL Pattern)</obo:IAO_0000115>
         <rdfs:label>identifier system</rdfs:label>
-        <rdfs:label xml:lang="en">identifier system</rdfs:label>
     </owl:Class>
     
 
@@ -178,6 +187,61 @@
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000340"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000363 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000363">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <obo:IAO_0000115>A value set comprised of terms that describe if and how a particular value set may be extended with new terms.</obo:IAO_0000115>
+        <dc:creator>GROUP:ClinGen Data Model Working Group (SEPIO:0000361)</dc:creator>
+        <rdfs:label xml:lang="en">Value Set Extensibility Value Set</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000364 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000364">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
+        <obo:IAO_0000115>A term describing a value set that cannot be extended with new values.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">fixed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000365 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000365">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
+        <obo:IAO_0000115>A term describing a value set that can be extended with new values.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">extensible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000397 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000397">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000363"/>
+        <obo:IAO_0000115>A term describing a value set defined by reference to some external terminological system, as opposed to fully enumerated in the value set model.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">external</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

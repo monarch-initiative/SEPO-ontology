@@ -1798,16 +1798,6 @@ Ultimately, one or more &apos;criterion assessments&apos; are evaluated together
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000374 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000374">
-        <obo:IAO_0000115>A specification comprised of identifiers as designated by an authoritative organization.
-
-Any set of identifiers that is resolved in exactly the same way (i.e. 1:1 relationship between prefix and resolving URL Pattern)</obo:IAO_0000115>
-    </rdf:Description>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000391 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000391">
@@ -2122,56 +2112,6 @@ Any set of identifiers that is resolved in exactly the same way (i.e. 1:1 relati
         <obo:IAO_0000118>ClinGen DMWG</obo:IAO_0000118>
         <rdfs:label xml:lang="en">ClinGen Data Model Working Group</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000411 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000411">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>HGNC</obo:SEPIO_0000367>
-        <rdfs:label xml:lang="en">Human Gene Nomenclature Committee</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/geno -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/geno">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>GENO</obo:SEPIO_0000367>
-        <rdfs:label>Genotype Ontology</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/hp -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/hp">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>HP</obo:SEPIO_0000367>
-        <rdfs:label>Human Phenotype Ontology</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/mondo -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/mondo">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>MONDO</obo:SEPIO_0000367>
-        <rdfs:label>Monarch Disease Ontology</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/so -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/so">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
-        <obo:SEPIO_0000367>SO</obo:SEPIO_0000367>
-        <rdfs:label>Sequence Ontology</rdfs:label>
-    </owl:NamedIndividual>
     <rdf:Description>
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
     </rdf:Description>
@@ -2239,9 +2179,6 @@ While ontologically imprecise, this is a commonly used shortcut to standardize s
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000340">
         <obo:IAO_0000115>Organizational class that groups classes imported from the skos model to support creation and definition of value sets for particular SEPIO data model implementations.</obo:IAO_0000115>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000363">
-        <rdfs:comment>blah blah blah</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000372">
         <obo:IAO_0000115>A value set comprised of terms representing diseases.</obo:IAO_0000115>
