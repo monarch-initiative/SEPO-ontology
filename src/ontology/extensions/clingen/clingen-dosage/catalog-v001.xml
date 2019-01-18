@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="file:/C:/matt/git/github/monarch/sepo-ontology/src/ontology/">
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.oboblibrary.org/obo/sepio-removed.owl" uri="archived/sepio-removed.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/bfo.owl" uri="mireots/bfo-mireot.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/clingen-dosage.owl" uri="extensions/clingen/clingen-dosage/sepio-clingen-dosage.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/eco.owl" uri="mireots/eco-mireot.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl" uri="imports/ontology-metadata.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio-clingen-acmg-valueset.owl" uri="extensions/clingen/clingen-acmg/sepio-clingen-acmg-valueset.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio-clingen-acmg.owl" uri="extensions/clingen/clingen-acmg/sepio-clingen-acmg.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio-clingen-dosage-valueset" uri="extensions/clingen/clingen-dosage/sepio-clingen-dosage-valueset.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio-clingen-valueset2.owl" uri="archived/sepio-clingen-valueset2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio-merged.owl" uri="archived/sepio-merged.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio-merged_20170724.owl" uri="archived/sepio-merged_20170724.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio-valueset.owl" uri="sepio-valueset.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio.owl" uri="sepio.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://purl.obolibrary.org/obo/sepio_developer.owl" uri="archived/sepio_developer.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1545169363179" name="http://www.w3.org/2004/02/skos/core" uri="imports/skos.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.oboblibrary.org/obo/sepio-removed.owl" uri="archived/sepio-removed.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/bfo.owl" uri="mireots/bfo-mireot.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/clingen-dosage.owl" uri="extensions/clingen/clingen-dosage/sepio-clingen-dosage.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/eco.owl" uri="mireots/eco-mireot.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl" uri="imports/ontology-metadata.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio-clingen-acmg-valueset.owl" uri="extensions/clingen/clingen-acmg/sepio-clingen-acmg-valueset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio-clingen-acmg.owl" uri="extensions/clingen/clingen-acmg/sepio-clingen-acmg.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio-clingen-dosage-valueset" uri="extensions/clingen/clingen-dosage/sepio-clingen-dosage-valueset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio-clingen-valueset2.owl" uri="archived/sepio-clingen-valueset2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio-merged.owl" uri="archived/sepio-merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio-merged_20170724.owl" uri="archived/sepio-merged_20170724.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio-valueset.owl" uri="sepio-valueset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio.owl" uri="sepio.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://purl.obolibrary.org/obo/sepio_developer.owl" uri="archived/sepio_developer.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1547775247364" name="http://www.w3.org/2004/02/skos/core" uri="imports/skos.rdf"/>
     </group>
 </catalog>

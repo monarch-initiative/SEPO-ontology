@@ -44,22 +44,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000362 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000362"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000367 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000367"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/SEPIO_0000373 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000373"/>
-    
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->

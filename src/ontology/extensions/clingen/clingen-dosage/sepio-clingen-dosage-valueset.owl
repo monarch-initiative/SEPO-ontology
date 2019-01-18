@@ -56,6 +56,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000375 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000375">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/hp"/>
+        <rdfs:label xml:lang="en">Human Phenotype Value Set</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_0002005 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002005">
@@ -120,6 +131,16 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002011">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
         <rdfs:label xml:lang="en">Assertion Predicate Value Set</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/hp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/hp">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>HP</obo:SEPIO_0000367>
+        <rdfs:label>Human Phenotype Ontology</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
