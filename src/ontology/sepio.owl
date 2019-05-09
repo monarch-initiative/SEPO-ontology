@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio.owl#"
      xml:base="http://purl.obolibrary.org/obo/sepio.owl"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:eco="http://purl.obolibrary.org/obo/eco/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio.owl">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl"/>
+        <dc:contributor>Matthew Brush</dc:contributor>
         <terms:description>The SEPIO ontology is in its early stages of development, undergoing iterative refinement as new requirements emerge and alignment with existing standards is explored. The SEPIO core file imports two files which can be resolved at the URLs below:
 
 IAO ontology-metadata import: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/imports/ontology-metadata.owl
 
 bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/mireots/bfo-mireot.owl</terms:description>
-        <dc:contributor>Matthew Brush</dc:contributor>
     </owl:Ontology>
     
 
@@ -888,7 +888,7 @@ A explicit commitment to this more abstracted level of representation is a core 
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
             <rdf:Description rdf:about="http://purl.org/dc/terms/source"/>
         </owl:propertyChainAxiom>
-        <obo:IAO_0000115>A relation used to link an assertion or proposition to publications where evidence for it was found.</obo:IAO_0000115>
+        <obo:IAO_0000115>A relation used to link an assertion or proposition to a source where evidence for it was found (i.e. a document, document part, database, etc)</obo:IAO_0000115>
         <obo:SEPIO_0000052>cito:cites_as_evidence</obo:SEPIO_0000052>
         <obo:SEPIO_0000061>Note that this may not qualify as a proper shortcut (i.e. it may not be valid to define using a property chain) for the same reason has_supporting reference is not defined as a property chain called has_evidence_item_described_by.</obo:SEPIO_0000061>
         <obo:SEPIO_0000399 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</obo:SEPIO_0000399>
@@ -1052,8 +1052,8 @@ Want to be able to support inferences such as:
         </owl:propertyChainAxiom>
         <obo:IAO_0000115>A shortcut relation that directly relates an assertion and an evidence item that contributes to one or more of its evidence  lines  (i.e. a piece of information that is used as evidence for or against its validity).</obo:IAO_0000115>
         <obo:IAO_0000118>assertion_has_evidence_item</obo:IAO_0000118>
+        <obo:IAO_0000118>has_evidence_information</obo:IAO_0000118>
         <obo:IAO_0000118>has_evidence_supported_by</obo:IAO_0000118>
-        <obo:SEPIO_0000399 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</obo:SEPIO_0000399>
         <rdfs:comment>This relation can be used to link an assertion directly to evidence items that support it. Evidence items are typically organized into &apos;evidence lines&apos; that group them according to the argument(s) to which they contribute.  This shortcut  relation supports use cases where it is desirable to elide over this level of organization and create direct links from an assertion to the fundamental pieces of information that represent evidence supporting it.
 
 A property chain (has_evidence_line o has_evidence_item -&gt; has_evidence_with_item) is defined that can be used to infer this direct edge, facilitating interoperability between data sets that do and don&apos;t implement evidence lines to organize evidence items.</rdfs:comment>
@@ -3028,6 +3028,26 @@ An attribute of an evidence line describing whether it supports or disputes a ta
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000431 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000431">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <rdfs:comment>Recommendations are another type of statement besides assertions that can be supported by evidence. They don&apos;t put forth a proposed facts as true, but instead describe a recommended action on the foundation of evidence that it will be beneficial.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000432 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000432">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000174"/>
+        <rdfs:comment>A hypothesis is another type of statement that, like an assertion, can be supported by evidence. It puts for a possible fact as true, but does not express an agents belief in this fact.  Rather, it is a possible fact whose truth will be explired via reasoning or experimentation.</rdfs:comment>
+        <rdfs:label xml:lang="en">hypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SEPIO_000383 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_000383">
@@ -3267,5 +3287,5 @@ This concept is intentionally quite broad, covering informal and ad-hoc groups, 
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

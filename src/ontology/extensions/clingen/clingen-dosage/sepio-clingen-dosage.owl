@@ -60,17 +60,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GENO_0000923 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GENO_0000923">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <obo:IAO_0000115>An information entity that describes the total number of functional copies of a gene or region of sequence in a particular genome.</obo:IAO_0000115>
-        <rdfs:comment>The notion of genetic dosage describes how many &apos;functional&apos; copies of a sequence are present in a genome - i.e. sequences that retain their normal activity and/or produce gene products that retain their normal activity. In diploid organisms, the normal dosage is 2 for autosomal genes/regions. Dosage increases if there is a duplication of the gene/region. Dosage decreases if there is either a deletion of a gene/region, or an inactivating mutation that eliminates gene function. This latter condition sets it apart from the notion of a &apos;genomic sequence complement&apos;, which reflects how many actual copies of a sequence exist in a genome. Addition of a non-functional allele of a gene will increase its genomic sequence complement count (i.e. its copy number), but not increase its dosage.</rdfs:comment>
-        <rdfs:label xml:lang="en">genetic dosage</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000219 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000219">
