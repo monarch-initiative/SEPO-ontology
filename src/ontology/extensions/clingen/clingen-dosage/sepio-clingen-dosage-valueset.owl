@@ -33,10 +33,14 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000840">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002010"/>
-        <rdfs:label>pathogenic_for_condition</rdfs:label>
     </owl:NamedIndividual>
     
+    <!-- http://purl.obolibrary.org/obo/GENO_0000843 -->
 
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000843">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002010"/>
+    </owl:NamedIndividual>
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0000146 -->
 
