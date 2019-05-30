@@ -79,9 +79,15 @@
         <obo:IAO_0000115>An assertion about the strength of the total evidence evaluated to determine the validity of a potential assertion.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">evidence level assertion</rdfs:label>
     </owl:Class>
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <obo:IAO_0000115>An assertion about the ability of a protocol or procedure to assess the veracity of a proposition</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">proposition scope assertion</rdfs:label>
+    </owl:Class>
     
-
-
     <!-- http://purl.obolibrary.org/obo/SEPIO_0002002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002002">
