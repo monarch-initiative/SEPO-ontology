@@ -138,6 +138,47 @@
     </owl:NamedIndividual>
     
 
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002501 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002501">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <rdfs:label xml:lang="en">Scope Assertion Value Set</rdfs:label>
+    </owl:NamedIndividual>
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002502 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002502">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002501"/>
+        <rdfs:label xml:lang="en">gene associated with autosomal recessive phenotype</rdfs:label>
+    </owl:NamedIndividual>
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002503 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002503">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <rdfs:label xml:lang="en">Scope Predicate Value Set</rdfs:label>
+    </owl:NamedIndividual>
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002504 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002504">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002503"/>
+        <rdfs:label xml:lang="en">is in scope</rdfs:label>
+    </owl:NamedIndividual>
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002505 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002505">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002503"/>
+        <rdfs:label xml:lang="en">is out of scope</rdfs:label>
+    </owl:NamedIndividual>
 
     <!-- http://purl.obolibrary.org/obo/hp -->
 
