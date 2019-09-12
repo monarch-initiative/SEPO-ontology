@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio.owl#"
-     xml:base="http://purl.obolibrary.org/obo/sepio.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio/sepio-full.owl#"
+     xml:base="http://purl.obolibrary.org/obo/sepio/sepio-full.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -15,8 +15,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sepio/releases/2019-09-12/sepio.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio/sepio-full.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/sepio/releases/2019-09-12/sepio-full.owl"/>
         <dc:contributor>Matthew Brush</dc:contributor>
         <dc:title>Ontology for scientific evidence and provenance information</dc:title>
         <terms:description>The SEPIO ontology is in its early stages of development, undergoing iterative refinement as new requirements emerge and alignment with existing standards is explored. The SEPIO core file imports two files which can be resolved at the URLs below:
@@ -525,9 +525,7 @@ has_evidence_from_source = has_evidence_line o has_evidence_item o source.</obo:
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -3884,7 +3882,9 @@ For example, many silico prediction tools such as SIFT interrogate biological se
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 

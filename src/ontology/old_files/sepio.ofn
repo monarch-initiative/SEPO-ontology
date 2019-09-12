@@ -1,0 +1,2234 @@
+Prefix(:=<http://purl.obolibrary.org/obo/sepio.owl#>)
+Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(eco:=<http://purl.obolibrary.org/obo/eco/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/sepio.owl>
+Import(<http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl>)
+Import(<http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl>)
+Annotation(dce:contributor "Matthew Brush")
+Annotation(terms:description "The SEPIO ontology is in its early stages of development, undergoing iterative refinement as new requirements emerge and alignment with existing standards is explored. The SEPIO core file imports two files which can be resolved at the URLs below:
+
+IAO ontology-metadata import: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/imports/ontology-metadata.owl
+
+bfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/mireots/bfo-mireot.owl")
+
+Declaration(Class(obo:BFO_0000001))
+Declaration(Class(obo:BFO_0000002))
+Declaration(Class(obo:BFO_0000003))
+Declaration(Class(obo:BFO_0000015))
+Declaration(Class(obo:BFO_0000019))
+Declaration(Class(obo:BFO_0000020))
+Declaration(Class(obo:BFO_0000023))
+Declaration(Class(obo:BFO_0000031))
+Declaration(Class(obo:BFO_0000040))
+Declaration(Class(obo:BFO_0000182))
+Declaration(Class(obo:ERO_0001716))
+Declaration(Class(obo:IAO_0000013))
+Declaration(Class(obo:IAO_0000027))
+Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:IAO_0000064))
+Declaration(Class(obo:IAO_0000088))
+Declaration(Class(obo:IAO_0000100))
+Declaration(Class(obo:IAO_0000104))
+Declaration(Class(obo:IAO_0000109))
+Declaration(Class(obo:IAO_0000306))
+Declaration(Class(obo:IAO_0000308))
+Declaration(Class(obo:IAO_0000310))
+Declaration(Class(obo:IAO_0000311))
+Declaration(Class(obo:IAO_0000313))
+Declaration(Class(obo:OBI_0000011))
+Declaration(Class(obo:OBI_0000066))
+Declaration(Class(obo:OBI_0000070))
+Declaration(Class(obo:OBI_0000175))
+Declaration(Class(obo:OBI_0000235))
+Declaration(Class(obo:OBI_0000272))
+Declaration(Class(obo:OBI_0000338))
+Declaration(Class(obo:OBI_0000938))
+Declaration(Class(obo:OBI_0001146))
+Declaration(Class(obo:OBI_0002165))
+Declaration(Class(obo:SEPIO_0000000))
+Declaration(Class(obo:SEPIO_0000001))
+Declaration(Class(obo:SEPIO_0000002))
+Declaration(Class(obo:SEPIO_0000003))
+Declaration(Class(obo:SEPIO_0000004))
+Declaration(Class(obo:SEPIO_0000037))
+Declaration(Class(obo:SEPIO_0000048))
+Declaration(Class(obo:SEPIO_0000049))
+Declaration(Class(obo:SEPIO_0000055))
+Declaration(Class(obo:SEPIO_0000056))
+Declaration(Class(obo:SEPIO_0000058))
+Declaration(Class(obo:SEPIO_0000066))
+Declaration(Class(obo:SEPIO_0000067))
+Declaration(Class(obo:SEPIO_0000069))
+Declaration(Class(obo:SEPIO_0000070))
+Declaration(Class(obo:SEPIO_0000071))
+Declaration(Class(obo:SEPIO_0000072))
+Declaration(Class(obo:SEPIO_0000073))
+Declaration(Class(obo:SEPIO_0000074))
+Declaration(Class(obo:SEPIO_0000076))
+Declaration(Class(obo:SEPIO_0000077))
+Declaration(Class(obo:SEPIO_0000078))
+Declaration(Class(obo:SEPIO_0000079))
+Declaration(Class(obo:SEPIO_0000080))
+Declaration(Class(obo:SEPIO_0000081))
+Declaration(Class(obo:SEPIO_0000102))
+Declaration(Class(obo:SEPIO_0000125))
+Declaration(Class(obo:SEPIO_0000127))
+Declaration(Class(obo:SEPIO_0000131))
+Declaration(Class(obo:SEPIO_0000133))
+Declaration(Class(obo:SEPIO_0000143))
+Declaration(Class(obo:SEPIO_0000148))
+Declaration(Class(obo:SEPIO_0000149))
+Declaration(Class(obo:SEPIO_0000153))
+Declaration(Class(obo:SEPIO_0000154))
+Declaration(Class(obo:SEPIO_0000155))
+Declaration(Class(obo:SEPIO_0000156))
+Declaration(Class(obo:SEPIO_0000157))
+Declaration(Class(obo:SEPIO_0000158))
+Declaration(Class(obo:SEPIO_0000173))
+Declaration(Class(obo:SEPIO_0000174))
+Declaration(Class(obo:SEPIO_0000175))
+Declaration(Class(obo:SEPIO_0000180))
+Declaration(Class(obo:SEPIO_0000181))
+Declaration(Class(obo:SEPIO_0000185))
+Declaration(Class(obo:SEPIO_0000186))
+Declaration(Class(obo:SEPIO_0000187))
+Declaration(Class(obo:SEPIO_0000258))
+Declaration(Class(obo:SEPIO_0000340))
+Declaration(Class(obo:SEPIO_0000385))
+Declaration(Class(obo:SEPIO_0000400))
+Declaration(Class(obo:SEPIO_0000401))
+Declaration(Class(obo:SEPIO_0000402))
+Declaration(Class(obo:SEPIO_0000414))
+Declaration(Class(obo:SEPIO_0000431))
+Declaration(Class(obo:SEPIO_0000432))
+Declaration(Class(obo:SEPIO_000383))
+Declaration(Class(obo:STATO_0000039))
+Declaration(Class(obo:STATO_0000104))
+Declaration(Class(obo:STATO_0000184))
+Declaration(Class(<http://purl.org/oban/association>))
+Declaration(Class(oboInOwl:ObsoleteClass))
+Declaration(Class(<http://www.w3.org/2004/02/skos/core#Concept>))
+Declaration(Class(<http://www.w3.org/ns/prov#Activity>))
+Declaration(Class(<http://www.w3.org/ns/prov#Agent>))
+Declaration(Class(foaf:Group))
+Declaration(Class(foaf:Organization))
+Declaration(Class(foaf:Person))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:BFO_0000055))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:OBI_0000999))
+Declaration(ObjectProperty(obo:RO_0000056))
+Declaration(ObjectProperty(obo:RO_0000057))
+Declaration(ObjectProperty(obo:RO_0002233))
+Declaration(ObjectProperty(obo:RO_0002234))
+Declaration(ObjectProperty(obo:RO_0002350))
+Declaration(ObjectProperty(obo:RO_0002351))
+Declaration(ObjectProperty(obo:RO_0002352))
+Declaration(ObjectProperty(obo:RO_0002353))
+Declaration(ObjectProperty(obo:RO_0002614))
+Declaration(ObjectProperty(obo:SEPIO_0000006))
+Declaration(ObjectProperty(obo:SEPIO_0000007))
+Declaration(ObjectProperty(obo:SEPIO_0000008))
+Declaration(ObjectProperty(obo:SEPIO_0000009))
+Declaration(ObjectProperty(obo:SEPIO_0000015))
+Declaration(ObjectProperty(obo:SEPIO_0000017))
+Declaration(ObjectProperty(obo:SEPIO_0000026))
+Declaration(ObjectProperty(obo:SEPIO_0000027))
+Declaration(ObjectProperty(obo:SEPIO_0000028))
+Declaration(ObjectProperty(obo:SEPIO_0000030))
+Declaration(ObjectProperty(obo:SEPIO_0000041))
+Declaration(ObjectProperty(obo:SEPIO_0000046))
+Declaration(ObjectProperty(obo:SEPIO_0000084))
+Declaration(ObjectProperty(obo:SEPIO_0000085))
+Declaration(ObjectProperty(obo:SEPIO_0000098))
+Declaration(ObjectProperty(obo:SEPIO_0000099))
+Declaration(ObjectProperty(obo:SEPIO_0000100))
+Declaration(ObjectProperty(obo:SEPIO_0000101))
+Declaration(ObjectProperty(obo:SEPIO_0000108))
+Declaration(ObjectProperty(obo:SEPIO_0000109))
+Declaration(ObjectProperty(obo:SEPIO_0000113))
+Declaration(ObjectProperty(obo:SEPIO_0000114))
+Declaration(ObjectProperty(obo:SEPIO_0000115))
+Declaration(ObjectProperty(obo:SEPIO_0000116))
+Declaration(ObjectProperty(obo:SEPIO_0000124))
+Declaration(ObjectProperty(obo:SEPIO_0000126))
+Declaration(ObjectProperty(obo:SEPIO_0000130))
+Declaration(ObjectProperty(obo:SEPIO_0000132))
+Declaration(ObjectProperty(obo:SEPIO_0000140))
+Declaration(ObjectProperty(obo:SEPIO_0000144))
+Declaration(ObjectProperty(obo:SEPIO_0000145))
+Declaration(ObjectProperty(obo:SEPIO_0000146))
+Declaration(ObjectProperty(obo:SEPIO_0000150))
+Declaration(ObjectProperty(obo:SEPIO_0000151))
+Declaration(ObjectProperty(obo:SEPIO_0000152))
+Declaration(ObjectProperty(obo:SEPIO_0000159))
+Declaration(ObjectProperty(obo:SEPIO_0000167))
+Declaration(ObjectProperty(obo:SEPIO_0000169))
+Declaration(ObjectProperty(obo:SEPIO_0000178))
+Declaration(ObjectProperty(obo:SEPIO_0000183))
+Declaration(ObjectProperty(obo:SEPIO_0000188))
+Declaration(ObjectProperty(obo:SEPIO_0000189))
+Declaration(ObjectProperty(obo:SEPIO_0000197))
+Declaration(ObjectProperty(obo:SEPIO_0000232))
+Declaration(ObjectProperty(obo:SEPIO_0000257))
+Declaration(ObjectProperty(obo:SEPIO_0000376))
+Declaration(ObjectProperty(obo:SEPIO_0000387))
+Declaration(ObjectProperty(obo:SEPIO_0000388))
+Declaration(ObjectProperty(obo:SEPIO_0000389))
+Declaration(ObjectProperty(obo:SEPIO_0000390))
+Declaration(ObjectProperty(obo:SEPIO_0000398))
+Declaration(ObjectProperty(obo:SEPIO_0000406))
+Declaration(ObjectProperty(obo:SEPIO_0000407))
+Declaration(ObjectProperty(obo:SEPIO_0000415))
+Declaration(ObjectProperty(obo:SEPIO_0000427))
+Declaration(ObjectProperty(terms:source))
+Declaration(ObjectProperty(<http://purl.org/oban/association_has_object>))
+Declaration(ObjectProperty(<http://purl.org/oban/association_has_predicate>))
+Declaration(ObjectProperty(<http://purl.org/oban/association_has_subject>))
+Declaration(ObjectProperty(<http://purl.org/pav/authoredBy>))
+Declaration(ObjectProperty(<http://purl.org/pav/createdBy>))
+Declaration(ObjectProperty(<http://purl.org/pav/curatedBy>))
+Declaration(ObjectProperty(<http://purl.org/pav/derivedFrom>))
+Declaration(ObjectProperty(<http://purl.org/pav/importedFrom>))
+Declaration(ObjectProperty(<http://purl.org/pav/retrievedFrom>))
+Declaration(ObjectProperty(<http://purl.org/pav/sourceAccessedAt>))
+Declaration(ObjectProperty(oboInOwl:ObsoleteProperty))
+Declaration(DataProperty(obo:ERO_0000480))
+Declaration(DataProperty(obo:SEPIO_0000021))
+Declaration(DataProperty(obo:SEPIO_0000036))
+Declaration(DataProperty(obo:SEPIO_0000040))
+Declaration(DataProperty(obo:SEPIO_0000051))
+Declaration(DataProperty(obo:SEPIO_0000063))
+Declaration(DataProperty(obo:SEPIO_0000105))
+Declaration(DataProperty(obo:SEPIO_0000123))
+Declaration(DataProperty(obo:SEPIO_0000135))
+Declaration(DataProperty(obo:SEPIO_0000160))
+Declaration(DataProperty(obo:SEPIO_0000161))
+Declaration(DataProperty(obo:SEPIO_0000162))
+Declaration(DataProperty(obo:SEPIO_0000164))
+Declaration(DataProperty(obo:SEPIO_0000165))
+Declaration(DataProperty(obo:SEPIO_0000168))
+Declaration(DataProperty(obo:SEPIO_0000231))
+Declaration(DataProperty(obo:SEPIO_0000346))
+Declaration(DataProperty(obo:SEPIO_0000384))
+Declaration(DataProperty(obo:SEPIO_0000419))
+Declaration(DataProperty(obo:SEPIO_0000429))
+Declaration(DataProperty(obo:STATO_0000129))
+Declaration(DataProperty(dce:description))
+Declaration(DataProperty(terms:date))
+Declaration(DataProperty(terms:identifier))
+Declaration(DataProperty(terms:title))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/doi>))
+Declaration(DataProperty(<http://purl.org/pav/version>))
+Declaration(DataProperty(foaf:name))
+Declaration(NamedIndividual(obo:SEPIO_0000403))
+Declaration(NamedIndividual(obo:SEPIO_0000404))
+Declaration(NamedIndividual(obo:SEPIO_0000405))
+Declaration(AnnotationProperty(obo:IAO_0000111))
+Declaration(AnnotationProperty(obo:IAO_0000112))
+Declaration(AnnotationProperty(obo:IAO_0000114))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000116))
+Declaration(AnnotationProperty(obo:IAO_0000117))
+Declaration(AnnotationProperty(obo:IAO_0000118))
+Declaration(AnnotationProperty(obo:IAO_0000119))
+Declaration(AnnotationProperty(obo:IAO_0000232))
+Declaration(AnnotationProperty(obo:IAO_0000412))
+Declaration(AnnotationProperty(obo:SEPIO_0000052))
+Declaration(AnnotationProperty(obo:SEPIO_0000061))
+Declaration(AnnotationProperty(obo:SEPIO_0000184))
+Declaration(AnnotationProperty(obo:SEPIO_0000337))
+Declaration(AnnotationProperty(obo:SEPIO_0000386))
+Declaration(AnnotationProperty(obo:SEPIO_0000399))
+Declaration(AnnotationProperty(dce:license))
+Declaration(AnnotationProperty(terms:description))
+Declaration(AnnotationProperty(terms:source))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:inSubset))
+Declaration(AnnotationProperty(foaf:mbox))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:SEPIO_0000052 (consider)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000052 "consider"@en)
+
+# Annotation Property: obo:SEPIO_0000061 (SEPIO_editor_note)
+
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000061 "Used to capture development notes and design decisions or questions. All annotations using this property should be removed before publishing / releasing the ontology to the public (but ideally retained in some place as valuable documentation).")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000061 "SEPIO_editor_note"@en)
+
+# Annotation Property: obo:SEPIO_0000184 (usage note)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000184 "usage note"@en)
+
+# Annotation Property: obo:SEPIO_0000337 (in_value_set)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000337 "in_value_set"@en)
+
+# Annotation Property: obo:SEPIO_0000386 (sepio_preferred_label)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000386 "sepio_preferred_label"@en)
+SubAnnotationPropertyOf(obo:SEPIO_0000386 obo:IAO_0000118)
+
+# Annotation Property: obo:SEPIO_0000399 (is_shortcut)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000399 "Annotation indicating whether a property represents a \"shortcut\" relation that can be used to directly link two objects that are indirectly linked through a longer path of two or more edges.  Shortcut relations can be logically expanded to be expressed in terms of this longer path, e.g. 
+
+has_evidence_from_source = has_evidence_line o has_evidence_item o source.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000399 "is_shortcut"@en)
+AnnotationPropertyRange(obo:SEPIO_0000399 xsd:boolean)
+
+# Annotation Property: terms:description (description)
+
+AnnotationAssertion(obo:IAO_0000115 terms:description "An account of the resource.")
+AnnotationAssertion(rdfs:comment terms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.\""@en)
+AnnotationAssertion(rdfs:label terms:description "description"@en)
+
+# Annotation Property: terms:source (source)
+
+AnnotationAssertion(obo:IAO_0000115 terms:source "A related resource from which the described resource is derived.")
+AnnotationAssertion(rdfs:comment terms:source "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.")
+AnnotationAssertion(rdfs:label terms:source "source"@en)
+AnnotationPropertyRange(terms:source obo:IAO_0000030)
+
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+
+AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference"@en)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:BFO_0000050 (part of)
+
+AnnotationAssertion(obo:IAO_0000111 obo:BFO_0000050 "is part of"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000050 "my brain is part of my body (continuant parthood, two material entities)"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000050 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000050 "this day is part of this year (occurrent parthood)"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000050 "a core relation that holds between a part and its whole"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000050 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000050 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en)
+AnnotationAssertion(obo:IAO_0000118 obo:BFO_0000050 "part_of"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:BFO_0000050 obo:ro.owl)
+AnnotationAssertion(rdfs:label obo:BFO_0000050 "part of"@en)
+InverseObjectProperties(obo:BFO_0000050 obo:BFO_0000051)
+TransitiveObjectProperty(obo:BFO_0000050)
+
+# Object Property: obo:BFO_0000051 (has part)
+
+AnnotationAssertion(obo:IAO_0000111 obo:BFO_0000051 "has part"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000051 "my body has part my brain (continuant parthood, two material entities)"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000051 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000051 "this year has part this day (occurrent parthood)"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000051 "a core relation that holds between a whole and its part"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000051 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000051 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en)
+AnnotationAssertion(obo:IAO_0000118 obo:BFO_0000051 "has_part"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:BFO_0000051 obo:ro.owl)
+AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"@en)
+TransitiveObjectProperty(obo:BFO_0000051)
+
+# Object Property: obo:BFO_0000055 (realizes)
+
+AnnotationAssertion(rdfs:comment obo:BFO_0000055 "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process")
+AnnotationAssertion(rdfs:label obo:BFO_0000055 "realizes")
+SubObjectPropertyOf(obo:BFO_0000055 owl:topObjectProperty)
+ObjectPropertyDomain(obo:BFO_0000055 obo:BFO_0000015)
+ObjectPropertyRange(obo:BFO_0000055 obo:BFO_0000020)
+
+# Object Property: obo:IAO_0000136 (is_about)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000136 "Is_about is a (currently) primitive relation that relates an information artifact to an entity.")
+AnnotationAssertion(rdfs:label obo:IAO_0000136 "is_about"@en)
+ObjectPropertyDomain(obo:IAO_0000136 obo:IAO_0000030)
+
+# Object Property: obo:OBI_0000999 (obsolete_has_category_label)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000999 "A relation between a categorical measurement data item and the categorical label that indicates the value of that data item on the categorical scale.")
+AnnotationAssertion(obo:IAO_0000231 obo:OBI_0000999 "Deprecate unless there is a use case requireing this relation.")
+AnnotationAssertion(rdfs:label obo:OBI_0000999 "obsolete_has_category_label")
+SubObjectPropertyOf(obo:OBI_0000999 oboInOwl:ObsoleteProperty)
+
+# Object Property: obo:RO_0000056 (participates in)
+
+AnnotationAssertion(obo:IAO_0000111 obo:RO_0000056 "participates in"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:RO_0000056 "this blood clot participates in this blood coagulation"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:RO_0000056 "this input material (or this output material) participates in this process"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:RO_0000056 "this investigator participates in this investigation"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000056 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en)
+AnnotationAssertion(obo:IAO_0000118 obo:RO_0000056 "participates_in"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:RO_0000056 obo:ro.owl)
+AnnotationAssertion(rdfs:label obo:RO_0000056 "participates in"@en)
+InverseObjectProperties(obo:RO_0000056 obo:RO_0000057)
+ObjectPropertyDomain(obo:RO_0000056 obo:BFO_0000002)
+ObjectPropertyRange(obo:RO_0000056 obo:BFO_0000003)
+
+# Object Property: obo:RO_0000057 (has participant)
+
+AnnotationAssertion(obo:IAO_0000111 obo:RO_0000057 "has participant"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:RO_0000057 "this blood coagulation has participant this blood clot"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:RO_0000057 "this investigation has participant this investigator"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:RO_0000057 "this process has participant this input material (or this output material)"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000057 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:RO_0000057 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en)
+AnnotationAssertion(obo:IAO_0000118 obo:RO_0000057 "has_participant"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:RO_0000057 obo:ro.owl)
+AnnotationAssertion(rdfs:label obo:RO_0000057 "has participant"@en)
+ObjectPropertyDomain(obo:RO_0000057 obo:BFO_0000003)
+ObjectPropertyRange(obo:RO_0000057 obo:BFO_0000002)
+
+# Object Property: obo:RO_0002233 (has input)
+
+AnnotationAssertion(obo:IAO_0000114 obo:RO_0002233 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002233 "p has direct input c iff c is a participant in p, c is present at the start of p, and the state of c is modified during p.")
+AnnotationAssertion(obo:IAO_0000117 obo:RO_0002233 "Chris Mungall")
+AnnotationAssertion(obo:IAO_0000118 obo:RO_0002233 "consumes")
+AnnotationAssertion(obo:IAO_0000412 obo:RO_0002233 obo:ro.owl)
+AnnotationAssertion(oboInOwl:inSubset obo:RO_0002233 <http://purl.obolibrary.org/obo/ro/subsets#ro-eco>)
+AnnotationAssertion(rdfs:label obo:RO_0002233 "has input"@en)
+SubObjectPropertyOf(obo:RO_0002233 obo:RO_0000057)
+InverseObjectProperties(obo:RO_0002233 obo:RO_0002352)
+
+# Object Property: obo:RO_0002234 (has output)
+
+AnnotationAssertion(obo:IAO_0000114 obo:RO_0002234 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002234 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p.")
+AnnotationAssertion(obo:IAO_0000117 obo:RO_0002234 "Chris Mungall")
+AnnotationAssertion(obo:IAO_0000118 obo:RO_0002234 "produces")
+AnnotationAssertion(obo:IAO_0000412 obo:RO_0002234 obo:ro.owl)
+AnnotationAssertion(oboInOwl:inSubset obo:RO_0002234 <http://purl.obolibrary.org/obo/ro/subsets#ro-eco>)
+AnnotationAssertion(rdfs:label obo:RO_0002234 "has output"@en)
+SubObjectPropertyOf(obo:RO_0002234 obo:RO_0000057)
+InverseObjectProperties(obo:RO_0002234 obo:RO_0002353)
+
+# Object Property: obo:RO_0002350 (member of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002350 "Is member of is a mereological relation between a item and a collection.")
+AnnotationAssertion(rdfs:label obo:RO_0002350 "member of")
+SubObjectPropertyOf(obo:RO_0002350 obo:BFO_0000050)
+
+# Object Property: obo:RO_0002351 (has member)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002351 "Has member is a mereological relation between a collection and an item.")
+AnnotationAssertion(rdfs:label obo:RO_0002351 "has member")
+SubObjectPropertyOf(obo:RO_0002351 obo:BFO_0000051)
+
+# Object Property: obo:RO_0002352 (input of)
+
+AnnotationAssertion(obo:IAO_0000117 obo:RO_0002352 "Chris Mungall")
+AnnotationAssertion(obo:IAO_0000412 obo:RO_0002352 obo:ro.owl)
+AnnotationAssertion(oboInOwl:inSubset obo:RO_0002352 <http://purl.obolibrary.org/obo/ro/subsets#ro-eco>)
+AnnotationAssertion(rdfs:label obo:RO_0002352 "input of"@en)
+SubObjectPropertyOf(obo:RO_0002352 obo:RO_0000056)
+
+# Object Property: obo:RO_0002353 (output of)
+
+AnnotationAssertion(obo:IAO_0000117 obo:RO_0002353 "Chris Mungall")
+AnnotationAssertion(obo:IAO_0000412 obo:RO_0002353 obo:ro.owl)
+AnnotationAssertion(oboInOwl:inSubset obo:RO_0002353 <http://purl.obolibrary.org/obo/ro/subsets#ro-eco>)
+AnnotationAssertion(rdfs:label obo:RO_0002353 "output of"@en)
+SubObjectPropertyOf(obo:RO_0002353 obo:RO_0000056)
+
+# Object Property: obo:RO_0002614 (is_evidence_with_support_from)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002614 "A relationship between a piece of evidence and an entity that plays a role in supporting that evidence.")
+AnnotationAssertion(obo:IAO_0000118 obo:RO_0002614 "is_evidence_supported_by"@en)
+AnnotationAssertion(rdfs:label obo:RO_0002614 "is_evidence_with_support_from")
+ObjectPropertyDomain(obo:RO_0002614 obo:SEPIO_0000002)
+
+# Object Property: obo:SEPIO_0000006 (has_evidence_line)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000006 "A relationship between an assertion or proposition and an evidence line used in evaluating its validity.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000006 "Consider re-use of http://purl.obolibrary.org/obo/RO_0002558 ! 'has evidence'.
+Definition = \"x has evidence y iff , x is  an information content entity, material entity or process, and y supports either the existence of x, or the truth value of x.\"
+
+See  also http://semanticscience.org/resource/SIO_000772 ! 'has evidence'.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000006 "has_evidence")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000006 "has_evidence_line"@en)
+InverseObjectProperties(obo:SEPIO_0000006 obo:SEPIO_0000427)
+ObjectPropertyDomain(obo:SEPIO_0000006 ObjectUnionOf(obo:SEPIO_0000000 obo:SEPIO_0000001))
+ObjectPropertyRange(obo:SEPIO_0000006 obo:SEPIO_0000002)
+
+# Object Property: obo:SEPIO_0000007 (has_supporting_evidence_line)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000007 "A relation between a proposition and information that supports its validity, based on the evaluation of some agent.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000007 "Mapping to related terms: 
+
+Consider: http://semanticscience.org/resource/SIO_000206 ! 'is supported by'")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000007 "has_supporting_evidence_line"@en)
+SubObjectPropertyOf(obo:SEPIO_0000007 obo:SEPIO_0000006)
+
+# Object Property: obo:SEPIO_0000008 (has_disputing_evidence_line)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000008 "A relation between a proposition and information that contradicts its validity, based on the evaluation and conclusion of some agent.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000008 "Mapping to related terms: 
+
+Consider: http://semanticscience.org/resource/SIO_000774 ! 'is refuted by'")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000008 "has_conflicting_evidence")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000008 "has_refuting_evidence_line")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000008 "has_disputing_evidence_line"@en)
+SubObjectPropertyOf(obo:SEPIO_0000008 obo:SEPIO_0000006)
+
+# Object Property: obo:SEPIO_0000009 (has_inconclusive_evidence_line)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000009 "A relation between a proposition and information that was used to evaluate a particular proposition, but failed to provide conclusive support for or against its validity.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000009 "Mapping to related terms: 
+
+Consider: http://semanticscience.org/resource/SIO_000207 ! 'is disputed by'")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000009 "A relation between a proposition and information that does not conclusively support or contradict its validity, based on evaluation of some agent.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000009 "has_inconclusive_evidence_line"@en)
+SubObjectPropertyOf(obo:SEPIO_0000009 obo:SEPIO_0000006)
+
+# Object Property: obo:SEPIO_0000015 (proposition_asserted_in)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000015 "A relation holding between a proposition and an assertion in which it is expressed.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000015 "is_asserted_in")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000015 "A particular proposition can be asserted in more than one assertion - in cases where assertions made by different agents, or on different occasions, put forth the same proposition as true.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000015 "proposition_asserted_in")
+InverseObjectProperties(obo:SEPIO_0000015 obo:SEPIO_0000030)
+ObjectPropertyDomain(obo:SEPIO_0000015 obo:SEPIO_0000000)
+ObjectPropertyRange(obo:SEPIO_0000015 obo:SEPIO_0000001)
+
+# Object Property: obo:SEPIO_0000017 (has_agent)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000017 "Consider use of http://purl.obolibrary.org/obo/RO_0002217 ! actively participates in.  
+Definition = \"actively participates in y if and only if x participates in y and x realizes some active role\"")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000017 "has_agent"@en)
+SubObjectPropertyOf(obo:SEPIO_0000017 obo:RO_0000057)
+ObjectPropertyRange(obo:SEPIO_0000017 <http://www.w3.org/ns/prov#Agent>)
+
+# Object Property: obo:SEPIO_0000026 (assertion_has_subject)
+
+AnnotationAssertion(obo:IAO_0000231 obo:SEPIO_0000026 "Decided that a more generic has_subject property should suffice to cover links from either an assertion or a proposition to an entity representing the subject of the statement made.
+
+But wanted to maintain the text in the comment here for future reference/use.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000026 "Propositional statements can be represented in RDF  as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.
+
+As a proposition-level entity, a particular association can be expressed in more than one assertion made by different agents, or at different times. The meaning of an assertion can be captured through its link to an association whose meaning is formally specified as described above (e.g. :assertion1 is_asserted_in :association1, :association1 has_subject :thing1). 
+
+The assertion_has_subject property allows more direct specification of assertion meaning, bypassing an association and pointing directly to the subject of the reified triple.  In this sense, it is a shortcut relation over two more fundamental properties (is_asserted_in  o  association_has_subject).
+
+This property is useful when a particular dataset wants to describe statements at the level of assertions rather than propositions, and formally describe assertion semantics without needed to represent an proposition-level association.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000026 "assertion_has_subject"@en)
+SubObjectPropertyOf(obo:SEPIO_0000026 oboInOwl:ObsoleteProperty)
+ObjectPropertyDomain(obo:SEPIO_0000026 obo:SEPIO_0000001)
+
+# Object Property: obo:SEPIO_0000027 (assertion_has_object)
+
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000027 "Propositional statements can be represented in RDF  as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.
+
+As a proposition-level entity, a particular association can be expressed in more than one assertion made by different agents, or at different times. The meaning of an assertion can be captured through its link to an association whose meaning is formally specified as described above (e.g. :assertion1 is_asserted_in :association1, :association1 has_object :thing1). 
+
+The assertion_has_object property allows more direct specification of assertion meaning, bypassing an association and pointing directly to the object of the reified triple.  In this sense, it is a shortcut relation over two more fundamental properties (is_asserted_in  o  association_has_object).
+
+This property is useful when a particular dataset wants to describe statements at the level of assertions rather than propositions, and formally describe assertion semantics without needed to represent an proposition-level association.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000027 "assertion_has_object"@en)
+SubObjectPropertyOf(obo:SEPIO_0000027 oboInOwl:ObsoleteProperty)
+ObjectPropertyDomain(obo:SEPIO_0000027 obo:SEPIO_0000001)
+
+# Object Property: obo:SEPIO_0000028 (assertion_has_predicate)
+
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000028 "Propositional statements can be represented in RDF  as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.
+
+As a proposition-level entity, a particular association can be expressed in more than one assertion made by different agents, or at different times. The meaning of an assertion can be captured through its link to an association whose meaning is formally specified as described above (e.g. :assertion1 is_asserted_in :association1, :association1 has_predicate :thing1). 
+
+The assertion_has_predicate property allows more direct specification of assertion meaning, bypassing an association and pointing directly to the predicate of the reified triple.  In this sense, it is a shortcut relation over two more fundamental properties (is_asserted_in  o  association_has_predicate).
+
+This property is useful when a particular dataset wants to describe statements at the level of assertions rather than propositions, and formally describe assertion semantics without needed to represent an proposition-level association.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000028 "assertion_has_predicate"@en)
+SubObjectPropertyOf(obo:SEPIO_0000028 oboInOwl:ObsoleteProperty)
+ObjectPropertyDomain(obo:SEPIO_0000028 obo:SEPIO_0000001)
+
+# Object Property: obo:SEPIO_0000030 (asserts_proposition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000030 "A relation holding between an assertion and the proposition that it puts forth as true.")
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000030 "Mapping to related terms: 
+
+Consider: http://purl.org/see/rdo#is_assertion_asserting")
+AnnotationAssertion(obo:SEPIO_0000386 obo:SEPIO_0000030 "assertsProposition")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000030 "In practice, SEPIO recommends that data is captured at the assertion level, and post-processed as needed to aggregate assertions making the same claim under a single proposition using this property.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000030 "asserts_proposition")
+ObjectPropertyDomain(obo:SEPIO_0000030 obo:SEPIO_0000001)
+ObjectPropertyRange(obo:SEPIO_0000030 obo:SEPIO_0000000)
+
+# Object Property: obo:SEPIO_0000041 (is_specified_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000041 "A relation holding between a generated artifact and a plan specification that specifies all or part of the process that created it (e.g. a protocol, guideline, rule set)")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000041 "Consider SIO:00339 (a relation between a product and the information content entity that specifies it.)")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000041 "has_direct_supporting_method")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000041 "In SEPIO, this property is most often used to link an assertion (the generated artifact) to an 'assertion method' that may specified how it was created.  This assertion method may describe what types of data may be used as evidence, what weight to give a particular type of evidence, and how to combine different lines of evidence in generating the final assertion.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000041 "is_specified_by"@en)
+InverseObjectProperties(obo:SEPIO_0000041 obo:SEPIO_0000407)
+ObjectPropertyDomain(obo:SEPIO_0000041 obo:BFO_0000002)
+ObjectPropertyRange(obo:SEPIO_0000041 obo:IAO_0000104)
+
+# Object Property: obo:SEPIO_0000046 (has_role)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000046 "Consider RO:0000087 ! has_role (def = a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence).  However, this property is defined as a relation between an independent continuant and a role.  In BFO, dependent continuants (such as information) cannot bear roles.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000046 "has_role"@en)
+
+# Object Property: obo:SEPIO_0000084 (has_evidence_item)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000084 "A relation holding between an evidence line and an individual information entity that contributes to the argument it represents.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000084 "has_supporting_information")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000084 "has_evidence_item"@en)
+SubObjectPropertyOf(obo:SEPIO_0000084 obo:RO_0002614)
+InverseObjectProperties(obo:SEPIO_0000084 obo:SEPIO_0000376)
+ObjectPropertyDomain(obo:SEPIO_0000084 obo:SEPIO_0000002)
+ObjectPropertyRange(obo:SEPIO_0000084 obo:SEPIO_0000149)
+
+# Object Property: obo:SEPIO_0000085 (has_evidence_item_output_from)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000085 "A relation that links an evidence line to any activities (studies, assays, computational tasks, curation) that generated evidence items contributing to it.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000085 "has_supporting_activity")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000085 "is_evidence_supported_by_process")
+AnnotationAssertion(obo:SEPIO_0000399 obo:SEPIO_0000085 "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label obo:SEPIO_0000085 "has_evidence_item_output_from"@en)
+SubObjectPropertyOf(obo:SEPIO_0000085 obo:RO_0002614)
+ObjectPropertyDomain(obo:SEPIO_0000085 obo:SEPIO_0000002)
+ObjectPropertyRange(obo:SEPIO_0000085 <http://www.w3.org/ns/prov#Activity>)
+
+# Object Property: obo:SEPIO_0000098 (is_equilavent_to)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000098 "has_equivalent_proposition")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000098 "is_equilavent_to"@en)
+SubObjectPropertyOf(obo:SEPIO_0000098 obo:SEPIO_0000116)
+SymmetricObjectProperty(obo:SEPIO_0000098)
+
+# Object Property: obo:SEPIO_0000099 (is_consistent_with)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000099 "has_consistent_proposition"@en)
+AnnotationAssertion(rdfs:label obo:SEPIO_0000099 "is_consistent_with")
+SubObjectPropertyOf(obo:SEPIO_0000099 obo:SEPIO_0000116)
+SymmetricObjectProperty(obo:SEPIO_0000099)
+
+# Object Property: obo:SEPIO_0000100 (strongly_contradicts)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000100 "Previosly implemented  property chains: 
+
+is_asserted_in o strongly_contradicts o asserts -> strongly_contradicts
+asserts o strongly_contradicts o is_asserted_in -> strongly_contradicts
+
+But these broke reasoner - \"the given hierarchy is not regular\" error message\".  Apparently breaks rule that \"in property chains of 3 or larger, the inner property must not also appear as the composite property\". (https://arxiv.org/pdf/1212.2902.pdf)")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000100 "has_contradicting_proposition"@en)
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000100 "Relation between two propositions that make opposing claims (e.g. proposition1 holds that variant1 is pathogenic for disease1, and proposition2 holds that variant1 is benign for disease1).")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000100 "strongly_contradicts"@en)
+SubObjectPropertyOf(obo:SEPIO_0000100 obo:SEPIO_0000115)
+SymmetricObjectProperty(obo:SEPIO_0000100)
+ObjectPropertyDomain(obo:SEPIO_0000100 obo:SEPIO_0000000)
+ObjectPropertyRange(obo:SEPIO_0000100 obo:SEPIO_0000000)
+
+# Object Property: obo:SEPIO_0000101 (contradicts)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000101 "has_inconsistent_proposition"@en)
+AnnotationAssertion(rdfs:label obo:SEPIO_0000101 "contradicts")
+SubObjectPropertyOf(obo:SEPIO_0000101 obo:SEPIO_0000115)
+
+# Object Property: obo:SEPIO_0000108 (is_expressed_in)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000108 "Relationship between a statement or proposition and a document in which it is expressed (e.g. a publication, report, or database record).")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000108 "is_expressed_in"@en)
+InverseObjectProperties(obo:SEPIO_0000108 obo:SEPIO_0000109)
+ObjectPropertyDomain(obo:SEPIO_0000108 ObjectUnionOf(obo:SEPIO_0000000 obo:SEPIO_0000174))
+ObjectPropertyRange(obo:SEPIO_0000108 obo:IAO_0000310)
+
+# Object Property: obo:SEPIO_0000109 (expresses)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000109 "Relationship between a document (e.g. a publication, report, database record) and an assertion or proposition that is stated in its content.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000109 "expresses"@en)
+ObjectPropertyDomain(obo:SEPIO_0000109 obo:IAO_0000310)
+ObjectPropertyRange(obo:SEPIO_0000109 ObjectUnionOf(obo:SEPIO_0000000 obo:SEPIO_0000001))
+
+# Object Property: obo:SEPIO_0000113 (has_compatability)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000113 "Grouping class to hold exploratory relationships linking assertions or propositions based on the compatability or degree of agreement in their meaning.  Has utility toward inferring links between evidence lines and propositions.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000113 "has_concordance")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000113 "propositional relationships")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000113 "has_compatability"@en)
+
+# Object Property: obo:SEPIO_0000114 (measures_parameter)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000114 "A relation between a planned process and a parameter that it measures as part of an assay or observation.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000114 "measures_parameter")
+SubObjectPropertyOf(obo:SEPIO_0000114 obo:SEPIO_0000406)
+
+# Object Property: obo:SEPIO_0000115 (conflicts_with)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000115 "conflicts_with"@en)
+SubObjectPropertyOf(obo:SEPIO_0000115 obo:SEPIO_0000113)
+
+# Object Property: obo:SEPIO_0000116 (aligns_with)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000116 "aligns_with"@en)
+SubObjectPropertyOf(obo:SEPIO_0000116 obo:SEPIO_0000113)
+
+# Object Property: obo:SEPIO_0000124 (evidence_has_supporting_reference)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000124 "A relation that holds between an evidence line and a citable document from which information supporting the evidence line was obtained (i.e. a \"supporting reference\").")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000124 "Note that this relation only links an evidence line to publications actually consulted by the asserting agent to find and interpret evidence items. There may be other publications that describe the same evidence item that the asserting agent did not consult, which would not qualify as supporting references.  
+
+For example, consider a GO curator's use of sequence data for the rat Vegfa gene in a line of evidence supporting their assertion that the human VEGFA ortholog exhibited the same angiogeneic activity. There may be multiple publications that report this same rat gene sequence, but only the publication that the curator consulted in making this assertion would qualify as a supporting reference for this evidence line.
+
+For this resaon, we are not able to create a property chain declaring \"has_evidence_item o is_described_by -> has_evidence_item_described_by\". . . because this would entail that any publication describing this rat Vegfa gene sequence was a supporting reference for the assertion.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000124 "has_supporting_reference")
+AnnotationAssertion(obo:SEPIO_0000061 obo:SEPIO_0000124 "Keeping the label has_supporting_reference instead of has_evidence_item_described_by because the later follows the pattern we use for true shortcut relations (i.e. that can be defined using property chains). For reasons outlined in the editor note, this is not such a shortcut relation.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000124 "evidence_has_supporting_reference"@en)
+SubObjectPropertyOf(obo:SEPIO_0000124 obo:RO_0002614)
+ObjectPropertyDomain(obo:SEPIO_0000124 obo:SEPIO_0000002)
+ObjectPropertyRange(obo:SEPIO_0000124 obo:IAO_0000310)
+
+# Object Property: obo:SEPIO_0000126 (is_inconsistent_with)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000126 "is_inconsistent_with"@en)
+SubObjectPropertyOf(obo:SEPIO_0000126 obo:SEPIO_0000113)
+
+# Object Property: obo:SEPIO_0000130 (stated_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000130 "A relation between a statement and the original agent who stated it.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000130 "We intentionally avoid use of a more generic \"creator\" property here, as this term is used in established standards such as PAV and DC to specifically describe agents who generated a specific representation of an information content entity. For example, the pav:createdBy property is used specifically to describe agents contributing to a specific representation. 
+
+SEPIO, by contrast, aims to describe the agent(s) responsible for generating the abstract information content these concretized artifacts express. For this reason, SEPIO creates the more specific \"stated_by\" relation to explicitly distinguish the act of making a statement (generating its information content) from the act of creating a specific digital representation of the statement (generating a particular concretized artifact). 
+			
+A explicit commitment to this more abstracted level of representation is a core feature of the SEPIO model, and has implications for how instances in the data are described, identified, and distinguished in practice.")
+AnnotationAssertion(obo:SEPIO_0000061 obo:SEPIO_0000130 "Formerly 'asserted_by': A relation between an assertion and the agent who originally generated the assertion, based on their evaluation of and inference from relevant evidence.  Was broadened to 'stated_by' to cover statements that are not assertions - e.g. study findings statements.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000130 "In the case that the statement is an assertion, the responsible agent is the one who originally generated an assertion based on their evaluation of relevant evidence. 
+
+If more than one agent is involved in this process, we may consider them collectively as a  group or organization representing a single agent.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000130 "stated_by"@en)
+SubObjectPropertyOf(obo:SEPIO_0000130 obo:SEPIO_0000387)
+
+# Object Property: obo:SEPIO_0000132 (evidence_line_strength)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000132 "A relation describing the degree of support provided by an evidence line for a target assertion or proposition.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000132 "The value of this property is typically a term from some defined set of values that enumerates categorical degrees of evidence strength  (e.g. the CIViC five-teired 'evidence level' scale). Different systems or applications can create terms representing the levels of strength they wish to define for their use case.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000132 "evidence_line_strength"@en)
+ObjectPropertyDomain(obo:SEPIO_0000132 obo:SEPIO_0000002)
+ObjectPropertyRange(obo:SEPIO_0000132 obo:SEPIO_0000133)
+
+# Object Property: obo:SEPIO_0000140 (evaluated_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000140 "A relation holding between a generated artifact and an agent who evaluated its quality, completeness, or utility.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000140 "In SEPIO, the agent responsible for a particular evidence line is linked via the \"evaluated_by\" property. This reflects that perspective that evaluation of the relevance, strength, and direction of an evidence line w.r.t. a particular assertion are the key acts inherent in the evidence line's \"creation\".  
+
+We avoid using a \"creator\" relation here because this label is used in established standards such as PAV and DC to specifically describe agents contributing to a specific digital representation, as opposed to agents responsible for generating the underlying information content these concrete representations express. 
+			
+A explicit commitment to this more abstracted level of representation is a core feature of the SEPIO model, and has implications for how instances in the data are described, identified, and distinguished in practice.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000140 "assessed_by"@en)
+AnnotationAssertion(rdfs:label obo:SEPIO_0000140 "evaluated_by")
+SubObjectPropertyOf(obo:SEPIO_0000140 obo:SEPIO_0000150)
+
+# Object Property: obo:SEPIO_0000144 (has_qualifier)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000144 "A relation used to indicate context in which a particular assertion or proposition applies.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000144 "has_qualifier"@en)
+SubObjectPropertyOf(obo:SEPIO_0000144 obo:IAO_0000136)
+ObjectPropertyDomain(obo:SEPIO_0000144 ObjectUnionOf(obo:SEPIO_0000000 obo:SEPIO_0000174))
+
+# Object Property: obo:SEPIO_0000145 (has_evidence_from_source)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000145 "A relation used to link an assertion or proposition to a source where evidence for it was found (i.e. a document, document part, database, etc)")
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000145 "cito:cites_as_evidence")
+AnnotationAssertion(obo:SEPIO_0000061 obo:SEPIO_0000145 "Note that this may not qualify as a proper shortcut (i.e. it may not be valid to define using a property chain) for the same reason has_supporting reference is not defined as a property chain called has_evidence_item_described_by.")
+AnnotationAssertion(obo:SEPIO_0000399 obo:SEPIO_0000145 "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000145 "This is a shortcut relation to be used when  publications are referenced as providing support for an assertion, but it is not clear how many evidence lines  are described across these publications.  In such cases, discrete evidence lines cannot be created, and the has_evidence_from_source relation is used to directly link the assertion to publications providing some form of evidence information.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000145 "has_evidence_from_source"@en)
+ObjectPropertyDomain(obo:SEPIO_0000145 ObjectUnionOf(obo:SEPIO_0000000 obo:SEPIO_0000001))
+ObjectPropertyRange(obo:SEPIO_0000145 obo:IAO_0000030)
+
+# Object Property: obo:SEPIO_0000146 (has_evidence_level)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000146 "A relation used to link an assertion or proposition directly to some indicator of the strength of the total evidence supporting it.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000146 "has_total_evidence_strength")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000146 "This relation links an assertion or proposition directly to some indicator of the strength of the total evidence supporting it. It is used when there is not enough information to create evidence line(s) for the assertion, but the source provides some indication of the strength of the evidence supporting it.
+
+Note that this is different than the notion of statement confidence, which describes how confident an agent is that a statement is true.  Confidence may depend on factors in addition to the strength of the evidence (e.g. who made the prior probability that the asserted proposition could be true, who made the assertion and when, etc.)")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000146 "has_evidence_level"@en)
+ObjectPropertyDomain(obo:SEPIO_0000146 ObjectUnionOf(obo:SEPIO_0000000 obo:SEPIO_0000001))
+ObjectPropertyRange(obo:SEPIO_0000146 obo:SEPIO_0000133)
+
+# Object Property: obo:SEPIO_0000150 (has_contributor)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000150 "A relation between an information content entity and an agent who made a contribution to its information content, or to its subsequent modification or assessment.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000150 "SEPIO intentionally creates its own hierarchy of contributor properties, instead of re-using terms from existing standards like PAV or Dublin Core - whose domain is structured digital resources. This is because properties such as pav:createdBy specifically describe agents who generated a specific digital representation of information, while SEPIO aims to describe agents responsible for generating the abstract information content that such a concrete representation may express.  
+
+The subject of 'contributor' relations in the SEPIO are explicitly abstract in nature - considered at the level of their information content as opposed to concretizations in particular digital resources or representations.  For example, the SEPIO \"stated_by\" relation explicitly refers toan  agent originally putting forth a statement as true (generating its information content), as opposed to an agent creating a specific digital representation of the statement (generating a particular concretized artifact such as a json object returned by an API). 
+
+Should further clarification become available with respect to whether PAV or DC contributor properties accommodate the nuanced definitions we require, we will re-consider their inclusion in SEPIO. For example, the pav:authoredBy property seems to refer specifically to the agent who generated information content expressed in a resource - and thus may be appropriate in the context of SEPIO.  But even here, the range of the property is a particular authored digital resource, and not the information content it expresses.  DC properties such as dce:contributor and dce:creator are ambiguous as to which level of contribution they describe.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000150 "has_contributor"@en)
+InverseObjectProperties(obo:SEPIO_0000150 obo:SEPIO_0000188)
+ObjectPropertyRange(obo:SEPIO_0000150 <http://www.w3.org/ns/prov#Agent>)
+
+# Object Property: obo:SEPIO_0000151 (validated_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000151 "A relation holding between a statement and an agent that validates its truth or accuracy - typically by reviewing the provenance and data on which it is based.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000151 "validity_assessed_by"@en)
+AnnotationAssertion(rdfs:label obo:SEPIO_0000151 "validated_by")
+SubObjectPropertyOf(obo:SEPIO_0000151 obo:SEPIO_0000150)
+
+# Object Property: obo:SEPIO_0000152 (obsolete_evidence_assessed_by)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000152 "evidence_strength_assessed_by")
+AnnotationAssertion(obo:IAO_0000231 obo:SEPIO_0000152 "ClinGen not using this, as they create contrigution objects and assign roles to capture such information.  Can bring it back if there is need in some other use case/application.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000152 "obsolete_evidence_assessed_by"@en)
+SubObjectPropertyOf(obo:SEPIO_0000152 oboInOwl:ObsoleteProperty)
+
+# Object Property: obo:SEPIO_0000159 (qualified_contribution)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000159 "A relation holding between an artifact and a contribution made by a particular agent to its creation, modification, assessment, or destruction.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000159 "Consider sup-properties specific to the type of contribuion make, to support property chains for inferring a direct realtiomnship between the artifact/entitiy contributed to, and a related agent or date. At present, we could only support:
+   -  qualified_contribution  o  date_of_contribution  -> dce:date
+
+Want to be able to support inferences such as:
+  - qualified_creation  o  date_of_contribution -> date_created
+  - qualified_evaluation  o  date_of_contribution -> date_evaluated
+  - qualified_modification  o  date_of_contribution -> date_modified")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000159 "has_contribution")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000159 "Analogous to PROV qualified Attribution - use to capture additional information about the contribution made by an agent, such as a role they played, or organization on behalf of which the contribution was made.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000159 "qualified_contribution"@en)
+ObjectPropertyRange(obo:SEPIO_0000159 obo:SEPIO_0000158)
+
+# Object Property: obo:SEPIO_0000167 (confidence_level)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000167 "a relation between an information entity and an indicator of degree of confidence that the information it represents is true.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000167 "trust_rating")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000167 "Confidence in an information entity can mean different things for different types of information.  For example, for assertions this reflects the confidence an agent has that the proposition it puts forth is true.  For things like data items, it reflects the confidence an agent has that the data accurately reflects the aspect of reality its was intended to measure.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000167 "confidence_level"@en)
+ObjectPropertyDomain(obo:SEPIO_0000167 obo:IAO_0000030)
+ObjectPropertyRange(obo:SEPIO_0000167 obo:SEPIO_0000187)
+
+# Object Property: obo:SEPIO_0000169 (agent_for)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000169 "a relation between an agent and an other agent, typically an organization, on whose behalf a Contribution is made.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000169 "performed_on_behalf_of")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000169 "agent_for"@en)
+ObjectPropertyDomain(obo:SEPIO_0000169 obo:SEPIO_0000158)
+ObjectPropertyRange(obo:SEPIO_0000169 <http://www.w3.org/ns/prov#Agent>)
+
+# Object Property: obo:SEPIO_0000178 (is_described_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000178 "A relation between one entity and an informtion content entity that provides a description of it.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000178 "Consider: http://semanticscience.org/resource/SIO_000557 ! 'is described by'")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000178 "is_described_by"@en)
+
+# Object Property: obo:SEPIO_0000183 (evidence_direction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000183 "A relation indicating whether an evidence line supports or disputes a target proposition (or represents inconclusive evidence that is not sufficient for either).")
+AnnotationAssertion(obo:SEPIO_0000386 obo:SEPIO_0000183 "evidenceDirection")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000183 "evidence_direction"@en)
+ObjectPropertyDomain(obo:SEPIO_0000183 obo:SEPIO_0000002)
+ObjectPropertyRange(obo:SEPIO_0000183 obo:SEPIO_0000402)
+
+# Object Property: obo:SEPIO_0000188 (contributes_to)
+
+AnnotationAssertion(obo:SEPIO_0000386 obo:SEPIO_0000188 "contributesTo")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000188 "A relation between an agent and an entity toward which the agent made a contribution.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000188 "contributes_to"@en)
+
+# Object Property: obo:SEPIO_0000189 (has_evidence_line_with_item)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000189 "A shortcut relation that directly relates an assertion and an evidence item that contributes to one or more of its evidence  lines  (i.e. a piece of information that is used as evidence for or against its validity).")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000189 "assertion_has_evidence_item")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000189 "has_evidence_information")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000189 "has_evidence_supported_by")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000189 "This relation can be used to link an assertion directly to evidence items that support it. Evidence items are typically organized into 'evidence lines' that group them according to the argument(s) to which they contribute.  This shortcut  relation supports use cases where it is desirable to elide over this level of organization and create direct links from an assertion to the fundamental pieces of information that represent evidence supporting it.
+
+A property chain (has_evidence_line o has_evidence_item -> has_evidence_with_item) is defined that can be used to infer this direct edge, facilitating interoperability between data sets that do and don't implement evidence lines to organize evidence items.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000189 "has_evidence_line_with_item"@en)
+ObjectPropertyDomain(obo:SEPIO_0000189 ObjectUnionOf(obo:SEPIO_0000000 obo:SEPIO_0000001))
+ObjectPropertyRange(obo:SEPIO_0000189 obo:SEPIO_0000149)
+
+# Object Property: obo:SEPIO_0000197 (asserted_conclusion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000197 "A relationship that holds between an assertion and a term that summarizes its asserted conclusion.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000197 "asserted_outcome")
+AnnotationAssertion(obo:SEPIO_0000386 obo:SEPIO_0000197 "assertedConclusion")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000197 "asserted_conclusion"@en)
+ObjectPropertyDomain(obo:SEPIO_0000197 obo:SEPIO_0000001)
+
+# Object Property: obo:SEPIO_0000232 (obsolete_has_quantifier)
+
+AnnotationAssertion(obo:IAO_0000231 obo:SEPIO_0000232 "Deprecate until there is a specific use case requiring this relation.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000232 "obsolete_has_quantifier"@en)
+SubObjectPropertyOf(obo:SEPIO_0000232 oboInOwl:ObsoleteProperty)
+
+# Object Property: obo:SEPIO_0000257 (describes_study_data)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000257 "A relation that holds between a study finding and a data item it describes (i.e. a data item generated by the study whose results are described by the finding).")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000257 "describes_supporting_data"@en)
+AnnotationAssertion(rdfs:label obo:SEPIO_0000257 "describes_study_data")
+SubObjectPropertyOf(obo:SEPIO_0000257 obo:IAO_0000136)
+ObjectPropertyDomain(obo:SEPIO_0000257 obo:SEPIO_0000173)
+ObjectPropertyRange(obo:SEPIO_0000257 obo:IAO_0000030)
+
+# Object Property: obo:SEPIO_0000376 (evidence_item_for)
+
+AnnotationAssertion(obo:SEPIO_0000386 obo:SEPIO_0000376 "evidenceItemFor")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000376 "evidence_item_for")
+ObjectPropertyDomain(obo:SEPIO_0000376 obo:SEPIO_0000149)
+ObjectPropertyRange(obo:SEPIO_0000376 obo:SEPIO_0000002)
+
+# Object Property: obo:SEPIO_0000387 (created_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000387 "A relation between an information content entity and an agent who made a primary contribution to its original creation.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000387 "created_by"@en)
+SubObjectPropertyOf(obo:SEPIO_0000387 obo:SEPIO_0000150)
+
+# Object Property: obo:SEPIO_0000388 (has_subject)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000388 "A relation that holds between a statement or proposition which can be captured in part or in whole as a directional relationship between two entities, and the entity that representing the subject of this relationship.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000388 "has_subject"@en)
+SubObjectPropertyOf(obo:SEPIO_0000388 obo:IAO_0000136)
+
+# Object Property: obo:SEPIO_0000389 (has_predicate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000389 "A relation that holds between a statement or proposition which can be captured in part or in whole as a directional relationship between two entities, and the property serving as the predicate in this relationship.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000389 "has_predicate"@en)
+SubObjectPropertyOf(obo:SEPIO_0000389 obo:IAO_0000136)
+
+# Object Property: obo:SEPIO_0000390 (has_object)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000390 "A relation that holds between a statement or proposition which can be captured in part or in whole as a directional relationship between two entities, and the entity that representing the object or value of this relationship.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000390 "has_object"@en)
+SubObjectPropertyOf(obo:SEPIO_0000390 obo:IAO_0000136)
+
+# Object Property: obo:SEPIO_0000398 (has_evidence_type)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000398 "A shortcut relation that links an assertion directly to a term representing the type of evidence that supports it.")
+AnnotationAssertion(obo:SEPIO_0000399 obo:SEPIO_0000398 "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000398 "Relation expands to has_evidence_line o rdf:type -> has_evidence_type")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000398 "has_evidence_type"@en)
+
+# Object Property: obo:SEPIO_0000406 (ExploratoryProperty)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000406 "ExploratoryProperty"@en)
+
+# Object Property: obo:SEPIO_0000407 (specifies_creation_of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000407 "A relation holding between a plan specification and an artifact whose generation it specifies.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000407 "specifies_creation_of"@en)
+
+# Object Property: obo:SEPIO_0000415 (evidence_item_quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000415 "A relation describing the quality of the data used as evidence by an agent making an assertion.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000415 "This property is used to indicate the inherent quality of a piece of data, based on the rigor of the experiment that produced it.  It is not a direct indicator of the strength of evidence the data may provide for an assertion.
+
+The value of this property is typically a term from some defined set of values that enumerates categorical degrees of quality (e.g. the CIViC five star 'trust rating' scale) Different systems or applications can create terms representing the levels of quality they wish to define for their use case.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000415 "evidence_item_quality")
+
+# Object Property: obo:SEPIO_0000427 (is_evidence_line_for)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000427 "evidence_for")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000427 "is_evidence_line_for"@en)
+
+# Object Property: <http://purl.org/oban/association_has_object> (association has object)
+
+AnnotationAssertion(obo:IAO_0000116 <http://purl.org/oban/association_has_object> "Propositional statements can be represented in RDF as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.
+
+This property is defined by OBAN to specifically link 'associations', which are proposition-level entities, to their object (sensu RDF).  It is therefore a more specific relation than its has_object parent, which can be used to link a statement or proposition to its object.")
+AnnotationAssertion(rdfs:label <http://purl.org/oban/association_has_object> "association has object")
+SubObjectPropertyOf(<http://purl.org/oban/association_has_object> obo:SEPIO_0000390)
+ObjectPropertyDomain(<http://purl.org/oban/association_has_object> <http://purl.org/oban/association>)
+
+# Object Property: <http://purl.org/oban/association_has_predicate> (association has predicate)
+
+AnnotationAssertion(obo:IAO_0000116 <http://purl.org/oban/association_has_predicate> "Propositional statements can be represented in RDF as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.
+
+This property is defined by OBAN to specifically link 'associations', which are proposition-level entities, to the property representing the predicate of the reified triple.  It is therefore a more specific relation than its has_predicate parent, which can be used to link a statement or proposition to its predicate.")
+AnnotationAssertion(rdfs:label <http://purl.org/oban/association_has_predicate> "association has predicate"@en)
+SubObjectPropertyOf(<http://purl.org/oban/association_has_predicate> obo:SEPIO_0000389)
+ObjectPropertyDomain(<http://purl.org/oban/association_has_predicate> <http://purl.org/oban/association>)
+
+# Object Property: <http://purl.org/oban/association_has_subject> (association has subject)
+
+AnnotationAssertion(obo:IAO_0000116 <http://purl.org/oban/association_has_subject> "Propositional statements can be represented in RDF as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.
+
+This property is defined by OBAN to specifically link 'associations', which are proposition-level entities, to their subject (sensu RDF).  It is therefore a more specific relation than its has_subject parent, which can be used to link a statement or proposition to its subject.")
+AnnotationAssertion(rdfs:label <http://purl.org/oban/association_has_subject> "association has subject")
+SubObjectPropertyOf(<http://purl.org/oban/association_has_subject> obo:SEPIO_0000388)
+ObjectPropertyDomain(<http://purl.org/oban/association_has_subject> <http://purl.org/oban/association>)
+
+# Object Property: <http://purl.org/pav/authoredBy> (Authored by)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/pav/authoredBy> "An agent that originated or gave existence to the work that is expressed by the digital resource.
+
+The author of the content of a resource may be different from the creator of the resource representation (although they are often the same). See pav:createdBy for a discussion.
+
+pav:authoredBy is more specific than its superproperty dct:creator - which might or might not be interpreted to also cover the creation of the representation of the artifact.
+
+The author is usually not a software agent (which would be indicated with pav:createdWith, pav:createdBy or pav:importedBy), unless the software actually authored the content itself; for instance an artificial intelligence algorithm which authored a piece of music or a machine learning algorithm that authored a classification of a tumor sample.
+
+The date of authoring can be expressed using pav:authoredOn - note however in the case of multiple authors that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using PROV relationships like prov:qualifiedAttribution or prov:wasGeneratedBy.")
+AnnotationAssertion(rdfs:label <http://purl.org/pav/authoredBy> "Authored by")
+SubObjectPropertyOf(<http://purl.org/pav/authoredBy> oboInOwl:ObsoleteProperty)
+
+# Object Property: <http://purl.org/pav/createdBy> (Created by)
+
+AnnotationAssertion(obo:IAO_0000116 <http://purl.org/pav/createdBy> "SEPIO creates this relation distinct from existing PAV and PROV relations (e.g. pcav:createdBy), which are too specific about whether a relation refers to the agent who created the abstract information content, vs who serialized and documented in concrete form.")
+AnnotationAssertion(oboInOwl:hasDbXref <http://purl.org/pav/createdBy> "http://purl.org/dc/terms/creator")
+AnnotationAssertion(rdfs:comment <http://purl.org/pav/createdBy> "An agent primary responsible for making the digital artifact or resource representation. 
+This property is distinct from forming the content, which is indicated with pav:contributedBy or its subproperties; pav:authoredBy, which identifies who authored the knowledge expressed by this resource; and pav:curatedBy, which identifies who curated the knowledge into its current form. 
+pav:createdBy is more specific than its superproperty dct:creator - which might or might not be interpreted to cover this creator. 
+For instance, the author wrote 'this species has bigger wings than normal' in his log book. The curator, going through the log book and identifying important knowledge, formalizes this as 'locus perculus has wingspan > 0.5m'. The creator enters this knowledge as a digital resource in the knowledge system, thus creating the digital artifact (say as JSON, RDF, XML or HTML). 
+A different example is a news article. pav:authoredBy indicates the journalist who wrote the article. pav:contributedBy can indicate the artist who added an illustration. pav:curatedBy can indicate the editor who made the article conform to the news paper's style. pav:createdBy can indicate who put the article on the web site.
+The software tool used by the creator to make the digital resource (say Protege, Wordpress or OpenOffice) can be indicated with pav:createdWith.
+
+The date the digital resource was created can be indicated with pav:createdOn.
+
+The location the agent was at when creating the digital resource can be made using pav:createdAt.")
+AnnotationAssertion(rdfs:label <http://purl.org/pav/createdBy> "Created by"@en)
+SubObjectPropertyOf(<http://purl.org/pav/createdBy> oboInOwl:ObsoleteProperty)
+
+# Object Property: <http://purl.org/pav/curatedBy> (Curated by)
+
+AnnotationAssertion(obo:IAO_0000115 <http://purl.org/pav/curatedBy> "Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation.
+
+The curator may be different from the author (pav:authoredBy) and creator of the digital resource (pav:createdBy).
+
+The curator may in some cases be a software agent, for instance text mining software which adds hyperlinks for recognized genome names.
+
+The date of curating can be expressed using pav:curatedOn - note however in the case of multiple curators that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using PROV relationships like prov:qualifiedAttribution or prov:wasGeneratedBy")
+AnnotationAssertion(rdfs:label <http://purl.org/pav/curatedBy> "Curated by"@en)
+SubObjectPropertyOf(<http://purl.org/pav/curatedBy> oboInOwl:ObsoleteProperty)
+
+# Object Property: <http://purl.org/pav/derivedFrom> (Derived from)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/pav/derivedFrom> "Derived from a different resource.
+
+Derivation conserns itself with derived knowledge. If this resource has the same content as the other resource, but has simply been transcribed to fit a different model (like XML -> RDF or SQL -> CVS), use pav:importedFrom. If a resource was simply retrieved, use pav:retrievedFrom. If the content has however been further refined or modified, pav:derivedFrom should be used.
+
+Details about who performed the derivation (e.g. who did the refining or modifications) may be indicated with pav:contributedBy and its subproperties.")
+AnnotationAssertion(rdfs:label <http://purl.org/pav/derivedFrom> "Derived from")
+SubObjectPropertyOf(<http://purl.org/pav/derivedFrom> terms:source)
+
+# Object Property: <http://purl.org/pav/importedFrom> (Imported from)
+
+AnnotationAssertion(obo:IAO_0000115 <http://purl.org/pav/importedFrom> "The original source of imported information.
+
+Import means that the content has been preserved, but transcribed somehow, for instance to fit a different representation model by converting formats. Examples of import are when the original was JSON and the current resource is RDF, or where the original was an document scan, and this resource is the plain text found through OCR.
+
+The imported resource does not have to be complete, but should be consistent with the knowledge conveyed by the original resource.
+
+If additional knowledge has been contributed, pav:derivedFrom would be more appropriate.
+
+If the resource has been copied verbatim from the original representation (e.g. downloaded), use pav:retrievedFrom.
+
+To indicate which agent(s) performed the import, use pav:importedBy. Use pav:importedOn to indicate when it happened.")
+AnnotationAssertion(rdfs:label <http://purl.org/pav/importedFrom> "Imported from"@en)
+SubObjectPropertyOf(<http://purl.org/pav/importedFrom> terms:source)
+
+# Object Property: <http://purl.org/pav/retrievedFrom> (Retrieved from)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/pav/retrievedFrom> "The URI where a resource has been retrieved from.
+
+The retrieving agent is usually a software entity, which has done the retrieval from the original source without performing any transcription.
+
+Retrieval indicates that this resource has the same representation as the original resource. If the resource has been somewhat transformed, use pav:importedFrom instead.
+
+The time of the retrieval should be indicated using pav:retrievedOn. The agent may be indicated with pav:retrievedBy.")
+AnnotationAssertion(rdfs:label <http://purl.org/pav/retrievedFrom> "Retrieved from")
+SubObjectPropertyOf(<http://purl.org/pav/retrievedFrom> terms:source)
+
+# Object Property: <http://purl.org/pav/sourceAccessedAt> (<http://purl.org/pav/sourceAccessedAt>)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/pav/sourceAccessedAt> "Source accessed at")
+AnnotationAssertion(rdfs:comment <http://purl.org/pav/sourceAccessedAt> "The resource is related to a given source which was accessed or consulted (but not retrieved, imported or derived from). This access can be detailed with pav:sourceAccessedBy and pav:sourceAccessedOn.
+
+For instance, a curator (pav:curatedBy) might have consulted figures in a published paper to confirm that a dataset was correctly pav:importedFrom the paper's supplementary CSV file.
+
+Another example: I can access the page for tomorrow weather in Boston (http://www.weather.com/weather/tomorrow/Boston+MA+02143)  and I can blog ‘tomorrow is going to be nice’. The source does not make any claims about the nice weather, that is my interpretation; therefore the blog post has pav:sourceAccessedAt the weather page.")
+SubObjectPropertyOf(<http://purl.org/pav/sourceAccessedAt> oboInOwl:ObsoleteProperty)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: obo:ERO_0000480 (has_url)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ERO_0000480 "Web address of the resource")
+AnnotationAssertion(rdfs:label obo:ERO_0000480 "has_url"@en)
+
+# Data Property: obo:SEPIO_0000021 (date_created)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000021 "SEPIO creates a relation separate from existing PAV and PROV relations (e.g. pac:createdOn) which are too specific about whether a relation refers to the date on which the abstract information content was created, or when it was serialized and documented in a concrete format.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000021 "created_on")
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000021 "Consider: 
+
+1. http://purl.org/dc/terms/created
+
+2. http://purl.org/pav/createdOn ! Created on
+Def: The date of creation of the resource representation.  The agents responsible can be indicated with pav:createdBy. This property is normally used in a functional way, indicating the time of creation, although PAV does not formally restrict this. pav:lastUpdateOn can be used to indicate minor updates that did not affect the creating date. 
+
+3. prov:generatedAtTime: The time at which an entity was completely created and is available for use.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000021 "date_created"@en)
+SubDataPropertyOf(obo:SEPIO_0000021 terms:date)
+DataPropertyDomain(obo:SEPIO_0000021 obo:BFO_0000002)
+
+# Data Property: obo:SEPIO_0000036 (date_modified)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000036 "The most recent data on which an entity was modified or updated.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000036 "date_last_updated")
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000036 "http://purl.org/dc/terms/modified ! Date Modified
+Definition: Date on which the resource was changed.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000036 "date_modified"@en)
+SubDataPropertyOf(obo:SEPIO_0000036 terms:date)
+DataPropertyDomain(obo:SEPIO_0000036 obo:BFO_0000002)
+
+# Data Property: obo:SEPIO_0000040 (date_evaluated)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000040 "date_evaluated"@en)
+SubDataPropertyOf(obo:SEPIO_0000040 terms:date)
+DataPropertyDomain(obo:SEPIO_0000040 obo:BFO_0000002)
+
+# Data Property: obo:SEPIO_0000051 (date_submitted)
+
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000051 "http://purl.org/dc/terms/dateSubmitted")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000051 "date_submitted"@en)
+SubDataPropertyOf(obo:SEPIO_0000051 terms:date)
+DataPropertyDomain(obo:SEPIO_0000051 obo:BFO_0000002)
+
+# Data Property: obo:SEPIO_0000063 (start_date)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000063 "Consider: http://www.w3.org/ns/prov#startedAtTime")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000063 "start_date"@en)
+SubDataPropertyOf(obo:SEPIO_0000063 obo:SEPIO_0000160)
+DataPropertyDomain(obo:SEPIO_0000063 obo:BFO_0000015)
+
+# Data Property: obo:SEPIO_0000105 (date_created_before)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000105 "date_created_before"@en)
+SubDataPropertyOf(obo:SEPIO_0000105 terms:date)
+
+# Data Property: obo:SEPIO_0000123 (has_textual_part)
+
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000123 "Relation between a report and a string of text that it contains")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000123 "has_textual_part"@en)
+
+# Data Property: obo:SEPIO_0000135 (date_stated)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000135 "A relation holding between an statement and the date on which it was made.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000135 "asserted_on")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000135 "date_stated"@en)
+SubDataPropertyOf(obo:SEPIO_0000135 obo:SEPIO_0000021)
+
+# Data Property: obo:SEPIO_0000160 (activity_date)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000160 "time_of_activity")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000160 "activity_date"@en)
+DataPropertyDomain(obo:SEPIO_0000160 obo:BFO_0000015)
+DataPropertyRange(obo:SEPIO_0000160 xsd:dateTime)
+
+# Data Property: obo:SEPIO_0000161 (end_date)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000161 "Consider: http://www.w3.org/ns/prov#endedAtTime")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000161 "end_date"@en)
+SubDataPropertyOf(obo:SEPIO_0000161 obo:SEPIO_0000160)
+
+# Data Property: obo:SEPIO_0000162 (date_curated)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000162 "Consider: http://purl.org/pav/curatedOn
+
+Definition: The date this resource was curated.
+
+pav:curatedBy gives the agent(s) that performed the curation.
+
+This property is normally used in a functional way, indicating the last curation date, although PAV does not formally restrict this.
+
+The value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000162 "date_curated"@en)
+SubDataPropertyOf(obo:SEPIO_0000162 terms:date)
+
+# Data Property: obo:SEPIO_0000164 (date_updated)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000164 "Consider: http://purl.org/pav/lastUpdateOn")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000164 "date_updated"@en)
+SubDataPropertyOf(obo:SEPIO_0000164 terms:date)
+
+# Data Property: obo:SEPIO_0000165 (date_validated)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000165 "A relation holding between an artifact (e.g. an asseriton) and the date/time at which it was validated as meeting some standard of quality or rigor.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000165 "date_validated"@en)
+SubDataPropertyOf(obo:SEPIO_0000165 terms:date)
+DataPropertyDomain(obo:SEPIO_0000165 obo:SEPIO_0000001)
+
+# Data Property: obo:SEPIO_0000168 (confidence_score)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000168 "A quantitative value that can be interpreted as an indicator of the degree of confidence that a piece of information is true, and accurately reflects the aspect of reality it is about.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000168 "This property has a similar intent as assertion_confidence_level, but used for quantitative numerical values.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000168 "The 'confidence score' property does not only include statistical measures such as p-values that explicitly indicate a level of confidence. It also includes any quantitative score against which a threshold for making an assertion is defined - where the distance of this score from this threshold can be interpreted as an indicator of how much confidence we might have that the asserted conclusion is true.  
+
+For example, many silico prediction tools such as SIFT interrogate biological sequence data to calculate a score that reflects the likelihood that a particular sequence variant negatively impacts gene product function.  A variant is interpreted to be 'Tolerated', 'Damaging', or 'Deleterious' based on how its score compares against pre-defined thresholds. Here, we may have less confidence that a variant with a score just above the 'Damaging' threshold is truly damaging, versus a variant whose score is well above the threshold.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000168 "confidence_score"@en)
+DataPropertyDomain(obo:SEPIO_0000168 obo:IAO_0000030)
+
+# Data Property: obo:SEPIO_0000231 (statement quantifier)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000231 "A relation used to link a statement to some quantitative measure about the statement itself (e.g. a confidence score)")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000231 "statement quantifier"@en)
+
+# Data Property: obo:SEPIO_0000346 (statement qualifier)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000346 "A relation used to qualify the meaning of a statement.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000346 "Most commonly used with a \"NOT\" value to negate a statement - i.e. indicate that the claim implied by its strucuted representation is not true.  For example, the negation qualifier on the following OBAN-style association would make the claim that BRCA2 is NOT linked to the phenotype 'abnormal lymphocyte count':
+
+<:assertion1> a OBAN:association;
+      OBAN:association_has_object   HP_0040088 (abnormal lymphocyte count);
+      OBAN:association_has_predicate   RO:0002200 (has_phenotype);
+      OBAN:association_has_subject   HGNC:1101 (BRCA2);
+      SEPIO:0000346(quallifier)   \"NOT\".")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000346 "statement qualifier"@en)
+
+# Data Property: obo:SEPIO_0000384 (date_created_after)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000384 "date_created_after"@en)
+SubDataPropertyOf(obo:SEPIO_0000384 terms:date)
+
+# Data Property: obo:SEPIO_0000419 (probabilistic quantifier)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000419 "probabilistic quantifier"@en)
+SubDataPropertyOf(obo:SEPIO_0000419 obo:SEPIO_0000168)
+
+# Data Property: obo:SEPIO_0000429 (evidence_line_strength_score)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000429 "A numerical value that quantifies the strength of evidence provided by a line of evidence. This is a counterpart to the evidence_line_strength object property - for use when the strength of evidence is captured using a quantitiative score/measure.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000429 "evidence_line_strength_score"@en)
+DataPropertyDomain(obo:SEPIO_0000429 obo:SEPIO_0000002)
+
+# Data Property: obo:STATO_0000129 (has_value)
+
+AnnotationAssertion(obo:SEPIO_0000052 obo:STATO_0000129 "http://www.w3.org/ns/prov#value
+'This property serves the same purpose as rdf:value, but has been reintroduced to avoid some of the definitional ambiguity in the RDF specification (specifically, 'may be used in describing structured values'). The editor's definition comes from http://www.w3.org/TR/rdf-primer/#rdfvalue'")
+AnnotationAssertion(rdfs:label obo:STATO_0000129 "has_value"@en)
+
+# Data Property: dce:description (description)
+
+AnnotationAssertion(obo:IAO_0000115 dce:description "An account of a resource.")
+AnnotationAssertion(rdfs:label dce:description "description")
+DataPropertyRange(dce:description xsd:string)
+
+# Data Property: terms:date (date)
+
+AnnotationAssertion(obo:IAO_0000115 terms:date "A point or period of time associated with an event in the lifecycle of the resource.")
+AnnotationAssertion(obo:IAO_0000116 terms:date "Consider: http://purl.org/pav/contributedOn")
+AnnotationAssertion(rdfs:label terms:date "date"@en)
+DataPropertyDomain(terms:date obo:BFO_0000002)
+DataPropertyRange(terms:date xsd:dateTime)
+
+# Data Property: terms:identifier (identifier)
+
+AnnotationAssertion(rdfs:label terms:identifier "identifier"@en)
+
+# Data Property: terms:title (title)
+
+AnnotationAssertion(rdfs:label terms:title "title")
+
+# Data Property: <http://purl.org/ontology/bibo/doi> (digital object identifier (doi))
+
+AnnotationAssertion(obo:IAO_0000118 <http://purl.org/ontology/bibo/doi> "doi")
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/doi> "digital object identifier (doi)")
+SubDataPropertyOf(<http://purl.org/ontology/bibo/doi> terms:identifier)
+
+# Data Property: <http://purl.org/pav/version> (version)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/pav/version> "The version number of a resource. This is a freetext string, typical values are \"1.5\" or \"21\". The URI identifying the previous version can be provided using prov:previousVersion.
+
+This property is normally used in a functional way, although PAV does not formally restrict this.")
+AnnotationAssertion(rdfs:label <http://purl.org/pav/version> "version")
+
+# Data Property: foaf:name (name)
+
+AnnotationAssertion(obo:IAO_0000115 foaf:name "A name for some thing.")
+AnnotationAssertion(rdfs:label foaf:name "name")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:BFO_0000182 (history)
+
+AnnotationAssertion(rdfs:comment obo:BFO_0000182 "A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])")
+AnnotationAssertion(rdfs:label obo:BFO_0000182 "history")
+SubClassOf(obo:BFO_0000182 obo:BFO_0000015)
+
+# Class: obo:ERO_0001716 (database)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ERO_0001716 "A database is an organized collection of data, today typically in digital form.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:ERO_0001716 "http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Database")
+AnnotationAssertion(rdfs:label obo:ERO_0001716 "database"@en)
+SubClassOf(obo:ERO_0001716 obo:IAO_0000030)
+
+# Class: obo:IAO_0000013 (journal article)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000013 "journal article"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000013 "Examples are articles published in the journals, Nature and Science. The content can often be cited by reference to a paper based encoding, e.g.  Authors, Title of article, Journal name, date or year of publication, volume and page number."@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000013 obo:IAO_0000120)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000013 "a report that is published in a journal"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000013 "person:Alan Ruttenberg"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000013 "person:Chris Stoeckert"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000013 "OBI_0000159"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000013 "group:OBI"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000013 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000013 "journal article"@en)
+SubClassOf(obo:IAO_0000013 obo:IAO_0000311)
+
+# Class: obo:IAO_0000027 (data item)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000027 "data item"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000027 "Data items include counts of things, analyte concentrations, and statistical summaries."@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000027 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000027 "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000027 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000027 "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000027 "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/")
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000027 "PERSON: Alan Ruttenberg"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000027 "PERSON: Chris Stoeckert"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000027 "PERSON: Jonathan Rees"@en)
+AnnotationAssertion(obo:IAO_0000118 obo:IAO_0000027 "data"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000027 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000027 "data item"@en)
+SubClassOf(obo:IAO_0000027 obo:IAO_0000030)
+
+# Class: obo:IAO_0000030 (information content entity)
+
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000030 "- Data Items: A '548.5 mg/dl' measurement of blood glucose in mutant mice.
+- Protocols: A blood glucose assay protocol that describes how the measurement was taken.
+- Calculations: A 1.3951e-24 p-value statistic indicating a significant increase relative to wild-type mice.
+- Assertions: An assertion stating that \"Lpr1 leptin receptor mutations can lead to diabetes\".
+- Publications: A journal article that publishes this assertion.
+- Figure/Tables: A figure or table from this article that present data supporting it.
+- Software/Algorithms: A text-mining algorithm that mines the literature to identify and extract the assertion.
+- Databases: The MGI (Mouse Genome Informatics) database that stores the assertion as a structured gene-disease annotation.")
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000030 "A generically dependent continuant that is about some thing.")
+AnnotationAssertion(rdfs:comment obo:IAO_0000030 "ICEs are abstract entities that convey information about things in the world. ICEs represent the information encoded in physical artifacts such as photographs, books, or digital storage medium (as opposed to the physical medium itself).  A particular ICE can be encoded simultaneously in many physical or digital mediums and formats. For example, only one instance of the first edition of \"War and Peace\" exists as an ICE, representing information conveyed in this work. But many instances of \"War and Peace\" exist at the level of their physical concretizations in printed books or digital devices.")
+AnnotationAssertion(rdfs:label obo:IAO_0000030 "information content entity"@en)
+SubClassOf(obo:IAO_0000030 obo:BFO_0000031)
+SubClassOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:IAO_0000136 obo:BFO_0000001))
+SubClassOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:SEPIO_0000387 <http://www.w3.org/ns/prov#Agent>))
+SubClassOf(obo:IAO_0000030 DataExactCardinality(1 obo:SEPIO_0000021 xsd:dateTime))
+
+# Class: obo:IAO_0000064 (algorithm)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000064 "A plan specification which describes the inputs and output of mathematical functions as well as workflow of execution for achieving an predefined objective. Algorithms are realized usually by means of implementation as computer programs for execution by automata.")
+AnnotationAssertion(rdfs:label obo:IAO_0000064 "algorithm")
+SubClassOf(obo:IAO_0000064 obo:IAO_0000104)
+
+# Class: obo:IAO_0000088 (report)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000088 "report"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000088 "Examples of reports are gene lists and investigation reports. These are not published (journal) articles but may be included in a journal article."@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000088 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000088 "a document assembled by an author for the purpose of providing information for the audience. A report is the output of a documenting process and has the objective to be consumed by a specific audience. Topic of the report is on something that has completed. A report is not a single figure. Examples of reports are journal article, patent application, grant progress report, case report (not patient record)"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000088 "2009-03-16: this was report of results with definition: A report is a narrative object that is a formal statement of the results of an investigation, or of any matter on which definite information is required, made by some person or body instructed or required to do so."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000088 "2009-03-16: work has been done on this term during during the OBI workshop winter 2009 and the current definition was considered acceptable for use in OBI. If there is a need to modify this definition please notify OBI."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000088 "2009-08-10 Alan Ruttenberg: Larry Hunter suggests that this be obsoleted and replaced by 'document'. Alan restored as there are OBI dependencies and this merits further discussion"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000088 "disagreement about where reports go. alan: only some gene lists are reports. Is a report all the content of some document? The example of usage suggests that a report may be part of  some article. Term needs clarification"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000088 "PERSON: Alan Ruttenberg"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000088 "PERSON: Melanie Courtot"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000088 "PERSON:Chris Stoeckert"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000088 "GROUP: OBI"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000088 "OBI_0000099"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000088 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000088 "report"@en)
+SubClassOf(obo:IAO_0000088 obo:IAO_0000310)
+
+# Class: obo:IAO_0000100 (data set)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000100 "data set"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000100 "Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves)."@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000100 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000100 "A data item that is an aggregate of other data items of the same type that have something in common. Averages and distributions can be determined for data sets."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000100 "2009/10/23 Alan Ruttenberg. The intention is that this term represent collections of like data. So this isn't for, e.g. the whole contents of a cel file, which includes parameters, metadata etc. This is more like java arrays of a certain rather specific type"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000100 "2014-05-05: Data sets are aggregates and thus must include two or more data items. We have chosen not to add logical axioms to make this restriction.")
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000100 "person:Allyson Lister"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000100 "person:Chris Stoeckert"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000100 "OBI_0000042"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000100 "group:OBI"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000100 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000100 "data set"@en)
+SubClassOf(obo:IAO_0000100 obo:IAO_0000030)
+
+# Class: obo:IAO_0000104 (plan specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000104 "A directive information entity with action specifications and objective specifications as parts that, when concretized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000104 "Alternative previous definition: a plan is a set of instructions that specify how an objective should be achieved"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000104 "Alan Ruttenberg"@en)
+AnnotationAssertion(obo:SEPIO_0000386 obo:IAO_0000104 "method")
+AnnotationAssertion(rdfs:label obo:IAO_0000104 "plan specification"@en)
+SubClassOf(obo:IAO_0000104 obo:IAO_0000030)
+
+# Class: obo:IAO_0000109 (measurement datum)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000109 "measurement datum"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000109 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}."@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000109 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000109 "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000109 "2/2/2009 is_specified_output of some assay?"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000109 "person:Chris Stoeckert"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000109 "OBI_0000305"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000109 "group:OBI"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000109 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000109 "measurement datum"@en)
+SubClassOf(obo:IAO_0000109 obo:IAO_0000027)
+
+# Class: obo:IAO_0000306 (table)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000306 "A textual entity that contains a two-dimensional arrangement of texts repeated at regular intervals across a spatial range, such that the spatial relationships among the constituent texts expresses propositions")
+AnnotationAssertion(rdfs:label obo:IAO_0000306 "table")
+SubClassOf(obo:IAO_0000306 obo:IAO_0000030)
+
+# Class: obo:IAO_0000308 (figure)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000308 "figure"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000308 "Any picture, diagram or table"@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000308 obo:IAO_0000120)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000308 "An information content entity consisting of a two dimensional arrangement of information content entities such that the arrangement itself is about something."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000308 "PERSON: Lawrence Hunter"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000308 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000308 "figure"@en)
+SubClassOf(obo:IAO_0000308 obo:IAO_0000030)
+
+# Class: obo:IAO_0000310 (document)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000310 "document"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000310 "A journal article, patent application, laboratory notebook, or a book"@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000310 obo:IAO_0000120)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000310 "A collection of information content entities intended to be understood together as a whole"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000310 "PERSON: Lawrence Hunter"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000310 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000310 "document"@en)
+SubClassOf(obo:IAO_0000310 obo:IAO_0000030)
+
+# Class: obo:IAO_0000311 (publication)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000311 "publication"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000311 "A journal article or book"@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000311 obo:IAO_0000120)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000311 "A document that has been accepted by a publisher"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000311 "PERSON: Lawrence Hunter"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000311 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000311 "publication"@en)
+SubClassOf(obo:IAO_0000311 obo:IAO_0000310)
+
+# Class: obo:IAO_0000313 (patent)
+
+AnnotationAssertion(obo:IAO_0000111 obo:IAO_0000313 "patent"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000313 "US Patent 6,449,603"@en)
+AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000313 obo:IAO_0000120)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000313 "A document that has been accepted by a patent authority"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000313 "PERSON: Lawrence Hunter"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:IAO_0000313 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000313 "patent"@en)
+SubClassOf(obo:IAO_0000313 obo:IAO_0000310)
+
+# Class: obo:OBI_0000011 (planned process)
+
+AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000011 "planned process"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000011 "Injecting mice with a vaccine in order to test its efficacy"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000011 obo:IAO_0000122)
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000011 "A processual entity that realizes a plan which is the concretization of a plan specification."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:OBI_0000011 "'Plan' includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn't have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000011 "Bjoern Peters"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000011 "branch derived"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000232 obo:OBI_0000011 "6/11/9: Edited at workshop. Used to include: is initiated by an agent"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000232 obo:OBI_0000011 "This class merges the previously separated objective driven process and planned process, as they the separation proved hard to maintain. (1/22/09, branch call)"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000011 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:OBI_0000011 "planned process"@en)
+SubClassOf(obo:OBI_0000011 <http://www.w3.org/ns/prov#Activity>)
+SubClassOf(obo:OBI_0000011 ObjectSomeValuesFrom(obo:SEPIO_0000017 <http://www.w3.org/ns/prov#Agent>))
+
+# Class: obo:OBI_0000066 (investigation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000066 "a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s).")
+AnnotationAssertion(rdfs:label obo:OBI_0000066 "investigation"@en)
+SubClassOf(obo:OBI_0000066 obo:SEPIO_0000004)
+
+# Class: obo:OBI_0000070 (assay)
+
+AnnotationAssertion(rdfs:label obo:OBI_0000070 "assay"@en)
+SubClassOf(obo:OBI_0000070 obo:SEPIO_0000004)
+
+# Class: obo:OBI_0000175 (p-value)
+
+AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000175 "p-value"@en)
+AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000175 obo:IAO_0000121)
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000175 "A quantitative confidence value that represents the probability of obtaining a result at least as extreme as that actually obtained, assuming that the actual value was the result of chance alone."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:OBI_0000175 "May be outside the scope of OBI long term, is needed so is retained"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000175 "PERSON:Chris Stoeckert"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000175 "WEB: http://en.wikipedia.org/wiki/P-value"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000175 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:OBI_0000175 "p-value"@en)
+SubClassOf(obo:OBI_0000175 obo:STATO_0000039)
+
+# Class: obo:OBI_0000235 (standard error)
+
+AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000235 "standard error"@en)
+AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000235 obo:IAO_0000125)
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000235 "A quantitative confidence value which is the standard deviations of the sample in a frequency distribution, obtained by dividing the standard deviation by the total number of cases in the frequency distribution."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000235 "person:Chris Stoeckert"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000235 "group:OBI"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000232 obo:OBI_0000235 "see P-Value"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000235 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:OBI_0000235 "standard error"@en)
+SubClassOf(obo:OBI_0000235 obo:STATO_0000039)
+
+# Class: obo:OBI_0000272 (protocol)
+
+AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000272 "PCR protocol, has objective specification, amplify DNA fragment of interest, and has action specification describes the amounts of experimental reagents used (e..g. buffers, dNTPS, enzyme), and the temperature and cycle time settings for running the PCR.")
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000272 "A plan specification which has sufficient level of detail and quantitative information to communicate it between investigation agents, so that different investigation agents will reliably be able to independently reproduce the process.")
+AnnotationAssertion(obo:SEPIO_0000386 obo:OBI_0000272 "experimental protocol")
+AnnotationAssertion(rdfs:label obo:OBI_0000272 "protocol")
+SubClassOf(obo:OBI_0000272 obo:IAO_0000104)
+
+# Class: obo:OBI_0000338 (drawing a conclusion based on data)
+
+AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000338 "drawing a conclusion based on data"@en)
+AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000338 "Concluding that a gene is upregulated in a tissue sample based on the band intensity in a western blot.  Concluding that a patient has a infection based on measurement of an elevated body temperature and reported headache. Concluding that there were problems in an investigation because data from PCR and microarray are conflicting. Concluding that 'defects in gene XYZ cause cancer due to improper DNA repair' based on data from experiments in that study that gene XYZ is involved in DNA repair, and the conclusion of a previous study that cancer patients have an increased number of mutations in this gene. "^^xsd:string)
+AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000338 obo:IAO_0000122)
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000338 "A planned process in which data gathered in an investigation is evaluated in the context of existing knowledge with the objective to generate more general conclusions or to conclude that the data does not allow one to draw general conclusion"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000338 "PERSON: Bjoern Peters"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000338 "PERSON: Jennifer Fostel"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000338 "Bjoern Peters"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000338 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:OBI_0000338 "drawing a conclusion based on data"@en)
+SubClassOf(obo:OBI_0000338 obo:SEPIO_0000003)
+
+# Class: obo:OBI_0000938 (obsolete_categorical measurement datum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000938 "A measurement datum that is reported on a categorical scale")
+AnnotationAssertion(rdfs:label obo:OBI_0000938 "obsolete_categorical measurement datum")
+SubClassOf(obo:OBI_0000938 oboInOwl:ObsoleteClass)
+
+# Class: obo:OBI_0001146 (binding assay)
+
+AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001146 "binding assay"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000112 obo:OBI_0001146 "Determination of KD value for an antibody binding a protein using a BIACORE assay. Using plate bound antigen in an ELISA to determine if a mixture of serum antibodies bind the antigen.nnThe following are NOT binding assays, as the desired output is not binding data: RNA microarray experiments to determine levels of gene expression. ChIP experiments to determine where in DNA a transcription factor binds. Using an IL-2 antibody on an ELISA plate to determine presence of IL-2 after stimulating a T cell culture. "^^xsd:string)
+AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001146 obo:IAO_0000120)
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001146 "An assay with the objective to characterize the disposition of two or more material entities to form a complex."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001146 "PERSON:Bjoern Peters, Randi Vita, Jason Greenbaum"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001146 "PERSON:Bjoern Peters, Randi Vita, Jason Greenbaum"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001146 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:OBI_0001146 "binding assay"^^xsd:string)
+SubClassOf(obo:OBI_0001146 obo:OBI_0000070)
+
+# Class: obo:OBI_0002165 (protein localization assay)
+
+AnnotationAssertion(obo:IAO_0000111 obo:OBI_0002165 "protein localization assay"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000114 obo:OBI_0002165 obo:IAO_0000120)
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0002165 "An assay that determines the specific location of a protein. Subcellular localization is distinguished from tissue-based localization based on the type of microscopy applied."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000117 obo:OBI_0002165 "Rebecca Tauber"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000119 obo:OBI_0002165 "OBI development call"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000412 obo:OBI_0002165 obo:obi.owl)
+AnnotationAssertion(rdfs:label obo:OBI_0002165 "protein localization assay"^^xsd:string)
+SubClassOf(obo:OBI_0002165 obo:OBI_0000070)
+
+# Class: obo:SEPIO_0000000 (proposition)
+
+AnnotationAssertion(obo:IAO_0000112 obo:SEPIO_0000000 "The proposition that BRCA1:2685T>A causes familial breast cancer.")
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000000 "An abstract entity representing the sharable meaning of what is expressed in a particular assertion.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000000 "In the SEPIO model, an assertion is akin to an act in speech or text that expresses beleif in the truth of a proposition.  It is the proposition that represents the semantic content of a claim, and bears truth value. 
+
+Mappings to terms from related models: 
+1.  http://purl.org/see/rdo#proposition
+A SEPIO proposition is equivalent to a 'proposition' from the Semantic EvidencE framework. \"The class rdo:proposition represents propositions i.e. the sharable objects of propositional attitudes like belief or desire and the bearers of truth values. As truth bearers they are either true or false. They are taken to represent the semantic content of sentences or larger lexical entities formulated in some natural or artificial language.\")
+
+2. http://purl.org/mp/Holotype
+The notion of a holotype from the Micropublications model is related to a SPEIO proposition - in that it represents a statement that is selcted to all other statements expressing the same meaning.
+
+3. http://purl.org/oban/association
+An OBAN proposition is a more type of proposition, that is structured/expressed according to the specifications laid out in the OBAN ontology.")
+AnnotationAssertion(obo:IAO_0000119 obo:SEPIO_0000000 "http://plato.stanford.edu/entries/propositions")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000000 "The notion of a proposition, and its relationship to an assertion, derives from the domain of logic and philosophy [12]. Propositions are abstract entities that, like numbers, are independent of space and time. They represent only the meaning that is expressed in a particular agent’s assertion, and are ‘sharable’ in that the same proposition can be expressed in many different assertions. Propositions are primary bearers of truth value, in that they are true or false.  
+
+From http://plato.stanford.edu/entries/propositions/: \"Propositions are the sharable objects of the attitudes and the primary bearers of truth and falsity. This stipulation rules out certain candidates for propositions, including thought- and utterance-tokens, which presumably are not sharable, and concrete events or facts, which presumably cannot be false.\"")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000000 "proposition"@en)
+SubClassOf(obo:SEPIO_0000000 obo:BFO_0000001)
+
+# Class: obo:SEPIO_0000001 (assertion)
+
+AnnotationAssertion(obo:IAO_0000112 obo:SEPIO_0000001 "The following are three seperate assertion instances, that assert the same proposition (that BRCA1:2685T>A causes familial breast cancer)
+
+1. Counsyl's assertion on October 5, 2009 that BRCA1:2685T>A causes familial breast cancer. 
+
+2. The ENIGMA  consortium’s assertion on September 18, 2010 that BRCA1:2685T>A causes familial breast cancer.
+
+3. A later assertion by the ENIGMA consortium on May 9, 2013, based on new evidence, that BRCA1:2685T>A causes familial breast cancer.")
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000001 "A statement made by a particular agent on a particular occasion that a particular proposition is true, based on the evaluation of one or more lines of evidence.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000001 "SEPIO distinguishes two high-level subtypes of statements:
+1. Findings are statements that report the immediate, objective results of an experiment, observation, or study -  without bias or interpretation.  A finding statement results simply from the act of reporting or summarizing these direct observations, calculations, or measurements.
+2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and the act of interpretating as evidence.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000001 "claim")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000001 "evidence-based assertion")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000001 "propostional assertion")
+AnnotationAssertion(obo:IAO_0000119 obo:SEPIO_0000001 "Derived from http://purl.org/see/rdo#assertion")
+AnnotationAssertion(obo:SEPIO_0000184 obo:SEPIO_0000001 "The identity of a particular assertion is dependent upon (1) what it claims to be true (its semantic content, aka its ‘proposition’), (2) the agent asserting it, and (3) the occasion on which the assertion is made. Many agents can make assertions expressing belief in the same proposition (e.g. ENIGMA’s assertion that that BRCA1:2685T>A causes familial breast cancer is a separate instance than Counsyl’s assertion of the same underlying proposition).  Likewise, a single agent can make more than one assertion of belief in the same proposition on different occasions  (e.g. ENIGMA may make a separate assertion of the same proposition that BRCA1:2685T>A causes familial breast cancer at a later date, based on additional evidence).")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000001 "Assertions as defined in SEPIO are the result of some logical inference made based on the interpretation of evidence.  They put forth a proposition that may or may not be true - the validity of which ultimately rests on the quantity, quality, diversity, and concordance of evidence supporting it.
+
+Statements directly reporting study results or observations are not considered assertions in this sense, as they merely report what was observed or recorded, but do not rely on a leap of logical inference (see 'study finding').")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000001 "assertion"@en)
+SubClassOf(obo:SEPIO_0000001 obo:SEPIO_0000174)
+SubClassOf(obo:SEPIO_0000001 ObjectSomeValuesFrom(obo:RO_0002353 obo:SEPIO_0000003))
+SubClassOf(obo:SEPIO_0000001 ObjectSomeValuesFrom(obo:SEPIO_0000006 obo:SEPIO_0000002))
+SubClassOf(obo:SEPIO_0000001 ObjectSomeValuesFrom(obo:SEPIO_0000030 obo:SEPIO_0000000))
+
+# Class: obo:SEPIO_0000002 (evidence line)
+
+AnnotationAssertion(obo:IAO_0000112 obo:SEPIO_0000002 "An example of an evidence line would be the argument that a finding such as \"Lepr1 KO mice exhibit lower blood glucose levels than matched WT controls\" makes in support of the proposition that \"Lepr1 gene is involved in diabetes\". The Evidence Items supporting this line of evidence could include experimental data from a study exploring blood glucose levels in Lepr1 KO mice, such as a 548.5 mg/dl measurement of blood glucose in a Lepr<tm1b/tm1b> mutant mouse, or a 1.3951e-24 p-value indicating this measure to be significantly different from wild-type mice.
+
+Here, the finding and its supporting data exist independently of their use as evidence. An evidence line based on this finding comes into existence only when an agent interprets this finding as providing a meaningful argument for a particular proposition, in the act of making an assertion.
+
+(This example is based on data from the IMPC record here: http://bit.ly/2t4J1TI)")
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000002 "An evidence line represents an independent and meaningful argument for or against a particular proposition, that is based on the interpretation of one or more pieces of information as evidence.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000002 "evidence-based argument")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000002 "An evidence line is created through the interpretation of one or more pieces of information that collectively support a meaningful argument for or against a proposition. To qualify as an Evidence Line, this argument must be independently significant as evidence - i.e. it must be capable of affecting the probability of accepting the target proposition as true. This does not mean, however, that it is independently sufficient to establish belief in the proposition, as additional evidence lines may be required to ultimately accept the proposition as true. 
+For example, in the ACMG framework  for variant interpretations establishes \"absence in population databases\" as a type of evidence line that can argue for the pathogenicty of a particular variant. But this argument alone is not considered sufficient to establish a variant's pathogencity, as the other types of evidence are additionally required to establish the truth of this Proposition (e.g. a line of evidence demonstrating the variant to have a deleterious effect on protein function, or showing it to segregate with disease features in a family tree).")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000002 "evidence line"@en)
+SubClassOf(obo:SEPIO_0000002 obo:IAO_0000030)
+SubClassOf(obo:SEPIO_0000002 ObjectSomeValuesFrom(obo:SEPIO_0000084 obo:SEPIO_0000149))
+SubClassOf(obo:SEPIO_0000002 ObjectSomeValuesFrom(obo:SEPIO_0000132 obo:SEPIO_0000133))
+SubClassOf(obo:SEPIO_0000002 ObjectSomeValuesFrom(obo:SEPIO_0000183 obo:SEPIO_0000402))
+
+# Class: obo:SEPIO_0000003 (assertion process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000003 "An act of interpreting evidence to make an assertion of belief that a particular proposition is true")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000003 "Mappings to terms from related models:  
+
+Likely equivalent to http://purl.org/see/rdo#act_of_inference.
+
+May be equivalent to http://purl.obolibrary.org/obo/ECO_0000217 ! assertion method.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000003 "act of assertion")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000003 "An assertion process includes the processes of interpreting data and evaluating it as evidence for the validity of a proposition. They are affected by a particular agents on a particular occasions, and can be specified by assertion methods or guidelines.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000003 "assertion process"@en)
+SubClassOf(obo:SEPIO_0000003 obo:OBI_0000011)
+SubClassOf(obo:SEPIO_0000003 ObjectSomeValuesFrom(obo:RO_0002233 obo:SEPIO_0000002))
+SubClassOf(obo:SEPIO_0000003 ObjectSomeValuesFrom(obo:RO_0002234 obo:SEPIO_0000001))
+
+# Class: obo:SEPIO_0000004 (research activity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000004 "A planned process executed in the performance of scientific research wherein systematic investigations are performed to establish facts and reach new conclusions about phenomena in the world.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000004 "Data generation process are typically experimental studies or observations, but can include any process generating information used to evaluate a claim.  This is an organizational class that groups more specific types of such processes that are most commonly used in generating data used as evidence to support claims. These processes produce informational artifacts such as measured  data values, derived statistical calculations and confidence measures, or statements representing summaries or conclusions drawn from such data.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000004 "research activity"@en)
+SubClassOf(obo:SEPIO_0000004 obo:OBI_0000011)
+SubClassOf(obo:SEPIO_0000004 ObjectSomeValuesFrom(obo:RO_0002234 obo:IAO_0000030))
+
+# Class: obo:SEPIO_0000037 (assertion method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000037 "A directive information entity that specifies an algorithm or heuristics for evaluating evidence in the process of making an assertion.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000037 "SEPIO implements several OWL individuals representing instances of commonly applied assertion methods, primarily those used in pathogenic variant classification such as the ACMG variant classification criteria.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000037 "Assertion methods can be informal guidlines or heuristics that support manual evaluation of evidence, e.g. the ACMG Variant Classification Guidelines. Assertion methods can also be formally encoded as algorithms that allow computational or statistical analysis of data as evidence in support of making an assertion - e.g. multifactorial analysis algorithms that operate on specified data to generate a quantitative score indicating the validity of a particular proposition.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000037 "assertion method"@en)
+SubClassOf(obo:SEPIO_0000037 obo:IAO_0000104)
+SubClassOf(obo:SEPIO_0000037 ObjectSomeValuesFrom(obo:SEPIO_0000407 obo:SEPIO_0000001))
+
+# Class: obo:SEPIO_0000048 (contributor role)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000048 "A role borne by a  person, group, organization, or information processing entity (e.g. software, algorithms) in virtue of its active participation in a process leading to some outcome (e.g the generation, modification, or provision of some entity).")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000048 "agent role")
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000048 "http://purl.org/see/rdo#agent_role")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000048 "In the context of evidence and proveannce, agents are persons, groups, organizations, or software that are responsible for making assertions or generating the evidence and data that support them.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000048 "contributor role"@en)
+SubClassOf(obo:SEPIO_0000048 obo:BFO_0000023)
+
+# Class: obo:SEPIO_0000049 (resource role)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000049 "A role inhering in any material or information artifact that is used by an agent as specified input into a planned process.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000049 "In the context of evidence and provenance for scientific claims, resources are entities that are used by agents to facilitate processes aimed at the generation of assertions or the evidence and data that support them.  Examples include instruments, reagents, model systems, software, and protocols.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000049 "resource role"@en)
+SubClassOf(obo:SEPIO_0000049 obo:BFO_0000023)
+
+# Class: obo:SEPIO_0000055 (obsolete_manual assertion process)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000055 "Mappings to related terms:
+
+1. http://purl.obolibrary.org/obo/ECO_0000218 ! manual assertion
+ECO Definition/Comment: A manual assertion could be based on evidence that is generated by and interpreted by a human or it could involve human review of computationally generated information.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000055 "obsolete_manual assertion process"@en)
+SubClassOf(obo:SEPIO_0000055 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000056 (obsolete_automated assertion process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000056 "An assertion process performed through algorithmic analysis by a computational agent, independent of human review.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000056 "Mappings to related terms: 
+
+1. http://purl.obolibrary.org/obo/ECO_0000203 ! automatic assertion
+ECO Definition/Comment: An automatic assertion is based on computationally generated information that is not reviewed by a person prior to making the assertion. For example, one common type of automatic assertion involves creating an association of evidence with an entity based on commonness of attributes of that entity and another entity for which an assertion already exists. The commonness is determined algorithmically.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000056 "Ultimately even automated assertions require a human agent to set a confidence threshhold that determines when a computational output (e.g. a sequence similarity p-value) justifies an assesrtion being made.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000056 "obsolete_automated assertion process"@en)
+SubClassOf(obo:SEPIO_0000056 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000058 (provenance)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000058 "The process history leading to the creation and current condition of an artifact.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000058 "Consider whether it is appropriate to place this under the BFO:history class, which may apply only to histories of \"material entities or sites\". And consider if we want/need to define this class at all - as it is not used to model data - only as a means to record what SEPIO considers provenance to be, and how it is  different from evidence.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000058 "For scientific assertions/claims, this is the process history leading to the asseertion being made, including processes through which evidence is evaluated, and processes through which information used as evidence is created. The transitive nature of provenance means that the provenance history of informtion used as supporting data becomes provenance for an assertion that uses this information as evidence. Provenance metadata describes these processes, including accounts of who conducted these processes, what entities participated in them, and when/where they occurred.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000058 "provenance"@en)
+SubClassOf(obo:SEPIO_0000058 obo:BFO_0000182)
+
+# Class: obo:SEPIO_0000066 (primary research study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000066 "A study that involves primary research of subjects or specimens in a natural, cliniclal, or laboratory setting.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000066 "primary research study"@en)
+SubClassOf(obo:SEPIO_0000066 obo:SEPIO_0000125)
+
+# Class: obo:SEPIO_0000067 (clinical study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000067 "Formal clinical study performed using cohorts of multiple patients")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000067 "clinical study"@en)
+SubClassOf(obo:SEPIO_0000067 obo:SEPIO_0000066)
+
+# Class: obo:SEPIO_0000069 (interventional clinical study)
+
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000069 "http://purl.org/net/OCRe/research.owl#Interventional_study")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000069 "interventional clinical study"@en)
+SubClassOf(obo:SEPIO_0000069 obo:SEPIO_0000067)
+
+# Class: obo:SEPIO_0000070 (observational clinical study)
+
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000070 "http://purl.org/net/OCRe/research.owl#Observational_study")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000070 "observational clinical study"@en)
+SubClassOf(obo:SEPIO_0000070 obo:SEPIO_0000067)
+
+# Class: obo:SEPIO_0000071 (case-control clinical study)
+
+AnnotationAssertion(obo:SEPIO_0000052 obo:SEPIO_0000071 "http://purl.org/net/OCRe/research.owl#Case_control_study")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000071 "case-control clinical study"@en)
+SubClassOf(obo:SEPIO_0000071 obo:SEPIO_0000070)
+
+# Class: obo:SEPIO_0000072 (experimental model study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000072 "A research dtudy perfomred using an experimental model system such as a cell line, or model organism.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000072 "experimental model study"@en)
+SubClassOf(obo:SEPIO_0000072 obo:SEPIO_0000066)
+
+# Class: obo:SEPIO_0000073 (in vitro study)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000073 "in vitro study"@en)
+SubClassOf(obo:SEPIO_0000073 obo:SEPIO_0000072)
+
+# Class: obo:SEPIO_0000074 (in vivo study)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000074 "in vivo study"@en)
+SubClassOf(obo:SEPIO_0000074 obo:SEPIO_0000072)
+
+# Class: obo:SEPIO_0000076 (cell-based in vivo study)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000076 "cell-based in vivo study"@en)
+SubClassOf(obo:SEPIO_0000076 obo:SEPIO_0000074)
+
+# Class: obo:SEPIO_0000077 (tissue-based in vivo study)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000077 "tissue-based in vivo study"@en)
+SubClassOf(obo:SEPIO_0000077 obo:SEPIO_0000074)
+
+# Class: obo:SEPIO_0000078 (organism-based in vivo study)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000078 "whole organism in vivo study")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000078 "organism-based in vivo study"@en)
+SubClassOf(obo:SEPIO_0000078 obo:SEPIO_0000074)
+
+# Class: obo:SEPIO_0000079 (secondary research study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000079 "A study based only on analysis of existing data, as found in artifacts such as community/curated databases, raw datasets, or publications.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000079 "data-driven study")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000079 "secondary research study"@en)
+SubClassOf(obo:SEPIO_0000079 obo:SEPIO_0000125)
+
+# Class: obo:SEPIO_0000080 (literature-based study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000080 "A curation-based study that uses only one or more literature publication as input data source.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000080 "Based on ClinVar 'literature only' collection method: \"for submissions that provide the interpretation of a variant from one or more publications. No additional curation has been performed by the submitter; the interpretation is from the publication(s) only.\"")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000080 "literature-based study"@en)
+SubClassOf(obo:SEPIO_0000080 obo:SEPIO_0000079)
+
+# Class: obo:SEPIO_0000081 (curation-based study)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000081 "Based on Clinvar 'curation' collection method: \"for variants that were not directly observed by the submitter, but were interpreted by curation of multiple sources, including clinical testing laboratory reports, publications, private case data, and public databases.\"")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000081 "curation-based study"@en)
+SubClassOf(obo:SEPIO_0000081 obo:SEPIO_0000079)
+
+# Class: obo:SEPIO_0000102 (reference population data study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000102 "A study based on analysis of data gathered from baseline studies of a 	population group of apparently unaffected individuals to assess allele frequencies")
+AnnotationAssertion(obo:IAO_0000119 obo:SEPIO_0000102 "ClinVar")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000102 "reference population data study"@en)
+SubClassOf(obo:SEPIO_0000102 obo:SEPIO_0000079)
+
+# Class: obo:SEPIO_0000125 (research study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000125 "A planned proccess that executes some study design or protocol to generate scientific data that is interpreted to test or generate a hypothesis.")
+AnnotationAssertion(obo:SEPIO_0000061 obo:SEPIO_0000125 "Explore the classification of study types here as a possibility to implement in SEPIO. 
+https://mcw.libguides.com/evidencebased/studies
+Useful because these map to the strength of the evidence each might provide.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000125 "A research study is considered broadly to be any scientific activity aimed at answering a research question. Studies can be simple or complex, depending on the scope of the question being explored and the extent of resources deployed in doing so.  They may include a full research investigation, a set of experiments, or a single experiment or assay. Regardless, that act of sumamrizing any results as a finding statement is considered part of the study.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000125 "research study"@en)
+SubClassOf(obo:SEPIO_0000125 obo:SEPIO_0000004)
+
+# Class: obo:SEPIO_0000127 (obsolete_study group)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000127 "A group of individuals (organisms, specimens, samples) that are subjects in an observational or intervention study, and whose members represent experimental replicates as defined in a study design by the same independent variable specifications (i.e. subjected to the same selction criteria or set of experimental interventions).")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000127 "Consider: STATO_0000193, OBI_0000174")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000127 "obsolete_study group"@en)
+SubClassOf(obo:SEPIO_0000127 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000131 (curation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000131 "A planned process in which existing data is collected, organized, and improved in preparation for subsequent use.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000131 "curation"@en)
+SubClassOf(obo:SEPIO_0000131 obo:SEPIO_0000004)
+
+# Class: obo:SEPIO_0000133 (evidence strength)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000133 "A data item that quantifies the degree of support an agent believes an evidence line to provide for a particular proposition.")
+AnnotationAssertion(obo:SEPIO_0000061 obo:SEPIO_0000133 "Consider also framing as categorical measurement values?: 
+A categorical measurement reflecting an agent's cognitive quantification of the degree of support (s)he believes an evidence line to provide for a particular proposition.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000133 "The strength of a line of evidence typically depends on the *type* and *quality* of the study(ies) that generate its supporting evidence items.  
+
+1. Type of Study: In a particular domain of research, certain types of studies are commonly held to produce data that is more meaningful and reliable than others, as evidence for a particular type of assertion.  These more reliable studies tend to draw on experimental systems that more accurately replicate the natural phenomenon being studied, and experimental designs that reduce confounding variables and biases. For example, in vivo studies of gene function provide stronger evidence than in vitro systems that may not replicate all aspects of the biology of a living system, and randomized controlled clinical trials are held to be more reliable than retrospective or case control studies that are more susceptible to confounding factors.  
+
+2. Quality of Study: A given study can be performed to varying degrees of rigor and comprehensiveness,  irrespective of the type of study it represents. This is another important factor in assessing the overall strength of evidence it may produce.  Higher quality studies will have carefully defined controls, and be replicated numerous times to ensure reproducibility.  Other factors that are often used as secondary indicators of the quality of research data include the quality of the journal in which it is published, and the reputation of the lab or institution performing the study. 
+
+In SEPIO, the notion of evidence quality is captured in an attribute separate from the notion of evidence strength. And the notion of study type can be represented in the type assigned to a study instance, or the evidence code used to type an evidence line (which are often based on the type of study that produced the evidence data).  Evidence strength typically relies on assessment of one or both of these more fundamental attributes of evidence.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000133 "evidence strength"@en)
+SubClassOf(obo:SEPIO_0000133 obo:IAO_0000109)
+SubClassOf(obo:SEPIO_0000133 ObjectSomeValuesFrom(obo:IAO_0000136 obo:SEPIO_0000002))
+
+# Class: obo:SEPIO_0000143 (patient case study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000143 "A study that documents observations or findings from a single patent.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000143 "case reporting")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000143 "patient case study")
+SubClassOf(obo:SEPIO_0000143 obo:SEPIO_0000066)
+
+# Class: obo:SEPIO_0000148 (evidence role)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000148 "evidence role"@en)
+SubClassOf(obo:SEPIO_0000148 obo:BFO_0000023)
+
+# Class: obo:SEPIO_0000149 (evidence item)
+
+AnnotationAssertion(obo:IAO_0000112 obo:SEPIO_0000149 "- the raw count data from a case-control study comparing the frequency of an allele in two cohorts or populations
+- the calculated p-value as a measure of statistical significance of the difference identified in the study
+- a published figure documenting these data
+- an author statement summarizing the outcomes of the study (i.e. a 'study finding')
+- a broader conclusion inferred from interpretation of the data reported in a study (i.e. an evidence-based 'assertion')")
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000149 "An information content entity that is used as evidence to evaluate the validity of a target assertion or proposition.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000149 "evidence")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000149 "evidence information")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000149 "'Evidence Item' is a broad term covering any information interpreted as evidence in the act of making an assertion.  
+
+Classes representing different types of evidence items are imported here from ontologies such as OBI, IAO, and STATO, and include:
+ - measured data values
+ - derived data values such as statistical calculations and confidence measures
+ - figures presenting or describing such data
+ - author statements representing summaries of or conclusions drawn from such data
+ - established facts in a field of research
+
+Note that publications and reports are considered separately from 'evidence items', as a they *contain* information (data values, figures author statements) that can be used as evidence. But on its own a publication or report is merely a proxy for this information.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000149 "evidence item"@en)
+EquivalentClasses(obo:SEPIO_0000149 ObjectIntersectionOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:SEPIO_0000376 obo:SEPIO_0000002)))
+SubClassOf(obo:SEPIO_0000149 obo:IAO_0000030)
+SubClassOf(obo:SEPIO_0000149 ObjectSomeValuesFrom(obo:SEPIO_0000046 obo:SEPIO_0000148))
+
+# Class: obo:SEPIO_0000153 (creator role)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000153 "creator role"@en)
+SubClassOf(obo:SEPIO_0000153 obo:SEPIO_0000048)
+
+# Class: obo:SEPIO_0000154 (assessor role)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000154 "assessor role"@en)
+SubClassOf(obo:SEPIO_0000154 obo:SEPIO_0000048)
+
+# Class: obo:SEPIO_0000155 (approver role)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000155 "validator role")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000155 "approver role"@en)
+SubClassOf(obo:SEPIO_0000155 obo:SEPIO_0000154)
+
+# Class: obo:SEPIO_0000156 (curator role)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000156 "curator role"@en)
+SubClassOf(obo:SEPIO_0000156 obo:SEPIO_0000048)
+
+# Class: obo:SEPIO_0000157 (software agent)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000157 "An autonomous computer program that carries out tasks on behalf of users.")
+AnnotationAssertion(obo:IAO_0000119 obo:SEPIO_0000157 "https://en.wikipedia.org/wiki/Software_agent")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000157 "Software agents are designed to execute algorithm(s) that receive some input information and direct its processing to achieve a specified goal.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000157 "software agent"@en)
+SubClassOf(obo:SEPIO_0000157 obo:IAO_0000030)
+SubClassOf(obo:SEPIO_0000157 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000064))
+SubClassOf(obo:SEPIO_0000157 ObjectSomeValuesFrom(obo:SEPIO_0000046 obo:SEPIO_0000048))
+
+# Class: obo:SEPIO_0000158 (contribution)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000158 "The actions taken by a particular agent in the creation, modification, assessment, or destruction of an artifact.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000158 "This concept is similar in meaning and usage to PROV:Attribution.  Consider aligning or adopting.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000158 "A contribution describes the part played by a particular agent in the creation, modification, assessment, or descruction of an artifact. The scope of a given 'contribution' instance is constrained to include only the actions of one agent in contributing to a particular artifact.  The agent can be a group or organization comprised of more than one individual, acting together to make the contribution. Contribution instances are used to organize information about when, where, how (e.g. what roles were played), and on whose behalf these actions were performed.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000158 "contribution"@en)
+SubClassOf(obo:SEPIO_0000158 obo:OBI_0000011)
+SubClassOf(obo:SEPIO_0000158 ObjectSomeValuesFrom(obo:BFO_0000055 obo:SEPIO_0000048))
+SubClassOf(obo:SEPIO_0000158 ObjectExactCardinality(1 obo:SEPIO_0000017 <http://www.w3.org/ns/prov#Agent>))
+
+# Class: obo:SEPIO_0000173 (study finding)
+
+AnnotationAssertion(obo:IAO_0000112 obo:SEPIO_0000173 "Findings statements tend to take the form of \"We observed that . . . \", or \"Assay X revelaned that . . . \", or \"X was determined to be Y in a study of . . . \".  
+For example:
+
+\"Smith et. al observed that a positive response to imatinib treatment was two-fold higher in a cohort of leukemia patients bearing Bcr-Abl fusions compared to those lacking this driver mutaiton.\" 
+
+A statement summarizing the outcome of a sequencing analysis: \"DNA sequencing data from patient X revealed an A->T mutation at position 2143 in gene Y\".
+
+A statement summarizing the outcome of a variant population frequency study: \"The frequency of variant X was determined to be 0.00015 in a cohort of non-finnish european subjects described in the ExAC dataset.\"")
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000173 "A statement describing the immediate results of a research study, describing what was directly observed, measured, or derived through mathematical calculation.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000173 "In SEPIO, a high-level distinction is made between statements that are 'findings' vs 'assertions'.  Findings are statements that report/summarize what was directly observed or calculated in a study, and are about only the immediate  participants in the experiment or study. As such, findings involve no interpretation or inference from the data to draw broader conclusions. Assertions, by contrast, are statements that derive from some degree of interpretation or inference based on the evaluation of 'evidence', and often make broader claims about the types or categories to which study participants belong. This distinction is important because the provenance and validity of a 'finding' statement does not depend on subjective interpretation of 'evidence' in the same way that of an assertion does. This has modeling implications for how findings and assertions are linked to information that supports them.
+
+In practices, instances of 'study findings' are used to group one or more data items from a particular research study that are relevant as evidence for an assertion.  The utility of this class is in allowing the shared provenance of these data items to be more efficiently represented - as things like agent, date, and methods can be described once for the data set and inferred to apply to all individual data items that comprise it.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000173 "study outcome")
+AnnotationAssertion(obo:SEPIO_0000061 obo:SEPIO_0000173 "- While the act of generating a finding is simpler, it does involve some cognitive effort that could be guided by some method (i.e., one defining what experimental context should be included in the finding statement, and how this and the observed outcomes are reported). Which means that findings are not the direct output of an assay, which merely generates data. So perhaps in SEPIO we commit to only considering research processes at the level of studies - such that even assays would potentially involve some act of summarizing the results as a finding.
+
+- Note that at present 'study data sets' can serve the same 'organizational' purpose as 'study findings' - we should converge on one recommended way to perform this level of organization of evidence data.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000173 "A study finding is a statement that summarizes the immediate results of a particular experiment or study. It describes only what was directly observed, measured, or calculated, and optionally the experimental context of these observations.  It does not describe more general conclusions that may have been inferred from such results. As such, the scope of what a finding describes is limited to the direct participants in the study - i.e. it is about only the instances observed or measured in the study.  It makes no broader inference or conclusion about types or classes to which these instances belong. 
+
+This is not to say that the onserved findings are necessarily accurate or correct - only that they were indeed made in a particular study. For example, the finding that \"Sequencing of DNA from patient X revealed an A->T mutation at position 2143 in gene Y\" is a matter of fact - this was the outcome of the assay, even if the finding is an artifact of low sequencing coverage. Metadata about the finding (e.g. sequencing methods/reagents used, coverage or read depth) are recoded so users can judge for themselves whether the objectively reported finding accurtely reflects the biology it describes.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000173 "SEPIO distinguishes two high-level subtypes of statements:
+1. Findings are statements that report the immediate, objective results of an experiment, observation, or study -  without bias or interpretation.  A finding statement results simply from an act of reporting or summarizing these direct observations, calculations, or measurements.
+2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and its interpretation as evidence.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000173 "study finding"@en)
+SubClassOf(obo:SEPIO_0000173 obo:SEPIO_0000174)
+SubClassOf(obo:SEPIO_0000173 ObjectSomeValuesFrom(obo:RO_0002353 obo:SEPIO_0000125))
+
+# Class: obo:SEPIO_0000174 (statement)
+
+AnnotationAssertion(obo:IAO_0000112 obo:SEPIO_0000174 "The following is derived from https://en.wikipedia.org/wiki/Statement_(logic):
+
+Examples of sentences that are (or make) statements:
+\"Socrates is a man.\"
+\"A triangle has three sides.\"
+\"Madrid is the capital of Spain.\"
+\"There are five ducks on the lake\"
+\"The BRAF V600E mutation causes breast cancer\"
+
+Examples of sentences that are not (or do not make) statements:
+\"Who are you?\"
+\"Run!\"
+\"Greenness perambulates.\"
+\"I had one grunch but the eggplant over there.\"
+\"The King of France is wise.\"
+\"Broccoli tastes good.\"
+
+The first two examples are not declarative sentences and therefore are not (or do not make) statements. The third and fourth are declarative sentences but, lacking meaning, are neither true nor false and therefore are not (or do not make) statements. The fifth and sixth examples are meaningful declarative sentences, but are not statements but rather matters of opinion or taste.")
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000174 "An information content entity expressing a declarative sentence that is either true or false.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000174 "From https://en.wikipedia.org/wiki/Statement_(logic) (2017-06-21):
+\"A statement is a declarative sentence that bears truth value, in that it can be either true or false. This definition derives from the domain of logic, where a statement is either (a) a meaningful declarative sentence that is either true or false, or (b) that which a true or false declarative sentence asserts. In the latter case, a statement is distinct from a sentence in that a sentence is only one formulation of a statement, whereas there may be many other formulations expressing the same statement . . . In (this treatment), \"statement\" is introduced in order to distinguish a sentence from its informational content. A statement is regarded as the information content of an information-bearing sentence. Thus, a sentence is related to the statement it bears like a numeral to the number it refers to. Statements are abstract logical entities, while sentences are grammatical entities.\"
+----
+Note that the definition in (b) describes something closer to the notion of a 'Proposition' as defined in SEPIO?")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000174 "Statements are sentences (or, more precisely, the information content of sentences) that declare a definitive or proposed fact - expressing something about the world or one's experience of it that may or may not be true. The identity of a particular Statement is dependent upon (1) what it reports as true (its semantic content), (2) the Agent stating it, and (3) the occasion on which the statement is made. 
+
+The phrase \"the pink elephant\" describes an entity, but is not a 'statement' as it has no truth value. By contrast, the phrase \"the pink elephant is in the room\" is a statement as this can be evaluated for its truth.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000174 "statement"@en)
+SubClassOf(obo:SEPIO_0000174 obo:IAO_0000030)
+SubClassOf(obo:SEPIO_0000174 ObjectSomeValuesFrom(obo:SEPIO_0000130 <http://www.w3.org/ns/prov#Agent>))
+
+# Class: obo:SEPIO_0000175 (obsolete_observation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000175 "A statement describing something that was observed or recorded.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000175 "In SEPIO, a high-level distinction is made between Statements that are  'Observations' vs 'Assertions'. Observations are statements that report what is observed, and are inherently true in the sense that they reflect an agents particular experience. Assertions are statements that derive from some degree of interpretation or inference based on the evaluation of 'evidence'. 
+
+This distinction is important because the ultimate truth of observations or findings do not depend on evidence in the same way that the truth of assertions does.  Accordingly, any data related to an observation is not treated as evidence, and captured as observations.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000175 "An observation reflects only what an agent observed or device recorded. It is therefore considered a matter of fact, rather than a propositional assertion that may or may not be true.  This does not mean that the observations or recordings were necessarily accurate or correct - only that they were indeed made by an agent.  For example, the observation that \"I counted six ducks in the pond\" is a matter of fact, even if there are actually seven because I missed one that was hiding in the reeds.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000175 "obsolete_observation"@en)
+SubClassOf(obo:SEPIO_0000175 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000180 (obsolete_evidence statement)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000180 "A statement (ie an assertion or finding) that is used as evidence to evaluate the validity of a target assertion or proposition.")
+AnnotationAssertion(obo:IAO_0000231 obo:SEPIO_0000180 "Term is confusing and not required for current use cases. Main reason it was creaated is that his term is used in efforts like CIViC, and we wanted to be clear about how it fits into the SEPIO model. But this can be accomplished in documentation outside of the ontology.
+
+Axioms:
+Eq: 
+statement
+ and (contributes_to_evidence_line some 'evidence line')
+
+Sc:
+'information content entity'
+has_role some 'evidence  role'")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000180 "Evidence Statements can be 'findings' that summarize data and outcomes from a particular study, or evidence-based 'assertions' that make a broader claim, as inferred from the interpretation and evaluation of previously generated information.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000180 "obsolete_evidence statement"@en)
+SubClassOf(obo:SEPIO_0000180 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000181 (obsolete_evidence data)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000181 "Research data, or a product derived from research data such as data sets or figures, that are used as evidence to evaluate the validity of a target assertion or proposition.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000181 "Evidence data is not classified as a 'data item' because it is intended to cover products derived from data such as figures, tables, and data sets.")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000181 "evidence datum")
+AnnotationAssertion(obo:IAO_0000231 obo:SEPIO_0000181 "Term is confusing and not required for current use cases.
+Axioms:
+Eq: ('data item' or table or figure)
+ and (contributes_to_evidence_line some 'evidence line')
+
+Sc:
+'information content entity'
+has_role some 'evidence  role'")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000181 "Instances of this class can include elemental 'data items' such as experimental measurements or derived statistical calculations or scores (e.g. a 548.5 mg/dl blood glucose level, or a 1.3951e-24 p-value), data sets containing several such values and possibly metadata about them, or tables/figures that render such data for human consumption.
+
+The notion of 'evidence data' is meant to be contrasted with the notion of an 'evidence statement', which is a statement used as evidence. (Statements here are logical sentences with truth value that are typically supported by interpretation of more fundamental data).")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000181 "obsolete_evidence data"@en)
+SubClassOf(obo:SEPIO_0000181 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000185 (obsolete_data table)
+
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000185 "A set of data arranged in rows and columns.")
+AnnotationAssertion(obo:IAO_0000119 obo:SEPIO_0000185 "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48693 ! Data Table")
+AnnotationAssertion(obo:IAO_0000231 obo:SEPIO_0000185 "Not required for data models.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000185 "obsolete_data table"@en)
+SubClassOf(obo:SEPIO_0000185 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000186 (patient phenotyping study)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000186 "A study with the goal of assessing and documenting phenotypes exhibited by one or more patients.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000186 "Source: ClinVar (\" 'Phenotyping only' is intended for variants that are submitted to ClinVar to provide individual observations with detailed phenotype data, such as submissions from clinicians or patient registries, without an interpretation from the submitter. The interpretation from the testing laboratory may be provided in a separate field.\")
+ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes.pdf")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000186 "patient phenotyping study"@en)
+SubClassOf(obo:SEPIO_0000186 obo:SEPIO_0000070)
+
+# Class: obo:SEPIO_0000187 (confidence level)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000187 "A data item that quantifies the level of confidence an agent has that a particular piece of information is true.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000187 "confidence level"@en)
+SubClassOf(obo:SEPIO_0000187 obo:IAO_0000109)
+SubClassOf(obo:SEPIO_0000187 ObjectSomeValuesFrom(obo:IAO_0000136 obo:SEPIO_0000174))
+
+# Class: obo:SEPIO_0000258 (provider interpretation)
+
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000258 "Source: ClinVar (\" 'Provider interpretation' is intended for variants that were interpreted by a clinical provider. For example, the clinician may reclassify the variant using detailed patient phenotype information that was unavailable to the testing laborator\")
+ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes.pdf")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000258 "provider interpretation"@en)
+SubClassOf(obo:SEPIO_0000258 obo:SEPIO_0000070)
+
+# Class: obo:SEPIO_0000340 (skos terms)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000340 "Organizational class that groups classes imported from the skos model to support creation and definition of value sets for particular SEPIO data model implementations.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000340 "skos terms")
+
+# Class: obo:SEPIO_0000385 (obsolete_method)
+
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000385 "Consider IAO:0000104 (plan specification).")
+AnnotationAssertion(obo:IAO_0000118 obo:SEPIO_0000385 "plan specification")
+AnnotationAssertion(obo:IAO_0000231 obo:SEPIO_0000385 "Decided to use IAO:plan specification here.  Will give this term 'method' as a SEPIO-preferred label.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000385 "An information content entity that specifies instructions for how a particular objective can be achieved.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000385 "obsolete_method"@en)
+SubClassOf(obo:SEPIO_0000385 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000400 (study data set)
+
+AnnotationAssertion(obo:IAO_0000112 obo:SEPIO_0000400 "The set of data output from a study of the frequency of a particular allele in a particular population, which includes the following data (and metadata) items:
+{     
+ \"ascertainment\": \"ExAc ascertainment method\"
+ \"population\": \"Non-Finnish European\"
+ \"allele\": \"CAR:CA011797\",
+ \"alleleCount\": 66706,
+ \"alleleNumber\": 1,
+ \"alleleFrequency\": 0.00001499,
+ \"homozygousAlleleIndividualCount\": 0
+}
+
+This collection of data may be described by, but remains distinct from, a 'study finding' statement that summarizes the results in narrative form.")
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000400 "A data set comprised of data items produced by a single research study.")
+AnnotationAssertion(obo:IAO_0000116 obo:SEPIO_0000400 "Instances of this class are used in SEPIO to group one or more data items from a particular research study that are relevant as evidence for an assertion.  The utility of this class is in allowing the shared provenance of these data items to be more efficiently represented - as things like agent, date, and methods can be described once for the data set and inferred to apply to all individual data items that comprise it.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000400 "The data items comprising a study data set may include primary measurements, derived calculations, metadata about study participants and methods, or parameters of execution.  
+
+A research study is considered broadly to be any scientific activity aimed at answering a research question. Studies can be simple or complex, depending on the scope of the question being explored and the extent of resources deployed in doing so.  They may include a full research investigation, a set of experiments, or a single experiment or assay.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000400 "study data set"@en)
+SubClassOf(obo:SEPIO_0000400 obo:IAO_0000100)
+
+# Class: obo:SEPIO_0000401 (obsolete_opinion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000401 "A declarative sentence that expresses a belief or judgement that is not necessarily based on fact or knowledge.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000401 "Opinions are matters of subjective judgement or taste, and typically not able to be scientifically validated as objectively true based on empirical evidence. In this way, they are distinct from statements that have inherent truth value.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000401 "obsolete_opinion"@en)
+SubClassOf(obo:SEPIO_0000401 oboInOwl:ObsoleteClass)
+
+# Class: obo:SEPIO_0000402 (evidence direction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000402 "A data item that indicates an agent's assessment of whether an evidence line  supports or disputes a target proposition (or represents inconclusive evidence that is not sufficient for either).")
+AnnotationAssertion(obo:SEPIO_0000061 obo:SEPIO_0000402 "Consider also treating this as an attribute/quality of an evidence line:
+An attribute of an evidence line describing whether it supports or disputes a target proposition (or represents inconclusive evidence that is not sufficient for either).")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000402 "evidence direction"@en)
+EquivalentClasses(obo:SEPIO_0000402 ObjectOneOf(obo:SEPIO_0000403 obo:SEPIO_0000404 obo:SEPIO_0000405))
+SubClassOf(obo:SEPIO_0000402 obo:IAO_0000109)
+
+# Class: obo:SEPIO_0000414 (evidence quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000414 "A data item that indicates the quality of the data used as evidence by an agent making an assertion.")
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000414 "The quality of an evidence item is a measure of the rigor applied in performing the study and anlysis tasks used to produce it. Higher quality studies will have carefully defined controls, and be replicated numerous times to ensure reproducibility.  Other factors that are often used as secondary indicators of the quality of research data include the quality of the journal in which it is published, and the reputation of the lab or institution performing the study.  Evidence qualitty is an important factor in assessing the overall strength of evidence it may produce.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000414 "evidence quality")
+SubClassOf(obo:SEPIO_0000414 obo:IAO_0000109)
+
+# Class: obo:SEPIO_0000431 (recommendation)
+
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000431 "Recommendations are another type of statement besides assertions that can be supported by evidence. They don't put forth a proposed facts as true, but instead describe a recommended action on the foundation of evidence that it will be beneficial.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000431 "recommendation"@en)
+SubClassOf(obo:SEPIO_0000431 obo:SEPIO_0000174)
+
+# Class: obo:SEPIO_0000432 (hypothesis)
+
+AnnotationAssertion(rdfs:comment obo:SEPIO_0000432 "A hypothesis is another type of statement that, like an assertion, can be supported by evidence. It puts for a possible fact as true, but does not express an agents belief in this fact.  Rather, it is a possible fact whose truth will be explired via reasoning or experimentation.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000432 "hypothesis"@en)
+SubClassOf(obo:SEPIO_0000432 obo:SEPIO_0000174)
+
+# Class: obo:SEPIO_000383 (record)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_000383 "A document containing a collection of data or statements about some entity.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:SEPIO_000383 "http://semanticscience.org/resource/SIO_000088 ! 'record'")
+AnnotationAssertion(rdfs:comment obo:SEPIO_000383 "'Record' here is broadly defined to include any document holding (typically) structured information about a particular entity. This can include individual records from a database or knowledgebase that hold information about the subject of the record. 
+
+Specific examples include:
+- A single row of a table in a relational database.
+- A JSON or XML document holding information describing some entity.
+- A VCF File describing varaints in a patient, or a single row in this VCF file describinng a particular variant.
+- A Uniprot knowldgebase record describing the BRCA2 protein (http://www.uniprot.org/uniprot/P51587)
+- A ClinVar knwoledgebase record describing an assertion about the pathogenicity of the NM_000059.3(BRCA2):c.10G>T variant (https://www.ncbi.nlm.nih.gov/clinvar/variation/51063/)
+- An EHR record for a hospital patient.")
+AnnotationAssertion(rdfs:label obo:SEPIO_000383 "record")
+SubClassOf(obo:SEPIO_000383 obo:IAO_0000310)
+
+# Class: obo:STATO_0000039 (statistic)
+
+AnnotationAssertion(obo:IAO_0000112 obo:STATO_0000039 _:genid2147483892)
+AnnotationAssertion(obo:IAO_0000114 obo:STATO_0000039 obo:IAO_0000122)
+AnnotationAssertion(obo:IAO_0000115 obo:STATO_0000039 "a statistic is a measurement datum to describe a dataset or a variable. It is generated by a calculation on set of observed data."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:STATO_0000039 "Alejandra Gonzalez-Beltran"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:STATO_0000039 "Orlaith Burke"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000117 obo:STATO_0000039 "Philippe Rocca-Serra"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:STATO_0000039 "STATO, adapted from wikipedia (http://en.wikipedia.org/wiki/Statistic)."@en)
+AnnotationAssertion(obo:IAO_0000412 obo:STATO_0000039 <http://purl.obofoundry.org/obo/stato.owl>)
+AnnotationAssertion(rdfs:label obo:STATO_0000039 "statistic"@en)
+SubClassOf(obo:STATO_0000039 obo:IAO_0000027)
+
+# Class: obo:STATO_0000104 (z-score)
+
+AnnotationAssertion(obo:IAO_0000114 obo:STATO_0000104 obo:IAO_0000122)
+AnnotationAssertion(obo:IAO_0000115 obo:STATO_0000104 "A z-score (also known as z-value, standard score, or normal score) is a measure of the divergence of an individual experimental result from the most probable result, the mean. Z is expressed in terms of the number of standard deviations from the mean value."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:STATO_0000104 "Alejandra Gonzalez-Beltran"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:STATO_0000104 "Orlaith Burke"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:STATO_0000104 "Philippe Rocca-Serra"@en)
+AnnotationAssertion(obo:IAO_0000119 obo:STATO_0000104 "https://controls.engin.umich.edu/wiki/index.php/Basic_statistics:_mean,_median,_average,_standard_deviation,_z-scores,_and_p-value#Z-Scores"@en)
+AnnotationAssertion(obo:IAO_0000412 obo:STATO_0000104 <http://purl.obofoundry.org/obo/stato.owl>)
+AnnotationAssertion(rdfs:label obo:STATO_0000104 "z-score"@en)
+SubClassOf(obo:STATO_0000104 obo:STATO_0000039)
+
+# Class: obo:STATO_0000184 (obsolete_ratio)
+
+AnnotationAssertion(obo:IAO_0000115 obo:STATO_0000184 "A ratio is a data item which is formed with two numbers r and s is written r/s, where r is the numerator and s is the denominator. The ratio of r to s is equivalent to the quotient r/s.")
+AnnotationAssertion(rdfs:label obo:STATO_0000184 "obsolete_ratio")
+SubClassOf(obo:STATO_0000184 oboInOwl:ObsoleteClass)
+
+# Class: <http://purl.org/oban/association> (association)
+
+AnnotationAssertion(obo:IAO_0000115 <http://purl.org/oban/association> "Associations are a form of proposition, framed as a tuple linking two (or more) entities through defined relationships.")
+AnnotationAssertion(rdfs:label <http://purl.org/oban/association> "association"@en)
+SubClassOf(<http://purl.org/oban/association> obo:SEPIO_0000000)
+
+# Class: <http://www.w3.org/2004/02/skos/core#Concept> (Concept)
+
+AnnotationAssertion(obo:IAO_0000115 <http://www.w3.org/2004/02/skos/core#Concept> "An idea or notion; a unit of thought.")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#Concept> "Concept")
+SubClassOf(<http://www.w3.org/2004/02/skos/core#Concept> obo:SEPIO_0000340)
+
+# Class: <http://www.w3.org/ns/prov#Activity> (Activity)
+
+AnnotationAssertion(obo:IAO_0000115 <http://www.w3.org/ns/prov#Activity> "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.")
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/prov#Activity> "Activity")
+SubClassOf(<http://www.w3.org/ns/prov#Activity> obo:BFO_0000015)
+SubClassOf(<http://www.w3.org/ns/prov#Activity> ObjectSomeValuesFrom(obo:RO_0000057 obo:BFO_0000002))
+SubClassOf(<http://www.w3.org/ns/prov#Activity> DataSomeValuesFrom(obo:SEPIO_0000160 xsd:dateTime))
+
+# Class: <http://www.w3.org/ns/prov#Agent> (Agent)
+
+AnnotationAssertion(obo:IAO_0000115 <http://www.w3.org/ns/prov#Agent> "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.")
+AnnotationAssertion(obo:IAO_0000116 <http://www.w3.org/ns/prov#Agent> "prov:Agent is considered equivalent to foaf:Agent (http://xmlns.com/foaf/0.1/Agent ) Def = \"The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.\"")
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/prov#Agent> "Agents typically persons, organizations, or software that perform tasks, including making assertions, or generating information used as evidence.  In the execution of such tasks,  an 'agent role' is realized that inheres in the agent.")
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/prov#Agent> "Agent")
+EquivalentClasses(<http://www.w3.org/ns/prov#Agent> ObjectSomeValuesFrom(obo:SEPIO_0000046 obo:SEPIO_0000048))
+SubClassOf(<http://www.w3.org/ns/prov#Agent> obo:BFO_0000002)
+
+# Class: foaf:Group (Group)
+
+AnnotationAssertion(rdfs:comment foaf:Group "The Group class represents a collection of individual agents (and may itself play the role of a Agent, ie. something that can perform actions).
+
+This concept is intentionally quite broad, covering informal and ad-hoc groups, long-lived communities, organizational groups within a workplace, etc. Some such groups may have associated characteristics which could be captured in RDF (perhaps a homepage, name, mailing list etc.).")
+AnnotationAssertion(rdfs:label foaf:Group "Group")
+SubClassOf(foaf:Group obo:BFO_0000040)
+SubClassOf(foaf:Group ObjectSomeValuesFrom(obo:SEPIO_0000046 obo:SEPIO_0000048))
+
+# Class: foaf:Organization (Organization)
+
+AnnotationAssertion(obo:IAO_0000115 foaf:Organization "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.")
+AnnotationAssertion(rdfs:label foaf:Organization "Organization"@en)
+SubClassOf(foaf:Organization foaf:Group)
+SubClassOf(foaf:Organization ObjectSomeValuesFrom(obo:SEPIO_0000046 obo:SEPIO_0000048))
+
+# Class: foaf:Person (Person)
+
+AnnotationAssertion(obo:IAO_0000115 foaf:Person "A human being regarded as an individual.")
+AnnotationAssertion(rdfs:comment foaf:Person "The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. The Person class is a sub-class of the Agent class, since all people are considered 'agents' in FOAF.")
+AnnotationAssertion(rdfs:label foaf:Person "Person"@en)
+SubClassOf(foaf:Person obo:BFO_0000040)
+SubClassOf(foaf:Person ObjectSomeValuesFrom(obo:SEPIO_0000046 obo:SEPIO_0000048))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: obo:SEPIO_0000403 (supporting)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000403 "An evidence direction indicating that an evidence line provides an argument that supports the validity of a target assertion.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000403 "supporting"@en)
+ClassAssertion(obo:SEPIO_0000402 obo:SEPIO_0000403)
+
+# Individual: obo:SEPIO_0000404 (disputing)
+
+AnnotationAssertion(rdfs:label obo:SEPIO_0000404 "disputing"@en)
+ClassAssertion(obo:SEPIO_0000402 obo:SEPIO_0000404)
+
+# Individual: obo:SEPIO_0000405 (inconclusive)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SEPIO_0000405 "An evidence direction indicating that an evidence line lacks sufficient credibility, relevance, or completeness to argue for or against the validity of a target assertion.")
+AnnotationAssertion(rdfs:label obo:SEPIO_0000405 "inconclusive"@en)
+ClassAssertion(obo:SEPIO_0000402 obo:SEPIO_0000405)
+
+
+SubObjectPropertyOf(ObjectPropertyChain(obo:RO_0002353 obo:SEPIO_0000017) <http://purl.org/pav/createdBy>)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000006 obo:SEPIO_0000084) obo:SEPIO_0000189)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000006 obo:SEPIO_0000084 obo:SEPIO_0000178) obo:SEPIO_0000145)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000006 obo:SEPIO_0000084 terms:source) obo:SEPIO_0000145)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000030 obo:SEPIO_0000027) obo:SEPIO_0000027)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000030 <http://purl.org/oban/association_has_predicate>) obo:SEPIO_0000028)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000030 <http://purl.org/oban/association_has_subject>) obo:SEPIO_0000026)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000084 obo:RO_0002353) obo:SEPIO_0000085)
+SubObjectPropertyOf(Annotation(obo:SEPIO_0000061 "If we start using the 'study data set' class in a similar way to organize data items from a partiular study, we should create a similar property chain that traverses the property we use to link study data sets to their data item parts.  
+Can this just be \"has part\" . . .or is a specific/unique relation needed here to avoid unwanted entailments?") Annotation(rdfs:comment "This property chain ensures that any evidence items that are organized into groups using a 'study finding' object will still be classified as evidence items for the relevant evidence line, and returned by queries for evidence items for a particular evidence line.") ObjectPropertyChain(obo:SEPIO_0000084 obo:SEPIO_0000257) obo:SEPIO_0000084)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000098 obo:SEPIO_0000007) obo:SEPIO_0000007)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000098 obo:SEPIO_0000009) obo:SEPIO_0000009)
+SubObjectPropertyOf(ObjectPropertyChain(obo:SEPIO_0000100 obo:SEPIO_0000007) obo:SEPIO_0000008)
+)

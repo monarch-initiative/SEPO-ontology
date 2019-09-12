@@ -1,0 +1,120 @@
+Level	Rule Name	Subject	Property	Value
+ERROR	missing_label	http://purl.org/pav/sourceAccessedAt	rdfs:label		
+ERROR	misused_obsolete_label	OBI:0000938	rdfs:label	obsolete_categorical measurement datum	
+ERROR	misused_obsolete_label	OBI:0000999	rdfs:label	obsolete_has_category_label	
+ERROR	misused_obsolete_label	SEPIO:0000055	rdfs:label	obsolete_manual assertion process@en	
+ERROR	misused_obsolete_label	SEPIO:0000056	rdfs:label	obsolete_automated assertion process@en	
+ERROR	misused_obsolete_label	SEPIO:0000127	rdfs:label	obsolete_study group@en	
+ERROR	misused_obsolete_label	SEPIO:0000152	rdfs:label	obsolete_evidence_assessed_by@en	
+ERROR	misused_obsolete_label	SEPIO:0000175	rdfs:label	obsolete_observation@en	
+ERROR	misused_obsolete_label	SEPIO:0000180	rdfs:label	obsolete_evidence statement@en	
+ERROR	misused_obsolete_label	SEPIO:0000181	rdfs:label	obsolete_evidence data@en	
+ERROR	misused_obsolete_label	SEPIO:0000185	rdfs:label	obsolete_data table@en	
+ERROR	misused_obsolete_label	SEPIO:0000232	rdfs:label	obsolete_has_quantifier@en	
+ERROR	misused_obsolete_label	SEPIO:0000385	rdfs:label	obsolete_method@en	
+ERROR	misused_obsolete_label	SEPIO:0000401	rdfs:label	obsolete_opinion@en	
+ERROR	misused_obsolete_label	STATO:0000184	rdfs:label	obsolete_ratio	
+ERROR	missing_ontology_description	sepio.owl	dc11:description		
+WARN	annotation_whitespace	OBI:0000338	IAO:0000112	Concluding that a gene is upregulated in a tissue sample based on the band intensity in a western blot.  Concluding that a patient has a infection based on measurement of an elevated body temperature and reported headache. Concluding that there were problems in an investigation because data from PCR and microarray are conflicting. Concluding that 'defects in gene XYZ cause cancer due to improper DNA repair' based on data from experiments in that study that gene XYZ is involved in DNA repair, and the conclusion of a previous study that cancer patients have an increased number of mutations in this gene. 	
+WARN	annotation_whitespace	OBI:0001146	IAO:0000112	Determination of KD value for an antibody binding a protein using a BIACORE assay. Using plate bound antigen in an ELISA to determine if a mixture of serum antibodies bind the antigen.nnThe following are NOT binding assays, as the desired output is not binding data: RNA microarray experiments to determine levels of gene expression. ChIP experiments to determine where in DNA a transcription factor binds. Using an IL-2 antibody on an ELISA plate to determine presence of IL-2 after stimulating a T cell culture. 	
+WARN	missing_definition	BFO:0000055	IAO:0000115		
+WARN	missing_definition	BFO:0000182	IAO:0000115		
+WARN	missing_definition	OBI:0000070	IAO:0000115		
+WARN	missing_definition	RO:0002352	IAO:0000115		
+WARN	missing_definition	RO:0002353	IAO:0000115		
+WARN	missing_definition	SEPIO:0000017	IAO:0000115		
+WARN	missing_definition	SEPIO:0000021	IAO:0000115		
+WARN	missing_definition	SEPIO:0000026	IAO:0000115		
+WARN	missing_definition	SEPIO:0000027	IAO:0000115		
+WARN	missing_definition	SEPIO:0000028	IAO:0000115		
+WARN	missing_definition	SEPIO:0000040	IAO:0000115		
+WARN	missing_definition	SEPIO:0000046	IAO:0000115		
+WARN	missing_definition	SEPIO:0000051	IAO:0000115		
+WARN	missing_definition	SEPIO:0000052	IAO:0000115		
+WARN	missing_definition	SEPIO:0000055	IAO:0000115		
+WARN	missing_definition	SEPIO:0000061	IAO:0000115		
+WARN	missing_definition	SEPIO:0000063	IAO:0000115		
+WARN	missing_definition	SEPIO:0000069	IAO:0000115		
+WARN	missing_definition	SEPIO:0000070	IAO:0000115		
+WARN	missing_definition	SEPIO:0000071	IAO:0000115		
+WARN	missing_definition	SEPIO:0000073	IAO:0000115		
+WARN	missing_definition	SEPIO:0000074	IAO:0000115		
+WARN	missing_definition	SEPIO:0000076	IAO:0000115		
+WARN	missing_definition	SEPIO:0000077	IAO:0000115		
+WARN	missing_definition	SEPIO:0000078	IAO:0000115		
+WARN	missing_definition	SEPIO:0000081	IAO:0000115		
+WARN	missing_definition	SEPIO:0000098	IAO:0000115		
+WARN	missing_definition	SEPIO:0000099	IAO:0000115		
+WARN	missing_definition	SEPIO:0000100	IAO:0000115		
+WARN	missing_definition	SEPIO:0000101	IAO:0000115		
+WARN	missing_definition	SEPIO:0000105	IAO:0000115		
+WARN	missing_definition	SEPIO:0000113	IAO:0000115		
+WARN	missing_definition	SEPIO:0000115	IAO:0000115		
+WARN	missing_definition	SEPIO:0000116	IAO:0000115		
+WARN	missing_definition	SEPIO:0000123	IAO:0000115		
+WARN	missing_definition	SEPIO:0000126	IAO:0000115		
+WARN	missing_definition	SEPIO:0000148	IAO:0000115		
+WARN	missing_definition	SEPIO:0000152	IAO:0000115		
+WARN	missing_definition	SEPIO:0000153	IAO:0000115		
+WARN	missing_definition	SEPIO:0000154	IAO:0000115		
+WARN	missing_definition	SEPIO:0000155	IAO:0000115		
+WARN	missing_definition	SEPIO:0000156	IAO:0000115		
+WARN	missing_definition	SEPIO:0000160	IAO:0000115		
+WARN	missing_definition	SEPIO:0000161	IAO:0000115		
+WARN	missing_definition	SEPIO:0000162	IAO:0000115		
+WARN	missing_definition	SEPIO:0000164	IAO:0000115		
+WARN	missing_definition	SEPIO:0000184	IAO:0000115		
+WARN	missing_definition	SEPIO:0000185	IAO:0000115		
+WARN	missing_definition	SEPIO:0000188	IAO:0000115		
+WARN	missing_definition	SEPIO:0000232	IAO:0000115		
+WARN	missing_definition	SEPIO:0000258	IAO:0000115		
+WARN	missing_definition	SEPIO:0000337	IAO:0000115		
+WARN	missing_definition	SEPIO:0000376	IAO:0000115		
+WARN	missing_definition	SEPIO:0000384	IAO:0000115		
+WARN	missing_definition	SEPIO:0000385	IAO:0000115		
+WARN	missing_definition	SEPIO:0000386	IAO:0000115		
+WARN	missing_definition	SEPIO:0000406	IAO:0000115		
+WARN	missing_definition	SEPIO:0000419	IAO:0000115		
+WARN	missing_definition	SEPIO:0000427	IAO:0000115		
+WARN	missing_definition	SEPIO:0000431	IAO:0000115		
+WARN	missing_definition	SEPIO:0000432	IAO:0000115		
+WARN	missing_definition	STATO:0000129	IAO:0000115		
+WARN	missing_definition	dc:identifier	IAO:0000115		
+WARN	missing_definition	dc:title	IAO:0000115		
+WARN	missing_definition	http://purl.org/oban/association_has_object	IAO:0000115		
+WARN	missing_definition	http://purl.org/oban/association_has_predicate	IAO:0000115		
+WARN	missing_definition	http://purl.org/oban/association_has_subject	IAO:0000115		
+WARN	missing_definition	http://purl.org/ontology/bibo/doi	IAO:0000115		
+WARN	missing_definition	http://purl.org/pav/authoredBy	IAO:0000115		
+WARN	missing_definition	http://purl.org/pav/createdBy	IAO:0000115		
+WARN	missing_definition	http://purl.org/pav/derivedFrom	IAO:0000115		
+WARN	missing_definition	http://purl.org/pav/retrievedFrom	IAO:0000115		
+WARN	missing_definition	http://purl.org/pav/sourceAccessedAt	IAO:0000115		
+WARN	missing_definition	http://purl.org/pav/version	IAO:0000115		
+WARN	missing_definition	oboInOwl:hasDbXref	IAO:0000115		
+WARN	missing_definition	foaf:Group	IAO:0000115		
+WARN	invalid_xref	SEPIO:000383	oboInOwl:hasDbXref	http://semanticscience.org/resource/SIO_000088 ! 'record'	
+INFO	lowercase_definition	BFO:0000050	IAO:0000115	a core relation that holds between a part and its whole@en	
+INFO	lowercase_definition	BFO:0000051	IAO:0000115	a core relation that holds between a whole and its part@en	
+INFO	lowercase_definition	IAO:0000013	IAO:0000115	a report that is published in a journal@en	
+INFO	lowercase_definition	IAO:0000027	IAO:0000115	a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.@en	
+INFO	lowercase_definition	IAO:0000088	IAO:0000115	a document assembled by an author for the purpose of providing information for the audience. A report is the output of a documenting process and has the objective to be consumed by a specific audience. Topic of the report is on something that has completed. A report is not a single figure. Examples of reports are journal article, patent application, grant progress report, case report (not patient record)@en	
+INFO	lowercase_definition	OBI:0000066	IAO:0000115	a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s).	
+INFO	lowercase_definition	RO:0000056	IAO:0000115	a relation between a continuant and a process, in which the continuant is somehow involved in the process@en	
+INFO	lowercase_definition	RO:0000057	IAO:0000115	a relation between a process and a continuant, in which the continuant is somehow involved in the process@en	
+INFO	lowercase_definition	RO:0002233	IAO:0000115	p has direct input c iff c is a participant in p, c is present at the start of p, and the state of c is modified during p.	
+INFO	lowercase_definition	RO:0002234	IAO:0000115	p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p.	
+INFO	lowercase_definition	SEPIO:0000167	IAO:0000115	a relation between an information entity and an indicator of degree of confidence that the information it represents is true.	
+INFO	lowercase_definition	SEPIO:0000169	IAO:0000115	a relation between an agent and an other agent, typically an organization, on whose behalf a Contribution is made.	
+INFO	lowercase_definition	STATO:0000039	IAO:0000115	a statistic is a measurement datum to describe a dataset or a variable. It is generated by a calculation on set of observed data.@en	
+INFO	missing_superclass	BFO:0000001	rdfs:subClassOf		
+INFO	missing_superclass	BFO:0000002	rdfs:subClassOf		
+INFO	missing_superclass	BFO:0000003	rdfs:subClassOf		
+INFO	missing_superclass	BFO:0000015	rdfs:subClassOf		
+INFO	missing_superclass	BFO:0000019	rdfs:subClassOf		
+INFO	missing_superclass	BFO:0000020	rdfs:subClassOf		
+INFO	missing_superclass	BFO:0000023	rdfs:subClassOf		
+INFO	missing_superclass	BFO:0000031	rdfs:subClassOf		
+INFO	missing_superclass	BFO:0000040	rdfs:subClassOf		
+INFO	missing_superclass	SEPIO:0000340	rdfs:subClassOf		
+INFO	missing_superclass	oboInOwl:ObsoleteClass	rdfs:subClassOf		

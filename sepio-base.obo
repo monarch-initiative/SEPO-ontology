@@ -1,0 +1,1415 @@
+format-version: 1.2
+data-version: sepio/releases/2019-09-12/sepio-base.owl
+ontology: sepio/sepio-base
+property_value: http://purl.org/dc/elements/1.1/contributor "Matthew Brush" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Ontology for scientific evidence and provenance information" xsd:string
+property_value: http://purl.org/dc/terms/description "The SEPIO ontology is in its early stages of development, undergoing iterative refinement as new requirements emerge and alignment with existing standards is explored. The SEPIO core file imports two files which can be resolved at the URLs below:\n\nIAO ontology-metadata import: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/imports/ontology-metadata.owl\n\nbfo mireot: https://raw.githubusercontent.com/monarch-initiative/SEPIO-ontology/master/src/ontology/mireots/bfo-mireot.owl" xsd:string
+property_value: http://purl.org/dc/terms/license "Unspecified" xsd:string
+
+[Term]
+id: Activity
+name: Activity
+def: "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." []
+is_a: BFO:0000015
+relationship: RO:0000057 BFO:0000002 ! has participant
+
+[Term]
+id: Agent
+name: Agent
+def: "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity." []
+comment: Agents typically persons, organizations, or software that perform tasks, including making assertions, or generating information used as evidence.  In the execution of such tasks,  an 'agent role' is realized that inheres in the agent.
+is_a: BFO:0000002
+property_value: IAO:0000116 "prov:Agent is considered equivalent to foaf:Agent (http://xmlns.com/foaf/0.1/Agent ) Def = \"The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.\"" xsd:string
+
+[Term]
+id: BFO:0000182
+name: history
+comment: A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])
+is_a: BFO:0000015
+
+[Term]
+id: Concept
+name: Concept
+def: "An idea or notion; a unit of thought." []
+is_a: SEPIO:0000340 ! skos terms
+
+[Term]
+id: ERO:0001716
+name: database
+def: "A database is an organized collection of data, today typically in digital form." []
+xref: http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Database
+is_a: IAO:0000030 ! information content entity
+
+[Term]
+id: IAO:0000013
+name: journal article
+def: "a report that is published in a journal" []
+is_a: IAO:0000311 ! publication
+property_value: IAO:0000111 "journal article" xsd:string
+property_value: IAO:0000112 "Examples are articles published in the journals, Nature and Science. The content can often be cited by reference to a paper based encoding, e.g.  Authors, Title of article, Journal name, date or year of publication, volume and page number." xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "person:Alan Ruttenberg" xsd:string
+property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 group:OBI xsd:string
+property_value: IAO:0000119 "OBI_0000159" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: IAO:0000027
+name: data item
+def: "a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000111 "data item" xsd:string
+property_value: IAO:0000112 "Data items include counts of things, analyte concentrations, and statistical summaries." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers." xsd:string
+property_value: IAO:0000116 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum." xsd:string
+property_value: IAO:0000116 "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym." xsd:string
+property_value: IAO:0000116 "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/" xsd:string
+property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
+property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
+property_value: IAO:0000117 "PERSON: Jonathan Rees" xsd:string
+property_value: IAO:0000118 "data" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: IAO:0000030
+name: information content entity
+def: "A generically dependent continuant that is about some thing." []
+comment: ICEs are abstract entities that convey information about things in the world. ICEs represent the information encoded in physical artifacts such as photographs, books, or digital storage medium (as opposed to the physical medium itself).  A particular ICE can be encoded simultaneously in many physical or digital mediums and formats. For example, only one instance of the first edition of "War and Peace" exists as an ICE, representing information conveyed in this work. But many instances of "War and Peace" exist at the level of their physical concretizations in printed books or digital devices.
+is_a: BFO:0000031
+relationship: IAO:0000136 BFO:0000001 ! is_about
+relationship: SEPIO:0000387 Agent ! created_by Agent
+property_value: IAO:0000112 "- Data Items: A '548.5 mg/dl' measurement of blood glucose in mutant mice.\n- Protocols: A blood glucose assay protocol that describes how the measurement was taken.\n- Calculations: A 1.3951e-24 p-value statistic indicating a significant increase relative to wild-type mice.\n- Assertions: An assertion stating that \"Lpr1 leptin receptor mutations can lead to diabetes\".\n- Publications: A journal article that publishes this assertion.\n- Figure/Tables: A figure or table from this article that present data supporting it.\n- Software/Algorithms: A text-mining algorithm that mines the literature to identify and extract the assertion.\n- Databases: The MGI (Mouse Genome Informatics) database that stores the assertion as a structured gene-disease annotation." xsd:string
+
+[Term]
+id: IAO:0000064
+name: algorithm
+def: "A plan specification which describes the inputs and output of mathematical functions as well as workflow of execution for achieving an predefined objective. Algorithms are realized usually by means of implementation as computer programs for execution by automata." []
+is_a: IAO:0000104 ! plan specification
+
+[Term]
+id: IAO:0000088
+name: report
+def: "a document assembled by an author for the purpose of providing information for the audience. A report is the output of a documenting process and has the objective to be consumed by a specific audience. Topic of the report is on something that has completed. A report is not a single figure. Examples of reports are journal article, patent application, grant progress report, case report (not patient record)" []
+is_a: IAO:0000310 ! document
+property_value: IAO:0000111 "report" xsd:string
+property_value: IAO:0000112 "Examples of reports are gene lists and investigation reports. These are not published (journal) articles but may be included in a journal article." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "2009-03-16: this was report of results with definition: A report is a narrative object that is a formal statement of the results of an investigation, or of any matter on which definite information is required, made by some person or body instructed or required to do so." xsd:string
+property_value: IAO:0000116 "2009-03-16: work has been done on this term during during the OBI workshop winter 2009 and the current definition was considered acceptable for use in OBI. If there is a need to modify this definition please notify OBI." xsd:string
+property_value: IAO:0000116 "2009-08-10 Alan Ruttenberg: Larry Hunter suggests that this be obsoleted and replaced by 'document'. Alan restored as there are OBI dependencies and this merits further discussion" xsd:string
+property_value: IAO:0000116 "disagreement about where reports go. alan: only some gene lists are reports. Is a report all the content of some document? The example of usage suggests that a report may be part of  some article. Term needs clarification" xsd:string
+property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
+property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
+property_value: IAO:0000117 "PERSON:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 "GROUP: OBI" xsd:string
+property_value: IAO:0000119 "OBI_0000099" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: IAO:0000100
+name: data set
+def: "A data item that is an aggregate of other data items of the same type that have something in common. Averages and distributions can be determined for data sets." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000111 "data set" xsd:string
+property_value: IAO:0000112 "Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves)." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "2009/10/23 Alan Ruttenberg. The intention is that this term represent collections of like data. So this isn't for, e.g. the whole contents of a cel file, which includes parameters, metadata etc. This is more like java arrays of a certain rather specific type" xsd:string
+property_value: IAO:0000116 "2014-05-05: Data sets are aggregates and thus must include two or more data items. We have chosen not to add logical axioms to make this restriction." xsd:string
+property_value: IAO:0000117 "person:Allyson Lister" xsd:string
+property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 group:OBI xsd:string
+property_value: IAO:0000119 "OBI_0000042" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: IAO:0000104
+name: plan specification
+def: "A directive information entity with action specifications and objective specifications as parts that, when concretized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000116 "Alternative previous definition: a plan is a set of instructions that specify how an objective should be achieved" xsd:string
+property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
+property_value: SEPIO:0000386 "method" xsd:string
+
+[Term]
+id: IAO:0000109
+name: measurement datum
+def: "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device." []
+is_a: IAO:0000027 ! data item
+property_value: IAO:0000111 "measurement datum" xsd:string
+property_value: IAO:0000112 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "2/2/2009 is_specified_output of some assay?" xsd:string
+property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 group:OBI xsd:string
+property_value: IAO:0000119 "OBI_0000305" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: IAO:0000306
+name: table
+def: "A textual entity that contains a two-dimensional arrangement of texts repeated at regular intervals across a spatial range, such that the spatial relationships among the constituent texts expresses propositions" []
+is_a: IAO:0000030 ! information content entity
+
+[Term]
+id: IAO:0000308
+name: figure
+def: "An information content entity consisting of a two dimensional arrangement of information content entities such that the arrangement itself is about something." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000111 "figure" xsd:string
+property_value: IAO:0000112 "Any picture, diagram or table" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: IAO:0000310
+name: document
+def: "A collection of information content entities intended to be understood together as a whole" []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000111 "document" xsd:string
+property_value: IAO:0000112 "A journal article, patent application, laboratory notebook, or a book" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: IAO:0000311
+name: publication
+def: "A document that has been accepted by a publisher" []
+is_a: IAO:0000310 ! document
+property_value: IAO:0000111 "publication" xsd:string
+property_value: IAO:0000112 "A journal article or book" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: IAO:0000313
+name: patent
+def: "A document that has been accepted by a patent authority" []
+is_a: IAO:0000310 ! document
+property_value: IAO:0000111 "patent" xsd:string
+property_value: IAO:0000112 "US Patent 6,449,603" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: OBI:0000011
+name: planned process
+def: "A processual entity that realizes a plan which is the concretization of a plan specification." []
+is_a: Activity ! Activity
+relationship: SEPIO:0000017 Agent ! has_agent Agent
+property_value: IAO:0000111 "planned process" xsd:string
+property_value: IAO:0000112 "Injecting mice with a vaccine in order to test its efficacy" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000116 "'Plan' includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn't have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)" xsd:string
+property_value: IAO:0000117 "Bjoern Peters" xsd:string
+property_value: IAO:0000119 "branch derived" xsd:string
+property_value: IAO:0000232 "6/11/9: Edited at workshop. Used to include: is initiated by an agent" xsd:string
+property_value: IAO:0000232 "This class merges the previously separated objective driven process and planned process, as they the separation proved hard to maintain. (1/22/09, branch call)" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: OBI:0000066
+name: investigation
+def: "a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s)." []
+is_a: SEPIO:0000004 ! research activity
+
+[Term]
+id: OBI:0000070
+name: assay
+is_a: SEPIO:0000004 ! research activity
+
+[Term]
+id: OBI:0000175
+name: p-value
+def: "A quantitative confidence value that represents the probability of obtaining a result at least as extreme as that actually obtained, assuming that the actual value was the result of chance alone." []
+is_a: STATO:0000039 ! statistic
+property_value: IAO:0000111 "p-value" xsd:string
+property_value: IAO:0000114 IAO:0000121
+property_value: IAO:0000116 "May be outside the scope of OBI long term, is needed so is retained" xsd:string
+property_value: IAO:0000117 "PERSON:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 "WEB: http://en.wikipedia.org/wiki/P-value" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: OBI:0000235
+name: standard error
+def: "A quantitative confidence value which is the standard deviations of the sample in a frequency distribution, obtained by dividing the standard deviation by the total number of cases in the frequency distribution." []
+is_a: STATO:0000039 ! statistic
+property_value: IAO:0000111 "standard error" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 group:OBI xsd:string
+property_value: IAO:0000232 "see P-Value" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: OBI:0000272
+name: protocol
+def: "A plan specification which has sufficient level of detail and quantitative information to communicate it between investigation agents, so that different investigation agents will reliably be able to independently reproduce the process." []
+is_a: IAO:0000104 ! plan specification
+property_value: IAO:0000112 "PCR protocol, has objective specification, amplify DNA fragment of interest, and has action specification describes the amounts of experimental reagents used (e..g. buffers, dNTPS, enzyme), and the temperature and cycle time settings for running the PCR." xsd:string
+property_value: SEPIO:0000386 "experimental protocol" xsd:string
+
+[Term]
+id: OBI:0000338
+name: drawing a conclusion based on data
+def: "A planned process in which data gathered in an investigation is evaluated in the context of existing knowledge with the objective to generate more general conclusions or to conclude that the data does not allow one to draw general conclusion" []
+is_a: SEPIO:0000003 ! assertion process
+property_value: IAO:0000111 "drawing a conclusion based on data" xsd:string
+property_value: IAO:0000112 "Concluding that a gene is upregulated in a tissue sample based on the band intensity in a western blot.  Concluding that a patient has a infection based on measurement of an elevated body temperature and reported headache. Concluding that there were problems in an investigation because data from PCR and microarray are conflicting. Concluding that 'defects in gene XYZ cause cancer due to improper DNA repair' based on data from experiments in that study that gene XYZ is involved in DNA repair, and the conclusion of a previous study that cancer patients have an increased number of mutations in this gene. " xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
+property_value: IAO:0000117 "PERSON: Jennifer Fostel" xsd:string
+property_value: IAO:0000119 "Bjoern Peters" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: OBI:0000938
+name: obsolete_categorical measurement datum
+def: "A measurement datum that is reported on a categorical scale" []
+is_a: ObsoleteClass
+
+[Term]
+id: OBI:0001146
+name: binding assay
+def: "An assay with the objective to characterize the disposition of two or more material entities to form a complex." []
+is_a: OBI:0000070 ! assay
+property_value: IAO:0000111 "binding assay" xsd:string
+property_value: IAO:0000112 "Determination of KD value for an antibody binding a protein using a BIACORE assay. Using plate bound antigen in an ELISA to determine if a mixture of serum antibodies bind the antigen.nnThe following are NOT binding assays, as the desired output is not binding data: RNA microarray experiments to determine levels of gene expression. ChIP experiments to determine where in DNA a transcription factor binds. Using an IL-2 antibody on an ELISA plate to determine presence of IL-2 after stimulating a T cell culture. " xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON:Bjoern Peters, Randi Vita, Jason Greenbaum" xsd:string
+property_value: IAO:0000119 "PERSON:Bjoern Peters, Randi Vita, Jason Greenbaum" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: OBI:0002165
+name: protein localization assay
+def: "An assay that determines the specific location of a protein. Subcellular localization is distinguished from tissue-based localization based on the type of microscopy applied." []
+is_a: OBI:0000070 ! assay
+property_value: IAO:0000111 "protein localization assay" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "Rebecca Tauber" xsd:string
+property_value: IAO:0000119 "OBI development call" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+
+[Term]
+id: SEPIO:0000000
+name: proposition
+def: "An abstract entity representing the sharable meaning of what is expressed in a particular assertion." []
+comment: The notion of a proposition, and its relationship to an assertion, derives from the domain of logic and philosophy [12]. Propositions are abstract entities that, like numbers, are independent of space and time. They represent only the meaning that is expressed in a particular agent’s assertion, and are ‘sharable’ in that the same proposition can be expressed in many different assertions. Propositions are primary bearers of truth value, in that they are true or false.  \n\nFrom http://plato.stanford.edu/entries/propositions/: "Propositions are the sharable objects of the attitudes and the primary bearers of truth and falsity. This stipulation rules out certain candidates for propositions, including thought- and utterance-tokens, which presumably are not sharable, and concrete events or facts, which presumably cannot be false."
+is_a: BFO:0000001
+property_value: IAO:0000112 "The proposition that BRCA1:2685T>A causes familial breast cancer." xsd:string
+property_value: IAO:0000116 "In the SEPIO model, an assertion is akin to an act in speech or text that expresses beleif in the truth of a proposition.  It is the proposition that represents the semantic content of a claim, and bears truth value. \n\nMappings to terms from related models: \n1.  http://purl.org/see/rdo#proposition\nA SEPIO proposition is equivalent to a 'proposition' from the Semantic EvidencE framework. \"The class rdo:proposition represents propositions i.e. the sharable objects of propositional attitudes like belief or desire and the bearers of truth values. As truth bearers they are either true or false. They are taken to represent the semantic content of sentences or larger lexical entities formulated in some natural or artificial language.\")\n\n2. http://purl.org/mp/Holotype\nThe notion of a holotype from the Micropublications model is related to a SPEIO proposition - in that it represents a statement that is selcted to all other statements expressing the same meaning.\n\n3. http://purl.org/oban/association\nAn OBAN proposition is a more type of proposition, that is structured/expressed according to the specifications laid out in the OBAN ontology." xsd:string
+property_value: IAO:0000119 http://plato.stanford.edu/entries/propositions xsd:string
+
+[Term]
+id: SEPIO:0000001
+name: assertion
+def: "A statement made by a particular agent on a particular occasion that a particular proposition is true, based on the evaluation of one or more lines of evidence." []
+comment: Assertions as defined in SEPIO are the result of some logical inference made based on the interpretation of evidence.  They put forth a proposition that may or may not be true - the validity of which ultimately rests on the quantity, quality, diversity, and concordance of evidence supporting it.\n\nStatements directly reporting study results or observations are not considered assertions in this sense, as they merely report what was observed or recorded, but do not rely on a leap of logical inference (see 'study finding').
+is_a: SEPIO:0000174 ! statement
+relationship: RO:0002353 SEPIO:0000003 ! output of assertion process
+relationship: SEPIO:0000006 SEPIO:0000002 ! has_evidence_line evidence line
+relationship: SEPIO:0000030 SEPIO:0000000 ! asserts_proposition proposition
+property_value: IAO:0000112 "The following are three seperate assertion instances, that assert the same proposition (that BRCA1:2685T>A causes familial breast cancer)\n\n1. Counsyl's assertion on October 5, 2009 that BRCA1:2685T>A causes familial breast cancer. \n\n2. The ENIGMA  consortium’s assertion on September 18, 2010 that BRCA1:2685T>A causes familial breast cancer.\n\n3. A later assertion by the ENIGMA consortium on May 9, 2013, based on new evidence, that BRCA1:2685T>A causes familial breast cancer." xsd:string
+property_value: IAO:0000116 "SEPIO distinguishes two high-level subtypes of statements:\n1. Findings are statements that report the immediate, objective results of an experiment, observation, or study -  without bias or interpretation.  A finding statement results simply from the act of reporting or summarizing these direct observations, calculations, or measurements.\n2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and the act of interpretating as evidence." xsd:string
+property_value: IAO:0000118 "claim" xsd:string
+property_value: IAO:0000118 "evidence-based assertion" xsd:string
+property_value: IAO:0000118 "propostional assertion" xsd:string
+property_value: IAO:0000119 "Derived from http://purl.org/see/rdo#assertion" xsd:string
+property_value: SEPIO:0000184 "The identity of a particular assertion is dependent upon (1) what it claims to be true (its semantic content, aka its ‘proposition’), (2) the agent asserting it, and (3) the occasion on which the assertion is made. Many agents can make assertions expressing belief in the same proposition (e.g. ENIGMA’s assertion that that BRCA1:2685T>A causes familial breast cancer is a separate instance than Counsyl’s assertion of the same underlying proposition).  Likewise, a single agent can make more than one assertion of belief in the same proposition on different occasions  (e.g. ENIGMA may make a separate assertion of the same proposition that BRCA1:2685T>A causes familial breast cancer at a later date, based on additional evidence)." xsd:string
+
+[Term]
+id: SEPIO:0000002
+name: evidence line
+def: "An evidence line represents an independent and meaningful argument for or against a particular proposition, that is based on the interpretation of one or more pieces of information as evidence." []
+comment: An evidence line is created through the interpretation of one or more pieces of information that collectively support a meaningful argument for or against a proposition. To qualify as an Evidence Line, this argument must be independently significant as evidence - i.e. it must be capable of affecting the probability of accepting the target proposition as true. This does not mean, however, that it is independently sufficient to establish belief in the proposition, as additional evidence lines may be required to ultimately accept the proposition as true. \nFor example, in the ACMG framework  for variant interpretations establishes "absence in population databases" as a type of evidence line that can argue for the pathogenicty of a particular variant. But this argument alone is not considered sufficient to establish a variant's pathogencity, as the other types of evidence are additionally required to establish the truth of this Proposition (e.g. a line of evidence demonstrating the variant to have a deleterious effect on protein function, or showing it to segregate with disease features in a family tree).
+is_a: IAO:0000030 ! information content entity
+relationship: SEPIO:0000084 SEPIO:0000149 ! has_evidence_item evidence item
+relationship: SEPIO:0000132 SEPIO:0000133 ! evidence_line_strength evidence strength
+relationship: SEPIO:0000183 SEPIO:0000402 ! evidence_direction evidence direction
+property_value: IAO:0000112 "An example of an evidence line would be the argument that a finding such as \"Lepr1 KO mice exhibit lower blood glucose levels than matched WT controls\" makes in support of the proposition that \"Lepr1 gene is involved in diabetes\". The Evidence Items supporting this line of evidence could include experimental data from a study exploring blood glucose levels in Lepr1 KO mice, such as a 548.5 mg/dl measurement of blood glucose in a Lepr<tm1b/tm1b> mutant mouse, or a 1.3951e-24 p-value indicating this measure to be significantly different from wild-type mice.\n\nHere, the finding and its supporting data exist independently of their use as evidence. An evidence line based on this finding comes into existence only when an agent interprets this finding as providing a meaningful argument for a particular proposition, in the act of making an assertion.\n\n(This example is based on data from the IMPC record here: http://bit.ly/2t4J1TI)" xsd:string
+property_value: IAO:0000118 "evidence-based argument" xsd:string
+
+[Term]
+id: SEPIO:0000003
+name: assertion process
+def: "An act of interpreting evidence to make an assertion of belief that a particular proposition is true" []
+comment: An assertion process includes the processes of interpreting data and evaluating it as evidence for the validity of a proposition. They are affected by a particular agents on a particular occasions, and can be specified by assertion methods or guidelines.
+is_a: OBI:0000011 ! planned process
+relationship: RO:0002233 SEPIO:0000002 ! has input evidence line
+relationship: RO:0002234 SEPIO:0000001 ! has output assertion
+property_value: IAO:0000116 "Mappings to terms from related models:  \n\nLikely equivalent to http://purl.org/see/rdo#act_of_inference.\n\nMay be equivalent to http://purl.obolibrary.org/obo/ECO_0000217 ! assertion method." xsd:string
+property_value: IAO:0000118 "act of assertion" xsd:string
+
+[Term]
+id: SEPIO:0000004
+name: research activity
+def: "A planned process executed in the performance of scientific research wherein systematic investigations are performed to establish facts and reach new conclusions about phenomena in the world." []
+comment: Data generation process are typically experimental studies or observations, but can include any process generating information used to evaluate a claim.  This is an organizational class that groups more specific types of such processes that are most commonly used in generating data used as evidence to support claims. These processes produce informational artifacts such as measured  data values, derived statistical calculations and confidence measures, or statements representing summaries or conclusions drawn from such data.
+is_a: OBI:0000011 ! planned process
+relationship: RO:0002234 IAO:0000030 ! has output information content entity
+
+[Term]
+id: SEPIO:0000037
+name: assertion method
+def: "A directive information entity that specifies an algorithm or heuristics for evaluating evidence in the process of making an assertion." []
+comment: Assertion methods can be informal guidlines or heuristics that support manual evaluation of evidence, e.g. the ACMG Variant Classification Guidelines. Assertion methods can also be formally encoded as algorithms that allow computational or statistical analysis of data as evidence in support of making an assertion - e.g. multifactorial analysis algorithms that operate on specified data to generate a quantitative score indicating the validity of a particular proposition.
+is_a: IAO:0000104 ! plan specification
+relationship: SEPIO:0000407 SEPIO:0000001 ! specifies_creation_of assertion
+property_value: IAO:0000116 "SEPIO implements several OWL individuals representing instances of commonly applied assertion methods, primarily those used in pathogenic variant classification such as the ACMG variant classification criteria." xsd:string
+
+[Term]
+id: SEPIO:0000048
+name: contributor role
+def: "A role borne by a  person, group, organization, or information processing entity (e.g. software, algorithms) in virtue of its active participation in a process leading to some outcome (e.g the generation, modification, or provision of some entity)." []
+comment: In the context of evidence and proveannce, agents are persons, groups, organizations, or software that are responsible for making assertions or generating the evidence and data that support them.
+is_a: BFO:0000023
+property_value: IAO:0000118 "agent role" xsd:string
+property_value: SEPIO:0000052 http://purl.org/see/rdo#agent_role xsd:string
+
+[Term]
+id: SEPIO:0000049
+name: resource role
+def: "A role inhering in any material or information artifact that is used by an agent as specified input into a planned process." []
+comment: In the context of evidence and provenance for scientific claims, resources are entities that are used by agents to facilitate processes aimed at the generation of assertions or the evidence and data that support them.  Examples include instruments, reagents, model systems, software, and protocols.
+is_a: BFO:0000023
+
+[Term]
+id: SEPIO:0000055
+name: obsolete_manual assertion process
+is_a: ObsoleteClass
+property_value: IAO:0000116 "Mappings to related terms:\n\n1. http://purl.obolibrary.org/obo/ECO_0000218 ! manual assertion\nECO Definition/Comment: A manual assertion could be based on evidence that is generated by and interpreted by a human or it could involve human review of computationally generated information." xsd:string
+
+[Term]
+id: SEPIO:0000056
+name: obsolete_automated assertion process
+def: "An assertion process performed through algorithmic analysis by a computational agent, independent of human review." []
+comment: Ultimately even automated assertions require a human agent to set a confidence threshhold that determines when a computational output (e.g. a sequence similarity p-value) justifies an assesrtion being made.
+is_a: ObsoleteClass
+property_value: IAO:0000116 "Mappings to related terms: \n\n1. http://purl.obolibrary.org/obo/ECO_0000203 ! automatic assertion\nECO Definition/Comment: An automatic assertion is based on computationally generated information that is not reviewed by a person prior to making the assertion. For example, one common type of automatic assertion involves creating an association of evidence with an entity based on commonness of attributes of that entity and another entity for which an assertion already exists. The commonness is determined algorithmically." xsd:string
+
+[Term]
+id: SEPIO:0000058
+name: provenance
+def: "The process history leading to the creation and current condition of an artifact." []
+comment: For scientific assertions/claims, this is the process history leading to the asseertion being made, including processes through which evidence is evaluated, and processes through which information used as evidence is created. The transitive nature of provenance means that the provenance history of informtion used as supporting data becomes provenance for an assertion that uses this information as evidence. Provenance metadata describes these processes, including accounts of who conducted these processes, what entities participated in them, and when/where they occurred.
+is_a: BFO:0000182 ! history
+property_value: IAO:0000116 "Consider whether it is appropriate to place this under the BFO:history class, which may apply only to histories of \"material entities or sites\". And consider if we want/need to define this class at all - as it is not used to model data - only as a means to record what SEPIO considers provenance to be, and how it is  different from evidence." xsd:string
+
+[Term]
+id: SEPIO:0000066
+name: primary research study
+def: "A study that involves primary research of subjects or specimens in a natural, cliniclal, or laboratory setting." []
+is_a: SEPIO:0000125 ! research study
+
+[Term]
+id: SEPIO:0000067
+name: clinical study
+def: "Formal clinical study performed using cohorts of multiple patients" []
+is_a: SEPIO:0000066 ! primary research study
+
+[Term]
+id: SEPIO:0000069
+name: interventional clinical study
+is_a: SEPIO:0000067 ! clinical study
+property_value: SEPIO:0000052 http://purl.org/net/OCRe/research.owl#Interventional_study xsd:string
+
+[Term]
+id: SEPIO:0000070
+name: observational clinical study
+is_a: SEPIO:0000067 ! clinical study
+property_value: SEPIO:0000052 http://purl.org/net/OCRe/research.owl#Observational_study xsd:string
+
+[Term]
+id: SEPIO:0000071
+name: case-control clinical study
+is_a: SEPIO:0000070 ! observational clinical study
+property_value: SEPIO:0000052 http://purl.org/net/OCRe/research.owl#Case_control_study xsd:string
+
+[Term]
+id: SEPIO:0000072
+name: experimental model study
+def: "A research dtudy perfomred using an experimental model system such as a cell line, or model organism." []
+is_a: SEPIO:0000066 ! primary research study
+
+[Term]
+id: SEPIO:0000073
+name: in vitro study
+is_a: SEPIO:0000072 ! experimental model study
+
+[Term]
+id: SEPIO:0000074
+name: in vivo study
+is_a: SEPIO:0000072 ! experimental model study
+
+[Term]
+id: SEPIO:0000076
+name: cell-based in vivo study
+is_a: SEPIO:0000074 ! in vivo study
+
+[Term]
+id: SEPIO:0000077
+name: tissue-based in vivo study
+is_a: SEPIO:0000074 ! in vivo study
+
+[Term]
+id: SEPIO:0000078
+name: organism-based in vivo study
+is_a: SEPIO:0000074 ! in vivo study
+property_value: IAO:0000118 "whole organism in vivo study" xsd:string
+
+[Term]
+id: SEPIO:0000079
+name: secondary research study
+def: "A study based only on analysis of existing data, as found in artifacts such as community/curated databases, raw datasets, or publications." []
+is_a: SEPIO:0000125 ! research study
+property_value: IAO:0000118 "data-driven study" xsd:string
+
+[Term]
+id: SEPIO:0000080
+name: literature-based study
+def: "A curation-based study that uses only one or more literature publication as input data source." []
+is_a: SEPIO:0000079 ! secondary research study
+property_value: IAO:0000116 "Based on ClinVar 'literature only' collection method: \"for submissions that provide the interpretation of a variant from one or more publications. No additional curation has been performed by the submitter; the interpretation is from the publication(s) only.\"" xsd:string
+
+[Term]
+id: SEPIO:0000081
+name: curation-based study
+is_a: SEPIO:0000079 ! secondary research study
+property_value: IAO:0000116 "Based on Clinvar 'curation' collection method: \"for variants that were not directly observed by the submitter, but were interpreted by curation of multiple sources, including clinical testing laboratory reports, publications, private case data, and public databases.\"" xsd:string
+
+[Term]
+id: SEPIO:0000102
+name: reference population data study
+def: "A study based on analysis of data gathered from baseline studies of a 	population group of apparently unaffected individuals to assess allele frequencies" []
+is_a: SEPIO:0000079 ! secondary research study
+property_value: IAO:0000119 "ClinVar" xsd:string
+
+[Term]
+id: SEPIO:0000125
+name: research study
+def: "A planned proccess that executes some study design or protocol to generate scientific data that is interpreted to test or generate a hypothesis." []
+comment: A research study is considered broadly to be any scientific activity aimed at answering a research question. Studies can be simple or complex, depending on the scope of the question being explored and the extent of resources deployed in doing so.  They may include a full research investigation, a set of experiments, or a single experiment or assay. Regardless, that act of sumamrizing any results as a finding statement is considered part of the study.
+is_a: SEPIO:0000004 ! research activity
+property_value: SEPIO:0000061 "Explore the classification of study types here as a possibility to implement in SEPIO. \nhttps://mcw.libguides.com/evidencebased/studies\nUseful because these map to the strength of the evidence each might provide." xsd:string
+
+[Term]
+id: SEPIO:0000127
+name: obsolete_study group
+def: "A group of individuals (organisms, specimens, samples) that are subjects in an observational or intervention study, and whose members represent experimental replicates as defined in a study design by the same independent variable specifications (i.e. subjected to the same selction criteria or set of experimental interventions)." []
+is_a: ObsoleteClass
+property_value: IAO:0000116 "Consider: STATO_0000193, OBI_0000174" xsd:string
+
+[Term]
+id: SEPIO:0000131
+name: curation
+def: "A planned process in which existing data is collected, organized, and improved in preparation for subsequent use." []
+is_a: SEPIO:0000004 ! research activity
+
+[Term]
+id: SEPIO:0000133
+name: evidence strength
+def: "A data item that quantifies the degree of support an agent believes an evidence line to provide for a particular proposition." []
+comment: The strength of a line of evidence typically depends on the *type* and *quality* of the study(ies) that generate its supporting evidence items.  \n\n1. Type of Study: In a particular domain of research, certain types of studies are commonly held to produce data that is more meaningful and reliable than others, as evidence for a particular type of assertion.  These more reliable studies tend to draw on experimental systems that more accurately replicate the natural phenomenon being studied, and experimental designs that reduce confounding variables and biases. For example, in vivo studies of gene function provide stronger evidence than in vitro systems that may not replicate all aspects of the biology of a living system, and randomized controlled clinical trials are held to be more reliable than retrospective or case control studies that are more susceptible to confounding factors.  \n\n2. Quality of Study: A given study can be performed to varying degrees of rigor and comprehensiveness,  irrespective of the type of study it represents. This is another important factor in assessing the overall strength of evidence it may produce.  Higher quality studies will have carefully defined controls, and be replicated numerous times to ensure reproducibility.  Other factors that are often used as secondary indicators of the quality of research data include the quality of the journal in which it is published, and the reputation of the lab or institution performing the study. \n\nIn SEPIO, the notion of evidence quality is captured in an attribute separate from the notion of evidence strength. And the notion of study type can be represented in the type assigned to a study instance, or the evidence code used to type an evidence line (which are often based on the type of study that produced the evidence data).  Evidence strength typically relies on assessment of one or both of these more fundamental attributes of evidence.
+is_a: IAO:0000109 ! measurement datum
+relationship: IAO:0000136 SEPIO:0000002 ! is_about evidence line
+property_value: SEPIO:0000061 "Consider also framing as categorical measurement values?: \nA categorical measurement reflecting an agent's cognitive quantification of the degree of support (s)he believes an evidence line to provide for a particular proposition." xsd:string
+
+[Term]
+id: SEPIO:0000143
+name: patient case study
+def: "A study that documents observations or findings from a single patent." []
+is_a: SEPIO:0000066 ! primary research study
+property_value: IAO:0000118 "case reporting" xsd:string
+
+[Term]
+id: SEPIO:0000148
+name: evidence role
+is_a: BFO:0000023
+
+[Term]
+id: SEPIO:0000149
+name: evidence item
+def: "An information content entity that is used as evidence to evaluate the validity of a target assertion or proposition." []
+comment: 'Evidence Item' is a broad term covering any information interpreted as evidence in the act of making an assertion.  \n\nClasses representing different types of evidence items are imported here from ontologies such as OBI, IAO, and STATO, and include:\n - measured data values\n - derived data values such as statistical calculations and confidence measures\n - figures presenting or describing such data\n - author statements representing summaries of or conclusions drawn from such data\n - established facts in a field of research\n\nNote that publications and reports are considered separately from 'evidence items', as a they *contain* information (data values, figures author statements) that can be used as evidence. But on its own a publication or report is merely a proxy for this information.
+is_a: IAO:0000030 ! information content entity
+intersection_of: IAO:0000030 ! information content entity
+intersection_of: SEPIO:0000376 SEPIO:0000002 ! evidence_item_for evidence line
+relationship: SEPIO:0000046 SEPIO:0000148 ! has_role evidence role
+property_value: IAO:0000112 "- the raw count data from a case-control study comparing the frequency of an allele in two cohorts or populations\n- the calculated p-value as a measure of statistical significance of the difference identified in the study\n- a published figure documenting these data\n- an author statement summarizing the outcomes of the study (i.e. a 'study finding')\n- a broader conclusion inferred from interpretation of the data reported in a study (i.e. an evidence-based 'assertion')" xsd:string
+property_value: IAO:0000118 "evidence" xsd:string
+property_value: IAO:0000118 "evidence information" xsd:string
+
+[Term]
+id: SEPIO:0000153
+name: creator role
+is_a: SEPIO:0000048 ! contributor role
+
+[Term]
+id: SEPIO:0000154
+name: assessor role
+is_a: SEPIO:0000048 ! contributor role
+
+[Term]
+id: SEPIO:0000155
+name: approver role
+is_a: SEPIO:0000154 ! assessor role
+property_value: IAO:0000118 "validator role" xsd:string
+
+[Term]
+id: SEPIO:0000156
+name: curator role
+is_a: SEPIO:0000048 ! contributor role
+
+[Term]
+id: SEPIO:0000157
+name: software agent
+def: "An autonomous computer program that carries out tasks on behalf of users." []
+comment: Software agents are designed to execute algorithm(s) that receive some input information and direct its processing to achieve a specified goal.
+is_a: IAO:0000030 ! information content entity
+relationship: BFO:0000051 IAO:0000064 ! has part algorithm
+relationship: SEPIO:0000046 SEPIO:0000048 ! has_role contributor role
+property_value: IAO:0000119 https://en.wikipedia.org/wiki/Software_agent xsd:string
+
+[Term]
+id: SEPIO:0000158
+name: contribution
+def: "The actions taken by a particular agent in the creation, modification, assessment, or destruction of an artifact." []
+comment: A contribution describes the part played by a particular agent in the creation, modification, assessment, or descruction of an artifact. The scope of a given 'contribution' instance is constrained to include only the actions of one agent in contributing to a particular artifact.  The agent can be a group or organization comprised of more than one individual, acting together to make the contribution. Contribution instances are used to organize information about when, where, how (e.g. what roles were played), and on whose behalf these actions were performed.
+is_a: OBI:0000011 ! planned process
+relationship: BFO:0000055 SEPIO:0000048 ! realizes contributor role
+relationship: SEPIO:0000017 Agent {cardinality="1"} ! has_agent Agent
+property_value: IAO:0000116 "This concept is similar in meaning and usage to PROV:Attribution.  Consider aligning or adopting." xsd:string
+
+[Term]
+id: SEPIO:0000173
+name: study finding
+def: "A statement describing the immediate results of a research study, describing what was directly observed, measured, or derived through mathematical calculation." []
+comment: A study finding is a statement that summarizes the immediate results of a particular experiment or study. It describes only what was directly observed, measured, or calculated, and optionally the experimental context of these observations.  It does not describe more general conclusions that may have been inferred from such results. As such, the scope of what a finding describes is limited to the direct participants in the study - i.e. it is about only the instances observed or measured in the study.  It makes no broader inference or conclusion about types or classes to which these instances belong. \n\nThis is not to say that the onserved findings are necessarily accurate or correct - only that they were indeed made in a particular study. For example, the finding that "Sequencing of DNA from patient X revealed an A->T mutation at position 2143 in gene Y" is a matter of fact - this was the outcome of the assay, even if the finding is an artifact of low sequencing coverage. Metadata about the finding (e.g. sequencing methods/reagents used, coverage or read depth) are recoded so users can judge for themselves whether the objectively reported finding accurtely reflects the biology it describes.
+comment: SEPIO distinguishes two high-level subtypes of statements:\n1. Findings are statements that report the immediate, objective results of an experiment, observation, or study -  without bias or interpretation.  A finding statement results simply from an act of reporting or summarizing these direct observations, calculations, or measurements.\n2. Assertions, by contrast, result from acts of interpretation and/or inference, based on information used as evidence. The statement here is a conclusion drawn from critical evaluation of this more foundational information, and its validity depends on the quality of this information and its interpretation as evidence.
+is_a: SEPIO:0000174 ! statement
+relationship: RO:0002353 SEPIO:0000125 ! output of research study
+property_value: IAO:0000112 "Findings statements tend to take the form of \"We observed that . . . \", or \"Assay X revelaned that . . . \", or \"X was determined to be Y in a study of . . . \".  \nFor example:\n\n\"Smith et. al observed that a positive response to imatinib treatment was two-fold higher in a cohort of leukemia patients bearing Bcr-Abl fusions compared to those lacking this driver mutaiton.\" \n\nA statement summarizing the outcome of a sequencing analysis: \"DNA sequencing data from patient X revealed an A->T mutation at position 2143 in gene Y\".\n\nA statement summarizing the outcome of a variant population frequency study: \"The frequency of variant X was determined to be 0.00015 in a cohort of non-finnish european subjects described in the ExAC dataset.\"" xsd:string
+property_value: IAO:0000116 "In SEPIO, a high-level distinction is made between statements that are 'findings' vs 'assertions'.  Findings are statements that report/summarize what was directly observed or calculated in a study, and are about only the immediate  participants in the experiment or study. As such, findings involve no interpretation or inference from the data to draw broader conclusions. Assertions, by contrast, are statements that derive from some degree of interpretation or inference based on the evaluation of 'evidence', and often make broader claims about the types or categories to which study participants belong. This distinction is important because the provenance and validity of a 'finding' statement does not depend on subjective interpretation of 'evidence' in the same way that of an assertion does. This has modeling implications for how findings and assertions are linked to information that supports them.\n\nIn practices, instances of 'study findings' are used to group one or more data items from a particular research study that are relevant as evidence for an assertion.  The utility of this class is in allowing the shared provenance of these data items to be more efficiently represented - as things like agent, date, and methods can be described once for the data set and inferred to apply to all individual data items that comprise it." xsd:string
+property_value: IAO:0000118 "study outcome" xsd:string
+property_value: SEPIO:0000061 "- While the act of generating a finding is simpler, it does involve some cognitive effort that could be guided by some method (i.e., one defining what experimental context should be included in the finding statement, and how this and the observed outcomes are reported). Which means that findings are not the direct output of an assay, which merely generates data. So perhaps in SEPIO we commit to only considering research processes at the level of studies - such that even assays would potentially involve some act of summarizing the results as a finding.\n\n- Note that at present 'study data sets' can serve the same 'organizational' purpose as 'study findings' - we should converge on one recommended way to perform this level of organization of evidence data." xsd:string
+
+[Term]
+id: SEPIO:0000174
+name: statement
+def: "An information content entity expressing a declarative sentence that is either true or false." []
+comment: From https://en.wikipedia.org/wiki/Statement_(logic) (2017-06-21):\n"A statement is a declarative sentence that bears truth value, in that it can be either true or false. This definition derives from the domain of logic, where a statement is either (a) a meaningful declarative sentence that is either true or false, or (b) that which a true or false declarative sentence asserts. In the latter case, a statement is distinct from a sentence in that a sentence is only one formulation of a statement, whereas there may be many other formulations expressing the same statement . . . In (this treatment), "statement" is introduced in order to distinguish a sentence from its informational content. A statement is regarded as the information content of an information-bearing sentence. Thus, a sentence is related to the statement it bears like a numeral to the number it refers to. Statements are abstract logical entities, while sentences are grammatical entities."\n----\nNote that the definition in (b) describes something closer to the notion of a 'Proposition' as defined in SEPIO?
+comment: Statements are sentences (or, more precisely, the information content of sentences) that declare a definitive or proposed fact - expressing something about the world or one's experience of it that may or may not be true. The identity of a particular Statement is dependent upon (1) what it reports as true (its semantic content), (2) the Agent stating it, and (3) the occasion on which the statement is made. \n\nThe phrase "the pink elephant" describes an entity, but is not a 'statement' as it has no truth value. By contrast, the phrase "the pink elephant is in the room" is a statement as this can be evaluated for its truth.
+is_a: IAO:0000030 ! information content entity
+relationship: SEPIO:0000130 Agent ! stated_by Agent
+property_value: IAO:0000112 "The following is derived from https://en.wikipedia.org/wiki/Statement_(logic):\n\nExamples of sentences that are (or make) statements:\n\"Socrates is a man.\"\n\"A triangle has three sides.\"\n\"Madrid is the capital of Spain.\"\n\"There are five ducks on the lake\"\n\"The BRAF V600E mutation causes breast cancer\"\n\nExamples of sentences that are not (or do not make) statements:\n\"Who are you?\"\n\"Run!\"\n\"Greenness perambulates.\"\n\"I had one grunch but the eggplant over there.\"\n\"The King of France is wise.\"\n\"Broccoli tastes good.\"\n\nThe first two examples are not declarative sentences and therefore are not (or do not make) statements. The third and fourth are declarative sentences but, lacking meaning, are neither true nor false and therefore are not (or do not make) statements. The fifth and sixth examples are meaningful declarative sentences, but are not statements but rather matters of opinion or taste." xsd:string
+
+[Term]
+id: SEPIO:0000175
+name: obsolete_observation
+def: "A statement describing something that was observed or recorded." []
+comment: An observation reflects only what an agent observed or device recorded. It is therefore considered a matter of fact, rather than a propositional assertion that may or may not be true.  This does not mean that the observations or recordings were necessarily accurate or correct - only that they were indeed made by an agent.  For example, the observation that "I counted six ducks in the pond" is a matter of fact, even if there are actually seven because I missed one that was hiding in the reeds.
+is_a: ObsoleteClass
+property_value: IAO:0000116 "In SEPIO, a high-level distinction is made between Statements that are  'Observations' vs 'Assertions'. Observations are statements that report what is observed, and are inherently true in the sense that they reflect an agents particular experience. Assertions are statements that derive from some degree of interpretation or inference based on the evaluation of 'evidence'. \n\nThis distinction is important because the ultimate truth of observations or findings do not depend on evidence in the same way that the truth of assertions does.  Accordingly, any data related to an observation is not treated as evidence, and captured as observations." xsd:string
+
+[Term]
+id: SEPIO:0000180
+name: obsolete_evidence statement
+def: "A statement (ie an assertion or finding) that is used as evidence to evaluate the validity of a target assertion or proposition." []
+comment: Evidence Statements can be 'findings' that summarize data and outcomes from a particular study, or evidence-based 'assertions' that make a broader claim, as inferred from the interpretation and evaluation of previously generated information.
+is_a: ObsoleteClass
+property_value: IAO:0000231 "Term is confusing and not required for current use cases. Main reason it was creaated is that his term is used in efforts like CIViC, and we wanted to be clear about how it fits into the SEPIO model. But this can be accomplished in documentation outside of the ontology.\n\nAxioms:\nEq: \nstatement\n and (contributes_to_evidence_line some 'evidence line')\n\nSc:\n'information content entity'\nhas_role some 'evidence  role'" xsd:string
+
+[Term]
+id: SEPIO:0000181
+name: obsolete_evidence data
+def: "Research data, or a product derived from research data such as data sets or figures, that are used as evidence to evaluate the validity of a target assertion or proposition." []
+comment: Instances of this class can include elemental 'data items' such as experimental measurements or derived statistical calculations or scores (e.g. a 548.5 mg/dl blood glucose level, or a 1.3951e-24 p-value), data sets containing several such values and possibly metadata about them, or tables/figures that render such data for human consumption.\n\nThe notion of 'evidence data' is meant to be contrasted with the notion of an 'evidence statement', which is a statement used as evidence. (Statements here are logical sentences with truth value that are typically supported by interpretation of more fundamental data).
+is_a: ObsoleteClass
+property_value: IAO:0000116 "Evidence data is not classified as a 'data item' because it is intended to cover products derived from data such as figures, tables, and data sets." xsd:string
+property_value: IAO:0000118 "evidence datum" xsd:string
+property_value: IAO:0000231 "Term is confusing and not required for current use cases.\nAxioms:\nEq: ('data item' or table or figure)\n and (contributes_to_evidence_line some 'evidence line')\n\nSc:\n'information content entity'\nhas_role some 'evidence  role'" xsd:string
+
+[Term]
+id: SEPIO:0000185
+name: obsolete_data table
+is_a: ObsoleteClass
+property_value: IAO:0000118 "A set of data arranged in rows and columns." xsd:string
+property_value: IAO:0000119 "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48693 ! Data Table" xsd:string
+property_value: IAO:0000231 "Not required for data models." xsd:string
+
+[Term]
+id: SEPIO:0000186
+name: patient phenotyping study
+def: "A study with the goal of assessing and documenting phenotypes exhibited by one or more patients." []
+comment: Source: ClinVar (" 'Phenotyping only' is intended for variants that are submitted to ClinVar to provide individual observations with detailed phenotype data, such as submissions from clinicians or patient registries, without an interpretation from the submitter. The interpretation from the testing laboratory may be provided in a separate field.")\nftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes.pdf
+is_a: SEPIO:0000070 ! observational clinical study
+
+[Term]
+id: SEPIO:0000187
+name: confidence level
+def: "A data item that quantifies the level of confidence an agent has that a particular piece of information is true." []
+is_a: IAO:0000109 ! measurement datum
+relationship: IAO:0000136 SEPIO:0000174 ! is_about statement
+
+[Term]
+id: SEPIO:0000258
+name: provider interpretation
+comment: Source: ClinVar (" 'Provider interpretation' is intended for variants that were interpreted by a clinical provider. For example, the clinician may reclassify the variant using detailed patient phenotype information that was unavailable to the testing laborator")\nftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/release_notes/20170803_data_release_notes.pdf
+is_a: SEPIO:0000070 ! observational clinical study
+
+[Term]
+id: SEPIO:0000340
+name: skos terms
+def: "Organizational class that groups classes imported from the skos model to support creation and definition of value sets for particular SEPIO data model implementations." []
+
+[Term]
+id: SEPIO:0000385
+name: obsolete_method
+comment: An information content entity that specifies instructions for how a particular objective can be achieved.
+is_a: ObsoleteClass
+property_value: IAO:0000116 "Consider IAO:0000104 (plan specification)." xsd:string
+property_value: IAO:0000118 "plan specification" xsd:string
+property_value: IAO:0000231 "Decided to use IAO:plan specification here.  Will give this term 'method' as a SEPIO-preferred label." xsd:string
+
+[Term]
+id: SEPIO:0000400
+name: study data set
+def: "A data set comprised of data items produced by a single research study." []
+comment: The data items comprising a study data set may include primary measurements, derived calculations, metadata about study participants and methods, or parameters of execution.  \n\nA research study is considered broadly to be any scientific activity aimed at answering a research question. Studies can be simple or complex, depending on the scope of the question being explored and the extent of resources deployed in doing so.  They may include a full research investigation, a set of experiments, or a single experiment or assay.
+is_a: IAO:0000100 ! data set
+property_value: IAO:0000112 "The set of data output from a study of the frequency of a particular allele in a particular population, which includes the following data (and metadata) items:\n{     \n \"ascertainment\": \"ExAc ascertainment method\"\n \"population\": \"Non-Finnish European\"\n \"allele\": \"CAR:CA011797\",\n \"alleleCount\": 66706,\n \"alleleNumber\": 1,\n \"alleleFrequency\": 0.00001499,\n \"homozygousAlleleIndividualCount\": 0\n}\n\nThis collection of data may be described by, but remains distinct from, a 'study finding' statement that summarizes the results in narrative form." xsd:string
+property_value: IAO:0000116 "Instances of this class are used in SEPIO to group one or more data items from a particular research study that are relevant as evidence for an assertion.  The utility of this class is in allowing the shared provenance of these data items to be more efficiently represented - as things like agent, date, and methods can be described once for the data set and inferred to apply to all individual data items that comprise it." xsd:string
+
+[Term]
+id: SEPIO:0000401
+name: obsolete_opinion
+def: "A declarative sentence that expresses a belief or judgement that is not necessarily based on fact or knowledge." []
+comment: Opinions are matters of subjective judgement or taste, and typically not able to be scientifically validated as objectively true based on empirical evidence. In this way, they are distinct from statements that have inherent truth value.
+is_a: ObsoleteClass
+
+[Term]
+id: SEPIO:0000402
+name: evidence direction
+def: "A data item that indicates an agent's assessment of whether an evidence line  supports or disputes a target proposition (or represents inconclusive evidence that is not sufficient for either)." []
+is_a: IAO:0000109 ! measurement datum
+property_value: SEPIO:0000061 "Consider also treating this as an attribute/quality of an evidence line:\nAn attribute of an evidence line describing whether it supports or disputes a target proposition (or represents inconclusive evidence that is not sufficient for either)." xsd:string
+
+[Term]
+id: SEPIO:0000414
+name: evidence quality
+def: "A data item that indicates the quality of the data used as evidence by an agent making an assertion." []
+comment: The quality of an evidence item is a measure of the rigor applied in performing the study and anlysis tasks used to produce it. Higher quality studies will have carefully defined controls, and be replicated numerous times to ensure reproducibility.  Other factors that are often used as secondary indicators of the quality of research data include the quality of the journal in which it is published, and the reputation of the lab or institution performing the study.  Evidence qualitty is an important factor in assessing the overall strength of evidence it may produce.
+is_a: IAO:0000109 ! measurement datum
+
+[Term]
+id: SEPIO:0000431
+name: recommendation
+comment: Recommendations are another type of statement besides assertions that can be supported by evidence. They don't put forth a proposed facts as true, but instead describe a recommended action on the foundation of evidence that it will be beneficial.
+is_a: SEPIO:0000174 ! statement
+
+[Term]
+id: SEPIO:0000432
+name: hypothesis
+comment: A hypothesis is another type of statement that, like an assertion, can be supported by evidence. It puts for a possible fact as true, but does not express an agents belief in this fact.  Rather, it is a possible fact whose truth will be explired via reasoning or experimentation.
+is_a: SEPIO:0000174 ! statement
+
+[Term]
+id: SEPIO:000383
+name: record
+def: "A document containing a collection of data or statements about some entity." []
+comment: 'Record' here is broadly defined to include any document holding (typically) structured information about a particular entity. This can include individual records from a database or knowledgebase that hold information about the subject of the record. \n\nSpecific examples include:\n- A single row of a table in a relational database.\n- A JSON or XML document holding information describing some entity.\n- A VCF File describing varaints in a patient, or a single row in this VCF file describinng a particular variant.\n- A Uniprot knowldgebase record describing the BRCA2 protein (http://www.uniprot.org/uniprot/P51587)\n- A ClinVar knwoledgebase record describing an assertion about the pathogenicity of the NM_000059.3(BRCA2):c.10G>T variant (https://www.ncbi.nlm.nih.gov/clinvar/variation/51063/)\n- An EHR record for a hospital patient.
+xref: http://semanticscience.org/resource/SIO_000088 ! 'record'
+is_a: IAO:0000310 ! document
+
+[Term]
+id: STATO:0000039
+name: statistic
+def: "a statistic is a measurement datum to describe a dataset or a variable. It is generated by a calculation on set of observed data." []
+is_a: IAO:0000027 ! data item
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "Alejandra Gonzalez-Beltran" xsd:string
+property_value: IAO:0000117 "Orlaith Burke" xsd:string
+property_value: IAO:0000117 "Philippe Rocca-Serra" xsd:string
+property_value: IAO:0000119 "STATO, adapted from wikipedia (http://en.wikipedia.org/wiki/Statistic)." xsd:string
+property_value: IAO:0000412 http://purl.obofoundry.org/obo/stato.owl
+
+[Term]
+id: STATO:0000104
+name: z-score
+def: "A z-score (also known as z-value, standard score, or normal score) is a measure of the divergence of an individual experimental result from the most probable result, the mean. Z is expressed in terms of the number of standard deviations from the mean value." []
+is_a: STATO:0000039 ! statistic
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "Alejandra Gonzalez-Beltran" xsd:string
+property_value: IAO:0000117 "Orlaith Burke" xsd:string
+property_value: IAO:0000117 "Philippe Rocca-Serra" xsd:string
+property_value: IAO:0000119 https://controls.engin.umich.edu/wiki/index.php/Basic_statistics:_mean,_median,_average,_standard_deviation,_z-scores,_and_p-value#Z-Scores xsd:string
+property_value: IAO:0000412 http://purl.obofoundry.org/obo/stato.owl
+
+[Term]
+id: STATO:0000184
+name: obsolete_ratio
+def: "A ratio is a data item which is formed with two numbers r and s is written r/s, where r is the numerator and s is the denominator. The ratio of r to s is equivalent to the quotient r/s." []
+is_a: ObsoleteClass
+
+[Term]
+id: http://purl.org/oban/association
+name: association
+def: "Associations are a form of proposition, framed as a tuple linking two (or more) entities through defined relationships." []
+is_a: SEPIO:0000000 ! proposition
+
+[Term]
+id: http://xmlns.com/foaf/0.1/Group
+name: Group
+comment: The Group class represents a collection of individual agents (and may itself play the role of a Agent, ie. something that can perform actions).\n\nThis concept is intentionally quite broad, covering informal and ad-hoc groups, long-lived communities, organizational groups within a workplace, etc. Some such groups may have associated characteristics which could be captured in RDF (perhaps a homepage, name, mailing list etc.).
+is_a: BFO:0000040
+relationship: SEPIO:0000046 SEPIO:0000048 ! has_role contributor role
+
+[Term]
+id: http://xmlns.com/foaf/0.1/Organization
+name: Organization
+def: "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc." []
+is_a: http://xmlns.com/foaf/0.1/Group ! Group
+relationship: SEPIO:0000046 SEPIO:0000048 ! has_role contributor role
+
+[Term]
+id: http://xmlns.com/foaf/0.1/Person
+name: Person
+def: "A human being regarded as an individual." []
+comment: The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. The Person class is a sub-class of the Agent class, since all people are considered 'agents' in FOAF.
+is_a: BFO:0000040
+relationship: SEPIO:0000046 SEPIO:0000048 ! has_role contributor role
+
+[Typedef]
+id: BFO:0000050
+name: part of
+def: "a core relation that holds between a part and its whole" []
+property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000118 "part_of" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+is_transitive: true
+inverse_of: BFO:0000051 ! has part
+
+[Typedef]
+id: BFO:0000051
+name: has part
+def: "a core relation that holds between a whole and its part" []
+property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000118 "has_part" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+is_transitive: true
+
+[Typedef]
+id: BFO:0000055
+name: realizes
+comment: Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process
+domain: BFO:0000015
+range: BFO:0000020
+
+[Typedef]
+id: IAO:0000136
+name: is_about
+def: "Is_about is a (currently) primitive relation that relates an information artifact to an entity." []
+domain: IAO:0000030 ! information content entity
+
+[Typedef]
+id: OBI:0000999
+name: obsolete_has_category_label
+def: "A relation between a categorical measurement data item and the categorical label that indicates the value of that data item on the categorical scale." []
+property_value: IAO:0000231 "Deprecate unless there is a use case requireing this relation." xsd:string
+is_a: ObsoleteProperty
+
+[Typedef]
+id: RO:0000056
+name: participates in
+def: "a relation between a continuant and a process, in which the continuant is somehow involved in the process" []
+property_value: IAO:0000111 "participates in" xsd:string
+property_value: IAO:0000112 "this blood clot participates in this blood coagulation" xsd:string
+property_value: IAO:0000112 "this input material (or this output material) participates in this process" xsd:string
+property_value: IAO:0000112 "this investigator participates in this investigation" xsd:string
+property_value: IAO:0000118 "participates_in" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000002
+range: BFO:0000003
+inverse_of: RO:0000057 ! has participant
+
+[Typedef]
+id: RO:0000057
+name: has participant
+def: "a relation between a process and a continuant, in which the continuant is somehow involved in the process" []
+property_value: IAO:0000111 "has participant" xsd:string
+property_value: IAO:0000112 "this blood coagulation has participant this blood clot" xsd:string
+property_value: IAO:0000112 "this investigation has participant this investigator" xsd:string
+property_value: IAO:0000112 "this process has participant this input material (or this output material)" xsd:string
+property_value: IAO:0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time." xsd:string
+property_value: IAO:0000118 "has_participant" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000003
+range: BFO:0000002
+
+[Typedef]
+id: RO:0002233
+name: has input
+def: "p has direct input c iff c is a participant in p, c is present at the start of p, and the state of c is modified during p." []
+subset: ro-eco
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "consumes" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0000057 ! has participant
+inverse_of: RO:0002352 ! input of
+
+[Typedef]
+id: RO:0002234
+name: has output
+def: "p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p." []
+subset: ro-eco
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "produces" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0000057 ! has participant
+inverse_of: RO:0002353 ! output of
+
+[Typedef]
+id: RO:0002350
+name: member of
+def: "Is member of is a mereological relation between a item and a collection." []
+is_a: BFO:0000050 ! part of
+
+[Typedef]
+id: RO:0002351
+name: has member
+def: "Has member is a mereological relation between a collection and an item." []
+is_a: BFO:0000051 ! has part
+
+[Typedef]
+id: RO:0002352
+name: input of
+subset: ro-eco
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0000056 ! participates in
+
+[Typedef]
+id: RO:0002353
+name: output of
+subset: ro-eco
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0000056 ! participates in
+
+[Typedef]
+id: RO:0002614
+name: is_evidence_with_support_from
+def: "A relationship between a piece of evidence and an entity that plays a role in supporting that evidence." []
+property_value: IAO:0000118 "is_evidence_supported_by" xsd:string
+domain: SEPIO:0000002 ! evidence line
+
+[Typedef]
+id: SEPIO:0000006
+name: has_evidence_line
+def: "A relationship between an assertion or proposition and an evidence line used in evaluating its validity." []
+property_value: IAO:0000116 "Consider re-use of http://purl.obolibrary.org/obo/RO_0002558 ! 'has evidence'.\nDefinition = \"x has evidence y iff , x is  an information content entity, material entity or process, and y supports either the existence of x, or the truth value of x.\"\n\nSee  also http://semanticscience.org/resource/SIO_000772 ! 'has evidence'." xsd:string
+property_value: IAO:0000118 "has_evidence" xsd:string
+range: SEPIO:0000002 ! evidence line
+inverse_of: SEPIO:0000427 ! is_evidence_line_for
+
+[Typedef]
+id: SEPIO:0000007
+name: has_supporting_evidence_line
+def: "A relation between a proposition and information that supports its validity, based on the evaluation of some agent." []
+property_value: IAO:0000116 "Mapping to related terms: \n\nConsider: http://semanticscience.org/resource/SIO_000206 ! 'is supported by'" xsd:string
+holds_over_chain: SEPIO:0000098 SEPIO:0000007
+is_a: SEPIO:0000006 ! has_evidence_line
+
+[Typedef]
+id: SEPIO:0000008
+name: has_disputing_evidence_line
+def: "A relation between a proposition and information that contradicts its validity, based on the evaluation and conclusion of some agent." []
+property_value: IAO:0000116 "Mapping to related terms: \n\nConsider: http://semanticscience.org/resource/SIO_000774 ! 'is refuted by'" xsd:string
+property_value: IAO:0000118 "has_conflicting_evidence" xsd:string
+property_value: IAO:0000118 "has_refuting_evidence_line" xsd:string
+holds_over_chain: SEPIO:0000100 SEPIO:0000007
+is_a: SEPIO:0000006 ! has_evidence_line
+
+[Typedef]
+id: SEPIO:0000009
+name: has_inconclusive_evidence_line
+def: "A relation between a proposition and information that was used to evaluate a particular proposition, but failed to provide conclusive support for or against its validity." []
+comment: A relation between a proposition and information that does not conclusively support or contradict its validity, based on evaluation of some agent.
+property_value: IAO:0000116 "Mapping to related terms: \n\nConsider: http://semanticscience.org/resource/SIO_000207 ! 'is disputed by'" xsd:string
+holds_over_chain: SEPIO:0000098 SEPIO:0000009
+is_a: SEPIO:0000006 ! has_evidence_line
+
+[Typedef]
+id: SEPIO:0000015
+name: proposition_asserted_in
+def: "A relation holding between a proposition and an assertion in which it is expressed." []
+comment: A particular proposition can be asserted in more than one assertion - in cases where assertions made by different agents, or on different occasions, put forth the same proposition as true.
+property_value: IAO:0000118 "is_asserted_in" xsd:string
+domain: SEPIO:0000000 ! proposition
+range: SEPIO:0000001 ! assertion
+inverse_of: SEPIO:0000030 ! asserts_proposition
+
+[Typedef]
+id: SEPIO:0000017
+name: has_agent
+property_value: IAO:0000116 "Consider use of http://purl.obolibrary.org/obo/RO_0002217 ! actively participates in.  \nDefinition = \"actively participates in y if and only if x participates in y and x realizes some active role\"" xsd:string
+range: Agent ! Agent
+is_a: RO:0000057 ! has participant
+
+[Typedef]
+id: SEPIO:0000026
+name: assertion_has_subject
+comment: Propositional statements can be represented in RDF  as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.\n\nAs a proposition-level entity, a particular association can be expressed in more than one assertion made by different agents, or at different times. The meaning of an assertion can be captured through its link to an association whose meaning is formally specified as described above (e.g. :assertion1 is_asserted_in :association1, :association1 has_subject :thing1). \n\nThe assertion_has_subject property allows more direct specification of assertion meaning, bypassing an association and pointing directly to the subject of the reified triple.  In this sense, it is a shortcut relation over two more fundamental properties (is_asserted_in  o  association_has_subject).\n\nThis property is useful when a particular dataset wants to describe statements at the level of assertions rather than propositions, and formally describe assertion semantics without needed to represent an proposition-level association.
+property_value: IAO:0000231 "Decided that a more generic has_subject property should suffice to cover links from either an assertion or a proposition to an entity representing the subject of the statement made.\n\nBut wanted to maintain the text in the comment here for future reference/use." xsd:string
+domain: SEPIO:0000001 ! assertion
+holds_over_chain: SEPIO:0000030 http://purl.org/oban/association_has_subject
+is_a: ObsoleteProperty
+
+[Typedef]
+id: SEPIO:0000027
+name: assertion_has_object
+comment: Propositional statements can be represented in RDF  as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.\n\nAs a proposition-level entity, a particular association can be expressed in more than one assertion made by different agents, or at different times. The meaning of an assertion can be captured through its link to an association whose meaning is formally specified as described above (e.g. :assertion1 is_asserted_in :association1, :association1 has_object :thing1). \n\nThe assertion_has_object property allows more direct specification of assertion meaning, bypassing an association and pointing directly to the object of the reified triple.  In this sense, it is a shortcut relation over two more fundamental properties (is_asserted_in  o  association_has_object).\n\nThis property is useful when a particular dataset wants to describe statements at the level of assertions rather than propositions, and formally describe assertion semantics without needed to represent an proposition-level association.
+domain: SEPIO:0000001 ! assertion
+holds_over_chain: SEPIO:0000030 SEPIO:0000027
+is_a: ObsoleteProperty
+
+[Typedef]
+id: SEPIO:0000028
+name: assertion_has_predicate
+comment: Propositional statements can be represented in RDF  as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.\n\nAs a proposition-level entity, a particular association can be expressed in more than one assertion made by different agents, or at different times. The meaning of an assertion can be captured through its link to an association whose meaning is formally specified as described above (e.g. :assertion1 is_asserted_in :association1, :association1 has_predicate :thing1). \n\nThe assertion_has_predicate property allows more direct specification of assertion meaning, bypassing an association and pointing directly to the predicate of the reified triple.  In this sense, it is a shortcut relation over two more fundamental properties (is_asserted_in  o  association_has_predicate).\n\nThis property is useful when a particular dataset wants to describe statements at the level of assertions rather than propositions, and formally describe assertion semantics without needed to represent an proposition-level association.
+domain: SEPIO:0000001 ! assertion
+holds_over_chain: SEPIO:0000030 http://purl.org/oban/association_has_predicate
+is_a: ObsoleteProperty
+
+[Typedef]
+id: SEPIO:0000030
+name: asserts_proposition
+def: "A relation holding between an assertion and the proposition that it puts forth as true." []
+comment: In practice, SEPIO recommends that data is captured at the assertion level, and post-processed as needed to aggregate assertions making the same claim under a single proposition using this property.
+property_value: SEPIO:0000052 "Mapping to related terms: \n\nConsider: http://purl.org/see/rdo#is_assertion_asserting" xsd:string
+property_value: SEPIO:0000386 "assertsProposition" xsd:string
+domain: SEPIO:0000001 ! assertion
+range: SEPIO:0000000 ! proposition
+
+[Typedef]
+id: SEPIO:0000041
+name: is_specified_by
+def: "A relation holding between a generated artifact and a plan specification that specifies all or part of the process that created it (e.g. a protocol, guideline, rule set)" []
+comment: In SEPIO, this property is most often used to link an assertion (the generated artifact) to an 'assertion method' that may specified how it was created.  This assertion method may describe what types of data may be used as evidence, what weight to give a particular type of evidence, and how to combine different lines of evidence in generating the final assertion.
+property_value: IAO:0000116 "Consider SIO:00339 (a relation between a product and the information content entity that specifies it.)" xsd:string
+property_value: IAO:0000118 "has_direct_supporting_method" xsd:string
+domain: BFO:0000002
+range: IAO:0000104 ! plan specification
+inverse_of: SEPIO:0000407 ! specifies_creation_of
+
+[Typedef]
+id: SEPIO:0000046
+name: has_role
+property_value: IAO:0000116 "Consider RO:0000087 ! has_role (def = a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence).  However, this property is defined as a relation between an independent continuant and a role.  In BFO, dependent continuants (such as information) cannot bear roles." xsd:string
+
+[Typedef]
+id: SEPIO:0000084
+name: has_evidence_item
+def: "A relation holding between an evidence line and an individual information entity that contributes to the argument it represents." []
+property_value: IAO:0000118 "has_supporting_information" xsd:string
+domain: SEPIO:0000002 ! evidence line
+range: SEPIO:0000149 ! evidence item
+is_a: RO:0002614 ! is_evidence_with_support_from
+inverse_of: SEPIO:0000376 ! evidence_item_for
+transitive_over: SEPIO:0000257 {http://purl.obolibrary.org/obo/SEPIO_0000061="If we start using the 'study data set' class in a similar way to organize data items from a partiular study, we should create a similar property chain that traverses the property we use to link study data sets to their data item parts.  \nCan this just be \"has part\" . . .or is a specific/unique relation needed here to avoid unwanted entailments?", comment="This property chain ensures that any evidence items that are organized into groups using a 'study finding' object will still be classified as evidence items for the relevant evidence line, and returned by queries for evidence items for a particular evidence line."} ! describes_study_data
+
+[Typedef]
+id: SEPIO:0000085
+name: has_evidence_item_output_from
+def: "A relation that links an evidence line to any activities (studies, assays, computational tasks, curation) that generated evidence items contributing to it." []
+property_value: IAO:0000118 "has_supporting_activity" xsd:string
+property_value: IAO:0000118 "is_evidence_supported_by_process" xsd:string
+property_value: SEPIO:0000399 "true" xsd:boolean
+domain: SEPIO:0000002 ! evidence line
+range: Activity ! Activity
+holds_over_chain: SEPIO:0000084 RO:0002353
+is_a: RO:0002614 ! is_evidence_with_support_from
+
+[Typedef]
+id: SEPIO:0000098
+name: is_equilavent_to
+property_value: IAO:0000118 "has_equivalent_proposition" xsd:string
+is_symmetric: true
+is_a: SEPIO:0000116 ! aligns_with
+
+[Typedef]
+id: SEPIO:0000099
+name: is_consistent_with
+property_value: IAO:0000118 "has_consistent_proposition" xsd:string
+is_symmetric: true
+is_a: SEPIO:0000116 ! aligns_with
+
+[Typedef]
+id: SEPIO:0000100
+name: strongly_contradicts
+comment: Relation between two propositions that make opposing claims (e.g. proposition1 holds that variant1 is pathogenic for disease1, and proposition2 holds that variant1 is benign for disease1).
+property_value: IAO:0000116 "Previosly implemented  property chains: \n\nis_asserted_in o strongly_contradicts o asserts -> strongly_contradicts\nasserts o strongly_contradicts o is_asserted_in -> strongly_contradicts\n\nBut these broke reasoner - \"the given hierarchy is not regular\" error message\".  Apparently breaks rule that \"in property chains of 3 or larger, the inner property must not also appear as the composite property\". (https://arxiv.org/pdf/1212.2902.pdf)" xsd:string
+property_value: IAO:0000118 "has_contradicting_proposition" xsd:string
+domain: SEPIO:0000000 ! proposition
+range: SEPIO:0000000 ! proposition
+is_symmetric: true
+is_a: SEPIO:0000115 ! conflicts_with
+
+[Typedef]
+id: SEPIO:0000101
+name: contradicts
+property_value: IAO:0000118 "has_inconsistent_proposition" xsd:string
+is_a: SEPIO:0000115 ! conflicts_with
+
+[Typedef]
+id: SEPIO:0000108
+name: is_expressed_in
+def: "Relationship between a statement or proposition and a document in which it is expressed (e.g. a publication, report, or database record)." []
+range: IAO:0000310 ! document
+inverse_of: SEPIO:0000109 ! expresses
+
+[Typedef]
+id: SEPIO:0000109
+name: expresses
+def: "Relationship between a document (e.g. a publication, report, database record) and an assertion or proposition that is stated in its content." []
+domain: IAO:0000310 ! document
+
+[Typedef]
+id: SEPIO:0000113
+name: has_compatability
+property_value: IAO:0000116 "Grouping class to hold exploratory relationships linking assertions or propositions based on the compatability or degree of agreement in their meaning.  Has utility toward inferring links between evidence lines and propositions." xsd:string
+property_value: IAO:0000118 "has_concordance" xsd:string
+property_value: IAO:0000118 "propositional relationships" xsd:string
+
+[Typedef]
+id: SEPIO:0000114
+name: measures_parameter
+def: "A relation between a planned process and a parameter that it measures as part of an assay or observation." []
+is_a: SEPIO:0000406 ! ExploratoryProperty
+
+[Typedef]
+id: SEPIO:0000115
+name: conflicts_with
+is_a: SEPIO:0000113 ! has_compatability
+
+[Typedef]
+id: SEPIO:0000116
+name: aligns_with
+is_a: SEPIO:0000113 ! has_compatability
+
+[Typedef]
+id: SEPIO:0000124
+name: evidence_has_supporting_reference
+def: "A relation that holds between an evidence line and a citable document from which information supporting the evidence line was obtained (i.e. a \"supporting reference\")." []
+property_value: IAO:0000116 "Note that this relation only links an evidence line to publications actually consulted by the asserting agent to find and interpret evidence items. There may be other publications that describe the same evidence item that the asserting agent did not consult, which would not qualify as supporting references.  \n\nFor example, consider a GO curator's use of sequence data for the rat Vegfa gene in a line of evidence supporting their assertion that the human VEGFA ortholog exhibited the same angiogeneic activity. There may be multiple publications that report this same rat gene sequence, but only the publication that the curator consulted in making this assertion would qualify as a supporting reference for this evidence line.\n\nFor this resaon, we are not able to create a property chain declaring \"has_evidence_item o is_described_by -> has_evidence_item_described_by\". . . because this would entail that any publication describing this rat Vegfa gene sequence was a supporting reference for the assertion." xsd:string
+property_value: IAO:0000118 "has_supporting_reference" xsd:string
+property_value: SEPIO:0000061 "Keeping the label has_supporting_reference instead of has_evidence_item_described_by because the later follows the pattern we use for true shortcut relations (i.e. that can be defined using property chains). For reasons outlined in the editor note, this is not such a shortcut relation." xsd:string
+domain: SEPIO:0000002 ! evidence line
+range: IAO:0000310 ! document
+is_a: RO:0002614 ! is_evidence_with_support_from
+
+[Typedef]
+id: SEPIO:0000126
+name: is_inconsistent_with
+is_a: SEPIO:0000113 ! has_compatability
+
+[Typedef]
+id: SEPIO:0000130
+name: stated_by
+def: "A relation between a statement and the original agent who stated it." []
+comment: In the case that the statement is an assertion, the responsible agent is the one who originally generated an assertion based on their evaluation of relevant evidence. \n\nIf more than one agent is involved in this process, we may consider them collectively as a  group or organization representing a single agent.
+property_value: IAO:0000116 "We intentionally avoid use of a more generic \"creator\" property here, as this term is used in established standards such as PAV and DC to specifically describe agents who generated a specific representation of an information content entity. For example, the pav:createdBy property is used specifically to describe agents contributing to a specific representation. \n\nSEPIO, by contrast, aims to describe the agent(s) responsible for generating the abstract information content these concretized artifacts express. For this reason, SEPIO creates the more specific \"stated_by\" relation to explicitly distinguish the act of making a statement (generating its information content) from the act of creating a specific digital representation of the statement (generating a particular concretized artifact). \n			\nA explicit commitment to this more abstracted level of representation is a core feature of the SEPIO model, and has implications for how instances in the data are described, identified, and distinguished in practice." xsd:string
+property_value: SEPIO:0000061 "Formerly 'asserted_by': A relation between an assertion and the agent who originally generated the assertion, based on their evaluation of and inference from relevant evidence.  Was broadened to 'stated_by' to cover statements that are not assertions - e.g. study findings statements." xsd:string
+is_a: SEPIO:0000387 ! created_by
+
+[Typedef]
+id: SEPIO:0000132
+name: evidence_line_strength
+def: "A relation describing the degree of support provided by an evidence line for a target assertion or proposition." []
+property_value: IAO:0000116 "The value of this property is typically a term from some defined set of values that enumerates categorical degrees of evidence strength  (e.g. the CIViC five-teired 'evidence level' scale). Different systems or applications can create terms representing the levels of strength they wish to define for their use case." xsd:string
+domain: SEPIO:0000002 ! evidence line
+range: SEPIO:0000133 ! evidence strength
+
+[Typedef]
+id: SEPIO:0000140
+name: evaluated_by
+def: "A relation holding between a generated artifact and an agent who evaluated its quality, completeness, or utility." []
+property_value: IAO:0000116 "In SEPIO, the agent responsible for a particular evidence line is linked via the \"evaluated_by\" property. This reflects that perspective that evaluation of the relevance, strength, and direction of an evidence line w.r.t. a particular assertion are the key acts inherent in the evidence line's \"creation\".  \n\nWe avoid using a \"creator\" relation here because this label is used in established standards such as PAV and DC to specifically describe agents contributing to a specific digital representation, as opposed to agents responsible for generating the underlying information content these concrete representations express. \n			\nA explicit commitment to this more abstracted level of representation is a core feature of the SEPIO model, and has implications for how instances in the data are described, identified, and distinguished in practice." xsd:string
+property_value: IAO:0000118 "assessed_by" xsd:string
+is_a: SEPIO:0000150 ! has_contributor
+
+[Typedef]
+id: SEPIO:0000144
+name: has_qualifier
+def: "A relation used to indicate context in which a particular assertion or proposition applies." []
+is_a: IAO:0000136 ! is_about
+
+[Typedef]
+id: SEPIO:0000145
+name: has_evidence_from_source
+def: "A relation used to link an assertion or proposition to a source where evidence for it was found (i.e. a document, document part, database, etc)" []
+comment: This is a shortcut relation to be used when  publications are referenced as providing support for an assertion, but it is not clear how many evidence lines  are described across these publications.  In such cases, discrete evidence lines cannot be created, and the has_evidence_from_source relation is used to directly link the assertion to publications providing some form of evidence information.
+property_value: SEPIO:0000052 cito:cites_as_evidence xsd:string
+property_value: SEPIO:0000061 "Note that this may not qualify as a proper shortcut (i.e. it may not be valid to define using a property chain) for the same reason has_supporting reference is not defined as a property chain called has_evidence_item_described_by." xsd:string
+property_value: SEPIO:0000399 "true" xsd:boolean
+range: IAO:0000030 ! information content entity
+
+[Typedef]
+id: SEPIO:0000146
+name: has_evidence_level
+def: "A relation used to link an assertion or proposition directly to some indicator of the strength of the total evidence supporting it." []
+comment: This relation links an assertion or proposition directly to some indicator of the strength of the total evidence supporting it. It is used when there is not enough information to create evidence line(s) for the assertion, but the source provides some indication of the strength of the evidence supporting it.\n\nNote that this is different than the notion of statement confidence, which describes how confident an agent is that a statement is true.  Confidence may depend on factors in addition to the strength of the evidence (e.g. who made the prior probability that the asserted proposition could be true, who made the assertion and when, etc.)
+property_value: IAO:0000118 "has_total_evidence_strength" xsd:string
+range: SEPIO:0000133 ! evidence strength
+
+[Typedef]
+id: SEPIO:0000150
+name: has_contributor
+def: "A relation between an information content entity and an agent who made a contribution to its information content, or to its subsequent modification or assessment." []
+property_value: IAO:0000116 "SEPIO intentionally creates its own hierarchy of contributor properties, instead of re-using terms from existing standards like PAV or Dublin Core - whose domain is structured digital resources. This is because properties such as pav:createdBy specifically describe agents who generated a specific digital representation of information, while SEPIO aims to describe agents responsible for generating the abstract information content that such a concrete representation may express.  \n\nThe subject of 'contributor' relations in the SEPIO are explicitly abstract in nature - considered at the level of their information content as opposed to concretizations in particular digital resources or representations.  For example, the SEPIO \"stated_by\" relation explicitly refers toan  agent originally putting forth a statement as true (generating its information content), as opposed to an agent creating a specific digital representation of the statement (generating a particular concretized artifact such as a json object returned by an API). \n\nShould further clarification become available with respect to whether PAV or DC contributor properties accommodate the nuanced definitions we require, we will re-consider their inclusion in SEPIO. For example, the pav:authoredBy property seems to refer specifically to the agent who generated information content expressed in a resource - and thus may be appropriate in the context of SEPIO.  But even here, the range of the property is a particular authored digital resource, and not the information content it expresses.  DC properties such as dce:contributor and dce:creator are ambiguous as to which level of contribution they describe." xsd:string
+range: Agent ! Agent
+inverse_of: SEPIO:0000188 ! contributes_to
+
+[Typedef]
+id: SEPIO:0000151
+name: validated_by
+def: "A relation holding between a statement and an agent that validates its truth or accuracy - typically by reviewing the provenance and data on which it is based." []
+property_value: IAO:0000118 "validity_assessed_by" xsd:string
+is_a: SEPIO:0000150 ! has_contributor
+
+[Typedef]
+id: SEPIO:0000152
+name: obsolete_evidence_assessed_by
+property_value: IAO:0000118 "evidence_strength_assessed_by" xsd:string
+property_value: IAO:0000231 "ClinGen not using this, as they create contrigution objects and assign roles to capture such information.  Can bring it back if there is need in some other use case/application." xsd:string
+is_a: ObsoleteProperty
+
+[Typedef]
+id: SEPIO:0000159
+name: qualified_contribution
+def: "A relation holding between an artifact and a contribution made by a particular agent to its creation, modification, assessment, or destruction." []
+comment: Analogous to PROV qualified Attribution - use to capture additional information about the contribution made by an agent, such as a role they played, or organization on behalf of which the contribution was made.
+property_value: IAO:0000116 "Consider sup-properties specific to the type of contribuion make, to support property chains for inferring a direct realtiomnship between the artifact/entitiy contributed to, and a related agent or date. At present, we could only support:\n   -  qualified_contribution  o  date_of_contribution  -> dce:date\n\nWant to be able to support inferences such as:\n  - qualified_creation  o  date_of_contribution -> date_created\n  - qualified_evaluation  o  date_of_contribution -> date_evaluated\n  - qualified_modification  o  date_of_contribution -> date_modified" xsd:string
+property_value: IAO:0000118 "has_contribution" xsd:string
+range: SEPIO:0000158 ! contribution
+
+[Typedef]
+id: SEPIO:0000167
+name: confidence_level
+def: "a relation between an information entity and an indicator of degree of confidence that the information it represents is true." []
+comment: Confidence in an information entity can mean different things for different types of information.  For example, for assertions this reflects the confidence an agent has that the proposition it puts forth is true.  For things like data items, it reflects the confidence an agent has that the data accurately reflects the aspect of reality its was intended to measure.
+property_value: IAO:0000118 "trust_rating" xsd:string
+domain: IAO:0000030 ! information content entity
+range: SEPIO:0000187 ! confidence level
+
+[Typedef]
+id: SEPIO:0000169
+name: agent_for
+def: "a relation between an agent and an other agent, typically an organization, on whose behalf a Contribution is made." []
+property_value: IAO:0000118 "performed_on_behalf_of" xsd:string
+domain: SEPIO:0000158 ! contribution
+range: Agent ! Agent
+
+[Typedef]
+id: SEPIO:0000178
+name: is_described_by
+def: "A relation between one entity and an informtion content entity that provides a description of it." []
+property_value: IAO:0000116 "Consider: http://semanticscience.org/resource/SIO_000557 ! 'is described by'" xsd:string
+
+[Typedef]
+id: SEPIO:0000183
+name: evidence_direction
+def: "A relation indicating whether an evidence line supports or disputes a target proposition (or represents inconclusive evidence that is not sufficient for either)." []
+property_value: SEPIO:0000386 "evidenceDirection" xsd:string
+domain: SEPIO:0000002 ! evidence line
+range: SEPIO:0000402 ! evidence direction
+
+[Typedef]
+id: SEPIO:0000188
+name: contributes_to
+comment: A relation between an agent and an entity toward which the agent made a contribution.
+property_value: SEPIO:0000386 "contributesTo" xsd:string
+
+[Typedef]
+id: SEPIO:0000189
+name: has_evidence_line_with_item
+def: "A shortcut relation that directly relates an assertion and an evidence item that contributes to one or more of its evidence  lines  (i.e. a piece of information that is used as evidence for or against its validity)." []
+comment: This relation can be used to link an assertion directly to evidence items that support it. Evidence items are typically organized into 'evidence lines' that group them according to the argument(s) to which they contribute.  This shortcut  relation supports use cases where it is desirable to elide over this level of organization and create direct links from an assertion to the fundamental pieces of information that represent evidence supporting it.\n\nA property chain (has_evidence_line o has_evidence_item -> has_evidence_with_item) is defined that can be used to infer this direct edge, facilitating interoperability between data sets that do and don't implement evidence lines to organize evidence items.
+property_value: IAO:0000118 "assertion_has_evidence_item" xsd:string
+property_value: IAO:0000118 "has_evidence_information" xsd:string
+property_value: IAO:0000118 "has_evidence_supported_by" xsd:string
+range: SEPIO:0000149 ! evidence item
+holds_over_chain: SEPIO:0000006 SEPIO:0000084
+
+[Typedef]
+id: SEPIO:0000197
+name: asserted_conclusion
+def: "A relationship that holds between an assertion and a term that summarizes its asserted conclusion." []
+property_value: IAO:0000118 "asserted_outcome" xsd:string
+property_value: SEPIO:0000386 "assertedConclusion" xsd:string
+domain: SEPIO:0000001 ! assertion
+
+[Typedef]
+id: SEPIO:0000232
+name: obsolete_has_quantifier
+property_value: IAO:0000231 "Deprecate until there is a specific use case requiring this relation." xsd:string
+is_a: ObsoleteProperty
+
+[Typedef]
+id: SEPIO:0000257
+name: describes_study_data
+def: "A relation that holds between a study finding and a data item it describes (i.e. a data item generated by the study whose results are described by the finding)." []
+property_value: IAO:0000118 "describes_supporting_data" xsd:string
+domain: SEPIO:0000173 ! study finding
+range: IAO:0000030 ! information content entity
+is_a: IAO:0000136 ! is_about
+
+[Typedef]
+id: SEPIO:0000376
+name: evidence_item_for
+property_value: SEPIO:0000386 "evidenceItemFor" xsd:string
+domain: SEPIO:0000149 ! evidence item
+range: SEPIO:0000002 ! evidence line
+
+[Typedef]
+id: SEPIO:0000387
+name: created_by
+def: "A relation between an information content entity and an agent who made a primary contribution to its original creation." []
+is_a: SEPIO:0000150 ! has_contributor
+
+[Typedef]
+id: SEPIO:0000388
+name: has_subject
+def: "A relation that holds between a statement or proposition which can be captured in part or in whole as a directional relationship between two entities, and the entity that representing the subject of this relationship." []
+is_a: IAO:0000136 ! is_about
+
+[Typedef]
+id: SEPIO:0000389
+name: has_predicate
+def: "A relation that holds between a statement or proposition which can be captured in part or in whole as a directional relationship between two entities, and the property serving as the predicate in this relationship." []
+is_a: IAO:0000136 ! is_about
+
+[Typedef]
+id: SEPIO:0000390
+name: has_object
+def: "A relation that holds between a statement or proposition which can be captured in part or in whole as a directional relationship between two entities, and the entity that representing the object or value of this relationship." []
+is_a: IAO:0000136 ! is_about
+
+[Typedef]
+id: SEPIO:0000398
+name: has_evidence_type
+def: "A shortcut relation that links an assertion directly to a term representing the type of evidence that supports it." []
+comment: Relation expands to has_evidence_line o rdf:type -> has_evidence_type
+property_value: SEPIO:0000399 "true" xsd:boolean
+
+[Typedef]
+id: SEPIO:0000406
+name: ExploratoryProperty
+
+[Typedef]
+id: SEPIO:0000407
+name: specifies_creation_of
+def: "A relation holding between a plan specification and an artifact whose generation it specifies." []
+
+[Typedef]
+id: SEPIO:0000415
+name: evidence_item_quality
+def: "A relation describing the quality of the data used as evidence by an agent making an assertion." []
+property_value: IAO:0000116 "This property is used to indicate the inherent quality of a piece of data, based on the rigor of the experiment that produced it.  It is not a direct indicator of the strength of evidence the data may provide for an assertion.\n\nThe value of this property is typically a term from some defined set of values that enumerates categorical degrees of quality (e.g. the CIViC five star 'trust rating' scale) Different systems or applications can create terms representing the levels of quality they wish to define for their use case." xsd:string
+
+[Typedef]
+id: SEPIO:0000427
+name: is_evidence_line_for
+property_value: IAO:0000118 "evidence_for" xsd:string
+
+[Typedef]
+id: http://purl.org/dc/terms/source
+name: source
+def: "A related resource from which the described resource is derived." []
+comment: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.
+
+[Typedef]
+id: http://purl.org/oban/association_has_object
+name: association has object
+property_value: IAO:0000116 "Propositional statements can be represented in RDF as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.\n\nThis property is defined by OBAN to specifically link 'associations', which are proposition-level entities, to their object (sensu RDF).  It is therefore a more specific relation than its has_object parent, which can be used to link a statement or proposition to its object." xsd:string
+domain: http://purl.org/oban/association ! association
+is_a: SEPIO:0000390 ! has_object
+
+[Typedef]
+id: http://purl.org/oban/association_has_predicate
+name: association has predicate
+property_value: IAO:0000116 "Propositional statements can be represented in RDF as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.\n\nThis property is defined by OBAN to specifically link 'associations', which are proposition-level entities, to the property representing the predicate of the reified triple.  It is therefore a more specific relation than its has_predicate parent, which can be used to link a statement or proposition to its predicate." xsd:string
+domain: http://purl.org/oban/association ! association
+is_a: SEPIO:0000389 ! has_predicate
+
+[Typedef]
+id: http://purl.org/oban/association_has_subject
+name: association has subject
+property_value: IAO:0000116 "Propositional statements can be represented in RDF as directional subject-predicate-object (S-P-O) triples. RDF reification vocabularies such as OBAN create named individuals in a graph that represent such S-P-O propositional statements. In OBAN, these are called 'associations', and the semantics of these associations can be represented using properties that link it to the subject, predicate, and object of the triple it represents.\n\nThis property is defined by OBAN to specifically link 'associations', which are proposition-level entities, to their subject (sensu RDF).  It is therefore a more specific relation than its has_subject parent, which can be used to link a statement or proposition to its subject." xsd:string
+domain: http://purl.org/oban/association ! association
+is_a: SEPIO:0000388 ! has_subject
+
+[Typedef]
+id: http://purl.org/pav/authoredBy
+name: Authored by
+comment: An agent that originated or gave existence to the work that is expressed by the digital resource.\n\nThe author of the content of a resource may be different from the creator of the resource representation (although they are often the same). See pav:createdBy for a discussion.\n\npav:authoredBy is more specific than its superproperty dct:creator - which might or might not be interpreted to also cover the creation of the representation of the artifact.\n\nThe author is usually not a software agent (which would be indicated with pav:createdWith, pav:createdBy or pav:importedBy), unless the software actually authored the content itself; for instance an artificial intelligence algorithm which authored a piece of music or a machine learning algorithm that authored a classification of a tumor sample.\n\nThe date of authoring can be expressed using pav:authoredOn - note however in the case of multiple authors that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using PROV relationships like prov:qualifiedAttribution or prov:wasGeneratedBy.
+is_a: ObsoleteProperty
+
+[Typedef]
+id: http://purl.org/pav/createdBy
+name: Created by
+comment: An agent primary responsible for making the digital artifact or resource representation. \nThis property is distinct from forming the content, which is indicated with pav:contributedBy or its subproperties; pav:authoredBy, which identifies who authored the knowledge expressed by this resource; and pav:curatedBy, which identifies who curated the knowledge into its current form. \npav:createdBy is more specific than its superproperty dct:creator - which might or might not be interpreted to cover this creator. \nFor instance, the author wrote 'this species has bigger wings than normal' in his log book. The curator, going through the log book and identifying important knowledge, formalizes this as 'locus perculus has wingspan > 0.5m'. The creator enters this knowledge as a digital resource in the knowledge system, thus creating the digital artifact (say as JSON, RDF, XML or HTML). \nA different example is a news article. pav:authoredBy indicates the journalist who wrote the article. pav:contributedBy can indicate the artist who added an illustration. pav:curatedBy can indicate the editor who made the article conform to the news paper's style. pav:createdBy can indicate who put the article on the web site.\nThe software tool used by the creator to make the digital resource (say Protege, Wordpress or OpenOffice) can be indicated with pav:createdWith.\n\nThe date the digital resource was created can be indicated with pav:createdOn.\n\nThe location the agent was at when creating the digital resource can be made using pav:createdAt.
+xref: http://purl.org/dc/terms/creator
+property_value: IAO:0000116 "SEPIO creates this relation distinct from existing PAV and PROV relations (e.g. pcav:createdBy), which are too specific about whether a relation refers to the agent who created the abstract information content, vs who serialized and documented in concrete form." xsd:string
+holds_over_chain: RO:0002353 SEPIO:0000017
+is_a: ObsoleteProperty
+
+[Typedef]
+id: http://purl.org/pav/curatedBy
+name: Curated by
+def: "Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation.\n\nThe curator may be different from the author (pav:authoredBy) and creator of the digital resource (pav:createdBy).\n\nThe curator may in some cases be a software agent, for instance text mining software which adds hyperlinks for recognized genome names.\n\nThe date of curating can be expressed using pav:curatedOn - note however in the case of multiple curators that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using PROV relationships like prov:qualifiedAttribution or prov:wasGeneratedBy" []
+is_a: ObsoleteProperty
+
+[Typedef]
+id: http://purl.org/pav/derivedFrom
+name: Derived from
+comment: Derived from a different resource.\n\nDerivation conserns itself with derived knowledge. If this resource has the same content as the other resource, but has simply been transcribed to fit a different model (like XML -> RDF or SQL -> CVS), use pav:importedFrom. If a resource was simply retrieved, use pav:retrievedFrom. If the content has however been further refined or modified, pav:derivedFrom should be used.\n\nDetails about who performed the derivation (e.g. who did the refining or modifications) may be indicated with pav:contributedBy and its subproperties.
+is_a: http://purl.org/dc/terms/source ! source
+
+[Typedef]
+id: http://purl.org/pav/importedFrom
+name: Imported from
+def: "The original source of imported information.\n\nImport means that the content has been preserved, but transcribed somehow, for instance to fit a different representation model by converting formats. Examples of import are when the original was JSON and the current resource is RDF, or where the original was an document scan, and this resource is the plain text found through OCR.\n\nThe imported resource does not have to be complete, but should be consistent with the knowledge conveyed by the original resource.\n\nIf additional knowledge has been contributed, pav:derivedFrom would be more appropriate.\n\nIf the resource has been copied verbatim from the original representation (e.g. downloaded), use pav:retrievedFrom.\n\nTo indicate which agent(s) performed the import, use pav:importedBy. Use pav:importedOn to indicate when it happened." []
+is_a: http://purl.org/dc/terms/source ! source
+
+[Typedef]
+id: http://purl.org/pav/retrievedFrom
+name: Retrieved from
+comment: The URI where a resource has been retrieved from.\n\nThe retrieving agent is usually a software entity, which has done the retrieval from the original source without performing any transcription.\n\nRetrieval indicates that this resource has the same representation as the original resource. If the resource has been somewhat transformed, use pav:importedFrom instead.\n\nThe time of the retrieval should be indicated using pav:retrievedOn. The agent may be indicated with pav:retrievedBy.
+is_a: http://purl.org/dc/terms/source ! source
+
+[Typedef]
+id: http://purl.org/pav/sourceAccessedAt
+comment: Source accessed at
+comment: The resource is related to a given source which was accessed or consulted (but not retrieved, imported or derived from). This access can be detailed with pav:sourceAccessedBy and pav:sourceAccessedOn.\n\nFor instance, a curator (pav:curatedBy) might have consulted figures in a published paper to confirm that a dataset was correctly pav:importedFrom the paper's supplementary CSV file.\n\nAnother example: I can access the page for tomorrow weather in Boston (http://www.weather.com/weather/tomorrow/Boston+MA+02143)  and I can blog ‘tomorrow is going to be nice’. The source does not make any claims about the nice weather, that is my interpretation; therefore the blog post has pav:sourceAccessedAt the weather page.
+is_a: ObsoleteProperty
+
