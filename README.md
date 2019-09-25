@@ -9,7 +9,7 @@ Data sources or developers interested in using SEPIO should begin by reading the
 
 ### Resources
  The Wiki pages  in this  repository are currently being updated to reflect the current state of the SEPIO Model and Framework. The pages below are recommended starting points for exploration.
-1. **[SEPIO Home](https://github.com/monarch-initiative/SEPIO-ontology/wiki)**: Summary level view of most impotent features and considerations for using SEPIO, with links to deeper dives  into specific topics.
+1. **[SEPIO Home](https://github.com/monarch-initiative/SEPIO-ontology/wiki)**: Summary level view of most importent features and considerations for using SEPIO, with links to deeper dives  into specific topics.
 2. **[SEPIO Framework](https://github.com/monarch-initiative/SEPIO-ontology/wiki/The-SEPIO-Framework)**: Overview of the  components of the framework and interactions between them.
 3. **[SEPIO  Ontology](https://github.com/monarch-initiative/SEPIO-ontology/wiki/The-SEPIO-Ontology)**: Deeper dive into the foundational SEPIO model as implemented in its  core  ontology. 
 4. **[ClinGen-ACMG SEPIO Profile](https://github.com/monarch-initiative/SEPIO-ontology/wiki/The-ClinGen-ACMG-Variant-Interpretation-Profile)**: Detailed look at a Profile created to represent rich evidence and provenance  for clinical variant pathogenicity interpretations.
