@@ -595,7 +595,7 @@ Consider: http://purl.org/see/rdo#is_assertion_asserting</obo:SEPIO_0000052>
         <obo:IAO_0000115>A relation holding between a planned process, or the artifact it generates, and a plan specification that specifies all or part of the process (e.g. a protocol, guideline, rule set)</obo:IAO_0000115>
         <obo:IAO_0000116>Consider SIO:00339 (a relation between a product and the information content entity that specifies it.)</obo:IAO_0000116>
         <rdfs:comment>In SEPIO, this property is most often used to link an assertion (the generated artifact) to an &apos;assertion method&apos; that may specified how it was created.  This assertion method may describe what types of data may be used as evidence, what weight to give a particular type of evidence, and how to combine different lines of evidence in generating the final assertion.</rdfs:comment>
-        <rdfs:label xml:lang="en">is_specified_by</rdfs:label>
+        <rdfs:label xml:lang="en">was_specified_by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1194,7 +1194,7 @@ The created_by and date_created properties allow us to connect a representation 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000407">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
         <obo:IAO_0000115>A relation holding between a plan specification and a planned process it specifies, or the artifact the process generates.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">specifies_creation_of</rdfs:label>
+        <rdfs:label xml:lang="en">specified_creation_of</rdfs:label>
     </owl:ObjectProperty>
     
 
