@@ -926,7 +926,7 @@ A explicit commitment to this more abstracted level of representation is a core 
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000133"/>
-        <obo:IAO_0000115>A relation used to link an assertion or proposition directly to some indicator of the strength of the total evidence supporting it.</obo:IAO_0000115>
+        <obo:IAO_0000115>A relation used to link an assertion or proposition directly to some indicator of the strength of the total evidence that asserting agent beleives to support it.</obo:IAO_0000115>
         <obo:IAO_0000118>has_total_evidence_strength</obo:IAO_0000118>
         <rdfs:comment>This relation links an assertion or proposition directly to some indicator of the strength of the total evidence supporting it. It is used when there is not enough information to create evidence line(s) for the assertion, but the source provides some indication of the strength of the evidence supporting it.
 
@@ -1069,11 +1069,11 @@ Want to be able to support inferences such as:
         <obo:IAO_0000115>A shortcut relation that directly relates an assertion and an evidence item that contributes to one or more of its evidence  lines  (i.e. a piece of information that is used as evidence for or against its validity).</obo:IAO_0000115>
         <obo:IAO_0000118>assertion_has_evidence_item</obo:IAO_0000118>
         <obo:IAO_0000118>has_evidence_information</obo:IAO_0000118>
-        <obo:IAO_0000118>has_evidence_supported_by</obo:IAO_0000118>
+        <obo:IAO_0000118>has_evidence_line_with_item</obo:IAO_0000118>
         <rdfs:comment>This relation can be used to link an assertion directly to evidence items that support it. Evidence items are typically organized into &apos;evidence lines&apos; that group them according to the argument(s) to which they contribute.  This shortcut  relation supports use cases where it is desirable to elide over this level of organization and create direct links from an assertion to the fundamental pieces of information that represent evidence supporting it.
 
 A property chain (has_evidence_line o has_evidence_item -&gt; has_evidence_with_item) is defined that can be used to infer this direct edge, facilitating interoperability between data sets that do and don&apos;t implement evidence lines to organize evidence items.</rdfs:comment>
-        <rdfs:label xml:lang="en">has_evidence_line_with_item</rdfs:label>
+        <rdfs:label xml:lang="en">has_evidence</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1227,6 +1227,26 @@ The value of this property is typically a term from some defined set of values t
         <obo:IAO_0000115>Note that this property connects a resource to an agent, not to some other information resource from which it came (e.g. another database or an API from which the resource in question was obtained).  Use the &apos;source&apos; property to capture this type of relationship.</obo:IAO_0000115>
         <obo:IAO_0000116>Consider: pav:providedBy</obo:IAO_0000116>
         <rdfs:label>provided_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000438 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000438">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000145"/>
+        <obo:IAO_0000115>A relation used to link an assertion or proposition to a source where supporting evidence for it was found (i.e. a document, document part, database, etc)</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has_supporting_evidence_from_source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000439 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000439">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000145"/>
+        <obo:IAO_0000115>A relation used to link an assertion or proposition to a source where disputing evidence for it was found (i.e. a document, document part, database, etc)</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has_disputing_evidence_from_source</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2022,6 +2042,9 @@ This property is normally used in a functional way, although PAV does not formal
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000306">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000115>A textual entity that contains a two-dimensional arrangement of texts repeated at regular intervals across a spatial range, such that the spatial relationships among the constituent texts expresses propositions</obo:IAO_0000115>
+        <rdfs:comment>MHB: A figure depicting a tabular representation of data, typically created to highlight a particular aspect or view of a larger data set. They may include derived statistical measures summarizing the primary data.
+
+The concept described here represents a tables generated for purposes of documentation or publication of results, as opposed to database tables defined as structures for primary storage of source data in some information system.</rdfs:comment>
         <rdfs:label>table</rdfs:label>
     </owl:Class>
     
@@ -2037,6 +2060,9 @@ This property is normally used in a functional way, although PAV does not formal
         <obo:IAO_0000115 xml:lang="en">An information content entity consisting of a two dimensional arrangement of information content entities such that the arrangement itself is about something.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:comment>MHB: A figure is a graphical presentation of information created as a vehicle to share with an audience, e.g. in a publication or report. Figures may include raw and/or summarized/derived data,  or diagrammatic abstractions of results, conclusions, or hypotheses.
+
+Figures often present data in a form that is summarized or abstracted for human consumption, using graphical conventions that may sacrifice detail of underlying data for ease or understanding.</rdfs:comment>
         <rdfs:label xml:lang="en">figure</rdfs:label>
     </owl:Class>
     
@@ -2622,11 +2648,15 @@ ECO Definition/Comment: An automatic assertion is based on computationally gener
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000125">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000004"/>
-        <obo:IAO_0000115>A planned proccess that executes some study design or protocol to generate scientific data that is interpreted to test or generate a hypothesis.</obo:IAO_0000115>
+        <obo:IAO_0000115>A planned process that executes some study design or protocol to generate scientific data that is interpreted to test or generate a hypothesis.</obo:IAO_0000115>
         <obo:SEPIO_0000061>Explore the classification of study types here as a possibility to implement in SEPIO. 
 https://mcw.libguides.com/evidencebased/studies
 Useful because these map to the strength of the evidence each might provide.</obo:SEPIO_0000061>
-        <rdfs:comment>A research study is considered broadly to be any scientific activity aimed at answering a research question. Studies can be simple or complex, depending on the scope of the question being explored and the extent of resources deployed in doing so.  They may include a full research investigation, a set of experiments, or a single experiment or assay. Regardless, that act of sumamrizing any results as a finding statement is considered part of the study.</rdfs:comment>
+        <rdfs:comment>A research study is considered broadly to be any scientific activity aimed at answering a research question. Studies can be simple or complex, depending on the scope of the question being explored and the extent of resources deployed in doing so.  They may include a full research investigation, a set of experiments, or a single experiment or assay. Regardless, that act of summarizing any results as a finding statement is considered part of the study.</rdfs:comment>
+        <rdfs:comment>A research study is considered broadly to be any scientific activity aimed at answering a research question. Studies can be simple or complex, depending on the scope of the question being explored and the extent of resources deployed in doing so.  They may include a full research investigation, a set of related experiments, or a single experiment or assay. Regardless, that act of summarizing any results as a finding statement is considered part of the study.
+
+
+&apos;Study&apos; here is broadly considered to include any defined activity performed to address a scientific question or generate a scientific hypothesis.  It covers scientific inquiry at different scales of complexity, from a single assay, experiment or observation, to a complex research investigation addressing a broader scientific question.   Studies can be based on a broad range of methods, including in silico algorithms, in vitro or in vivo experimentation on model systems, clinical studies on human subjects, or curation and analysis of existing knowledge, e.g. from publications, datasets, or knowledegbases, to derive novel insight.</rdfs:comment>
         <rdfs:label xml:lang="en">research study</rdfs:label>
     </owl:Class>
     
